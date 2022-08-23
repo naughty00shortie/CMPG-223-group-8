@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcadia_Hotel", "Arcadia_Hotel.csproj", "{0E3872D7-DC85-4FE4-9509-DD3C7693C232}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcadia_Hotel_DB", "..\Arcadia_Hotel_DB\Arcadia_Hotel_DB.csproj", "{DB80B0A2-A2E1-442A-BC59-400185BE2575}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0E3872D7-DC85-4FE4-9509-DD3C7693C232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E3872D7-DC85-4FE4-9509-DD3C7693C232}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E3872D7-DC85-4FE4-9509-DD3C7693C232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB80B0A2-A2E1-442A-BC59-400185BE2575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB80B0A2-A2E1-442A-BC59-400185BE2575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB80B0A2-A2E1-442A-BC59-400185BE2575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB80B0A2-A2E1-442A-BC59-400185BE2575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

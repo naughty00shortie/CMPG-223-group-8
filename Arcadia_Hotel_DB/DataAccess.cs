@@ -57,7 +57,8 @@ namespace Arcadia_Hotel_DB
                 return output.ToList();
             }
         }
-        6
+
+
 
         private static string LoadConnectionString()
         {

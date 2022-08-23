@@ -15,6 +15,29 @@ namespace Arcadia_Hotel
         public Form1()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
+=======
+           // LoadModels();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // DataAccess.LoadBooking();
+            // DataAccess.LoadEmployee();
+            // DataAccess.LoadGuest();
+            roles = DataAccess.LoadRole();
+            //DataAccess.LoadRoom();
+            dataGridView1.DataSource = roles;
+        }
+
+        private void LoadModels()
+        {
+            DataAccess.LoadBooking();
+            DataAccess.LoadEmployee();
+            DataAccess.LoadGuest();
+            DataAccess.LoadRole();
+            DataAccess.LoadRoom();
+>>>>>>> Stashed changes
         }
     }
 }

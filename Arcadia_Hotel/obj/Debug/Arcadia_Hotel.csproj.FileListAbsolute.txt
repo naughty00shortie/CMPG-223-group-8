@@ -71,3 +71,4 @@ C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debu
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.csproj.CopyComplete
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.exe
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.pdb
+C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmAdmin.resources

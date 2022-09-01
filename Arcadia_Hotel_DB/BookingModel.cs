@@ -11,8 +11,8 @@ namespace Arcadia_Hotel_DB
         public int Booking_Number { get; set; }
         public int Room_Number { get; set; }
         public int Guest_ID { get; set; }
-        public string Booking_Check_In { get; set; }
-        public string Booking_Check_out { get; set; }
-        public int Booking_Price_paid { get; set; }
+        public DateTime Booking_Check_In { get; set; }
+        public DateTime Booking_Check_out { get; set; }
+        public float Booking_Price_paid { get; set; }
     }
 }

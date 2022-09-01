@@ -37,6 +37,8 @@
             this.btnMakeR = new System.Windows.Forms.Button();
             this.tpReservation = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
+            this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.lbBookingInfo = new System.Windows.Forms.ListBox();
@@ -62,8 +64,37 @@
             this.btnBackMR = new System.Windows.Forms.Button();
             this.btnAddR = new System.Windows.Forms.Button();
             this.tpChangeReservation = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtBookingIDER = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.dtpCheckOutER = new System.Windows.Forms.DateTimePicker();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.dtpCheckInER = new System.Windows.Forms.DateTimePicker();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.nupRoomAmountER = new System.Windows.Forms.NumericUpDown();
+            this.cmbTypeER = new System.Windows.Forms.ComboBox();
+            this.txtSurnameER = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.txtERName = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSearchSurnameER = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.tpAdmin = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,39 +102,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.sqliteCommand1 = new Microsoft.Data.Sqlite.SqliteCommand();
-            this.button6 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtSearchSurnameER = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.sqLiteCommandBuilder1 = new System.Data.SQLite.SQLiteCommandBuilder();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.txtERName = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtSurnameER = new System.Windows.Forms.TextBox();
-            this.cmbTypeER = new System.Windows.Forms.ComboBox();
-            this.nupRoomAmountER = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.dtpCheckInER = new System.Windows.Forms.DateTimePicker();
-            this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
-            this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.dtpCheckOutER = new System.Windows.Forms.DateTimePicker();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtBookingIDER = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpMenu.SuspendLayout();
             this.tpReservation.SuspendLayout();
@@ -111,13 +109,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudRoomAmount)).BeginInit();
             this.panel1.SuspendLayout();
             this.tpChangeReservation.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tpAdmin.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupRoomAmountER)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tpAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -144,7 +142,7 @@
             this.tpMenu.Location = new System.Drawing.Point(4, 22);
             this.tpMenu.Name = "tpMenu";
             this.tpMenu.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMenu.Size = new System.Drawing.Size(1104, 587);
+            this.tpMenu.Size = new System.Drawing.Size(1155, 640);
             this.tpMenu.TabIndex = 0;
             this.tpMenu.Text = "Menu";
             this.tpMenu.UseVisualStyleBackColor = true;
@@ -157,6 +155,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Edit Guest Personal Info";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnExit
             // 
@@ -166,6 +165,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAdmin
             // 
@@ -175,6 +175,7 @@
             this.btnAdmin.TabIndex = 2;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnEditR
             // 
@@ -184,6 +185,7 @@
             this.btnEditR.TabIndex = 1;
             this.btnEditR.Text = "Edit Reservation";
             this.btnEditR.UseVisualStyleBackColor = true;
+            this.btnEditR.Click += new System.EventHandler(this.btnEditR_Click);
             // 
             // btnMakeR
             // 
@@ -193,6 +195,7 @@
             this.btnMakeR.TabIndex = 0;
             this.btnMakeR.Text = "Make Reservation";
             this.btnMakeR.UseVisualStyleBackColor = true;
+            this.btnMakeR.Click += new System.EventHandler(this.btnMakeR_Click);
             // 
             // tpReservation
             // 
@@ -231,6 +234,20 @@
             this.panel2.Size = new System.Drawing.Size(631, 440);
             this.panel2.TabIndex = 4;
             // 
+            // dtpCheckOut
+            // 
+            this.dtpCheckOut.Location = new System.Drawing.Point(415, 319);
+            this.dtpCheckOut.Name = "dtpCheckOut";
+            this.dtpCheckOut.Size = new System.Drawing.Size(200, 20);
+            this.dtpCheckOut.TabIndex = 22;
+            // 
+            // dtpCheckIn
+            // 
+            this.dtpCheckIn.Location = new System.Drawing.Point(101, 319);
+            this.dtpCheckIn.Name = "dtpCheckIn";
+            this.dtpCheckIn.Size = new System.Drawing.Size(200, 20);
+            this.dtpCheckIn.TabIndex = 21;
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(238, 84);
@@ -239,6 +256,7 @@
             this.button4.TabIndex = 20;
             this.button4.Text = "Add To A Booking";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label16
             // 
@@ -276,6 +294,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "Family"});
             this.comboBox1.Location = new System.Drawing.Point(137, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(139, 21);
@@ -433,6 +455,7 @@
             this.btnBackMR.TabIndex = 1;
             this.btnBackMR.Text = "Back";
             this.btnBackMR.UseVisualStyleBackColor = true;
+            this.btnBackMR.Click += new System.EventHandler(this.btnBackMR_Click);
             // 
             // btnAddR
             // 
@@ -442,6 +465,7 @@
             this.btnAddR.TabIndex = 0;
             this.btnAddR.Text = "Add Reservation";
             this.btnAddR.UseVisualStyleBackColor = true;
+            this.btnAddR.Click += new System.EventHandler(this.btnAddR_Click);
             // 
             // tpChangeReservation
             // 
@@ -457,6 +481,266 @@
             this.tpChangeReservation.TabIndex = 2;
             this.tpChangeReservation.Text = "Edit Reservation";
             this.tpChangeReservation.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.txtBookingIDER);
+            this.panel4.Controls.Add(this.label26);
+            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.dtpCheckOutER);
+            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.dtpCheckInER);
+            this.panel4.Controls.Add(this.label23);
+            this.panel4.Controls.Add(this.label22);
+            this.panel4.Controls.Add(this.nupRoomAmountER);
+            this.panel4.Controls.Add(this.cmbTypeER);
+            this.panel4.Controls.Add(this.txtSurnameER);
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.button8);
+            this.panel4.Controls.Add(this.txtERName);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Location = new System.Drawing.Point(46, 251);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(541, 339);
+            this.panel4.TabIndex = 8;
+            this.panel4.Visible = false;
+            // 
+            // txtBookingIDER
+            // 
+            this.txtBookingIDER.Enabled = false;
+            this.txtBookingIDER.Location = new System.Drawing.Point(336, 16);
+            this.txtBookingIDER.Name = "txtBookingIDER";
+            this.txtBookingIDER.Size = new System.Drawing.Size(120, 20);
+            this.txtBookingIDER.TabIndex = 26;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(249, 19);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(60, 13);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "BookingID:";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(204, 282);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(139, 48);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "Edit";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // dtpCheckOutER
+            // 
+            this.dtpCheckOutER.Location = new System.Drawing.Point(109, 246);
+            this.dtpCheckOutER.Name = "dtpCheckOutER";
+            this.dtpCheckOutER.Size = new System.Drawing.Size(200, 20);
+            this.dtpCheckOutER.TabIndex = 24;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(24, 199);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 13);
+            this.label25.TabIndex = 23;
+            this.label25.Text = "Check In:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(16, 252);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 13);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "Check Out:";
+            // 
+            // dtpCheckInER
+            // 
+            this.dtpCheckInER.Location = new System.Drawing.Point(109, 193);
+            this.dtpCheckInER.Name = "dtpCheckInER";
+            this.dtpCheckInER.Size = new System.Drawing.Size(200, 20);
+            this.dtpCheckInER.TabIndex = 21;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(346, 138);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(54, 13);
+            this.label23.TabIndex = 20;
+            this.label23.Text = "Ammount:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(36, 138);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(65, 13);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "Room Type:";
+            // 
+            // nupRoomAmountER
+            // 
+            this.nupRoomAmountER.Location = new System.Drawing.Point(406, 135);
+            this.nupRoomAmountER.Name = "nupRoomAmountER";
+            this.nupRoomAmountER.Size = new System.Drawing.Size(49, 20);
+            this.nupRoomAmountER.TabIndex = 18;
+            // 
+            // cmbTypeER
+            // 
+            this.cmbTypeER.FormattingEnabled = true;
+            this.cmbTypeER.Location = new System.Drawing.Point(109, 135);
+            this.cmbTypeER.Name = "cmbTypeER";
+            this.cmbTypeER.Size = new System.Drawing.Size(139, 21);
+            this.cmbTypeER.TabIndex = 16;
+            // 
+            // txtSurnameER
+            // 
+            this.txtSurnameER.Enabled = false;
+            this.txtSurnameER.Location = new System.Drawing.Point(336, 65);
+            this.txtSurnameER.Name = "txtSurnameER";
+            this.txtSurnameER.Size = new System.Drawing.Size(120, 20);
+            this.txtSurnameER.TabIndex = 11;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(257, 68);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(52, 13);
+            this.label21.TabIndex = 10;
+            this.label21.Text = "Surname:";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(233, 336);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(122, 30);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Edit Reservation";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // txtERName
+            // 
+            this.txtERName.Enabled = false;
+            this.txtERName.Location = new System.Drawing.Point(85, 65);
+            this.txtERName.Name = "txtERName";
+            this.txtERName.Size = new System.Drawing.Size(120, 20);
+            this.txtERName.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(36, 68);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(38, 13);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "Name:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(36, 19);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(103, 13);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Edit Reservation for:";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.button9);
+            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(110, 108);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(400, 124);
+            this.panel3.TabIndex = 5;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(209, 87);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(122, 30);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Delete Reservation";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(50, 87);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(122, 30);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Edit Reservation";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(65, 49);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 13);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Booking ID:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(164, 46);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(115, 20);
+            this.textBox7.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(137, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Edit Reservation";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(593, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(543, 584);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtSearchSurnameER);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Location = new System.Drawing.Point(156, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(287, 59);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Search Reservation";
+            // 
+            // txtSearchSurnameER
+            // 
+            this.txtSearchSurnameER.Location = new System.Drawing.Point(140, 29);
+            this.txtSearchSurnameER.Name = "txtSearchSurnameER";
+            this.txtSearchSurnameER.Size = new System.Drawing.Size(115, 20);
+            this.txtSearchSurnameER.TabIndex = 4;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(31, 32);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 13);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Search by Surname:";
             // 
             // button2
             // 
@@ -477,6 +761,15 @@
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Edit Personal Info";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1019, 543);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(77, 36);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Back";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // tpAdmin
             // 
@@ -546,301 +839,6 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // sqliteCommand1
-            // 
-            this.sqliteCommand1.CommandTimeout = 30;
-            this.sqliteCommand1.Connection = null;
-            this.sqliteCommand1.Transaction = null;
-            this.sqliteCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(1019, 543);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(77, 36);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Back";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtSearchSurnameER);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Location = new System.Drawing.Point(156, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 59);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Search Reservation";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(31, 32);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 13);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Search by Surname:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(593, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 584);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // txtSearchSurnameER
-            // 
-            this.txtSearchSurnameER.Location = new System.Drawing.Point(140, 29);
-            this.txtSearchSurnameER.Name = "txtSearchSurnameER";
-            this.txtSearchSurnameER.Size = new System.Drawing.Size(115, 20);
-            this.txtSearchSurnameER.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(110, 108);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(400, 124);
-            this.panel3.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(137, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Edit Reservation";
-            // 
-            // sqLiteCommandBuilder1
-            // 
-            this.sqLiteCommandBuilder1.DataAdapter = null;
-            this.sqLiteCommandBuilder1.QuoteSuffix = "]";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(164, 46);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(115, 20);
-            this.textBox7.TabIndex = 6;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(65, 49);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(63, 13);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Booking ID:";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(50, 87);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(122, 30);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Edit Reservation";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // txtERName
-            // 
-            this.txtERName.Enabled = false;
-            this.txtERName.Location = new System.Drawing.Point(85, 65);
-            this.txtERName.Name = "txtERName";
-            this.txtERName.Size = new System.Drawing.Size(120, 20);
-            this.txtERName.TabIndex = 8;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(36, 19);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(103, 13);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Edit Reservation for:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(36, 68);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(38, 13);
-            this.label20.TabIndex = 9;
-            this.label20.Text = "Name:";
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.txtBookingIDER);
-            this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.button10);
-            this.panel4.Controls.Add(this.dtpCheckOutER);
-            this.panel4.Controls.Add(this.label25);
-            this.panel4.Controls.Add(this.label24);
-            this.panel4.Controls.Add(this.dtpCheckInER);
-            this.panel4.Controls.Add(this.label23);
-            this.panel4.Controls.Add(this.label22);
-            this.panel4.Controls.Add(this.nupRoomAmountER);
-            this.panel4.Controls.Add(this.cmbTypeER);
-            this.panel4.Controls.Add(this.txtSurnameER);
-            this.panel4.Controls.Add(this.label21);
-            this.panel4.Controls.Add(this.button8);
-            this.panel4.Controls.Add(this.txtERName);
-            this.panel4.Controls.Add(this.label20);
-            this.panel4.Controls.Add(this.label19);
-            this.panel4.Location = new System.Drawing.Point(46, 251);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(541, 339);
-            this.panel4.TabIndex = 8;
-            this.panel4.Visible = false;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(233, 336);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(122, 30);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Edit Reservation";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(257, 68);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(52, 13);
-            this.label21.TabIndex = 10;
-            this.label21.Text = "Surname:";
-            // 
-            // txtSurnameER
-            // 
-            this.txtSurnameER.Enabled = false;
-            this.txtSurnameER.Location = new System.Drawing.Point(336, 65);
-            this.txtSurnameER.Name = "txtSurnameER";
-            this.txtSurnameER.Size = new System.Drawing.Size(120, 20);
-            this.txtSurnameER.TabIndex = 11;
-            // 
-            // cmbTypeER
-            // 
-            this.cmbTypeER.FormattingEnabled = true;
-            this.cmbTypeER.Location = new System.Drawing.Point(109, 135);
-            this.cmbTypeER.Name = "cmbTypeER";
-            this.cmbTypeER.Size = new System.Drawing.Size(139, 21);
-            this.cmbTypeER.TabIndex = 16;
-            // 
-            // nupRoomAmountER
-            // 
-            this.nupRoomAmountER.Location = new System.Drawing.Point(406, 135);
-            this.nupRoomAmountER.Name = "nupRoomAmountER";
-            this.nupRoomAmountER.Size = new System.Drawing.Size(49, 20);
-            this.nupRoomAmountER.TabIndex = 18;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(36, 138);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(65, 13);
-            this.label22.TabIndex = 19;
-            this.label22.Text = "Room Type:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(346, 138);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(54, 13);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Ammount:";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(209, 87);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(122, 30);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Delete Reservation";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // dtpCheckInER
-            // 
-            this.dtpCheckInER.Location = new System.Drawing.Point(109, 193);
-            this.dtpCheckInER.Name = "dtpCheckInER";
-            this.dtpCheckInER.Size = new System.Drawing.Size(200, 20);
-            this.dtpCheckInER.TabIndex = 21;
-            // 
-            // dtpCheckIn
-            // 
-            this.dtpCheckIn.Location = new System.Drawing.Point(101, 319);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(200, 20);
-            this.dtpCheckIn.TabIndex = 21;
-            // 
-            // dtpCheckOut
-            // 
-            this.dtpCheckOut.Location = new System.Drawing.Point(415, 319);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(200, 20);
-            this.dtpCheckOut.TabIndex = 22;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(16, 252);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(61, 13);
-            this.label24.TabIndex = 22;
-            this.label24.Text = "Check Out:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(24, 199);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 13);
-            this.label25.TabIndex = 23;
-            this.label25.Text = "Check In:";
-            // 
-            // dtpCheckOutER
-            // 
-            this.dtpCheckOutER.Location = new System.Drawing.Point(109, 246);
-            this.dtpCheckOutER.Name = "dtpCheckOutER";
-            this.dtpCheckOutER.Size = new System.Drawing.Size(200, 20);
-            this.dtpCheckOutER.TabIndex = 24;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(204, 282);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(139, 48);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Edit";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(249, 19);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(60, 13);
-            this.label26.TabIndex = 25;
-            this.label26.Text = "BookingID:";
-            // 
-            // txtBookingIDER
-            // 
-            this.txtBookingIDER.Enabled = false;
-            this.txtBookingIDER.Location = new System.Drawing.Point(336, 16);
-            this.txtBookingIDER.Name = "txtBookingIDER";
-            this.txtBookingIDER.Size = new System.Drawing.Size(120, 20);
-            this.txtBookingIDER.TabIndex = 26;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -859,17 +857,17 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tpChangeReservation.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tpAdmin.ResumeLayout(false);
-            this.tpAdmin.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupRoomAmountER)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tpAdmin.ResumeLayout(false);
+            this.tpAdmin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -917,7 +915,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label14;
-        private Microsoft.Data.Sqlite.SqliteCommand sqliteCommand1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -933,7 +930,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSearchSurnameER;
-        private System.Data.SQLite.SQLiteCommandBuilder sqLiteCommandBuilder1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox txtSurnameER;

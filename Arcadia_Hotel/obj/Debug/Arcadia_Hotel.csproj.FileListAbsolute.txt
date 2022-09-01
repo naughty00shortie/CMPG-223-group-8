@@ -73,3 +73,6 @@ C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debu
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.pdb
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmAdmin.resources
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmation.resources
+C:\dev\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmAdmin.resources
+C:\dev\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmation.resources
+C:\dev\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmEdit.resources

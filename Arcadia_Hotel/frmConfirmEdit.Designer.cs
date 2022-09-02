@@ -34,31 +34,30 @@ namespace Arcadia_Hotel
             this.label26 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.txtSurnameER = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBookingID = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtRoomType = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
             this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnConfirmChange = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 9);
+            this.label1.Location = new System.Drawing.Point(164, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(136, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Edit Confirmation ";
+            this.label1.Text = "Reservation Edit Made For:";
             // 
             // label19
             // 
@@ -96,29 +95,32 @@ namespace Arcadia_Hotel
             this.label21.TabIndex = 28;
             this.label21.Text = "Surname:";
             // 
-            // txtSurnameER
+            // txtBookingID
             // 
-            this.txtSurnameER.Enabled = false;
-            this.txtSurnameER.Location = new System.Drawing.Point(310, 40);
-            this.txtSurnameER.Name = "txtSurnameER";
-            this.txtSurnameER.Size = new System.Drawing.Size(120, 20);
-            this.txtSurnameER.TabIndex = 29;
+            this.txtBookingID.Enabled = false;
+            this.txtBookingID.Location = new System.Drawing.Point(310, 40);
+            this.txtBookingID.Name = "txtBookingID";
+            this.txtBookingID.ReadOnly = true;
+            this.txtBookingID.Size = new System.Drawing.Size(120, 20);
+            this.txtBookingID.TabIndex = 29;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(78, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 30;
+            this.txtName.Enabled = false;
+            this.txtName.Location = new System.Drawing.Point(78, 86);
+            this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(120, 20);
+            this.txtName.TabIndex = 30;
             // 
-            // textBox2
+            // txtSurname
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(310, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 31;
+            this.txtSurname.Enabled = false;
+            this.txtSurname.Location = new System.Drawing.Point(310, 86);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.ReadOnly = true;
+            this.txtSurname.Size = new System.Drawing.Size(120, 20);
+            this.txtSurname.TabIndex = 31;
             // 
             // label2
             // 
@@ -129,29 +131,32 @@ namespace Arcadia_Hotel
             this.label2.TabIndex = 33;
             this.label2.Text = "Room Type:";
             // 
-            // textBox3
+            // txtAmount
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(310, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(72, 20);
-            this.textBox3.TabIndex = 34;
+            this.txtAmount.Enabled = false;
+            this.txtAmount.Location = new System.Drawing.Point(310, 141);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.ReadOnly = true;
+            this.txtAmount.Size = new System.Drawing.Size(72, 20);
+            this.txtAmount.TabIndex = 34;
             // 
-            // textBox4
+            // txtRoomType
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(105, 141);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 20);
-            this.textBox4.TabIndex = 35;
+            this.txtRoomType.Enabled = false;
+            this.txtRoomType.Location = new System.Drawing.Point(105, 141);
+            this.txtRoomType.Name = "txtRoomType";
+            this.txtRoomType.ReadOnly = true;
+            this.txtRoomType.Size = new System.Drawing.Size(120, 20);
+            this.txtRoomType.TabIndex = 35;
             // 
-            // textBox5
+            // txtPrice
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(167, 265);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 36;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Location = new System.Drawing.Point(167, 265);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 36;
             // 
             // label3
             // 
@@ -203,51 +208,41 @@ namespace Arcadia_Hotel
             this.label6.TabIndex = 42;
             this.label6.Text = "Price:";
             // 
-            // btnBack
+            // btnOk
             // 
-            this.btnBack.Location = new System.Drawing.Point(358, 309);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 33);
-            this.btnBack.TabIndex = 43;
-            this.btnBack.Text = "Cancel";
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // btnConfirmChange
-            // 
-            this.btnConfirmChange.Location = new System.Drawing.Point(138, 309);
-            this.btnConfirmChange.Name = "btnConfirmChange";
-            this.btnConfirmChange.Size = new System.Drawing.Size(129, 33);
-            this.btnConfirmChange.TabIndex = 44;
-            this.btnConfirmChange.Text = "Confirm Changes";
-            this.btnConfirmChange.UseVisualStyleBackColor = true;
+            this.btnOk.Location = new System.Drawing.Point(138, 309);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(129, 33);
+            this.btnOk.TabIndex = 44;
+            this.btnOk.Text = "OK";
+            this.btnOk.UseVisualStyleBackColor = true;
             // 
             // frmConfirmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 357);
-            this.Controls.Add(this.btnConfirmChange);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpCheckOut);
             this.Controls.Add(this.dtpCheckIn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtRoomType);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtSurnameER);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtBookingID);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label1);
             this.Name = "frmConfirmEdit";
-            this.Text = "frmConfirmEdit";
+            this.Text = "Reservation Update Report";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,20 +255,19 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtSurnameER;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBookingID;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtRoomType;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpCheckIn;
         private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnConfirmChange;
+        private System.Windows.Forms.Button btnOk;
     }
 }

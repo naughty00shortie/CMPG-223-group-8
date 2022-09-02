@@ -93,7 +93,7 @@ namespace Arcadia_Hotel
             guest.Guest_Surname = textBox2.Text;
             guest.Guest_Name = textBox3.Text; 
             guest.Guest_Email = textBox4.Text;
-            guest.Guest_Phone_Number = textBox5.Text;
+            guest.Guest_Phone_Number = maskedTextBox1.Text;
 
             BookingModel booking = new BookingModel();
             booking.Booking_Price_paid = calcBookingPrice();
@@ -152,8 +152,12 @@ namespace Arcadia_Hotel
         {
             tabControl1.SelectedIndex = 0;
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-}
 }
 /*Waar daar staan Model beteken dit is n tabel in die DB
 Om dit te access moet jy n nuwe object create van daai datatype af

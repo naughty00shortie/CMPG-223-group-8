@@ -102,6 +102,12 @@
     <Compile Include="frmConfirmation.Designer.cs">
       <DependentUpon>frmConfirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConfirmationGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmationGuest.Designer.cs">
+      <DependentUpon>frmConfirmationGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConfirmEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfirmation.resx">
       <DependentUpon>frmConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmationGuest.resx">
+      <DependentUpon>frmConfirmationGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfirmEdit.resx">
       <DependentUpon>frmConfirmEdit.cs</DependentUpon>

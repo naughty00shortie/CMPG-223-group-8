@@ -52,7 +52,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -67,7 +66,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtBookingIDER = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnUpdateReservation = new System.Windows.Forms.Button();
             this.dtpCheckOutER = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -83,18 +82,18 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnDeleteReservation = new System.Windows.Forms.Button();
+            this.btnGoEditReservation = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBookingER = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEditReservation = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSearchSurnameER = new System.Windows.Forms.TextBox();
+            this.txtSearchER = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBackER = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnBackEG = new System.Windows.Forms.Button();
             this.tpAdmin = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -102,6 +101,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvEditGuest = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSearchEG = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnDeleteGuest = new System.Windows.Forms.Button();
+            this.btnGoEditGuest = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtGuestIDEG = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnUpdateGuest = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtSurnameEG = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
+            this.txtNameEG = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtEmailEG = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPhoneEG = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpMenu.SuspendLayout();
             this.tpReservation.SuspendLayout();
@@ -112,10 +134,14 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupRoomAmountER)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditReservation)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tpAdmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditGuest)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -159,7 +185,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(31, 478);
+            this.btnExit.Location = new System.Drawing.Point(31, 437);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(114, 41);
             this.btnExit.TabIndex = 3;
@@ -332,9 +358,9 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Enabled = false;
             this.txtPrice.Location = new System.Drawing.Point(279, 400);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(102, 20);
             this.txtPrice.TabIndex = 9;
             // 
@@ -371,15 +397,8 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(23, 114);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 294);
+            this.panel1.Size = new System.Drawing.Size(353, 290);
             this.panel1.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(162, 238);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(116, 20);
-            this.textBox5.TabIndex = 8;
             // 
             // textBox4
             // 
@@ -471,9 +490,9 @@
             // 
             this.tpChangeReservation.Controls.Add(this.panel4);
             this.tpChangeReservation.Controls.Add(this.panel3);
-            this.tpChangeReservation.Controls.Add(this.dataGridView1);
+            this.tpChangeReservation.Controls.Add(this.dgvEditReservation);
             this.tpChangeReservation.Controls.Add(this.groupBox1);
-            this.tpChangeReservation.Controls.Add(this.button2);
+            this.tpChangeReservation.Controls.Add(this.btnBackER);
             this.tpChangeReservation.Location = new System.Drawing.Point(4, 22);
             this.tpChangeReservation.Name = "tpChangeReservation";
             this.tpChangeReservation.Padding = new System.Windows.Forms.Padding(3);
@@ -487,7 +506,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.txtBookingIDER);
             this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.btnUpdateReservation);
             this.panel4.Controls.Add(this.dtpCheckOutER);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label24);
@@ -525,14 +544,14 @@
             this.label26.TabIndex = 25;
             this.label26.Text = "BookingID:";
             // 
-            // button10
+            // btnUpdateReservation
             // 
-            this.button10.Location = new System.Drawing.Point(204, 282);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(139, 48);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Edit";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnUpdateReservation.Location = new System.Drawing.Point(204, 282);
+            this.btnUpdateReservation.Name = "btnUpdateReservation";
+            this.btnUpdateReservation.Size = new System.Drawing.Size(139, 48);
+            this.btnUpdateReservation.TabIndex = 9;
+            this.btnUpdateReservation.Text = "Confirm Reservation Update";
+            this.btnUpdateReservation.UseVisualStyleBackColor = true;
             // 
             // dtpCheckOutER
             // 
@@ -654,33 +673,33 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.btnDeleteReservation);
+            this.panel3.Controls.Add(this.btnGoEditReservation);
             this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.txtBookingER);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(110, 108);
+            this.panel3.Location = new System.Drawing.Point(104, 108);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 124);
             this.panel3.TabIndex = 5;
             // 
-            // button9
+            // btnDeleteReservation
             // 
-            this.button9.Location = new System.Drawing.Point(209, 87);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(122, 30);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Delete Reservation";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnDeleteReservation.Location = new System.Drawing.Point(209, 87);
+            this.btnDeleteReservation.Name = "btnDeleteReservation";
+            this.btnDeleteReservation.Size = new System.Drawing.Size(122, 30);
+            this.btnDeleteReservation.TabIndex = 8;
+            this.btnDeleteReservation.Text = "Delete Reservation";
+            this.btnDeleteReservation.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnGoEditReservation
             // 
-            this.button7.Location = new System.Drawing.Point(50, 87);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(122, 30);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Edit Reservation";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnGoEditReservation.Location = new System.Drawing.Point(50, 87);
+            this.btnGoEditReservation.Name = "btnGoEditReservation";
+            this.btnGoEditReservation.Size = new System.Drawing.Size(122, 30);
+            this.btnGoEditReservation.TabIndex = 7;
+            this.btnGoEditReservation.Text = "Edit Reservation";
+            this.btnGoEditReservation.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -691,12 +710,12 @@
             this.label18.TabIndex = 5;
             this.label18.Text = "Booking ID:";
             // 
-            // textBox7
+            // txtBookingER
             // 
-            this.textBox7.Location = new System.Drawing.Point(164, 46);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(115, 20);
-            this.textBox7.TabIndex = 6;
+            this.txtBookingER.Location = new System.Drawing.Point(163, 46);
+            this.txtBookingER.Name = "txtBookingER";
+            this.txtBookingER.Size = new System.Drawing.Size(115, 20);
+            this.txtBookingER.TabIndex = 6;
             // 
             // label4
             // 
@@ -707,17 +726,17 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Edit Reservation";
             // 
-            // dataGridView1
+            // dgvEditReservation
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(593, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 584);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvEditReservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEditReservation.Location = new System.Drawing.Point(593, 6);
+            this.dgvEditReservation.Name = "dgvEditReservation";
+            this.dgvEditReservation.Size = new System.Drawing.Size(543, 584);
+            this.dgvEditReservation.TabIndex = 4;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtSearchSurnameER);
+            this.groupBox1.Controls.Add(this.txtSearchER);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Location = new System.Drawing.Point(156, 28);
             this.groupBox1.Name = "groupBox1";
@@ -726,12 +745,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Reservation";
             // 
-            // txtSearchSurnameER
+            // txtSearchER
             // 
-            this.txtSearchSurnameER.Location = new System.Drawing.Point(140, 29);
-            this.txtSearchSurnameER.Name = "txtSearchSurnameER";
-            this.txtSearchSurnameER.Size = new System.Drawing.Size(115, 20);
-            this.txtSearchSurnameER.TabIndex = 4;
+            this.txtSearchER.Location = new System.Drawing.Point(140, 29);
+            this.txtSearchER.Name = "txtSearchER";
+            this.txtSearchER.Size = new System.Drawing.Size(115, 20);
+            this.txtSearchER.TabIndex = 4;
             // 
             // label17
             // 
@@ -742,18 +761,22 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Search by Surname:";
             // 
-            // button2
+            // btnBackER
             // 
-            this.button2.Location = new System.Drawing.Point(1070, 596);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBackER.Location = new System.Drawing.Point(1070, 596);
+            this.btnBackER.Name = "btnBackER";
+            this.btnBackER.Size = new System.Drawing.Size(77, 36);
+            this.btnBackER.TabIndex = 2;
+            this.btnBackER.Text = "Back";
+            this.btnBackER.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button6);
+            this.tabPage1.Controls.Add(this.panel6);
+            this.tabPage1.Controls.Add(this.panel5);
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.dgvEditGuest);
+            this.tabPage1.Controls.Add(this.btnBackEG);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -762,14 +785,14 @@
             this.tabPage1.Text = "Edit Personal Info";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnBackEG
             // 
-            this.button6.Location = new System.Drawing.Point(1019, 543);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(77, 36);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Back";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnBackEG.Location = new System.Drawing.Point(1070, 596);
+            this.btnBackEG.Name = "btnBackEG";
+            this.btnBackEG.Size = new System.Drawing.Size(77, 36);
+            this.btnBackEG.TabIndex = 3;
+            this.btnBackEG.Text = "Back";
+            this.btnBackEG.UseVisualStyleBackColor = true;
             // 
             // tpAdmin
             // 
@@ -807,7 +830,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(433, 192);
+            this.button1.Location = new System.Drawing.Point(433, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -834,10 +857,223 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(420, 152);
+            this.textBox1.Location = new System.Drawing.Point(420, 146);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
+            // 
+            // dgvEditGuest
+            // 
+            this.dgvEditGuest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEditGuest.Location = new System.Drawing.Point(604, 6);
+            this.dgvEditGuest.Name = "dgvEditGuest";
+            this.dgvEditGuest.Size = new System.Drawing.Size(543, 584);
+            this.dgvEditGuest.TabIndex = 5;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtSearchEG);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Location = new System.Drawing.Point(141, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(287, 59);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Search Guest";
+            // 
+            // txtSearchEG
+            // 
+            this.txtSearchEG.Location = new System.Drawing.Point(140, 29);
+            this.txtSearchEG.Name = "txtSearchEG";
+            this.txtSearchEG.Size = new System.Drawing.Size(115, 20);
+            this.txtSearchEG.TabIndex = 4;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(31, 32);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(103, 13);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Search by Surname:";
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.btnDeleteGuest);
+            this.panel5.Controls.Add(this.btnGoEditGuest);
+            this.panel5.Controls.Add(this.label28);
+            this.panel5.Controls.Add(this.txtGuestIDEG);
+            this.panel5.Controls.Add(this.label29);
+            this.panel5.Location = new System.Drawing.Point(80, 109);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(400, 124);
+            this.panel5.TabIndex = 7;
+            // 
+            // btnDeleteGuest
+            // 
+            this.btnDeleteGuest.Location = new System.Drawing.Point(209, 87);
+            this.btnDeleteGuest.Name = "btnDeleteGuest";
+            this.btnDeleteGuest.Size = new System.Drawing.Size(122, 30);
+            this.btnDeleteGuest.TabIndex = 8;
+            this.btnDeleteGuest.Text = "Delete Guest";
+            this.btnDeleteGuest.UseVisualStyleBackColor = true;
+            // 
+            // btnGoEditGuest
+            // 
+            this.btnGoEditGuest.Location = new System.Drawing.Point(50, 87);
+            this.btnGoEditGuest.Name = "btnGoEditGuest";
+            this.btnGoEditGuest.Size = new System.Drawing.Size(122, 30);
+            this.btnGoEditGuest.TabIndex = 7;
+            this.btnGoEditGuest.Text = "Edit Guest";
+            this.btnGoEditGuest.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(65, 49);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(52, 13);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Guest ID:";
+            // 
+            // txtGuestIDEG
+            // 
+            this.txtGuestIDEG.Location = new System.Drawing.Point(164, 46);
+            this.txtGuestIDEG.Name = "txtGuestIDEG";
+            this.txtGuestIDEG.Size = new System.Drawing.Size(115, 20);
+            this.txtGuestIDEG.TabIndex = 6;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(161, 14);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(56, 13);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Edit Guest";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.txtPhoneEG);
+            this.panel6.Controls.Add(this.txtEmailEG);
+            this.panel6.Controls.Add(this.btnUpdateGuest);
+            this.panel6.Controls.Add(this.label33);
+            this.panel6.Controls.Add(this.label34);
+            this.panel6.Controls.Add(this.txtSurnameEG);
+            this.panel6.Controls.Add(this.label35);
+            this.panel6.Controls.Add(this.button14);
+            this.panel6.Controls.Add(this.txtNameEG);
+            this.panel6.Controls.Add(this.label36);
+            this.panel6.Controls.Add(this.label37);
+            this.panel6.Location = new System.Drawing.Point(27, 251);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(541, 339);
+            this.panel6.TabIndex = 9;
+            this.panel6.Visible = false;
+            // 
+            // btnUpdateGuest
+            // 
+            this.btnUpdateGuest.Location = new System.Drawing.Point(204, 282);
+            this.btnUpdateGuest.Name = "btnUpdateGuest";
+            this.btnUpdateGuest.Size = new System.Drawing.Size(139, 48);
+            this.btnUpdateGuest.TabIndex = 9;
+            this.btnUpdateGuest.Text = "Confirm Guest Info Update";
+            this.btnUpdateGuest.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(273, 202);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(38, 13);
+            this.label33.TabIndex = 20;
+            this.label33.Text = "E-mail:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(33, 202);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(41, 13);
+            this.label34.TabIndex = 19;
+            this.label34.Text = "Phone:";
+            // 
+            // txtSurnameEG
+            // 
+            this.txtSurnameEG.Enabled = false;
+            this.txtSurnameEG.Location = new System.Drawing.Point(331, 116);
+            this.txtSurnameEG.Name = "txtSurnameEG";
+            this.txtSurnameEG.Size = new System.Drawing.Size(120, 20);
+            this.txtSurnameEG.TabIndex = 11;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(259, 119);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(52, 13);
+            this.label35.TabIndex = 10;
+            this.label35.Text = "Surname:";
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(233, 336);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(122, 30);
+            this.button14.TabIndex = 7;
+            this.button14.Text = "Edit Reservation";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // txtNameEG
+            // 
+            this.txtNameEG.Enabled = false;
+            this.txtNameEG.Location = new System.Drawing.Point(85, 116);
+            this.txtNameEG.Name = "txtNameEG";
+            this.txtNameEG.Size = new System.Drawing.Size(120, 20);
+            this.txtNameEG.TabIndex = 8;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(36, 119);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(38, 13);
+            this.label36.TabIndex = 9;
+            this.label36.Text = "Name:";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(36, 16);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(114, 13);
+            this.label37.TabIndex = 5;
+            this.label37.Text = "Edit Guest Information:";
+            // 
+            // txtEmailEG
+            // 
+            this.txtEmailEG.Enabled = false;
+            this.txtEmailEG.Location = new System.Drawing.Point(331, 199);
+            this.txtEmailEG.Name = "txtEmailEG";
+            this.txtEmailEG.Size = new System.Drawing.Size(120, 20);
+            this.txtEmailEG.TabIndex = 22;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(162, 238);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(116, 20);
+            this.textBox5.TabIndex = 8;
+            // 
+            // txtPhoneEG
+            // 
+            this.txtPhoneEG.Enabled = false;
+            this.txtPhoneEG.Location = new System.Drawing.Point(85, 199);
+            this.txtPhoneEG.Name = "txtPhoneEG";
+            this.txtPhoneEG.Size = new System.Drawing.Size(120, 20);
+            this.txtPhoneEG.TabIndex = 23;
             // 
             // Form1
             // 
@@ -862,12 +1098,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupRoomAmountER)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditReservation)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tpAdmin.ResumeLayout(false);
             this.tpAdmin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditGuest)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -892,10 +1135,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBackMR;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBackER;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -917,19 +1159,19 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEditReservation;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnBackEG;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtERName;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnGoEditReservation;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBookingER;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSearchSurnameER;
+        private System.Windows.Forms.TextBox txtSearchER;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox txtSurnameER;
@@ -938,16 +1180,39 @@
         private System.Windows.Forms.NumericUpDown nupRoomAmountER;
         private System.Windows.Forms.ComboBox cmbTypeER;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnDeleteReservation;
         private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.DateTimePicker dtpCheckIn;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DateTimePicker dtpCheckInER;
         private System.Windows.Forms.DateTimePicker dtpCheckOutER;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnUpdateReservation;
         private System.Windows.Forms.TextBox txtBookingIDER;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtSearchEG;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.DataGridView dgvEditGuest;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnDeleteGuest;
+        private System.Windows.Forms.Button btnGoEditGuest;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtGuestIDEG;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnUpdateGuest;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtSurnameEG;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox txtNameEG;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox txtEmailEG;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPhoneEG;
     }
 }
 

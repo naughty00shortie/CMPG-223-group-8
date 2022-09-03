@@ -26,16 +26,16 @@ namespace Arcadia_Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            LoadModels();
         }
 
         private void LoadModels()
         {
-            DataAccess.LoadBooking();
-            DataAccess.LoadEmployee();
-            DataAccess.LoadGuest();
-            DataAccess.LoadRole();
-            DataAccess.LoadRoom();
+            DataAccess.loadBooking();
+            DataAccess.loadEmployee();
+            DataAccess.loadGuest();
+            DataAccess.loadRole();
+            DataAccess.loadRoom();
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -93,24 +93,25 @@ namespace Arcadia_Hotel
             guest.Guest_Surname = textBox2.Text;
             guest.Guest_Name = textBox3.Text; 
             guest.Guest_Email = textBox4.Text;
-            guest.Guest_Phone_Number = maskedTextBox1.Text;
+            guest.Guest_Phone_Number = textBox5.Text;
 
             BookingModel booking = new BookingModel();
             booking.Booking_Price_paid = calcBookingPrice();
+            txtPrice.Text = calcBookingPrice().ToString();
             booking.Booking_Check_In = DateTime.Parse(dtpCheckIn.Text);
             booking.Booking_Check_out = DateTime.Parse(dtpCheckOut.Text);
 
             DataAccess.insertGuest(guest);
-            guests = DataAccess.LoadGuest();
+            guests = DataAccess.loadGuest();
 
             for (int i = 0; i < nudRoomAmount.Value; i++)
             {
                 DataAccess.insertBooking(booking);
-                bookings = DataAccess.LoadBooking();
+                bookings = DataAccess.loadBooking();
             }
         }
 
-        private float calcBookingPrice()
+        public float calcBookingPrice()
         {
             int totalDays = 0;
             totalDays = (int)(DateTime.Parse(dtpCheckIn.Text) - DateTime.Parse(dtpCheckOut.Text)).TotalDays;
@@ -157,14 +158,28 @@ namespace Arcadia_Hotel
         {
 
         }
+
+        private void btnUpdateReservation_Click(object sender, EventArgs e)
+        {
+            //dgvEditGuest.DataSource = DataAccess.loadRoomSet();
+            frmConfirmEdit frmConfirmEdit = new frmConfirmEdit(this,(int)calcBookingPrice(),(int)nupRoomAmountER.Value);
+            frmConfirmEdit.Show();
+        }
+
+        private void btnGoEditReservation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 /*Waar daar staan Model beteken dit is n tabel in die DB
 Om dit te access moet jy n nuwe object create van daai datatype af
 die lists van die tables is bo aan create. die lists het die naam van die table plus n "s" bv bookings
-lists werk baie goed in n foreach loop bv.    foreach (var room in rooms) dan is room n rekord in die tabel en rooms die lys.
-om data in die DB in te lees moet daar eers n nuwe rekord create word bv. GuestModel guest = new GuestModel(); dan lees jy die data in die rekord bv. guest.Guest_Name = "Koos";
-Dan kan DataAccess.insertGuest(guest); gecall word om die data in te lees. Na die tyd moet guests =  DataAccess.LoadGuest(); gecall word om die data te update;
+lists werk baie goed in n foreach loop bv.    foreach (var room in rooms) dan is room n rekord in die tabel 
+en rooms die lys. om data in die DB in te lees moet daar eers n nuwe rekord create word bv. GuestModel guest = new GuestModel();
+dan lees jy die data in die rekord bv. guest.Guest_Name = "Koos";
+Dan kan DataAccess.insertGuest(guest); gecall word om die data in te lees. Na die tyd moet guests =  DataAccess.LoadGuest(); 
+gecall word om die data te update;
 
  
  

@@ -36,10 +36,10 @@ namespace Arcadia_Hotel
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtGuestId = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -106,41 +106,41 @@ namespace Arcadia_Hotel
             this.txtName.Size = new System.Drawing.Size(120, 20);
             this.txtName.TabIndex = 33;
             // 
-            // textBox1
+            // txtSurname
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(268, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 34;
+            this.txtSurname.Enabled = false;
+            this.txtSurname.Location = new System.Drawing.Point(268, 42);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.ReadOnly = true;
+            this.txtSurname.Size = new System.Drawing.Size(120, 20);
+            this.txtSurname.TabIndex = 34;
             // 
-            // textBox2
+            // txtGuestId
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(168, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(94, 20);
-            this.textBox2.TabIndex = 35;
+            this.txtGuestId.Enabled = false;
+            this.txtGuestId.Location = new System.Drawing.Point(168, 92);
+            this.txtGuestId.Name = "txtGuestId";
+            this.txtGuestId.ReadOnly = true;
+            this.txtGuestId.Size = new System.Drawing.Size(94, 20);
+            this.txtGuestId.TabIndex = 35;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(68, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(120, 20);
-            this.textBox3.TabIndex = 36;
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(68, 144);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(120, 20);
+            this.txtEmail.TabIndex = 36;
             // 
-            // textBox4
+            // txtPhone
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(268, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(120, 20);
-            this.textBox4.TabIndex = 37;
+            this.txtPhone.Enabled = false;
+            this.txtPhone.Location = new System.Drawing.Point(268, 144);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(120, 20);
+            this.txtPhone.TabIndex = 37;
             // 
             // btnOk
             // 
@@ -150,6 +150,7 @@ namespace Arcadia_Hotel
             this.btnOk.TabIndex = 38;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // frmConfirmationGuest
             // 
@@ -157,10 +158,10 @@ namespace Arcadia_Hotel
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 216);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtGuestId);
+            this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -184,10 +185,10 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtGuestId;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnOk;
     }
 }

@@ -78,3 +78,4 @@ C:\dev\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmation.re
 C:\dev\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmEdit.resources
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmEdit.resources
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmationGuest.resources
+C:\dev\CMPG-223-group-8\Arcadia_Hotel\obj\Debug\Arcadia_Hotel.frmConfirmationGuest.resources

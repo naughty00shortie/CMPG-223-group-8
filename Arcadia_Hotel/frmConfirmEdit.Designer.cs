@@ -39,7 +39,6 @@ namespace Arcadia_Hotel
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
-            this.txtRoomType = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@ namespace Arcadia_Hotel
             this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -140,15 +140,6 @@ namespace Arcadia_Hotel
             this.txtAmount.Size = new System.Drawing.Size(72, 20);
             this.txtAmount.TabIndex = 34;
             // 
-            // txtRoomType
-            // 
-            this.txtRoomType.Enabled = false;
-            this.txtRoomType.Location = new System.Drawing.Point(105, 141);
-            this.txtRoomType.Name = "txtRoomType";
-            this.txtRoomType.ReadOnly = true;
-            this.txtRoomType.Size = new System.Drawing.Size(120, 20);
-            this.txtRoomType.TabIndex = 35;
-            // 
             // txtPrice
             // 
             this.txtPrice.Enabled = false;
@@ -216,12 +207,22 @@ namespace Arcadia_Hotel
             this.btnOk.TabIndex = 44;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(105, 140);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 45;
             // 
             // frmConfirmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 357);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpCheckOut);
@@ -230,7 +231,6 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtRoomType);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSurname);
@@ -260,7 +260,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAmount;
-        private System.Windows.Forms.TextBox txtRoomType;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -269,5 +268,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

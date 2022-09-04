@@ -61,12 +61,19 @@ namespace Arcadia_Hotel_DB
             }
         }
 
-        public static DataSet loadRoomSet()
+        public static DataTable querySQL(String query)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (SqlConnection cnn = new SqlConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<RoomModel>("select * from Room", new DynamicParameters()).AsQueryable(); 
-                return (DataSet)output;
+                cnn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                adapter.SelectCommand = new SqlCommand();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(ds);
+                cnn.Close();
+                return ds.Tables[0];
             }
         }
 

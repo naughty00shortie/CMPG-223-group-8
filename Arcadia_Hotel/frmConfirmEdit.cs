@@ -35,12 +35,9 @@ namespace Arcadia_Hotel
             guest.Guest_Name = txtName.Text;
             guest.Guest_Surname = txtSurname.Text;
 
-            booking.Booking_Number = int.Parse(txtBookingID.Text);
-            booking.Booking_Price_paid = bookingRecieved.Booking_Price_paid;
+            room.Room_Description = comboBox1.Text;
 
-            room.Room_Description = txtRoomType.Text;
-
-            txtPrice.Text = ipayed_Amount.ToString();
+            txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
 
 
             DataAccess.updateBooking(booking,booking.Room_Number);

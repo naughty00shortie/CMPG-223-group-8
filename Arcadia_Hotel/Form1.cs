@@ -31,11 +31,11 @@ namespace Arcadia_Hotel
 
         private void LoadModels()
         {
-            DataAccess.loadBooking();
-            DataAccess.loadEmployee();
-            DataAccess.loadGuest();
-            DataAccess.loadRole();
-            DataAccess.loadRoom();
+            bookings = DataAccess.loadBooking();
+            employees = DataAccess.loadEmployee();
+            guests = DataAccess.loadGuest();
+            roles = DataAccess.loadRole();
+            rooms = DataAccess.loadRoom();
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -161,9 +161,9 @@ namespace Arcadia_Hotel
 
         private void btnUpdateReservation_Click(object sender, EventArgs e)
         {
-            //dgvEditGuest.DataSource = DataAccess.loadRoomSet();
-            frmConfirmEdit frmConfirmEdit = new frmConfirmEdit(this,(int)calcBookingPrice(),(int)nupRoomAmountER.Value);
-            frmConfirmEdit.Show();
+            dgvEditReservation.DataSource = DataAccess.querySQL("SELECT * FROM Room");
+            //frmConfirmEdit frmConfirmEdit = new frmConfirmEdit(this,(int)calcBookingPrice(),(int)nupRoomAmountER.Value);
+            //frmConfirmEdit.Show();
         }
 
         private void btnGoEditReservation_Click(object sender, EventArgs e)

@@ -93,6 +93,8 @@
             this.btnBackER = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtGuestEG = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.txtPhoneEG = new System.Windows.Forms.TextBox();
             this.txtEmailEG = new System.Windows.Forms.TextBox();
             this.btnUpdateGuest = new System.Windows.Forms.Button();
@@ -122,8 +124,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtGuestEG = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpMenu.SuspendLayout();
             this.tpReservation.SuspendLayout();
@@ -800,6 +800,24 @@
             this.panel6.TabIndex = 9;
             this.panel6.Visible = false;
             // 
+            // txtGuestEG
+            // 
+            this.txtGuestEG.Enabled = false;
+            this.txtGuestEG.Location = new System.Drawing.Point(331, 48);
+            this.txtGuestEG.Name = "txtGuestEG";
+            this.txtGuestEG.ReadOnly = true;
+            this.txtGuestEG.Size = new System.Drawing.Size(120, 20);
+            this.txtGuestEG.TabIndex = 25;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(259, 51);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(49, 13);
+            this.label30.TabIndex = 24;
+            this.label30.Text = "Guest ID";
+            // 
             // txtPhoneEG
             // 
             this.txtPhoneEG.Enabled = false;
@@ -1027,7 +1045,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(598, 434);
+            this.label3.Location = new System.Drawing.Point(322, 565);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(330, 13);
             this.label3.TabIndex = 4;
@@ -1066,24 +1084,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
-            // 
-            // txtGuestEG
-            // 
-            this.txtGuestEG.Enabled = false;
-            this.txtGuestEG.Location = new System.Drawing.Point(331, 48);
-            this.txtGuestEG.Name = "txtGuestEG";
-            this.txtGuestEG.ReadOnly = true;
-            this.txtGuestEG.Size = new System.Drawing.Size(120, 20);
-            this.txtGuestEG.TabIndex = 25;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(259, 51);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(49, 13);
-            this.label30.TabIndex = 24;
-            this.label30.Text = "Guest ID";
             // 
             // Form1
             // 

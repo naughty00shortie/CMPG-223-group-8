@@ -72,9 +72,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.dtpCheckInER = new System.Windows.Forms.DateTimePicker();
-            this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.nupRoomAmountER = new System.Windows.Forms.NumericUpDown();
             this.cmbTypeER = new System.Windows.Forms.ComboBox();
             this.txtSurnameER = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -124,6 +122,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGuestEG = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpMenu.SuspendLayout();
             this.tpReservation.SuspendLayout();
@@ -132,7 +132,6 @@
             this.panel1.SuspendLayout();
             this.tpChangeReservation.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupRoomAmountER)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditReservation)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -518,9 +517,7 @@
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label24);
             this.panel4.Controls.Add(this.dtpCheckInER);
-            this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.label22);
-            this.panel4.Controls.Add(this.nupRoomAmountER);
             this.panel4.Controls.Add(this.cmbTypeER);
             this.panel4.Controls.Add(this.txtSurnameER);
             this.panel4.Controls.Add(this.label21);
@@ -532,12 +529,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(541, 339);
             this.panel4.TabIndex = 8;
+            this.panel4.Visible = false;
             // 
             // txtBookingIDER
             // 
             this.txtBookingIDER.Enabled = false;
             this.txtBookingIDER.Location = new System.Drawing.Point(336, 16);
             this.txtBookingIDER.Name = "txtBookingIDER";
+            this.txtBookingIDER.ReadOnly = true;
             this.txtBookingIDER.Size = new System.Drawing.Size(120, 20);
             this.txtBookingIDER.TabIndex = 26;
             // 
@@ -592,15 +591,6 @@
             this.dtpCheckInER.Size = new System.Drawing.Size(200, 20);
             this.dtpCheckInER.TabIndex = 21;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(346, 138);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(54, 13);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Ammount:";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -609,13 +599,6 @@
             this.label22.Size = new System.Drawing.Size(65, 13);
             this.label22.TabIndex = 19;
             this.label22.Text = "Room Type:";
-            // 
-            // nupRoomAmountER
-            // 
-            this.nupRoomAmountER.Location = new System.Drawing.Point(406, 135);
-            this.nupRoomAmountER.Name = "nupRoomAmountER";
-            this.nupRoomAmountER.Size = new System.Drawing.Size(49, 20);
-            this.nupRoomAmountER.TabIndex = 18;
             // 
             // cmbTypeER
             // 
@@ -698,6 +681,7 @@
             this.btnDeleteReservation.TabIndex = 8;
             this.btnDeleteReservation.Text = "Delete Reservation";
             this.btnDeleteReservation.UseVisualStyleBackColor = true;
+            this.btnDeleteReservation.Click += new System.EventHandler(this.btnDeleteReservation_Click);
             // 
             // btnGoEditReservation
             // 
@@ -777,6 +761,7 @@
             this.btnBackER.TabIndex = 2;
             this.btnBackER.Text = "Back";
             this.btnBackER.UseVisualStyleBackColor = true;
+            this.btnBackER.Click += new System.EventHandler(this.btnBackER_Click);
             // 
             // tabPage1
             // 
@@ -796,6 +781,8 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.txtGuestEG);
+            this.panel6.Controls.Add(this.label30);
             this.panel6.Controls.Add(this.txtPhoneEG);
             this.panel6.Controls.Add(this.txtEmailEG);
             this.panel6.Controls.Add(this.btnUpdateGuest);
@@ -837,6 +824,7 @@
             this.btnUpdateGuest.TabIndex = 9;
             this.btnUpdateGuest.Text = "Confirm Guest Info Update";
             this.btnUpdateGuest.UseVisualStyleBackColor = true;
+            this.btnUpdateGuest.Click += new System.EventHandler(this.btnUpdateGuest_Click);
             // 
             // label33
             // 
@@ -929,6 +917,7 @@
             this.btnDeleteGuest.TabIndex = 8;
             this.btnDeleteGuest.Text = "Delete Guest";
             this.btnDeleteGuest.UseVisualStyleBackColor = true;
+            this.btnDeleteGuest.Click += new System.EventHandler(this.btnDeleteGuest_Click);
             // 
             // btnGoEditGuest
             // 
@@ -938,6 +927,7 @@
             this.btnGoEditGuest.TabIndex = 7;
             this.btnGoEditGuest.Text = "Edit Guest";
             this.btnGoEditGuest.UseVisualStyleBackColor = true;
+            this.btnGoEditGuest.Click += new System.EventHandler(this.btnGoEditGuest_Click);
             // 
             // label28
             // 
@@ -1007,6 +997,7 @@
             this.btnBackEG.TabIndex = 3;
             this.btnBackEG.Text = "Back";
             this.btnBackEG.UseVisualStyleBackColor = true;
+            this.btnBackEG.Click += new System.EventHandler(this.btnBackEG_Click);
             // 
             // tpAdmin
             // 
@@ -1076,6 +1067,24 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
+            // txtGuestEG
+            // 
+            this.txtGuestEG.Enabled = false;
+            this.txtGuestEG.Location = new System.Drawing.Point(331, 48);
+            this.txtGuestEG.Name = "txtGuestEG";
+            this.txtGuestEG.ReadOnly = true;
+            this.txtGuestEG.Size = new System.Drawing.Size(120, 20);
+            this.txtGuestEG.TabIndex = 25;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(259, 51);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(49, 13);
+            this.label30.TabIndex = 24;
+            this.label30.Text = "Guest ID";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1096,7 +1105,6 @@
             this.tpChangeReservation.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupRoomAmountER)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditReservation)).EndInit();
@@ -1178,9 +1186,7 @@
         private System.Windows.Forms.TextBox txtSurnameER;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.NumericUpDown nupRoomAmountER;
         private System.Windows.Forms.ComboBox cmbTypeER;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btnDeleteReservation;
         private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.DateTimePicker dtpCheckIn;
@@ -1214,6 +1220,8 @@
         private System.Windows.Forms.TextBox txtEmailEG;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txtPhoneEG;
+        private System.Windows.Forms.TextBox txtGuestEG;
+        private System.Windows.Forms.Label label30;
     }
 }
 

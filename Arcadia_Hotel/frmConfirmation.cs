@@ -40,7 +40,7 @@ namespace Arcadia_Hotel
             txtPhone.Text = guestRecieved.Guest_Phone_Number;
 
             dtpCheckIn.Text = bookingRecieved.Booking_Check_In.ToString();
-            dtpCheckOut.Text = bookingRecieved.Booking_Check_out.ToString();
+            dtpCheckOut.Text = bookingRecieved.Booking_Check_Out.ToString();
             txtBookingID.Text = bookingRecieved.Booking_Number.ToString();
             txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
 

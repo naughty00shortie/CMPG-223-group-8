@@ -19,11 +19,12 @@ namespace Arcadia_Hotel
         private BookingModel bookingRecieved;
 
 
-        public frmConfirmEdit(Form1 form1,BookingModel bookingRecieved)
+        public frmConfirmEdit(Form1 form1,BookingModel bookingRecieved,GuestModel guest, RoomModel room)
         {
             InitializeComponent();
             this.form1 = form1;
             this.bookingRecieved = bookingRecieved;
+
         }
 
         private void btnOk_Click(object sender, EventArgs e)

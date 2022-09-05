@@ -140,6 +140,29 @@ namespace Arcadia_Hotel_DB
 
         #endregion
 
+        #region DELETE
+
+
+        public static void DeleteBooking(int iD)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"DELETE Booking WHERE {iD} = Booking_Number");
+            }
+        }
+
+        public static void DeleteGuest(int iD)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"DELETE Guest WHERE {iD} = Guest_ID");
+            }
+        }
+
+
+        #endregion
+
+
 
 
 

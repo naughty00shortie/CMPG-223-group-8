@@ -26,16 +26,18 @@ namespace Arcadia_Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            LoadModels();
+            panel4.Visible = false;
+            panel6.Visible = false;
         }
 
         private void LoadModels()
         {
-            DataAccess.LoadBooking();
-            DataAccess.LoadEmployee();
-            DataAccess.LoadGuest();
-            DataAccess.LoadRole();
-            DataAccess.LoadRoom();
+            bookings = DataAccess.loadBooking();
+            employees = DataAccess.loadEmployee();
+            guests = DataAccess.loadGuest();
+            roles = DataAccess.loadRole();
+            rooms = DataAccess.loadRoom();
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -93,24 +95,25 @@ namespace Arcadia_Hotel
             guest.Guest_Surname = textBox2.Text;
             guest.Guest_Name = textBox3.Text; 
             guest.Guest_Email = textBox4.Text;
-            guest.Guest_Phone_Number = maskedTextBox1.Text;
+            guest.Guest_Phone_Number = textBox5.Text;
 
             BookingModel booking = new BookingModel();
             booking.Booking_Price_paid = calcBookingPrice();
+            txtPrice.Text = calcBookingPrice().ToString();
             booking.Booking_Check_In = DateTime.Parse(dtpCheckIn.Text);
-            booking.Booking_Check_out = DateTime.Parse(dtpCheckOut.Text);
+            booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text);
 
             DataAccess.insertGuest(guest);
-            guests = DataAccess.LoadGuest();
+            guests = DataAccess.loadGuest();
 
             for (int i = 0; i < nudRoomAmount.Value; i++)
             {
                 DataAccess.insertBooking(booking);
-                bookings = DataAccess.LoadBooking();
+                bookings = DataAccess.loadBooking();
             }
         }
 
-        private float calcBookingPrice()
+        public float calcBookingPrice()
         {
             int totalDays = 0;
             totalDays = (int)(DateTime.Parse(dtpCheckIn.Text) - DateTime.Parse(dtpCheckOut.Text)).TotalDays;
@@ -153,20 +156,138 @@ namespace Arcadia_Hotel
             tabControl1.SelectedIndex = 0;
         }
 
-        private void button10_Click(object sender, EventArgs e)
+
+        private void btnUpdateReservation_Click(object sender, EventArgs e)
         {
 
+            BookingModel booking = new BookingModel();
+            GuestModel guest = new GuestModel();
+            RoomModel room = new RoomModel();
+
+
+
+            booking.Booking_Number = int.Parse(txtBookingIDER.Text);
+            guest.Guest_Name = txtERName.Text;
+            guest.Guest_Surname = txtSurnameER.Text;
+            room.Room_Size = cmbTypeER.Text;
+            booking.Booking_Check_In =  DateTime.Parse(dtpCheckIn.Text);
+            booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text); 
+            //alles van frontend na backend
+
+
+            frmConfirmEdit frmConfirmEdit = new frmConfirmEdit(this, booking,guest,room);
+            frmConfirmEdit.Show();
+
+            bookings = DataAccess.loadBooking();
+        }
+
+        private void btnGoEditReservation_Click(object sender, EventArgs e)
+        {
+            foreach (var booking in bookings)
+            {
+                if (booking.Booking_Number == int.Parse(txtBookingER.Text))
+                {
+
+                    txtBookingIDER.Text = booking.Booking_Number.ToString();
+                    //txtERName.Text = booking.Booking_Name.ToString();
+                    //txtSurnameER.Text = booking.Booking_Surname.ToString();
+                    
+                    dtpCheckInER.Text = booking.Booking_Check_In.ToString();
+                    dtpCheckOutER.Text = booking.Booking_Check_Out.ToString();
+                    foreach (var guest in guests)
+                    {
+                        if (guest.Guest_ID == booking.Guest_ID)
+                        {
+                            txtERName.Text = guest.Guest_Name;
+                            txtSurnameER.Text = guest.Guest_Surname;
+                            break;
+                        }
+
+                    }
+                    foreach (var room in rooms)
+                    {
+                        if (room.Room_Number == booking.Room_Number)
+                        {
+                            cmbTypeER.Text = room.Room_Size;
+                        }
+                    }
+
+
+                    panel4.Visible = true;
+                    break;
+                }
+            }
+        }
+
+        private void btnGoEditGuest_Click(object sender, EventArgs e)
+        {            
+            GuestModel guestModel = new GuestModel();
+            foreach (var guest in guests)
+            {
+                if (guest.Guest_ID == int.Parse(txtGuestIDEG.Text))
+                {
+                    txtNameEG.Text = guest.Guest_Name;
+                    txtSurnameEG.Text = guest.Guest_Surname;
+                    txtPhoneEG.Text = guest.Guest_Phone_Number.ToString();
+                    txtEmailEG.Text = guest.Guest_Email.ToString();
+                    txtGuestIDEG.Text = guest.Guest_ID.ToString();
+                }
+            }
+            frmConfirmationGuest frmConfirmationGuest = new frmConfirmationGuest(this , guestModel);
+            panel6.Visible = true;
+        }
+
+        private void btnDeleteGuest_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                DataAccess.DeleteBooking(int.Parse(txtGuestIDEG.Text));
+            }
+        }
+
+        private void btnUpdateGuest_Click(object sender, EventArgs e)
+        {
+            GuestModel guest = new GuestModel();     
+            guest.Guest_Name = txtNameEG.Text;
+            guest.Guest_Surname = txtSurnameEG.Text;
+            guest.Guest_Phone_Number = txtPhoneEG.Text;
+            guest.Guest_Email = txtEmailEG.Text;
+            guest.Guest_ID = int.Parse(txtGuestIDEG.Text);
+            
+            frmConfirmationGuest frmConfirmGuest = new frmConfirmationGuest(this, guest);
+            frmConfirmGuest.Show();
+
+        }
+
+        private void btnBackEG_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void btnDeleteReservation_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                DataAccess.DeleteBooking(int.Parse(txtBookingER.Text));
+            }
+        }
+
+        private void btnBackER_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
         }
     }
 }
 /*Waar daar staan Model beteken dit is n tabel in die DB
 Om dit te access moet jy n nuwe object create van daai datatype af
 die lists van die tables is bo aan create. die lists het die naam van die table plus n "s" bv bookings
-lists werk baie goed in n foreach loop bv.    foreach (var room in rooms) dan is room n rekord in die tabel en rooms die lys.
-om data in die DB in te lees moet daar eers n nuwe rekord create word bv. GuestModel guest = new GuestModel(); dan lees jy die data in die rekord bv. guest.Guest_Name = "Koos";
-Dan kan DataAccess.insertGuest(guest); gecall word om die data in te lees. Na die tyd moet guests =  DataAccess.LoadGuest(); gecall word om die data te update;
-
- 
- 
+lists werk baie goed in n foreach loop bv.    foreach (var room in rooms) dan is room n rekord in die tabel 
+en rooms die lys. om data in die DB in te lees moet daar eers n nuwe rekord create word bv. GuestModel guest = new GuestModel();
+dan lees jy die data in die rekord bv. guest.Guest_Name = "Koos";
+Dan kan DataAccess.insertGuest(guest); gecall word om die data in te lees. Na die tyd moet guests =  DataAccess.LoadGuest(); 
+gecall word om die data te update;
+Prof Linda is luuks
  */
+ //prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛)
+ 
 

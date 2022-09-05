@@ -12,7 +12,7 @@ namespace Arcadia_Hotel_DB
         public int Room_Number { get; set; }
         public int Guest_ID { get; set; }
         public DateTime Booking_Check_In { get; set; }
-        public DateTime Booking_Check_out { get; set; }
+        public DateTime Booking_Check_Out { get; set; }
         public float Booking_Price_paid { get; set; }
     }
 }

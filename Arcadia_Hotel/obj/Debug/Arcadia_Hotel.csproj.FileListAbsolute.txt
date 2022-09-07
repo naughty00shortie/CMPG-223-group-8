@@ -84,3 +84,9 @@ C:\dev\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\System.ValueTuple.dll
 C:\dev\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\MoreLinq.pdb
 C:\dev\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\MoreLinq.xml
 C:\dev\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\System.ValueTuple.xml
+C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\MoreLinq.dll
+C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\System.ValueTuple.dll
+C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\XanderUI.dll
+C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\MoreLinq.pdb
+C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\MoreLinq.xml
+C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\System.ValueTuple.xml

@@ -18,7 +18,6 @@ namespace Arcadia_Hotel
         private Form1 form1;
         private BookingModel bookingRecieved;
 
-
         public frmConfirmEdit(Form1 form1,BookingModel bookingRecieved,GuestModel guest, RoomModel room)
         {
             InitializeComponent();

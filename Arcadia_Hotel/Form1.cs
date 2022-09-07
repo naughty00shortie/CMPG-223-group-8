@@ -26,9 +26,14 @@ namespace Arcadia_Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadModels();
+            //LoadModels();
             panel4.Visible = false;
             panel6.Visible = false;
+
+            // Make Page Invisible
+            tabControl1.Appearance = TabAppearance.FlatButtons; 
+            tabControl1.ItemSize = new Size(0, 1); 
+            tabControl1.SizeMode = TabSizeMode.Fixed;
         }
 
         private void LoadModels()

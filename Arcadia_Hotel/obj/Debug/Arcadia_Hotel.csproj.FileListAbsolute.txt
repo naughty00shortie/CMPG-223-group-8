@@ -91,3 +91,5 @@ C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debu
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\MoreLinq.xml
 C:\Users\ianst\OneDrive\Documents\GitHub\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\System.ValueTuple.xml
 C:\dev\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\XanderUI.dll
+C:\dev\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\ReaLTaiizor.dll
+C:\dev\CMPG-223-group-8\Arcadia_Hotel\bin\Debug\Controls\BBDateTime.cs

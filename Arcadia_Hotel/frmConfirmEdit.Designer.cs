@@ -29,6 +29,7 @@ namespace Arcadia_Hotel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfirmEdit));
             this.label1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -49,8 +50,9 @@ namespace Arcadia_Hotel
             this.btnOk = new XanderUI.XUIButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.xuiButton1 = new XanderUI.XUIButton();
             this.xuiButton2 = new XanderUI.XUIButton();
+            this.xuiButton1 = new XanderUI.XUIButton();
+            this.parrotBarGraph1 = new ReaLTaiizor.Controls.ParrotBarGraph();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -261,28 +263,6 @@ namespace Arcadia_Hotel
             this.panel1.Size = new System.Drawing.Size(445, 22);
             this.panel1.TabIndex = 48;
             // 
-            // xuiButton1
-            // 
-            this.xuiButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.xuiButton1.ButtonImage = null;
-            this.xuiButton1.ButtonStyle = XanderUI.XUIButton.Style.Material;
-            this.xuiButton1.ButtonText = "x";
-            this.xuiButton1.ClickBackColor = System.Drawing.Color.Red;
-            this.xuiButton1.ClickTextColor = System.Drawing.Color.White;
-            this.xuiButton1.CornerRadius = 5;
-            this.xuiButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.xuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.Red;
-            this.xuiButton1.HoverTextColor = System.Drawing.Color.White;
-            this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton1.Location = new System.Drawing.Point(423, 0);
-            this.xuiButton1.Name = "xuiButton1";
-            this.xuiButton1.Size = new System.Drawing.Size(22, 22);
-            this.xuiButton1.TabIndex = 49;
-            this.xuiButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
             // xuiButton2
             // 
             this.xuiButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -305,12 +285,55 @@ namespace Arcadia_Hotel
             this.xuiButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.xuiButton2.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
+            // xuiButton1
+            // 
+            this.xuiButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.xuiButton1.ButtonImage = null;
+            this.xuiButton1.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.xuiButton1.ButtonText = "x";
+            this.xuiButton1.ClickBackColor = System.Drawing.Color.Red;
+            this.xuiButton1.ClickTextColor = System.Drawing.Color.White;
+            this.xuiButton1.CornerRadius = 5;
+            this.xuiButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.xuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.Red;
+            this.xuiButton1.HoverTextColor = System.Drawing.Color.White;
+            this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.xuiButton1.Location = new System.Drawing.Point(423, 0);
+            this.xuiButton1.Name = "xuiButton1";
+            this.xuiButton1.Size = new System.Drawing.Size(22, 22);
+            this.xuiButton1.TabIndex = 49;
+            this.xuiButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // parrotBarGraph1
+            // 
+            this.parrotBarGraph1.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.parrotBarGraph1.GraphOrientation = ReaLTaiizor.Controls.ParrotBarGraph.Orientation.Vertical;
+            this.parrotBarGraph1.GraphStyle = ReaLTaiizor.Controls.ParrotBarGraph.Style.Material;
+            this.parrotBarGraph1.Items = ((System.Collections.Generic.List<int>)(resources.GetObject("parrotBarGraph1.Items")));
+            this.parrotBarGraph1.Location = new System.Drawing.Point(37, 43);
+            this.parrotBarGraph1.Name = "parrotBarGraph1";
+            this.parrotBarGraph1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotBarGraph1.ShowGrid = false;
+            this.parrotBarGraph1.Size = new System.Drawing.Size(386, 248);
+            this.parrotBarGraph1.Sorting = ReaLTaiizor.Controls.ParrotBarGraph.SortStyle.Normal;
+            this.parrotBarGraph1.SplitterColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.parrotBarGraph1.TabIndex = 49;
+            this.parrotBarGraph1.Text = "parrotBarGraph1";
+            this.parrotBarGraph1.TextAlignment = ReaLTaiizor.Controls.ParrotBarGraph.Aligning.Far;
+            this.parrotBarGraph1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.parrotBarGraph1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotBarGraph1.UnfilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            // 
             // frmConfirmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(445, 357);
+            this.Controls.Add(this.parrotBarGraph1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnOk);
@@ -366,5 +389,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Panel panel1;
         private XanderUI.XUIButton xuiButton1;
         private XanderUI.XUIButton xuiButton2;
+        private ReaLTaiizor.Controls.ParrotBarGraph parrotBarGraph1;
     }
 }

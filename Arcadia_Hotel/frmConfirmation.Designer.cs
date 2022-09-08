@@ -64,6 +64,7 @@ namespace Arcadia_Hotel
             // 
             // btnOk
             // 
+            this.btnOk.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnOk.Location = new System.Drawing.Point(208, 280);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 40);
@@ -276,8 +277,12 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(261, 61);
             this.Name = "frmConfirmation";
-            this.Text = "Reservation Report";
+            this.Text = "themeForm1";
+            this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.ResumeLayout(false);
             this.PerformLayout();
 

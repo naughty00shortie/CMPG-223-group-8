@@ -29,7 +29,6 @@ namespace Arcadia_Hotel
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfirmEdit));
             this.label1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -44,16 +43,19 @@ namespace Arcadia_Hotel
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
-            this.dtpCheckOut = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.btnOk = new XanderUI.XUIButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.xuiButton2 = new XanderUI.XUIButton();
             this.xuiButton1 = new XanderUI.XUIButton();
-            this.parrotBarGraph1 = new ReaLTaiizor.Controls.ParrotBarGraph();
+            this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
+            this.txtRoomType = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -188,20 +190,6 @@ namespace Arcadia_Hotel
             this.label5.TabIndex = 39;
             this.label5.Text = "Check Out:";
             // 
-            // dtpCheckIn
-            // 
-            this.dtpCheckIn.Location = new System.Drawing.Point(101, 183);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(200, 20);
-            this.dtpCheckIn.TabIndex = 40;
-            // 
-            // dtpCheckOut
-            // 
-            this.dtpCheckOut.Location = new System.Drawing.Point(101, 221);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(200, 20);
-            this.dtpCheckOut.TabIndex = 41;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -234,23 +222,6 @@ namespace Arcadia_Hotel
             this.btnOk.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 13;
-            this.comboBox1.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.comboBox1.Location = new System.Drawing.Point(102, 136);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 21);
-            this.comboBox1.TabIndex = 47;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -260,7 +231,7 @@ namespace Arcadia_Hotel
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 22);
+            this.panel1.Size = new System.Drawing.Size(455, 22);
             this.panel1.TabIndex = 48;
             // 
             // xuiButton2
@@ -278,7 +249,7 @@ namespace Arcadia_Hotel
             this.xuiButton2.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.xuiButton2.HoverTextColor = System.Drawing.Color.White;
             this.xuiButton2.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton2.Location = new System.Drawing.Point(401, 0);
+            this.xuiButton2.Location = new System.Drawing.Point(411, 0);
             this.xuiButton2.Name = "xuiButton2";
             this.xuiButton2.Size = new System.Drawing.Size(22, 22);
             this.xuiButton2.TabIndex = 50;
@@ -300,46 +271,77 @@ namespace Arcadia_Hotel
             this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.Red;
             this.xuiButton1.HoverTextColor = System.Drawing.Color.White;
             this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton1.Location = new System.Drawing.Point(423, 0);
+            this.xuiButton1.Location = new System.Drawing.Point(433, 0);
             this.xuiButton1.Name = "xuiButton1";
             this.xuiButton1.Size = new System.Drawing.Size(22, 22);
             this.xuiButton1.TabIndex = 49;
             this.xuiButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // parrotBarGraph1
+            // dtpCheckOut
             // 
-            this.parrotBarGraph1.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.parrotBarGraph1.GraphOrientation = ReaLTaiizor.Controls.ParrotBarGraph.Orientation.Vertical;
-            this.parrotBarGraph1.GraphStyle = ReaLTaiizor.Controls.ParrotBarGraph.Style.Material;
-            this.parrotBarGraph1.Items = ((System.Collections.Generic.List<int>)(resources.GetObject("parrotBarGraph1.Items")));
-            this.parrotBarGraph1.Location = new System.Drawing.Point(37, 43);
-            this.parrotBarGraph1.Name = "parrotBarGraph1";
-            this.parrotBarGraph1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.parrotBarGraph1.ShowGrid = false;
-            this.parrotBarGraph1.Size = new System.Drawing.Size(386, 248);
-            this.parrotBarGraph1.Sorting = ReaLTaiizor.Controls.ParrotBarGraph.SortStyle.Normal;
-            this.parrotBarGraph1.SplitterColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            this.parrotBarGraph1.TabIndex = 49;
-            this.parrotBarGraph1.Text = "parrotBarGraph1";
-            this.parrotBarGraph1.TextAlignment = ReaLTaiizor.Controls.ParrotBarGraph.Aligning.Far;
-            this.parrotBarGraph1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.parrotBarGraph1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.parrotBarGraph1.UnfilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckOut.BorderSize = 0;
+            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckOut.Location = new System.Drawing.Point(2, 2);
+            this.dtpCheckOut.Name = "dtpCheckOut";
+            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dtpCheckOut.TabIndex = 49;
+            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.dtpCheckOut);
+            this.panel2.Location = new System.Drawing.Point(102, 219);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(231, 26);
+            this.panel2.TabIndex = 50;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.dtpCheckIn);
+            this.panel3.Location = new System.Drawing.Point(102, 181);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(231, 26);
+            this.panel3.TabIndex = 51;
+            // 
+            // dtpCheckIn
+            // 
+            this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckIn.BorderSize = 0;
+            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckIn.Location = new System.Drawing.Point(2, 2);
+            this.dtpCheckIn.Name = "dtpCheckIn";
+            this.dtpCheckIn.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckIn.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dtpCheckIn.TabIndex = 49;
+            this.dtpCheckIn.TextColor = System.Drawing.Color.White;
+            // 
+            // txtRoomType
+            // 
+            this.txtRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtRoomType.Enabled = false;
+            this.txtRoomType.Location = new System.Drawing.Point(105, 137);
+            this.txtRoomType.Name = "txtRoomType";
+            this.txtRoomType.ReadOnly = true;
+            this.txtRoomType.Size = new System.Drawing.Size(120, 20);
+            this.txtRoomType.TabIndex = 52;
             // 
             // frmConfirmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(445, 357);
-            this.Controls.Add(this.parrotBarGraph1);
+            this.ClientSize = new System.Drawing.Size(455, 370);
+            this.Controls.Add(this.txtRoomType);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtpCheckOut);
-            this.Controls.Add(this.dtpCheckIn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -360,6 +362,8 @@ namespace Arcadia_Hotel
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservation Update Report";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,14 +385,15 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpCheckIn;
-        private System.Windows.Forms.DateTimePicker dtpCheckOut;
         private System.Windows.Forms.Label label6;
         private XanderUI.XUIButton btnOk;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
         private XanderUI.XUIButton xuiButton1;
         private XanderUI.XUIButton xuiButton2;
-        private ReaLTaiizor.Controls.ParrotBarGraph parrotBarGraph1;
+        private Controls.BBDateTime dtpCheckOut;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private Controls.BBDateTime dtpCheckIn;
+        private System.Windows.Forms.TextBox txtRoomType;
     }
 }

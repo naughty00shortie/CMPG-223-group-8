@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arcadia_Hotel_DB;
+using XanderUI;
 
 namespace Arcadia_Hotel
 {
@@ -26,7 +27,7 @@ namespace Arcadia_Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //LoadModels();
+            LoadModels();
             panel4.Visible = false;
             panel6.Visible = false;
 
@@ -34,6 +35,8 @@ namespace Arcadia_Hotel
             tabControl1.Appearance = TabAppearance.FlatButtons; 
             tabControl1.ItemSize = new Size(0, 1); 
             tabControl1.SizeMode = TabSizeMode.Fixed;
+
+            xuiButton4.BackgroundColor = Color.FromArgb(75, 80, 90);
         }
 
         private void LoadModels()
@@ -43,12 +46,11 @@ namespace Arcadia_Hotel
             guests = DataAccess.loadGuest();
             roles = DataAccess.loadRole();
             rooms = DataAccess.loadRoom();
+
+            dgvEditGuest.DataSource = rooms;
+            dgvEditGuest.DataSource = rooms;
         }
 
-        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
-        {
-
-        }
 
         private void tabPage2_Click(object sender, EventArgs e)
          {
@@ -69,25 +71,7 @@ namespace Arcadia_Hotel
 
         }
 
-        private void btnMakeR_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 1;
-        }
 
-        private void btnEditR_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 2;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 3;
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 4;
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -209,6 +193,7 @@ namespace Arcadia_Hotel
                         }
 
                     }
+
                     foreach (var room in rooms)
                     {
                         if (room.Room_Number == booking.Room_Number)
@@ -281,6 +266,18 @@ namespace Arcadia_Hotel
         {
             tabControl1.SelectedIndex = 0;
         }
+
+        private void setTab(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = (sender as XUIButton).TabIndex;
+            xuiButton1.BackgroundColor = Color.FromArgb(65, 70, 75);
+            xuiButton2.BackgroundColor = Color.FromArgb(65, 70, 75);
+            xuiButton3.BackgroundColor = Color.FromArgb(65, 70, 75);
+            xuiButton4.BackgroundColor = Color.FromArgb(65, 70, 75);
+
+            (sender as XUIButton).BackgroundColor = Color.FromArgb(75, 80, 90);
+        }
+
     }
 }
 /*Waar daar staan Model beteken dit is n tabel in die DB

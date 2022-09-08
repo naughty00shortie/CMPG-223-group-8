@@ -277,7 +277,7 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label1);
-            this.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(261, 61);
             this.Name = "frmConfirmation";

@@ -1,11 +1,3 @@
-// *****************************************
-// ** Author: Vincenzo Rossi              **
-// ** Year  : 2008                        **
-// ** Mail  : redmaster@tiscali.it        **
-// **                                     **
-// ** Released under                      **
-// **   The Code Project Open License     **
-// *****************************************
 
 using System;
 using System.Collections.Generic;
@@ -15,7 +7,7 @@ using System.Drawing;
 using System.ComponentModel;
 using System.Windows.Forms.VisualStyles;
 
-namespace birdbox.Controls
+namespace Arcadia_Hotel.Controls
 {
     /// <summary>
     ///     A derivation of DateTimePicker allowing to change background color

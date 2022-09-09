@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,23 +21,29 @@ namespace Arcadia_Hotel
         List<RoleModel> roles = new List<RoleModel>();
         List<RoomModel> rooms = new List<RoomModel>();
 
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int WM_NCHITTEST = 0x84;
+        private const int HT_CLIENT = 0x1;
+        private const int HT_CAPTION = 0x2;
+
         public Form1()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadModels();
-            panel4.Visible = false;
-            panel6.Visible = false;
+            loadUI();
 
-            // Make Page Invisible
-            tabControl1.Appearance = TabAppearance.FlatButtons; 
-            tabControl1.ItemSize = new Size(0, 1); 
-            tabControl1.SizeMode = TabSizeMode.Fixed;
-
-            xuiButton4.BackgroundColor = Color.FromArgb(75, 80, 90);
+           
         }
 
         private void LoadModels()
@@ -49,6 +56,22 @@ namespace Arcadia_Hotel
 
             dgvEditGuest.DataSource = rooms;
             dgvEditGuest.DataSource = rooms;
+        }
+
+        private void loadUI()
+        {
+            panel4.Visible = false;
+            panel6.Visible = false;
+
+            // Make Page Invisible
+            tabControl1.Appearance = TabAppearance.FlatButtons;
+            tabControl1.ItemSize = new Size(0, 1);
+            tabControl1.ActiveHeaderColor = Color.FromArgb(60,60,60);
+            tabControl1.ActiveTextColor = Color.FromArgb(60,60,60);
+            tabControl1.InActiveTextColor = Color.FromArgb(60,60,60);
+            tabControl1.SizeMode = TabSizeMode.Fixed;
+            xuiButton4.BackgroundColor = Color.FromArgb(75, 80, 90);
+
         }
 
 
@@ -276,6 +299,22 @@ namespace Arcadia_Hotel
             xuiButton4.BackgroundColor = Color.FromArgb(65, 70, 75);
 
             (sender as XUIButton).BackgroundColor = Color.FromArgb(75, 80, 90);
+        }
+
+        private void xuiButton6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void mouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+
         }
 
     }

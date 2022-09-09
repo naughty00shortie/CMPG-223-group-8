@@ -48,11 +48,11 @@ namespace Arcadia_Hotel
             this.panel1 = new System.Windows.Forms.Panel();
             this.xuiButton2 = new XanderUI.XUIButton();
             this.xuiButton1 = new XanderUI.XUIButton();
-            this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.txtRoomType = new System.Windows.Forms.TextBox();
+            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
+            this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,7 +70,7 @@ namespace Arcadia_Hotel
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(34, 43);
+            this.label19.Location = new System.Drawing.Point(34, 40);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(103, 13);
             this.label19.TabIndex = 6;
@@ -105,7 +105,7 @@ namespace Arcadia_Hotel
             // 
             // txtBookingID
             // 
-            this.txtBookingID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtBookingID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtBookingID.Enabled = false;
             this.txtBookingID.ForeColor = System.Drawing.Color.White;
             this.txtBookingID.Location = new System.Drawing.Point(310, 40);
@@ -116,7 +116,7 @@ namespace Arcadia_Hotel
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(78, 86);
             this.txtName.Name = "txtName";
@@ -126,7 +126,7 @@ namespace Arcadia_Hotel
             // 
             // txtSurname
             // 
-            this.txtSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtSurname.Enabled = false;
             this.txtSurname.Location = new System.Drawing.Point(310, 86);
             this.txtSurname.Name = "txtSurname";
@@ -145,7 +145,7 @@ namespace Arcadia_Hotel
             // 
             // txtAmount
             // 
-            this.txtAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtAmount.Enabled = false;
             this.txtAmount.Location = new System.Drawing.Point(310, 141);
             this.txtAmount.Name = "txtAmount";
@@ -155,7 +155,7 @@ namespace Arcadia_Hotel
             // 
             // txtPrice
             // 
-            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtPrice.Enabled = false;
             this.txtPrice.Location = new System.Drawing.Point(167, 265);
             this.txtPrice.Name = "txtPrice";
@@ -278,18 +278,6 @@ namespace Arcadia_Hotel
             this.xuiButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // dtpCheckOut
-            // 
-            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckOut.BorderSize = 0;
-            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckOut.Location = new System.Drawing.Point(2, 2);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dtpCheckOut.TabIndex = 49;
-            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -308,21 +296,9 @@ namespace Arcadia_Hotel
             this.panel3.Size = new System.Drawing.Size(231, 26);
             this.panel3.TabIndex = 51;
             // 
-            // dtpCheckIn
-            // 
-            this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckIn.BorderSize = 0;
-            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckIn.Location = new System.Drawing.Point(2, 2);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckIn.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dtpCheckIn.TabIndex = 49;
-            this.dtpCheckIn.TextColor = System.Drawing.Color.White;
-            // 
             // txtRoomType
             // 
-            this.txtRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtRoomType.Enabled = false;
             this.txtRoomType.Location = new System.Drawing.Point(105, 137);
             this.txtRoomType.Name = "txtRoomType";
@@ -330,11 +306,37 @@ namespace Arcadia_Hotel
             this.txtRoomType.Size = new System.Drawing.Size(120, 20);
             this.txtRoomType.TabIndex = 52;
             // 
+            // dtpCheckIn
+            // 
+            this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckIn.BorderSize = 0;
+            this.dtpCheckIn.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckIn.Location = new System.Drawing.Point(2, 2);
+            this.dtpCheckIn.Name = "dtpCheckIn";
+            this.dtpCheckIn.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckIn.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckIn.TabIndex = 49;
+            this.dtpCheckIn.TextColor = System.Drawing.Color.White;
+            // 
+            // dtpCheckOut
+            // 
+            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckOut.BorderSize = 0;
+            this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckOut.Location = new System.Drawing.Point(2, 2);
+            this.dtpCheckOut.Name = "dtpCheckOut";
+            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.TabIndex = 49;
+            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
+            // 
             // frmConfirmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(455, 370);
             this.Controls.Add(this.txtRoomType);
             this.Controls.Add(this.panel3);

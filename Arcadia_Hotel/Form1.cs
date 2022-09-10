@@ -254,7 +254,7 @@ namespace Arcadia_Hotel
         {
             if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DataAccess.DeleteBooking(int.Parse(txtGuestIDEG.Text));
+                DataAccess.deleteBooking(int.Parse(txtGuestIDEG.Text));
             }
         }
 
@@ -281,7 +281,7 @@ namespace Arcadia_Hotel
         {
             if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DataAccess.DeleteBooking(int.Parse(txtBookingER.Text));
+                DataAccess.deleteBooking(int.Parse(txtBookingER.Text));
             }
         }
 
@@ -329,6 +329,6 @@ Dan kan DataAccess.insertGuest(guest); gecall word om die data in te lees. Na di
 gecall word om die data te update;
 Prof Linda is luuks
  */
- //prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛)
+ //prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛) en ek wil graag by haar my hoeneers doen in all die DB vakke -- Albertus & Bernard
  
 

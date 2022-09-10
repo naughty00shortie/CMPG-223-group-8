@@ -1,4 +1,4 @@
-﻿
+﻿ 
 namespace Arcadia_Hotel
 {
     partial class frmAdmin
@@ -50,6 +50,8 @@ namespace Arcadia_Hotel
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpAddRoom = new System.Windows.Forms.TabPage();
+            this.redRoomDescription = new System.Windows.Forms.RichTextBox();
+            this.btnAddRoom = new XanderUI.XUIButton();
             this.dgvAddRoom = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,13 +79,13 @@ namespace Arcadia_Hotel
             this.label29 = new System.Windows.Forms.Label();
             this.dgvAddEmployee = new System.Windows.Forms.DataGridView();
             this.tpAddRole = new System.Windows.Forms.TabPage();
+            this.redRoleDescription = new System.Windows.Forms.RichTextBox();
             this.btnAddRole = new XanderUI.XUIButton();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.txtSalaryAR = new System.Windows.Forms.TextBox();
             this.txtHoursAR = new System.Windows.Forms.TextBox();
-            this.txtDescriptionRA = new System.Windows.Forms.TextBox();
             this.dgvRoleAR = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
             this.tpDeleteRoom = new System.Windows.Forms.TabPage();
@@ -108,11 +110,9 @@ namespace Arcadia_Hotel
             this.btnUpdateRoom = new XanderUI.XUIButton();
             this.txtPriceUR = new System.Windows.Forms.TextBox();
             this.txtSizeUR = new System.Windows.Forms.TextBox();
-            this.nupdAmountUR = new System.Windows.Forms.NumericUpDown();
             this.dgvRoomUpdate = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtDescriptionUR = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -150,6 +150,29 @@ namespace Arcadia_Hotel
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label37 = new System.Windows.Forms.Label();
             this.tpReport = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbShowMinimum = new System.Windows.Forms.CheckBox();
+            this.cbShowMax = new System.Windows.Forms.CheckBox();
+            this.cbSummation = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.cmbCategorizeRole = new System.Windows.Forms.ComboBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.cmbCategorizeRoomType = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbPageNumbers = new System.Windows.Forms.CheckBox();
+            this.cbUserName = new System.Windows.Forms.CheckBox();
+            this.cbReportName = new System.Windows.Forms.CheckBox();
+            this.cbTime = new System.Windows.Forms.CheckBox();
+            this.cbDate = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.btnDesign = new System.Windows.Forms.Button();
+            this.txtReportName = new System.Windows.Forms.TextBox();
+            this.rzrAdminName = new System.Windows.Forms.TextBox();
+            this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.tpChangePs = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.btnChangePassword = new XanderUI.XUIButton();
@@ -159,31 +182,6 @@ namespace Arcadia_Hotel
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddRoom = new XanderUI.XUIButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cmbReportType = new System.Windows.Forms.ComboBox();
-            this.rzrAdminName = new System.Windows.Forms.TextBox();
-            this.txtReportName = new System.Windows.Forms.TextBox();
-            this.btnDesign = new System.Windows.Forms.Button();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.cbDate = new System.Windows.Forms.CheckBox();
-            this.cbTime = new System.Windows.Forms.CheckBox();
-            this.cbReportName = new System.Windows.Forms.CheckBox();
-            this.cbUserName = new System.Windows.Forms.CheckBox();
-            this.cbPageNumbers = new System.Windows.Forms.CheckBox();
-            this.cmbCategorizeRoomType = new System.Windows.Forms.ComboBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.cmbCategorizeRole = new System.Windows.Forms.ComboBox();
-            this.cbShowMinimum = new System.Windows.Forms.CheckBox();
-            this.cbShowMax = new System.Windows.Forms.CheckBox();
-            this.cbSummation = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpAddRoom.SuspendLayout();
@@ -201,7 +199,6 @@ namespace Arcadia_Hotel
             this.tpDeleteRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleDR)).BeginInit();
             this.tpUpdateRoom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupdAmountUR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomUpdate)).BeginInit();
             this.tpUpdateRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleUR)).BeginInit();
@@ -209,11 +206,11 @@ namespace Arcadia_Hotel
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tpReport.SuspendLayout();
-            this.tpChangePs.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tpChangePs.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -372,7 +369,7 @@ namespace Arcadia_Hotel
             // 
             // tpAddRoom
             // 
-            this.tpAddRoom.Controls.Add(this.richTextBox1);
+            this.tpAddRoom.Controls.Add(this.redRoomDescription);
             this.tpAddRoom.Controls.Add(this.btnAddRoom);
             this.tpAddRoom.Controls.Add(this.dgvAddRoom);
             this.tpAddRoom.Controls.Add(this.label8);
@@ -390,6 +387,37 @@ namespace Arcadia_Hotel
             this.tpAddRoom.TabIndex = 1;
             this.tpAddRoom.Text = "Add Room";
             this.tpAddRoom.UseVisualStyleBackColor = true;
+            // 
+            // redRoomDescription
+            // 
+            this.redRoomDescription.Location = new System.Drawing.Point(151, 44);
+            this.redRoomDescription.Name = "redRoomDescription";
+            this.redRoomDescription.Size = new System.Drawing.Size(167, 79);
+            this.redRoomDescription.TabIndex = 51;
+            this.redRoomDescription.Text = "";
+            // 
+            // btnAddRoom
+            // 
+            this.btnAddRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnAddRoom.ButtonImage = null;
+            this.btnAddRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnAddRoom.ButtonText = "Add new room";
+            this.btnAddRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnAddRoom.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnAddRoom.CornerRadius = 10;
+            this.btnAddRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnAddRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnAddRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnAddRoom.Location = new System.Drawing.Point(106, 337);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddRoom.Name = "btnAddRoom";
+            this.btnAddRoom.Size = new System.Drawing.Size(159, 45);
+            this.btnAddRoom.TabIndex = 50;
+            this.btnAddRoom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnAddRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
             // dgvAddRoom
             // 
@@ -543,6 +571,7 @@ namespace Arcadia_Hotel
             this.btnAddEmployee.TabIndex = 37;
             this.btnAddEmployee.TextColor = System.Drawing.Color.Black;
             this.btnAddEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // label34
             // 
@@ -652,13 +681,13 @@ namespace Arcadia_Hotel
             // 
             // tpAddRole
             // 
+            this.tpAddRole.Controls.Add(this.redRoleDescription);
             this.tpAddRole.Controls.Add(this.btnAddRole);
             this.tpAddRole.Controls.Add(this.label23);
             this.tpAddRole.Controls.Add(this.label22);
             this.tpAddRole.Controls.Add(this.label21);
             this.tpAddRole.Controls.Add(this.txtSalaryAR);
             this.tpAddRole.Controls.Add(this.txtHoursAR);
-            this.tpAddRole.Controls.Add(this.txtDescriptionRA);
             this.tpAddRole.Controls.Add(this.dgvRoleAR);
             this.tpAddRole.Controls.Add(this.label18);
             this.tpAddRole.Location = new System.Drawing.Point(4, 22);
@@ -668,6 +697,14 @@ namespace Arcadia_Hotel
             this.tpAddRole.TabIndex = 7;
             this.tpAddRole.Text = "Add Role";
             this.tpAddRole.UseVisualStyleBackColor = true;
+            // 
+            // redRoleDescription
+            // 
+            this.redRoleDescription.Location = new System.Drawing.Point(182, 52);
+            this.redRoleDescription.Name = "redRoleDescription";
+            this.redRoleDescription.Size = new System.Drawing.Size(178, 79);
+            this.redRoleDescription.TabIndex = 52;
+            this.redRoleDescription.Text = "";
             // 
             // btnAddRole
             // 
@@ -688,11 +725,12 @@ namespace Arcadia_Hotel
             this.btnAddRole.TabIndex = 26;
             this.btnAddRole.TextColor = System.Drawing.Color.Black;
             this.btnAddRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddRole.Click += new System.EventHandler(this.btnAddRole_Click);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(54, 93);
+            this.label23.Location = new System.Drawing.Point(40, 52);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(86, 13);
             this.label23.TabIndex = 25;
@@ -729,13 +767,6 @@ namespace Arcadia_Hotel
             this.txtHoursAR.Name = "txtHoursAR";
             this.txtHoursAR.Size = new System.Drawing.Size(100, 20);
             this.txtHoursAR.TabIndex = 21;
-            // 
-            // txtDescriptionRA
-            // 
-            this.txtDescriptionRA.Location = new System.Drawing.Point(182, 90);
-            this.txtDescriptionRA.Name = "txtDescriptionRA";
-            this.txtDescriptionRA.Size = new System.Drawing.Size(131, 20);
-            this.txtDescriptionRA.TabIndex = 20;
             // 
             // dgvRoleAR
             // 
@@ -788,6 +819,7 @@ namespace Arcadia_Hotel
             this.btnDeleteRoom.TabIndex = 23;
             this.btnDeleteRoom.TextColor = System.Drawing.Color.Black;
             this.btnDeleteRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteRoom.Click += new System.EventHandler(this.btnDeleteRoom_Click);
             // 
             // label17
             // 
@@ -857,6 +889,7 @@ namespace Arcadia_Hotel
             this.btnDeleteEmployee.TabIndex = 47;
             this.btnDeleteEmployee.TextColor = System.Drawing.Color.Black;
             this.btnDeleteEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // label42
             // 
@@ -926,6 +959,7 @@ namespace Arcadia_Hotel
             this.btnDeleteRole.TabIndex = 31;
             this.btnDeleteRole.TextColor = System.Drawing.Color.Black;
             this.btnDeleteRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteRole.Click += new System.EventHandler(this.btnDeleteRole_Click);
             // 
             // label28
             // 
@@ -966,11 +1000,9 @@ namespace Arcadia_Hotel
             this.tpUpdateRoom.Controls.Add(this.btnUpdateRoom);
             this.tpUpdateRoom.Controls.Add(this.txtPriceUR);
             this.tpUpdateRoom.Controls.Add(this.txtSizeUR);
-            this.tpUpdateRoom.Controls.Add(this.nupdAmountUR);
             this.tpUpdateRoom.Controls.Add(this.dgvRoomUpdate);
             this.tpUpdateRoom.Controls.Add(this.label15);
             this.tpUpdateRoom.Controls.Add(this.label14);
-            this.tpUpdateRoom.Controls.Add(this.label13);
             this.tpUpdateRoom.Controls.Add(this.label12);
             this.tpUpdateRoom.Controls.Add(this.txtDescriptionUR);
             this.tpUpdateRoom.Controls.Add(this.label11);
@@ -1003,6 +1035,7 @@ namespace Arcadia_Hotel
             this.btnUpdateRoom.TabIndex = 22;
             this.btnUpdateRoom.TextColor = System.Drawing.Color.Black;
             this.btnUpdateRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateRoom.Click += new System.EventHandler(this.btnUpdateRoom_Click);
             // 
             // txtPriceUR
             // 
@@ -1017,28 +1050,6 @@ namespace Arcadia_Hotel
             this.txtSizeUR.Name = "txtSizeUR";
             this.txtSizeUR.Size = new System.Drawing.Size(118, 20);
             this.txtSizeUR.TabIndex = 20;
-            // 
-            // nupdAmountUR
-            // 
-            this.nupdAmountUR.Location = new System.Drawing.Point(151, 178);
-            this.nupdAmountUR.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.nupdAmountUR.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nupdAmountUR.Name = "nupdAmountUR";
-            this.nupdAmountUR.Size = new System.Drawing.Size(67, 20);
-            this.nupdAmountUR.TabIndex = 19;
-            this.nupdAmountUR.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // dgvRoomUpdate
             // 
@@ -1065,15 +1076,6 @@ namespace Arcadia_Hotel
             this.label14.Size = new System.Drawing.Size(61, 13);
             this.label14.TabIndex = 16;
             this.label14.Text = "Room Size:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(47, 180);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 13);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Amount of rooms:";
             // 
             // label12
             // 
@@ -1151,12 +1153,13 @@ namespace Arcadia_Hotel
             this.btnUpdateRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnUpdateRole.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnUpdateRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateRole.Location = new System.Drawing.Point(153, 331);
+            this.btnUpdateRole.Location = new System.Drawing.Point(133, 322);
             this.btnUpdateRole.Name = "btnUpdateRole";
             this.btnUpdateRole.Size = new System.Drawing.Size(200, 50);
             this.btnUpdateRole.TabIndex = 29;
             this.btnUpdateRole.TextColor = System.Drawing.Color.Black;
             this.btnUpdateRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateRole.Click += new System.EventHandler(this.btnUpdateRole_Click);
             // 
             // label27
             // 
@@ -1287,6 +1290,7 @@ namespace Arcadia_Hotel
             this.btnUpdateEmployee.TabIndex = 54;
             this.btnUpdateEmployee.TextColor = System.Drawing.Color.Black;
             this.btnUpdateEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
             // 
             // label47
             // 
@@ -1443,6 +1447,266 @@ namespace Arcadia_Hotel
             this.tpReport.Text = "Report";
             this.tpReport.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cbShowMinimum);
+            this.groupBox4.Controls.Add(this.cbShowMax);
+            this.groupBox4.Controls.Add(this.cbSummation);
+            this.groupBox4.Location = new System.Drawing.Point(395, 235);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(264, 173);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Sumery information";
+            // 
+            // cbShowMinimum
+            // 
+            this.cbShowMinimum.AutoSize = true;
+            this.cbShowMinimum.Location = new System.Drawing.Point(34, 87);
+            this.cbShowMinimum.Name = "cbShowMinimum";
+            this.cbShowMinimum.Size = new System.Drawing.Size(97, 17);
+            this.cbShowMinimum.TabIndex = 5;
+            this.cbShowMinimum.Text = "Show Minimum";
+            this.cbShowMinimum.UseVisualStyleBackColor = true;
+            // 
+            // cbShowMax
+            // 
+            this.cbShowMax.AutoSize = true;
+            this.cbShowMax.Location = new System.Drawing.Point(34, 64);
+            this.cbShowMax.Name = "cbShowMax";
+            this.cbShowMax.Size = new System.Drawing.Size(100, 17);
+            this.cbShowMax.TabIndex = 4;
+            this.cbShowMax.Text = "Show Maximum";
+            this.cbShowMax.UseVisualStyleBackColor = true;
+            // 
+            // cbSummation
+            // 
+            this.cbSummation.AutoSize = true;
+            this.cbSummation.Location = new System.Drawing.Point(34, 41);
+            this.cbSummation.Name = "cbSummation";
+            this.cbSummation.Size = new System.Drawing.Size(108, 17);
+            this.cbSummation.TabIndex = 3;
+            this.cbSummation.Text = "Show Summation";
+            this.cbSummation.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label52);
+            this.groupBox3.Controls.Add(this.cmbCategorizeRole);
+            this.groupBox3.Controls.Add(this.label51);
+            this.groupBox3.Controls.Add(this.cmbCategorizeRoomType);
+            this.groupBox3.Location = new System.Drawing.Point(395, 57);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(232, 151);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Categorize";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(31, 70);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(29, 13);
+            this.label52.TabIndex = 56;
+            this.label52.Text = "Role";
+            // 
+            // cmbCategorizeRole
+            // 
+            this.cmbCategorizeRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbCategorizeRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCategorizeRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbCategorizeRole.ForeColor = System.Drawing.Color.White;
+            this.cmbCategorizeRole.FormattingEnabled = true;
+            this.cmbCategorizeRole.ItemHeight = 13;
+            this.cmbCategorizeRole.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbCategorizeRole.Location = new System.Drawing.Point(34, 83);
+            this.cmbCategorizeRole.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbCategorizeRole.Name = "cmbCategorizeRole";
+            this.cmbCategorizeRole.Size = new System.Drawing.Size(137, 21);
+            this.cmbCategorizeRole.TabIndex = 55;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(31, 26);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(62, 13);
+            this.label51.TabIndex = 54;
+            this.label51.Text = "Room Type";
+            // 
+            // cmbCategorizeRoomType
+            // 
+            this.cmbCategorizeRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbCategorizeRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCategorizeRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbCategorizeRoomType.ForeColor = System.Drawing.Color.White;
+            this.cmbCategorizeRoomType.FormattingEnabled = true;
+            this.cmbCategorizeRoomType.ItemHeight = 13;
+            this.cmbCategorizeRoomType.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbCategorizeRoomType.Location = new System.Drawing.Point(34, 39);
+            this.cmbCategorizeRoomType.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbCategorizeRoomType.Name = "cmbCategorizeRoomType";
+            this.cmbCategorizeRoomType.Size = new System.Drawing.Size(137, 21);
+            this.cmbCategorizeRoomType.TabIndex = 50;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cbPageNumbers);
+            this.groupBox2.Controls.Add(this.cbUserName);
+            this.groupBox2.Controls.Add(this.cbReportName);
+            this.groupBox2.Controls.Add(this.cbTime);
+            this.groupBox2.Controls.Add(this.cbDate);
+            this.groupBox2.Location = new System.Drawing.Point(99, 256);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(262, 143);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Headder Options";
+            // 
+            // cbPageNumbers
+            // 
+            this.cbPageNumbers.AutoSize = true;
+            this.cbPageNumbers.Location = new System.Drawing.Point(154, 32);
+            this.cbPageNumbers.Name = "cbPageNumbers";
+            this.cbPageNumbers.Size = new System.Drawing.Size(96, 17);
+            this.cbPageNumbers.TabIndex = 4;
+            this.cbPageNumbers.Text = "Page Numbers";
+            this.cbPageNumbers.UseVisualStyleBackColor = true;
+            // 
+            // cbUserName
+            // 
+            this.cbUserName.AutoSize = true;
+            this.cbUserName.Location = new System.Drawing.Point(24, 101);
+            this.cbUserName.Name = "cbUserName";
+            this.cbUserName.Size = new System.Drawing.Size(79, 17);
+            this.cbUserName.TabIndex = 3;
+            this.cbUserName.Text = "User Name";
+            this.cbUserName.UseVisualStyleBackColor = true;
+            // 
+            // cbReportName
+            // 
+            this.cbReportName.AutoSize = true;
+            this.cbReportName.Location = new System.Drawing.Point(24, 78);
+            this.cbReportName.Name = "cbReportName";
+            this.cbReportName.Size = new System.Drawing.Size(89, 17);
+            this.cbReportName.TabIndex = 2;
+            this.cbReportName.Text = "Report Name";
+            this.cbReportName.UseVisualStyleBackColor = true;
+            // 
+            // cbTime
+            // 
+            this.cbTime.AutoSize = true;
+            this.cbTime.Location = new System.Drawing.Point(24, 55);
+            this.cbTime.Name = "cbTime";
+            this.cbTime.Size = new System.Drawing.Size(79, 17);
+            this.cbTime.TabIndex = 1;
+            this.cbTime.Text = "Show Time";
+            this.cbTime.UseVisualStyleBackColor = true;
+            // 
+            // cbDate
+            // 
+            this.cbDate.AutoSize = true;
+            this.cbDate.Location = new System.Drawing.Point(24, 32);
+            this.cbDate.Name = "cbDate";
+            this.cbDate.Size = new System.Drawing.Size(79, 17);
+            this.cbDate.TabIndex = 0;
+            this.cbDate.Text = "Show Date";
+            this.cbDate.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label50);
+            this.groupBox1.Controls.Add(this.label49);
+            this.groupBox1.Controls.Add(this.label48);
+            this.groupBox1.Controls.Add(this.btnDesign);
+            this.groupBox1.Controls.Add(this.txtReportName);
+            this.groupBox1.Controls.Add(this.rzrAdminName);
+            this.groupBox1.Controls.Add(this.cmbReportType);
+            this.groupBox1.Location = new System.Drawing.Point(99, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(290, 161);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Report Type";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(21, 115);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(73, 13);
+            this.label50.TabIndex = 55;
+            this.label50.Text = "Report Name:";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(21, 68);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(133, 13);
+            this.label49.TabIndex = 54;
+            this.label49.Text = "Admin Name and Surname";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(21, 26);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(99, 13);
+            this.label48.TabIndex = 53;
+            this.label48.Text = "Select Report Type";
+            // 
+            // btnDesign
+            // 
+            this.btnDesign.Location = new System.Drawing.Point(182, 127);
+            this.btnDesign.Name = "btnDesign";
+            this.btnDesign.Size = new System.Drawing.Size(64, 24);
+            this.btnDesign.TabIndex = 52;
+            this.btnDesign.Text = "Design";
+            this.btnDesign.UseVisualStyleBackColor = true;
+            // 
+            // txtReportName
+            // 
+            this.txtReportName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.txtReportName.Enabled = false;
+            this.txtReportName.Location = new System.Drawing.Point(24, 131);
+            this.txtReportName.Name = "txtReportName";
+            this.txtReportName.ReadOnly = true;
+            this.txtReportName.Size = new System.Drawing.Size(137, 20);
+            this.txtReportName.TabIndex = 51;
+            // 
+            // rzrAdminName
+            // 
+            this.rzrAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.rzrAdminName.Enabled = false;
+            this.rzrAdminName.Location = new System.Drawing.Point(24, 84);
+            this.rzrAdminName.Name = "rzrAdminName";
+            this.rzrAdminName.ReadOnly = true;
+            this.rzrAdminName.Size = new System.Drawing.Size(137, 20);
+            this.rzrAdminName.TabIndex = 50;
+            // 
+            // cmbReportType
+            // 
+            this.cmbReportType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbReportType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbReportType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbReportType.ForeColor = System.Drawing.Color.White;
+            this.cmbReportType.FormattingEnabled = true;
+            this.cmbReportType.ItemHeight = 13;
+            this.cmbReportType.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbReportType.Location = new System.Drawing.Point(24, 39);
+            this.cmbReportType.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbReportType.Name = "cmbReportType";
+            this.cmbReportType.Size = new System.Drawing.Size(137, 21);
+            this.cmbReportType.TabIndex = 49;
+            // 
             // tpChangePs
             // 
             this.tpChangePs.Controls.Add(this.label9);
@@ -1541,296 +1805,6 @@ namespace Arcadia_Hotel
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter current password:";
             // 
-            // btnAddRoom
-            // 
-            this.btnAddRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.btnAddRoom.ButtonImage = null;
-            this.btnAddRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnAddRoom.ButtonText = "Add new room";
-            this.btnAddRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.btnAddRoom.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.btnAddRoom.CornerRadius = 10;
-            this.btnAddRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnAddRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.btnAddRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.btnAddRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnAddRoom.Location = new System.Drawing.Point(106, 337);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(159, 45);
-            this.btnAddRoom.TabIndex = 50;
-            this.btnAddRoom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.btnAddRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(151, 44);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(244, 120);
-            this.richTextBox1.TabIndex = 51;
-            this.richTextBox1.Text = "";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label50);
-            this.groupBox1.Controls.Add(this.label49);
-            this.groupBox1.Controls.Add(this.label48);
-            this.groupBox1.Controls.Add(this.btnDesign);
-            this.groupBox1.Controls.Add(this.txtReportName);
-            this.groupBox1.Controls.Add(this.rzrAdminName);
-            this.groupBox1.Controls.Add(this.cmbReportType);
-            this.groupBox1.Location = new System.Drawing.Point(99, 57);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 161);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Report Type";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cbPageNumbers);
-            this.groupBox2.Controls.Add(this.cbUserName);
-            this.groupBox2.Controls.Add(this.cbReportName);
-            this.groupBox2.Controls.Add(this.cbTime);
-            this.groupBox2.Controls.Add(this.cbDate);
-            this.groupBox2.Location = new System.Drawing.Point(99, 256);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(262, 143);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Headder Options";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label52);
-            this.groupBox3.Controls.Add(this.cmbCategorizeRole);
-            this.groupBox3.Controls.Add(this.label51);
-            this.groupBox3.Controls.Add(this.cmbCategorizeRoomType);
-            this.groupBox3.Location = new System.Drawing.Point(395, 57);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(232, 151);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Categorize";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.cbShowMinimum);
-            this.groupBox4.Controls.Add(this.cbShowMax);
-            this.groupBox4.Controls.Add(this.cbSummation);
-            this.groupBox4.Location = new System.Drawing.Point(395, 235);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(264, 173);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Sumery information";
-            // 
-            // cmbReportType
-            // 
-            this.cmbReportType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbReportType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbReportType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.cmbReportType.ForeColor = System.Drawing.Color.White;
-            this.cmbReportType.FormattingEnabled = true;
-            this.cmbReportType.ItemHeight = 13;
-            this.cmbReportType.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbReportType.Location = new System.Drawing.Point(24, 39);
-            this.cmbReportType.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbReportType.Name = "cmbReportType";
-            this.cmbReportType.Size = new System.Drawing.Size(137, 21);
-            this.cmbReportType.TabIndex = 49;
-            // 
-            // rzrAdminName
-            // 
-            this.rzrAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.rzrAdminName.Enabled = false;
-            this.rzrAdminName.Location = new System.Drawing.Point(24, 84);
-            this.rzrAdminName.Name = "rzrAdminName";
-            this.rzrAdminName.ReadOnly = true;
-            this.rzrAdminName.Size = new System.Drawing.Size(137, 20);
-            this.rzrAdminName.TabIndex = 50;
-            // 
-            // txtReportName
-            // 
-            this.txtReportName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.txtReportName.Enabled = false;
-            this.txtReportName.Location = new System.Drawing.Point(24, 131);
-            this.txtReportName.Name = "txtReportName";
-            this.txtReportName.ReadOnly = true;
-            this.txtReportName.Size = new System.Drawing.Size(137, 20);
-            this.txtReportName.TabIndex = 51;
-            // 
-            // btnDesign
-            // 
-            this.btnDesign.Location = new System.Drawing.Point(182, 127);
-            this.btnDesign.Name = "btnDesign";
-            this.btnDesign.Size = new System.Drawing.Size(64, 24);
-            this.btnDesign.TabIndex = 52;
-            this.btnDesign.Text = "Design";
-            this.btnDesign.UseVisualStyleBackColor = true;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(21, 26);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(99, 13);
-            this.label48.TabIndex = 53;
-            this.label48.Text = "Select Report Type";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(21, 68);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(133, 13);
-            this.label49.TabIndex = 54;
-            this.label49.Text = "Admin Name and Surname";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(21, 115);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(73, 13);
-            this.label50.TabIndex = 55;
-            this.label50.Text = "Report Name:";
-            // 
-            // cbDate
-            // 
-            this.cbDate.AutoSize = true;
-            this.cbDate.Location = new System.Drawing.Point(24, 32);
-            this.cbDate.Name = "cbDate";
-            this.cbDate.Size = new System.Drawing.Size(79, 17);
-            this.cbDate.TabIndex = 0;
-            this.cbDate.Text = "Show Date";
-            this.cbDate.UseVisualStyleBackColor = true;
-            // 
-            // cbTime
-            // 
-            this.cbTime.AutoSize = true;
-            this.cbTime.Location = new System.Drawing.Point(24, 55);
-            this.cbTime.Name = "cbTime";
-            this.cbTime.Size = new System.Drawing.Size(79, 17);
-            this.cbTime.TabIndex = 1;
-            this.cbTime.Text = "Show Time";
-            this.cbTime.UseVisualStyleBackColor = true;
-            // 
-            // cbReportName
-            // 
-            this.cbReportName.AutoSize = true;
-            this.cbReportName.Location = new System.Drawing.Point(24, 78);
-            this.cbReportName.Name = "cbReportName";
-            this.cbReportName.Size = new System.Drawing.Size(89, 17);
-            this.cbReportName.TabIndex = 2;
-            this.cbReportName.Text = "Report Name";
-            this.cbReportName.UseVisualStyleBackColor = true;
-            // 
-            // cbUserName
-            // 
-            this.cbUserName.AutoSize = true;
-            this.cbUserName.Location = new System.Drawing.Point(24, 101);
-            this.cbUserName.Name = "cbUserName";
-            this.cbUserName.Size = new System.Drawing.Size(79, 17);
-            this.cbUserName.TabIndex = 3;
-            this.cbUserName.Text = "User Name";
-            this.cbUserName.UseVisualStyleBackColor = true;
-            // 
-            // cbPageNumbers
-            // 
-            this.cbPageNumbers.AutoSize = true;
-            this.cbPageNumbers.Location = new System.Drawing.Point(154, 32);
-            this.cbPageNumbers.Name = "cbPageNumbers";
-            this.cbPageNumbers.Size = new System.Drawing.Size(96, 17);
-            this.cbPageNumbers.TabIndex = 4;
-            this.cbPageNumbers.Text = "Page Numbers";
-            this.cbPageNumbers.UseVisualStyleBackColor = true;
-            // 
-            // cmbCategorizeRoomType
-            // 
-            this.cmbCategorizeRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbCategorizeRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCategorizeRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.cmbCategorizeRoomType.ForeColor = System.Drawing.Color.White;
-            this.cmbCategorizeRoomType.FormattingEnabled = true;
-            this.cmbCategorizeRoomType.ItemHeight = 13;
-            this.cmbCategorizeRoomType.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbCategorizeRoomType.Location = new System.Drawing.Point(34, 39);
-            this.cmbCategorizeRoomType.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbCategorizeRoomType.Name = "cmbCategorizeRoomType";
-            this.cmbCategorizeRoomType.Size = new System.Drawing.Size(137, 21);
-            this.cmbCategorizeRoomType.TabIndex = 50;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(31, 26);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(62, 13);
-            this.label51.TabIndex = 54;
-            this.label51.Text = "Room Type";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(31, 70);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(29, 13);
-            this.label52.TabIndex = 56;
-            this.label52.Text = "Role";
-            // 
-            // cmbCategorizeRole
-            // 
-            this.cmbCategorizeRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbCategorizeRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCategorizeRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.cmbCategorizeRole.ForeColor = System.Drawing.Color.White;
-            this.cmbCategorizeRole.FormattingEnabled = true;
-            this.cmbCategorizeRole.ItemHeight = 13;
-            this.cmbCategorizeRole.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbCategorizeRole.Location = new System.Drawing.Point(34, 83);
-            this.cmbCategorizeRole.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbCategorizeRole.Name = "cmbCategorizeRole";
-            this.cmbCategorizeRole.Size = new System.Drawing.Size(137, 21);
-            this.cmbCategorizeRole.TabIndex = 55;
-            // 
-            // cbShowMinimum
-            // 
-            this.cbShowMinimum.AutoSize = true;
-            this.cbShowMinimum.Location = new System.Drawing.Point(34, 87);
-            this.cbShowMinimum.Name = "cbShowMinimum";
-            this.cbShowMinimum.Size = new System.Drawing.Size(97, 17);
-            this.cbShowMinimum.TabIndex = 5;
-            this.cbShowMinimum.Text = "Show Minimum";
-            this.cbShowMinimum.UseVisualStyleBackColor = true;
-            // 
-            // cbShowMax
-            // 
-            this.cbShowMax.AutoSize = true;
-            this.cbShowMax.Location = new System.Drawing.Point(34, 64);
-            this.cbShowMax.Name = "cbShowMax";
-            this.cbShowMax.Size = new System.Drawing.Size(100, 17);
-            this.cbShowMax.TabIndex = 4;
-            this.cbShowMax.Text = "Show Maximum";
-            this.cbShowMax.UseVisualStyleBackColor = true;
-            // 
-            // cbSummation
-            // 
-            this.cbSummation.AutoSize = true;
-            this.cbSummation.Location = new System.Drawing.Point(34, 41);
-            this.cbSummation.Name = "cbSummation";
-            this.cbSummation.Size = new System.Drawing.Size(108, 17);
-            this.cbSummation.TabIndex = 3;
-            this.cbSummation.Text = "Show Summation";
-            this.cbSummation.UseVisualStyleBackColor = true;
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1867,7 +1841,6 @@ namespace Arcadia_Hotel
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleDR)).EndInit();
             this.tpUpdateRoom.ResumeLayout(false);
             this.tpUpdateRoom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupdAmountUR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomUpdate)).EndInit();
             this.tpUpdateRole.ResumeLayout(false);
             this.tpUpdateRole.PerformLayout();
@@ -1877,16 +1850,16 @@ namespace Arcadia_Hotel
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tpReport.ResumeLayout(false);
-            this.tpChangePs.ResumeLayout(false);
-            this.tpChangePs.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tpChangePs.ResumeLayout(false);
+            this.tpChangePs.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2024,7 +1997,7 @@ namespace Arcadia_Hotel
         private XanderUI.XUIButton btnUpdateEmployee;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private XanderUI.XUIButton btnAddRoom;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox redRoomDescription;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -2048,5 +2021,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.CheckBox cbShowMinimum;
         private System.Windows.Forms.CheckBox cbShowMax;
         private System.Windows.Forms.CheckBox cbSummation;
+        private System.Windows.Forms.RichTextBox redRoleDescription;
     }
 }

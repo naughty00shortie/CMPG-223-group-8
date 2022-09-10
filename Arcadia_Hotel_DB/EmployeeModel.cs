@@ -8,7 +8,7 @@ namespace Arcadia_Hotel_DB
 {
     public class EmployeeModel
     {
-        public string Employee_ID { get; set; }
+        public int Employee_ID { get; set; }
         public int Role_ID { get; set; }
         public string Employee_Surname { get; set; }
         public string Employee_Name { get; set; }

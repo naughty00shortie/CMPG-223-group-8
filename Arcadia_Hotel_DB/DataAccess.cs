@@ -107,7 +107,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into GUEST(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "INSERT into GUEST(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
                     guest);
             }
         }
@@ -117,8 +117,18 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "INSERT into ROOM(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
                     room);
+            }
+        }
+
+        public static void insertRole(RoleModel role)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute(
+                    "INSERT into role(Role_Description,Role_Salary,Role_Hours_Per_Day) VALUES (@Role_Description@,Role_Salary,@Role_Hours_Per_Day)",
+                    role);
             }
         }
 
@@ -128,7 +138,7 @@ namespace Arcadia_Hotel_DB
 
         #region UPDATE
 
-        public static void updateBooking(BookingModel booking,int iD)
+        public static void updateBooking(BookingModel booking)
         {
             using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
             {
@@ -138,12 +148,42 @@ namespace Arcadia_Hotel_DB
             }
         }
 
+        public static void updateRole(RoleModel role)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute(
+                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    role);
+            }
+        }
+
+        public static void updateEmployee(EmployeeModel employee)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute(
+                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    employee);
+            }
+        }
+
+        public static void updateRoom(RoomModel room)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute(
+                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    room);
+            }
+        }
+
         #endregion
 
         #region DELETE
 
 
-        public static void DeleteBooking(int iD)
+        public static void deleteBooking(int iD)
         {
             using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
             {
@@ -156,6 +196,30 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
             {
                 cnn.Execute($"DELETE Guest WHERE {iD} = Guest_ID");
+            }
+        }
+
+        public static void deleteEmployee(int iD)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"DELETE Employee WHERE {iD} = Employee_ID");
+            }
+        }
+
+        public static void deleteRole(int iD)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"DELETE Employee WHERE {iD} = Role_ID");
+            }
+        }
+
+        public static void deleteRoom(int iD)
+        {
+            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"DELETE Room WHERE {iD} = Role_ID");
             }
         }
 

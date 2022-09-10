@@ -48,23 +48,17 @@ namespace Arcadia_Hotel
             this.updateRoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeRoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tpAddRoom = new System.Windows.Forms.TabPage();
             this.redRoomDescription = new System.Windows.Forms.RichTextBox();
             this.btnAddRoom = new XanderUI.XUIButton();
             this.dgvAddRoom = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.nupdRoomAmount = new System.Windows.Forms.NumericUpDown();
             this.txtRoomPrice = new System.Windows.Forms.TextBox();
             this.txtRoomSize = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tpAddEmployee = new System.Windows.Forms.TabPage();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.btnAddEmployee = new XanderUI.XUIButton();
             this.label34 = new System.Windows.Forms.Label();
             this.dtpBirthDateAE = new System.Windows.Forms.DateTimePicker();
             this.label33 = new System.Windows.Forms.Label();
@@ -78,9 +72,7 @@ namespace Arcadia_Hotel
             this.dgvRoleEmployee = new System.Windows.Forms.DataGridView();
             this.label29 = new System.Windows.Forms.Label();
             this.dgvAddEmployee = new System.Windows.Forms.DataGridView();
-            this.tpAddRole = new System.Windows.Forms.TabPage();
             this.redRoleDescription = new System.Windows.Forms.RichTextBox();
-            this.btnAddRole = new XanderUI.XUIButton();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -88,25 +80,21 @@ namespace Arcadia_Hotel
             this.txtHoursAR = new System.Windows.Forms.TextBox();
             this.dgvRoleAR = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
-            this.tpDeleteRoom = new System.Windows.Forms.TabPage();
             this.btnDeleteRoom = new XanderUI.XUIButton();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbRoomID = new System.Windows.Forms.ComboBox();
             this.dgvDeleteRoom = new System.Windows.Forms.DataGridView();
-            this.tpDeleteEmployee = new System.Windows.Forms.TabPage();
             this.btnDeleteEmployee = new XanderUI.XUIButton();
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dgvDeleteEmployee = new System.Windows.Forms.DataGridView();
-            this.tpDeleteRole = new System.Windows.Forms.TabPage();
             this.btnDeleteRole = new XanderUI.XUIButton();
             this.label28 = new System.Windows.Forms.Label();
             this.cmbRoleIDDR = new System.Windows.Forms.ComboBox();
             this.dgvRoleDR = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
-            this.tpUpdateRoom = new System.Windows.Forms.TabPage();
             this.btnUpdateRoom = new XanderUI.XUIButton();
             this.txtPriceUR = new System.Windows.Forms.TextBox();
             this.txtSizeUR = new System.Windows.Forms.TextBox();
@@ -118,7 +106,6 @@ namespace Arcadia_Hotel
             this.label11 = new System.Windows.Forms.Label();
             this.cmbID = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.tpUpdateRole = new System.Windows.Forms.TabPage();
             this.btnUpdateRole = new XanderUI.XUIButton();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -130,7 +117,6 @@ namespace Arcadia_Hotel
             this.cmbRoleUR = new System.Windows.Forms.ComboBox();
             this.dgvRoleUR = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
-            this.tpUpdateEmployee = new System.Windows.Forms.TabPage();
             this.btnUpdateEmployee = new XanderUI.XUIButton();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -149,7 +135,6 @@ namespace Arcadia_Hotel
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label37 = new System.Windows.Forms.Label();
-            this.tpReport = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbShowMinimum = new System.Windows.Forms.CheckBox();
             this.cbShowMax = new System.Windows.Forms.CheckBox();
@@ -173,7 +158,6 @@ namespace Arcadia_Hotel
             this.txtReportName = new System.Windows.Forms.TextBox();
             this.rzrAdminName = new System.Windows.Forms.TextBox();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
-            this.tpChangePs = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.btnChangePassword = new XanderUI.XUIButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -182,35 +166,48 @@ namespace Arcadia_Hotel
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.xuiFlatTab1 = new XanderUI.XUIFlatTab();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.btnAddEmployee = new XanderUI.XUIButton();
+            this.btnAddRole = new XanderUI.XUIButton();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tpAddRoom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddRoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupdRoomAmount)).BeginInit();
-            this.tpAddEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddEmployee)).BeginInit();
-            this.tpAddRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleAR)).BeginInit();
-            this.tpDeleteRoom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteRoom)).BeginInit();
-            this.tpDeleteEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteEmployee)).BeginInit();
-            this.tpDeleteRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleDR)).BeginInit();
-            this.tpUpdateRoom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomUpdate)).BeginInit();
-            this.tpUpdateRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleUR)).BeginInit();
-            this.tpUpdateEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tpReport.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tpChangePs.SuspendLayout();
+            this.xuiFlatTab1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -223,7 +220,7 @@ namespace Arcadia_Hotel
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(889, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1109, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -347,52 +344,11 @@ namespace Arcadia_Hotel
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.reportToolStripMenuItem.Text = "Report";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tpAddRoom);
-            this.tabControl1.Controls.Add(this.tpAddEmployee);
-            this.tabControl1.Controls.Add(this.tpAddRole);
-            this.tabControl1.Controls.Add(this.tpDeleteRoom);
-            this.tabControl1.Controls.Add(this.tpDeleteEmployee);
-            this.tabControl1.Controls.Add(this.tpDeleteRole);
-            this.tabControl1.Controls.Add(this.tpUpdateRoom);
-            this.tabControl1.Controls.Add(this.tpUpdateRole);
-            this.tabControl1.Controls.Add(this.tpUpdateEmployee);
-            this.tabControl1.Controls.Add(this.tpReport);
-            this.tabControl1.Controls.Add(this.tpChangePs);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 24);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(889, 487);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tpAddRoom
-            // 
-            this.tpAddRoom.Controls.Add(this.redRoomDescription);
-            this.tpAddRoom.Controls.Add(this.btnAddRoom);
-            this.tpAddRoom.Controls.Add(this.dgvAddRoom);
-            this.tpAddRoom.Controls.Add(this.label8);
-            this.tpAddRoom.Controls.Add(this.label7);
-            this.tpAddRoom.Controls.Add(this.label6);
-            this.tpAddRoom.Controls.Add(this.label5);
-            this.tpAddRoom.Controls.Add(this.nupdRoomAmount);
-            this.tpAddRoom.Controls.Add(this.txtRoomPrice);
-            this.tpAddRoom.Controls.Add(this.txtRoomSize);
-            this.tpAddRoom.Controls.Add(this.label4);
-            this.tpAddRoom.Location = new System.Drawing.Point(4, 22);
-            this.tpAddRoom.Name = "tpAddRoom";
-            this.tpAddRoom.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAddRoom.Size = new System.Drawing.Size(881, 461);
-            this.tpAddRoom.TabIndex = 1;
-            this.tpAddRoom.Text = "Add Room";
-            this.tpAddRoom.UseVisualStyleBackColor = true;
-            // 
             // redRoomDescription
             // 
-            this.redRoomDescription.Location = new System.Drawing.Point(151, 44);
+            this.redRoomDescription.Location = new System.Drawing.Point(146, 65);
             this.redRoomDescription.Name = "redRoomDescription";
-            this.redRoomDescription.Size = new System.Drawing.Size(167, 79);
+            this.redRoomDescription.Size = new System.Drawing.Size(189, 95);
             this.redRoomDescription.TabIndex = 51;
             this.redRoomDescription.Text = "";
             // 
@@ -410,7 +366,7 @@ namespace Arcadia_Hotel
             this.btnAddRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btnAddRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.btnAddRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnAddRoom.Location = new System.Drawing.Point(106, 337);
+            this.btnAddRoom.Location = new System.Drawing.Point(107, 367);
             this.btnAddRoom.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(159, 45);
@@ -422,79 +378,52 @@ namespace Arcadia_Hotel
             // dgvAddRoom
             // 
             this.dgvAddRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAddRoom.Location = new System.Drawing.Point(449, 30);
+            this.dgvAddRoom.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvAddRoom.Location = new System.Drawing.Point(435, 3);
             this.dgvAddRoom.Name = "dgvAddRoom";
-            this.dgvAddRoom.Size = new System.Drawing.Size(402, 372);
+            this.dgvAddRoom.Size = new System.Drawing.Size(663, 524);
             this.dgvAddRoom.TabIndex = 19;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(128, 13);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(141, 19);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.Size = new System.Drawing.Size(107, 25);
             this.label8.TabIndex = 9;
             this.label8.Text = "Add Room";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 180);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Amount of rooms:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(84, 225);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label6.Location = new System.Drawing.Point(61, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.Size = new System.Drawing.Size(75, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "Room Size:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(67, 265);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.Location = new System.Drawing.Point(44, 249);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.Size = new System.Drawing.Size(101, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "Price per night:";
             // 
-            // nupdRoomAmount
-            // 
-            this.nupdRoomAmount.Location = new System.Drawing.Point(169, 178);
-            this.nupdRoomAmount.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.nupdRoomAmount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nupdRoomAmount.Name = "nupdRoomAmount";
-            this.nupdRoomAmount.Size = new System.Drawing.Size(56, 20);
-            this.nupdRoomAmount.TabIndex = 4;
-            this.nupdRoomAmount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // txtRoomPrice
             // 
-            this.txtRoomPrice.Location = new System.Drawing.Point(169, 262);
+            this.txtRoomPrice.Location = new System.Drawing.Point(146, 246);
             this.txtRoomPrice.Name = "txtRoomPrice";
             this.txtRoomPrice.Size = new System.Drawing.Size(96, 20);
             this.txtRoomPrice.TabIndex = 3;
             // 
             // txtRoomSize
             // 
-            this.txtRoomSize.Location = new System.Drawing.Point(169, 222);
+            this.txtRoomSize.Location = new System.Drawing.Point(146, 206);
             this.txtRoomSize.Name = "txtRoomSize";
             this.txtRoomSize.Size = new System.Drawing.Size(96, 20);
             this.txtRoomSize.TabIndex = 2;
@@ -502,89 +431,49 @@ namespace Arcadia_Hotel
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 47);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label4.Location = new System.Drawing.Point(15, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.Size = new System.Drawing.Size(121, 19);
             this.label4.TabIndex = 1;
             this.label4.Text = "Room Description:";
-            // 
-            // tpAddEmployee
-            // 
-            this.tpAddEmployee.Controls.Add(this.label36);
-            this.tpAddEmployee.Controls.Add(this.label35);
-            this.tpAddEmployee.Controls.Add(this.btnAddEmployee);
-            this.tpAddEmployee.Controls.Add(this.label34);
-            this.tpAddEmployee.Controls.Add(this.dtpBirthDateAE);
-            this.tpAddEmployee.Controls.Add(this.label33);
-            this.tpAddEmployee.Controls.Add(this.txtEmailAE);
-            this.tpAddEmployee.Controls.Add(this.label32);
-            this.tpAddEmployee.Controls.Add(this.cmbRoleIDAE);
-            this.tpAddEmployee.Controls.Add(this.label31);
-            this.tpAddEmployee.Controls.Add(this.txtSurnameAE);
-            this.tpAddEmployee.Controls.Add(this.label30);
-            this.tpAddEmployee.Controls.Add(this.txtNameAE);
-            this.tpAddEmployee.Controls.Add(this.dgvRoleEmployee);
-            this.tpAddEmployee.Controls.Add(this.label29);
-            this.tpAddEmployee.Controls.Add(this.dgvAddEmployee);
-            this.tpAddEmployee.Location = new System.Drawing.Point(4, 22);
-            this.tpAddEmployee.Name = "tpAddEmployee";
-            this.tpAddEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAddEmployee.Size = new System.Drawing.Size(881, 461);
-            this.tpAddEmployee.TabIndex = 4;
-            this.tpAddEmployee.Text = "Add Employee";
-            this.tpAddEmployee.UseVisualStyleBackColor = true;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(624, 9);
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(586, 22);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(58, 13);
+            this.label36.Size = new System.Drawing.Size(74, 19);
             this.label36.TabIndex = 39;
             this.label36.Text = "Employees";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(633, 299);
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(598, 306);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(34, 13);
+            this.label35.Size = new System.Drawing.Size(41, 19);
             this.label35.TabIndex = 38;
             this.label35.Text = "Roles";
-            // 
-            // btnAddEmployee
-            // 
-            this.btnAddEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAddEmployee.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnAddEmployee.ButtonImage")));
-            this.btnAddEmployee.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnAddEmployee.ButtonText = "Add Employee";
-            this.btnAddEmployee.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnAddEmployee.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddEmployee.CornerRadius = 5;
-            this.btnAddEmployee.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnAddEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnAddEmployee.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnAddEmployee.Location = new System.Drawing.Point(95, 315);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(200, 50);
-            this.btnAddEmployee.TabIndex = 37;
-            this.btnAddEmployee.TextColor = System.Drawing.Color.Black;
-            this.btnAddEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(86, 247);
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(48, 260);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(35, 13);
+            this.label34.Size = new System.Drawing.Size(44, 19);
             this.label34.TabIndex = 36;
             this.label34.Text = "Email:";
             // 
             // dtpBirthDateAE
             // 
-            this.dtpBirthDateAE.Location = new System.Drawing.Point(141, 195);
+            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 208);
             this.dtpBirthDateAE.Name = "dtpBirthDateAE";
             this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 20);
             this.dtpBirthDateAE.TabIndex = 35;
@@ -592,15 +481,17 @@ namespace Arcadia_Hotel
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(56, 201);
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(10, 209);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(68, 13);
+            this.label33.Size = new System.Drawing.Size(90, 19);
             this.label33.TabIndex = 34;
             this.label33.Text = "Date of birth:";
             // 
             // txtEmailAE
             // 
-            this.txtEmailAE.Location = new System.Drawing.Point(141, 244);
+            this.txtEmailAE.Location = new System.Drawing.Point(103, 257);
             this.txtEmailAE.Name = "txtEmailAE";
             this.txtEmailAE.Size = new System.Drawing.Size(117, 20);
             this.txtEmailAE.TabIndex = 33;
@@ -608,16 +499,18 @@ namespace Arcadia_Hotel
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(92, 152);
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(54, 165);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(32, 13);
+            this.label32.Size = new System.Drawing.Size(38, 19);
             this.label32.TabIndex = 28;
             this.label32.Text = "Role:";
             // 
             // cmbRoleIDAE
             // 
             this.cmbRoleIDAE.FormattingEnabled = true;
-            this.cmbRoleIDAE.Location = new System.Drawing.Point(141, 149);
+            this.cmbRoleIDAE.Location = new System.Drawing.Point(103, 162);
             this.cmbRoleIDAE.Name = "cmbRoleIDAE";
             this.cmbRoleIDAE.Size = new System.Drawing.Size(121, 21);
             this.cmbRoleIDAE.TabIndex = 27;
@@ -625,15 +518,17 @@ namespace Arcadia_Hotel
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(72, 67);
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(34, 80);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(52, 13);
+            this.label31.Size = new System.Drawing.Size(66, 19);
             this.label31.TabIndex = 26;
             this.label31.Text = "Surname:";
             // 
             // txtSurnameAE
             // 
-            this.txtSurnameAE.Location = new System.Drawing.Point(141, 64);
+            this.txtSurnameAE.Location = new System.Drawing.Point(103, 77);
             this.txtSurnameAE.Name = "txtSurnameAE";
             this.txtSurnameAE.Size = new System.Drawing.Size(117, 20);
             this.txtSurnameAE.TabIndex = 25;
@@ -641,15 +536,17 @@ namespace Arcadia_Hotel
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(86, 104);
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(48, 117);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(38, 13);
+            this.label30.Size = new System.Drawing.Size(48, 19);
             this.label30.TabIndex = 24;
             this.label30.Text = "Name:";
             // 
             // txtNameAE
             // 
-            this.txtNameAE.Location = new System.Drawing.Point(141, 101);
+            this.txtNameAE.Location = new System.Drawing.Point(103, 114);
             this.txtNameAE.Name = "txtNameAE";
             this.txtNameAE.Size = new System.Drawing.Size(117, 20);
             this.txtNameAE.TabIndex = 23;
@@ -657,7 +554,7 @@ namespace Arcadia_Hotel
             // dgvRoleEmployee
             // 
             this.dgvRoleEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoleEmployee.Location = new System.Drawing.Point(483, 315);
+            this.dgvRoleEmployee.Location = new System.Drawing.Point(445, 328);
             this.dgvRoleEmployee.Name = "dgvRoleEmployee";
             this.dgvRoleEmployee.Size = new System.Drawing.Size(323, 138);
             this.dgvRoleEmployee.TabIndex = 22;
@@ -665,105 +562,73 @@ namespace Arcadia_Hotel
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(153, 25);
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Location = new System.Drawing.Point(115, 38);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(75, 13);
+            this.label29.Size = new System.Drawing.Size(111, 21);
             this.label29.TabIndex = 21;
             this.label29.Text = "Hire Employee";
             // 
             // dgvAddEmployee
             // 
             this.dgvAddEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAddEmployee.Location = new System.Drawing.Point(402, 25);
+            this.dgvAddEmployee.Location = new System.Drawing.Point(364, 38);
             this.dgvAddEmployee.Name = "dgvAddEmployee";
             this.dgvAddEmployee.Size = new System.Drawing.Size(473, 257);
             this.dgvAddEmployee.TabIndex = 20;
             // 
-            // tpAddRole
-            // 
-            this.tpAddRole.Controls.Add(this.redRoleDescription);
-            this.tpAddRole.Controls.Add(this.btnAddRole);
-            this.tpAddRole.Controls.Add(this.label23);
-            this.tpAddRole.Controls.Add(this.label22);
-            this.tpAddRole.Controls.Add(this.label21);
-            this.tpAddRole.Controls.Add(this.txtSalaryAR);
-            this.tpAddRole.Controls.Add(this.txtHoursAR);
-            this.tpAddRole.Controls.Add(this.dgvRoleAR);
-            this.tpAddRole.Controls.Add(this.label18);
-            this.tpAddRole.Location = new System.Drawing.Point(4, 22);
-            this.tpAddRole.Name = "tpAddRole";
-            this.tpAddRole.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAddRole.Size = new System.Drawing.Size(881, 461);
-            this.tpAddRole.TabIndex = 7;
-            this.tpAddRole.Text = "Add Role";
-            this.tpAddRole.UseVisualStyleBackColor = true;
-            // 
             // redRoleDescription
             // 
-            this.redRoleDescription.Location = new System.Drawing.Point(182, 52);
+            this.redRoleDescription.Location = new System.Drawing.Point(191, 72);
             this.redRoleDescription.Name = "redRoleDescription";
             this.redRoleDescription.Size = new System.Drawing.Size(178, 79);
             this.redRoleDescription.TabIndex = 52;
             this.redRoleDescription.Text = "";
             // 
-            // btnAddRole
-            // 
-            this.btnAddRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAddRole.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnAddRole.ButtonImage")));
-            this.btnAddRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnAddRole.ButtonText = "Add Role";
-            this.btnAddRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnAddRole.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddRole.CornerRadius = 5;
-            this.btnAddRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnAddRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnAddRole.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnAddRole.Location = new System.Drawing.Point(72, 267);
-            this.btnAddRole.Name = "btnAddRole";
-            this.btnAddRole.Size = new System.Drawing.Size(200, 50);
-            this.btnAddRole.TabIndex = 26;
-            this.btnAddRole.TextColor = System.Drawing.Color.Black;
-            this.btnAddRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnAddRole.Click += new System.EventHandler(this.btnAddRole_Click);
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(40, 52);
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label23.Location = new System.Drawing.Point(49, 72);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(86, 13);
+            this.label23.Size = new System.Drawing.Size(109, 19);
             this.label23.TabIndex = 25;
             this.label23.Text = "Role description:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(69, 140);
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label22.Location = new System.Drawing.Point(94, 205);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 13);
+            this.label22.Size = new System.Drawing.Size(91, 19);
             this.label22.TabIndex = 24;
             this.label22.Text = "Salary of role:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(13, 191);
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label21.Location = new System.Drawing.Point(38, 256);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(127, 13);
+            this.label21.Size = new System.Drawing.Size(166, 19);
             this.label21.TabIndex = 23;
             this.label21.Text = "Hours role works per day:";
             // 
             // txtSalaryAR
             // 
-            this.txtSalaryAR.Location = new System.Drawing.Point(182, 137);
+            this.txtSalaryAR.Location = new System.Drawing.Point(207, 202);
             this.txtSalaryAR.Name = "txtSalaryAR";
             this.txtSalaryAR.Size = new System.Drawing.Size(100, 20);
             this.txtSalaryAR.TabIndex = 22;
             // 
             // txtHoursAR
             // 
-            this.txtHoursAR.Location = new System.Drawing.Point(182, 188);
+            this.txtHoursAR.Location = new System.Drawing.Point(207, 253);
             this.txtHoursAR.Name = "txtHoursAR";
             this.txtHoursAR.Size = new System.Drawing.Size(100, 20);
             this.txtHoursAR.TabIndex = 21;
@@ -771,7 +636,7 @@ namespace Arcadia_Hotel
             // dgvRoleAR
             // 
             this.dgvRoleAR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoleAR.Location = new System.Drawing.Point(430, 59);
+            this.dgvRoleAR.Location = new System.Drawing.Point(439, 79);
             this.dgvRoleAR.Name = "dgvRoleAR";
             this.dgvRoleAR.Size = new System.Drawing.Size(374, 336);
             this.dgvRoleAR.TabIndex = 19;
@@ -779,26 +644,13 @@ namespace Arcadia_Hotel
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(132, 18);
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label18.Location = new System.Drawing.Point(141, 38);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 13);
+            this.label18.Size = new System.Drawing.Size(93, 25);
             this.label18.TabIndex = 10;
             this.label18.Text = "Add Role";
-            // 
-            // tpDeleteRoom
-            // 
-            this.tpDeleteRoom.Controls.Add(this.btnDeleteRoom);
-            this.tpDeleteRoom.Controls.Add(this.label17);
-            this.tpDeleteRoom.Controls.Add(this.label16);
-            this.tpDeleteRoom.Controls.Add(this.cmbRoomID);
-            this.tpDeleteRoom.Controls.Add(this.dgvDeleteRoom);
-            this.tpDeleteRoom.Location = new System.Drawing.Point(4, 22);
-            this.tpDeleteRoom.Name = "tpDeleteRoom";
-            this.tpDeleteRoom.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeleteRoom.Size = new System.Drawing.Size(881, 461);
-            this.tpDeleteRoom.TabIndex = 3;
-            this.tpDeleteRoom.Text = "Delete Room";
-            this.tpDeleteRoom.UseVisualStyleBackColor = true;
             // 
             // btnDeleteRoom
             // 
@@ -813,7 +665,7 @@ namespace Arcadia_Hotel
             this.btnDeleteRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnDeleteRoom.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnDeleteRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteRoom.Location = new System.Drawing.Point(103, 158);
+            this.btnDeleteRoom.Location = new System.Drawing.Point(107, 173);
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.Size = new System.Drawing.Size(200, 50);
             this.btnDeleteRoom.TabIndex = 23;
@@ -824,7 +676,7 @@ namespace Arcadia_Hotel
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(43, 75);
+            this.label17.Location = new System.Drawing.Point(47, 90);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(124, 13);
             this.label17.TabIndex = 22;
@@ -833,7 +685,7 @@ namespace Arcadia_Hotel
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(147, 26);
+            this.label16.Location = new System.Drawing.Point(151, 41);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 13);
             this.label16.TabIndex = 21;
@@ -842,7 +694,7 @@ namespace Arcadia_Hotel
             // cmbRoomID
             // 
             this.cmbRoomID.FormattingEnabled = true;
-            this.cmbRoomID.Location = new System.Drawing.Point(173, 72);
+            this.cmbRoomID.Location = new System.Drawing.Point(177, 87);
             this.cmbRoomID.Name = "cmbRoomID";
             this.cmbRoomID.Size = new System.Drawing.Size(130, 21);
             this.cmbRoomID.TabIndex = 20;
@@ -850,25 +702,10 @@ namespace Arcadia_Hotel
             // dgvDeleteRoom
             // 
             this.dgvDeleteRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeleteRoom.Location = new System.Drawing.Point(457, 39);
+            this.dgvDeleteRoom.Location = new System.Drawing.Point(461, 54);
             this.dgvDeleteRoom.Name = "dgvDeleteRoom";
             this.dgvDeleteRoom.Size = new System.Drawing.Size(391, 360);
             this.dgvDeleteRoom.TabIndex = 19;
-            // 
-            // tpDeleteEmployee
-            // 
-            this.tpDeleteEmployee.Controls.Add(this.btnDeleteEmployee);
-            this.tpDeleteEmployee.Controls.Add(this.label42);
-            this.tpDeleteEmployee.Controls.Add(this.label41);
-            this.tpDeleteEmployee.Controls.Add(this.comboBox1);
-            this.tpDeleteEmployee.Controls.Add(this.dgvDeleteEmployee);
-            this.tpDeleteEmployee.Location = new System.Drawing.Point(4, 22);
-            this.tpDeleteEmployee.Name = "tpDeleteEmployee";
-            this.tpDeleteEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeleteEmployee.Size = new System.Drawing.Size(881, 461);
-            this.tpDeleteEmployee.TabIndex = 6;
-            this.tpDeleteEmployee.Text = "Delete Employee";
-            this.tpDeleteEmployee.UseVisualStyleBackColor = true;
             // 
             // btnDeleteEmployee
             // 
@@ -883,7 +720,7 @@ namespace Arcadia_Hotel
             this.btnDeleteEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnDeleteEmployee.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnDeleteEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(110, 159);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(88, 168);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
             this.btnDeleteEmployee.Size = new System.Drawing.Size(200, 50);
             this.btnDeleteEmployee.TabIndex = 47;
@@ -894,7 +731,7 @@ namespace Arcadia_Hotel
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(143, 29);
+            this.label42.Location = new System.Drawing.Point(121, 38);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(96, 13);
             this.label42.TabIndex = 46;
@@ -903,7 +740,7 @@ namespace Arcadia_Hotel
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(39, 88);
+            this.label41.Location = new System.Drawing.Point(17, 97);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(132, 13);
             this.label41.TabIndex = 45;
@@ -912,7 +749,7 @@ namespace Arcadia_Hotel
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 85);
+            this.comboBox1.Location = new System.Drawing.Point(172, 94);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 44;
@@ -920,25 +757,10 @@ namespace Arcadia_Hotel
             // dgvDeleteEmployee
             // 
             this.dgvDeleteEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeleteEmployee.Location = new System.Drawing.Point(455, 41);
+            this.dgvDeleteEmployee.Location = new System.Drawing.Point(433, 50);
             this.dgvDeleteEmployee.Name = "dgvDeleteEmployee";
             this.dgvDeleteEmployee.Size = new System.Drawing.Size(391, 360);
             this.dgvDeleteEmployee.TabIndex = 20;
-            // 
-            // tpDeleteRole
-            // 
-            this.tpDeleteRole.Controls.Add(this.btnDeleteRole);
-            this.tpDeleteRole.Controls.Add(this.label28);
-            this.tpDeleteRole.Controls.Add(this.cmbRoleIDDR);
-            this.tpDeleteRole.Controls.Add(this.dgvRoleDR);
-            this.tpDeleteRole.Controls.Add(this.label20);
-            this.tpDeleteRole.Location = new System.Drawing.Point(4, 22);
-            this.tpDeleteRole.Name = "tpDeleteRole";
-            this.tpDeleteRole.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeleteRole.Size = new System.Drawing.Size(881, 461);
-            this.tpDeleteRole.TabIndex = 9;
-            this.tpDeleteRole.Text = "Delete Role";
-            this.tpDeleteRole.UseVisualStyleBackColor = true;
             // 
             // btnDeleteRole
             // 
@@ -953,7 +775,7 @@ namespace Arcadia_Hotel
             this.btnDeleteRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnDeleteRole.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnDeleteRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteRole.Location = new System.Drawing.Point(115, 186);
+            this.btnDeleteRole.Location = new System.Drawing.Point(101, 196);
             this.btnDeleteRole.Name = "btnDeleteRole";
             this.btnDeleteRole.Size = new System.Drawing.Size(200, 50);
             this.btnDeleteRole.TabIndex = 31;
@@ -964,7 +786,7 @@ namespace Arcadia_Hotel
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(55, 90);
+            this.label28.Location = new System.Drawing.Point(41, 100);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(138, 13);
             this.label28.TabIndex = 22;
@@ -973,7 +795,7 @@ namespace Arcadia_Hotel
             // cmbRoleIDDR
             // 
             this.cmbRoleIDDR.FormattingEnabled = true;
-            this.cmbRoleIDDR.Location = new System.Drawing.Point(222, 87);
+            this.cmbRoleIDDR.Location = new System.Drawing.Point(208, 97);
             this.cmbRoleIDDR.Name = "cmbRoleIDDR";
             this.cmbRoleIDDR.Size = new System.Drawing.Size(121, 21);
             this.cmbRoleIDDR.TabIndex = 21;
@@ -981,7 +803,7 @@ namespace Arcadia_Hotel
             // dgvRoleDR
             // 
             this.dgvRoleDR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoleDR.Location = new System.Drawing.Point(469, 50);
+            this.dgvRoleDR.Location = new System.Drawing.Point(455, 60);
             this.dgvRoleDR.Name = "dgvRoleDR";
             this.dgvRoleDR.Size = new System.Drawing.Size(376, 360);
             this.dgvRoleDR.TabIndex = 19;
@@ -989,32 +811,11 @@ namespace Arcadia_Hotel
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(130, 30);
+            this.label20.Location = new System.Drawing.Point(116, 40);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(63, 13);
             this.label20.TabIndex = 11;
             this.label20.Text = "Delete Role";
-            // 
-            // tpUpdateRoom
-            // 
-            this.tpUpdateRoom.Controls.Add(this.btnUpdateRoom);
-            this.tpUpdateRoom.Controls.Add(this.txtPriceUR);
-            this.tpUpdateRoom.Controls.Add(this.txtSizeUR);
-            this.tpUpdateRoom.Controls.Add(this.dgvRoomUpdate);
-            this.tpUpdateRoom.Controls.Add(this.label15);
-            this.tpUpdateRoom.Controls.Add(this.label14);
-            this.tpUpdateRoom.Controls.Add(this.label12);
-            this.tpUpdateRoom.Controls.Add(this.txtDescriptionUR);
-            this.tpUpdateRoom.Controls.Add(this.label11);
-            this.tpUpdateRoom.Controls.Add(this.cmbID);
-            this.tpUpdateRoom.Controls.Add(this.label10);
-            this.tpUpdateRoom.Location = new System.Drawing.Point(4, 22);
-            this.tpUpdateRoom.Name = "tpUpdateRoom";
-            this.tpUpdateRoom.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUpdateRoom.Size = new System.Drawing.Size(881, 461);
-            this.tpUpdateRoom.TabIndex = 2;
-            this.tpUpdateRoom.Text = "Update Room";
-            this.tpUpdateRoom.UseVisualStyleBackColor = true;
             // 
             // btnUpdateRoom
             // 
@@ -1029,7 +830,7 @@ namespace Arcadia_Hotel
             this.btnUpdateRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnUpdateRoom.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnUpdateRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateRoom.Location = new System.Drawing.Point(104, 342);
+            this.btnUpdateRoom.Location = new System.Drawing.Point(112, 362);
             this.btnUpdateRoom.Name = "btnUpdateRoom";
             this.btnUpdateRoom.Size = new System.Drawing.Size(200, 50);
             this.btnUpdateRoom.TabIndex = 22;
@@ -1039,14 +840,14 @@ namespace Arcadia_Hotel
             // 
             // txtPriceUR
             // 
-            this.txtPriceUR.Location = new System.Drawing.Point(151, 266);
+            this.txtPriceUR.Location = new System.Drawing.Point(159, 286);
             this.txtPriceUR.Name = "txtPriceUR";
             this.txtPriceUR.Size = new System.Drawing.Size(118, 20);
             this.txtPriceUR.TabIndex = 21;
             // 
             // txtSizeUR
             // 
-            this.txtSizeUR.Location = new System.Drawing.Point(151, 223);
+            this.txtSizeUR.Location = new System.Drawing.Point(159, 243);
             this.txtSizeUR.Name = "txtSizeUR";
             this.txtSizeUR.Size = new System.Drawing.Size(118, 20);
             this.txtSizeUR.TabIndex = 20;
@@ -1054,7 +855,7 @@ namespace Arcadia_Hotel
             // dgvRoomUpdate
             // 
             this.dgvRoomUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoomUpdate.Location = new System.Drawing.Point(468, 56);
+            this.dgvRoomUpdate.Location = new System.Drawing.Point(476, 76);
             this.dgvRoomUpdate.Name = "dgvRoomUpdate";
             this.dgvRoomUpdate.Size = new System.Drawing.Size(374, 336);
             this.dgvRoomUpdate.TabIndex = 18;
@@ -1062,7 +863,7 @@ namespace Arcadia_Hotel
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(58, 269);
+            this.label15.Location = new System.Drawing.Point(66, 289);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(78, 13);
             this.label15.TabIndex = 17;
@@ -1071,7 +872,7 @@ namespace Arcadia_Hotel
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(75, 226);
+            this.label14.Location = new System.Drawing.Point(83, 246);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(61, 13);
             this.label14.TabIndex = 16;
@@ -1080,7 +881,7 @@ namespace Arcadia_Hotel
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(42, 133);
+            this.label12.Location = new System.Drawing.Point(50, 153);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(94, 13);
             this.label12.TabIndex = 14;
@@ -1088,7 +889,7 @@ namespace Arcadia_Hotel
             // 
             // txtDescriptionUR
             // 
-            this.txtDescriptionUR.Location = new System.Drawing.Point(151, 130);
+            this.txtDescriptionUR.Location = new System.Drawing.Point(159, 150);
             this.txtDescriptionUR.Name = "txtDescriptionUR";
             this.txtDescriptionUR.Size = new System.Drawing.Size(143, 20);
             this.txtDescriptionUR.TabIndex = 13;
@@ -1096,7 +897,7 @@ namespace Arcadia_Hotel
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 56);
+            this.label11.Location = new System.Drawing.Point(30, 76);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 13);
             this.label11.TabIndex = 12;
@@ -1105,7 +906,7 @@ namespace Arcadia_Hotel
             // cmbID
             // 
             this.cmbID.FormattingEnabled = true;
-            this.cmbID.Location = new System.Drawing.Point(151, 53);
+            this.cmbID.Location = new System.Drawing.Point(159, 73);
             this.cmbID.Name = "cmbID";
             this.cmbID.Size = new System.Drawing.Size(130, 21);
             this.cmbID.TabIndex = 11;
@@ -1113,32 +914,11 @@ namespace Arcadia_Hotel
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(127, 20);
+            this.label10.Location = new System.Drawing.Point(135, 40);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "Update Room";
-            // 
-            // tpUpdateRole
-            // 
-            this.tpUpdateRole.Controls.Add(this.btnUpdateRole);
-            this.tpUpdateRole.Controls.Add(this.label27);
-            this.tpUpdateRole.Controls.Add(this.label26);
-            this.tpUpdateRole.Controls.Add(this.label25);
-            this.tpUpdateRole.Controls.Add(this.txtDescriptionRU);
-            this.tpUpdateRole.Controls.Add(this.txtSalaryUR);
-            this.tpUpdateRole.Controls.Add(this.txtHoursUR);
-            this.tpUpdateRole.Controls.Add(this.label24);
-            this.tpUpdateRole.Controls.Add(this.cmbRoleUR);
-            this.tpUpdateRole.Controls.Add(this.dgvRoleUR);
-            this.tpUpdateRole.Controls.Add(this.label19);
-            this.tpUpdateRole.Location = new System.Drawing.Point(4, 22);
-            this.tpUpdateRole.Name = "tpUpdateRole";
-            this.tpUpdateRole.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUpdateRole.Size = new System.Drawing.Size(881, 461);
-            this.tpUpdateRole.TabIndex = 8;
-            this.tpUpdateRole.Text = "Update Role";
-            this.tpUpdateRole.UseVisualStyleBackColor = true;
             // 
             // btnUpdateRole
             // 
@@ -1153,7 +933,7 @@ namespace Arcadia_Hotel
             this.btnUpdateRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnUpdateRole.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnUpdateRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateRole.Location = new System.Drawing.Point(133, 322);
+            this.btnUpdateRole.Location = new System.Drawing.Point(118, 340);
             this.btnUpdateRole.Name = "btnUpdateRole";
             this.btnUpdateRole.Size = new System.Drawing.Size(200, 50);
             this.btnUpdateRole.TabIndex = 29;
@@ -1164,7 +944,7 @@ namespace Arcadia_Hotel
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(57, 255);
+            this.label27.Location = new System.Drawing.Point(42, 273);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(127, 13);
             this.label27.TabIndex = 28;
@@ -1173,7 +953,7 @@ namespace Arcadia_Hotel
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(113, 203);
+            this.label26.Location = new System.Drawing.Point(98, 221);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(71, 13);
             this.label26.TabIndex = 27;
@@ -1182,7 +962,7 @@ namespace Arcadia_Hotel
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(98, 152);
+            this.label25.Location = new System.Drawing.Point(83, 170);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(86, 13);
             this.label25.TabIndex = 26;
@@ -1190,21 +970,21 @@ namespace Arcadia_Hotel
             // 
             // txtDescriptionRU
             // 
-            this.txtDescriptionRU.Location = new System.Drawing.Point(212, 149);
+            this.txtDescriptionRU.Location = new System.Drawing.Point(197, 167);
             this.txtDescriptionRU.Name = "txtDescriptionRU";
             this.txtDescriptionRU.Size = new System.Drawing.Size(131, 20);
             this.txtDescriptionRU.TabIndex = 24;
             // 
             // txtSalaryUR
             // 
-            this.txtSalaryUR.Location = new System.Drawing.Point(212, 200);
+            this.txtSalaryUR.Location = new System.Drawing.Point(197, 218);
             this.txtSalaryUR.Name = "txtSalaryUR";
             this.txtSalaryUR.Size = new System.Drawing.Size(110, 20);
             this.txtSalaryUR.TabIndex = 23;
             // 
             // txtHoursUR
             // 
-            this.txtHoursUR.Location = new System.Drawing.Point(212, 252);
+            this.txtHoursUR.Location = new System.Drawing.Point(197, 270);
             this.txtHoursUR.Name = "txtHoursUR";
             this.txtHoursUR.Size = new System.Drawing.Size(110, 20);
             this.txtHoursUR.TabIndex = 22;
@@ -1212,7 +992,7 @@ namespace Arcadia_Hotel
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(36, 74);
+            this.label24.Location = new System.Drawing.Point(21, 92);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(148, 13);
             this.label24.TabIndex = 21;
@@ -1221,7 +1001,7 @@ namespace Arcadia_Hotel
             // cmbRoleUR
             // 
             this.cmbRoleUR.FormattingEnabled = true;
-            this.cmbRoleUR.Location = new System.Drawing.Point(212, 71);
+            this.cmbRoleUR.Location = new System.Drawing.Point(197, 89);
             this.cmbRoleUR.Name = "cmbRoleUR";
             this.cmbRoleUR.Size = new System.Drawing.Size(121, 21);
             this.cmbRoleUR.TabIndex = 20;
@@ -1229,7 +1009,7 @@ namespace Arcadia_Hotel
             // dgvRoleUR
             // 
             this.dgvRoleUR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoleUR.Location = new System.Drawing.Point(462, 58);
+            this.dgvRoleUR.Location = new System.Drawing.Point(447, 76);
             this.dgvRoleUR.Name = "dgvRoleUR";
             this.dgvRoleUR.Size = new System.Drawing.Size(374, 336);
             this.dgvRoleUR.TabIndex = 19;
@@ -1237,39 +1017,11 @@ namespace Arcadia_Hotel
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(150, 26);
+            this.label19.Location = new System.Drawing.Point(135, 44);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 13);
             this.label19.TabIndex = 11;
             this.label19.Text = "Update Role";
-            // 
-            // tpUpdateEmployee
-            // 
-            this.tpUpdateEmployee.Controls.Add(this.btnUpdateEmployee);
-            this.tpUpdateEmployee.Controls.Add(this.label47);
-            this.tpUpdateEmployee.Controls.Add(this.textBox6);
-            this.tpUpdateEmployee.Controls.Add(this.label46);
-            this.tpUpdateEmployee.Controls.Add(this.dateTimePicker1);
-            this.tpUpdateEmployee.Controls.Add(this.label45);
-            this.tpUpdateEmployee.Controls.Add(this.comboBox2);
-            this.tpUpdateEmployee.Controls.Add(this.label44);
-            this.tpUpdateEmployee.Controls.Add(this.label43);
-            this.tpUpdateEmployee.Controls.Add(this.textBox5);
-            this.tpUpdateEmployee.Controls.Add(this.textBox4);
-            this.tpUpdateEmployee.Controls.Add(this.cmbEmployeeIDUE);
-            this.tpUpdateEmployee.Controls.Add(this.label40);
-            this.tpUpdateEmployee.Controls.Add(this.label39);
-            this.tpUpdateEmployee.Controls.Add(this.label38);
-            this.tpUpdateEmployee.Controls.Add(this.dataGridView2);
-            this.tpUpdateEmployee.Controls.Add(this.dataGridView1);
-            this.tpUpdateEmployee.Controls.Add(this.label37);
-            this.tpUpdateEmployee.Location = new System.Drawing.Point(4, 22);
-            this.tpUpdateEmployee.Name = "tpUpdateEmployee";
-            this.tpUpdateEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUpdateEmployee.Size = new System.Drawing.Size(881, 461);
-            this.tpUpdateEmployee.TabIndex = 5;
-            this.tpUpdateEmployee.Text = "Update Employee";
-            this.tpUpdateEmployee.UseVisualStyleBackColor = true;
             // 
             // btnUpdateEmployee
             // 
@@ -1284,7 +1036,7 @@ namespace Arcadia_Hotel
             this.btnUpdateEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnUpdateEmployee.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnUpdateEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateEmployee.Location = new System.Drawing.Point(83, 366);
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(107, 399);
             this.btnUpdateEmployee.Name = "btnUpdateEmployee";
             this.btnUpdateEmployee.Size = new System.Drawing.Size(200, 50);
             this.btnUpdateEmployee.TabIndex = 54;
@@ -1295,7 +1047,7 @@ namespace Arcadia_Hotel
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(94, 323);
+            this.label47.Location = new System.Drawing.Point(118, 356);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(35, 13);
             this.label47.TabIndex = 53;
@@ -1303,7 +1055,7 @@ namespace Arcadia_Hotel
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(146, 320);
+            this.textBox6.Location = new System.Drawing.Point(170, 353);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(117, 20);
             this.textBox6.TabIndex = 52;
@@ -1311,7 +1063,7 @@ namespace Arcadia_Hotel
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(64, 281);
+            this.label46.Location = new System.Drawing.Point(88, 314);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(68, 13);
             this.label46.TabIndex = 51;
@@ -1319,7 +1071,7 @@ namespace Arcadia_Hotel
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(146, 275);
+            this.dateTimePicker1.Location = new System.Drawing.Point(170, 308);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 50;
@@ -1327,7 +1079,7 @@ namespace Arcadia_Hotel
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(100, 232);
+            this.label45.Location = new System.Drawing.Point(124, 265);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(32, 13);
             this.label45.TabIndex = 49;
@@ -1336,7 +1088,7 @@ namespace Arcadia_Hotel
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(146, 229);
+            this.comboBox2.Location = new System.Drawing.Point(170, 262);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 48;
@@ -1344,7 +1096,7 @@ namespace Arcadia_Hotel
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(94, 190);
+            this.label44.Location = new System.Drawing.Point(118, 223);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(38, 13);
             this.label44.TabIndex = 47;
@@ -1353,7 +1105,7 @@ namespace Arcadia_Hotel
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(80, 146);
+            this.label43.Location = new System.Drawing.Point(104, 179);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(52, 13);
             this.label43.TabIndex = 46;
@@ -1361,14 +1113,14 @@ namespace Arcadia_Hotel
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(146, 183);
+            this.textBox5.Location = new System.Drawing.Point(170, 216);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(117, 20);
             this.textBox5.TabIndex = 45;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(146, 143);
+            this.textBox4.Location = new System.Drawing.Point(170, 176);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(117, 20);
             this.textBox4.TabIndex = 44;
@@ -1376,7 +1128,7 @@ namespace Arcadia_Hotel
             // cmbEmployeeIDUE
             // 
             this.cmbEmployeeIDUE.FormattingEnabled = true;
-            this.cmbEmployeeIDUE.Location = new System.Drawing.Point(146, 48);
+            this.cmbEmployeeIDUE.Location = new System.Drawing.Point(170, 81);
             this.cmbEmployeeIDUE.Name = "cmbEmployeeIDUE";
             this.cmbEmployeeIDUE.Size = new System.Drawing.Size(130, 21);
             this.cmbEmployeeIDUE.TabIndex = 43;
@@ -1384,7 +1136,7 @@ namespace Arcadia_Hotel
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(3, 51);
+            this.label40.Location = new System.Drawing.Point(27, 84);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(136, 13);
             this.label40.TabIndex = 42;
@@ -1393,7 +1145,7 @@ namespace Arcadia_Hotel
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(634, 304);
+            this.label39.Location = new System.Drawing.Point(658, 337);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(34, 13);
             this.label39.TabIndex = 41;
@@ -1402,7 +1154,7 @@ namespace Arcadia_Hotel
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(610, 16);
+            this.label38.Location = new System.Drawing.Point(634, 49);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(58, 13);
             this.label38.TabIndex = 40;
@@ -1411,7 +1163,7 @@ namespace Arcadia_Hotel
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(490, 320);
+            this.dataGridView2.Location = new System.Drawing.Point(514, 353);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(323, 138);
             this.dataGridView2.TabIndex = 24;
@@ -1419,7 +1171,7 @@ namespace Arcadia_Hotel
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(400, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(424, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(473, 257);
             this.dataGridView1.TabIndex = 23;
@@ -1427,32 +1179,18 @@ namespace Arcadia_Hotel
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(143, 18);
+            this.label37.Location = new System.Drawing.Point(167, 51);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(91, 13);
             this.label37.TabIndex = 22;
             this.label37.Text = "Update Employee";
-            // 
-            // tpReport
-            // 
-            this.tpReport.Controls.Add(this.groupBox4);
-            this.tpReport.Controls.Add(this.groupBox3);
-            this.tpReport.Controls.Add(this.groupBox2);
-            this.tpReport.Controls.Add(this.groupBox1);
-            this.tpReport.Location = new System.Drawing.Point(4, 22);
-            this.tpReport.Name = "tpReport";
-            this.tpReport.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReport.Size = new System.Drawing.Size(881, 461);
-            this.tpReport.TabIndex = 10;
-            this.tpReport.Text = "Report";
-            this.tpReport.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cbShowMinimum);
             this.groupBox4.Controls.Add(this.cbShowMax);
             this.groupBox4.Controls.Add(this.cbSummation);
-            this.groupBox4.Location = new System.Drawing.Point(395, 235);
+            this.groupBox4.Location = new System.Drawing.Point(369, 221);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(264, 173);
             this.groupBox4.TabIndex = 3;
@@ -1495,7 +1233,7 @@ namespace Arcadia_Hotel
             this.groupBox3.Controls.Add(this.cmbCategorizeRole);
             this.groupBox3.Controls.Add(this.label51);
             this.groupBox3.Controls.Add(this.cmbCategorizeRoomType);
-            this.groupBox3.Location = new System.Drawing.Point(395, 57);
+            this.groupBox3.Location = new System.Drawing.Point(369, 43);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(232, 151);
             this.groupBox3.TabIndex = 2;
@@ -1561,7 +1299,7 @@ namespace Arcadia_Hotel
             this.groupBox2.Controls.Add(this.cbReportName);
             this.groupBox2.Controls.Add(this.cbTime);
             this.groupBox2.Controls.Add(this.cbDate);
-            this.groupBox2.Location = new System.Drawing.Point(99, 256);
+            this.groupBox2.Location = new System.Drawing.Point(73, 242);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(262, 143);
             this.groupBox2.TabIndex = 1;
@@ -1627,7 +1365,7 @@ namespace Arcadia_Hotel
             this.groupBox1.Controls.Add(this.txtReportName);
             this.groupBox1.Controls.Add(this.rzrAdminName);
             this.groupBox1.Controls.Add(this.cmbReportType);
-            this.groupBox1.Location = new System.Drawing.Point(99, 57);
+            this.groupBox1.Location = new System.Drawing.Point(73, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(290, 161);
             this.groupBox1.TabIndex = 0;
@@ -1707,28 +1445,10 @@ namespace Arcadia_Hotel
             this.cmbReportType.Size = new System.Drawing.Size(137, 21);
             this.cmbReportType.TabIndex = 49;
             // 
-            // tpChangePs
-            // 
-            this.tpChangePs.Controls.Add(this.label9);
-            this.tpChangePs.Controls.Add(this.btnChangePassword);
-            this.tpChangePs.Controls.Add(this.label3);
-            this.tpChangePs.Controls.Add(this.label2);
-            this.tpChangePs.Controls.Add(this.textBox3);
-            this.tpChangePs.Controls.Add(this.textBox2);
-            this.tpChangePs.Controls.Add(this.textBox1);
-            this.tpChangePs.Controls.Add(this.label1);
-            this.tpChangePs.Location = new System.Drawing.Point(4, 22);
-            this.tpChangePs.Name = "tpChangePs";
-            this.tpChangePs.Padding = new System.Windows.Forms.Padding(3);
-            this.tpChangePs.Size = new System.Drawing.Size(881, 461);
-            this.tpChangePs.TabIndex = 0;
-            this.tpChangePs.Text = "Change Password";
-            this.tpChangePs.UseVisualStyleBackColor = true;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(101, 22);
+            this.label9.Location = new System.Drawing.Point(140, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 13);
             this.label9.TabIndex = 10;
@@ -1747,7 +1467,7 @@ namespace Arcadia_Hotel
             this.btnChangePassword.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnChangePassword.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnChangePassword.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnChangePassword.Location = new System.Drawing.Point(67, 227);
+            this.btnChangePassword.Location = new System.Drawing.Point(106, 249);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(200, 50);
             this.btnChangePassword.TabIndex = 6;
@@ -1757,7 +1477,7 @@ namespace Arcadia_Hotel
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 122);
+            this.label3.Location = new System.Drawing.Point(83, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 13);
             this.label3.TabIndex = 5;
@@ -1766,7 +1486,7 @@ namespace Arcadia_Hotel
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 175);
+            this.label2.Location = new System.Drawing.Point(67, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 13);
             this.label2.TabIndex = 4;
@@ -1774,7 +1494,7 @@ namespace Arcadia_Hotel
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(169, 119);
+            this.textBox3.Location = new System.Drawing.Point(208, 141);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(116, 20);
@@ -1782,7 +1502,7 @@ namespace Arcadia_Hotel
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(169, 172);
+            this.textBox2.Location = new System.Drawing.Point(208, 194);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(116, 20);
@@ -1790,7 +1510,7 @@ namespace Arcadia_Hotel
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 70);
+            this.textBox1.Location = new System.Drawing.Point(208, 92);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(116, 20);
@@ -1799,18 +1519,297 @@ namespace Arcadia_Hotel
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 73);
+            this.label1.Location = new System.Drawing.Point(70, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter current password:";
             // 
+            // xuiFlatTab1
+            // 
+            this.xuiFlatTab1.ActiveHeaderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiFlatTab1.ActiveTextColor = System.Drawing.Color.White;
+            this.xuiFlatTab1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiFlatTab1.Controls.Add(this.tabPage1);
+            this.xuiFlatTab1.Controls.Add(this.tabPage2);
+            this.xuiFlatTab1.Controls.Add(this.tabPage3);
+            this.xuiFlatTab1.Controls.Add(this.tabPage4);
+            this.xuiFlatTab1.Controls.Add(this.tabPage5);
+            this.xuiFlatTab1.Controls.Add(this.tabPage6);
+            this.xuiFlatTab1.Controls.Add(this.tabPage7);
+            this.xuiFlatTab1.Controls.Add(this.tabPage8);
+            this.xuiFlatTab1.Controls.Add(this.tabPage9);
+            this.xuiFlatTab1.Controls.Add(this.tabPage10);
+            this.xuiFlatTab1.Controls.Add(this.tabPage11);
+            this.xuiFlatTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xuiFlatTab1.HeaderBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.xuiFlatTab1.InActiveHeaderColor = System.Drawing.Color.RoyalBlue;
+            this.xuiFlatTab1.InActiveTextColor = System.Drawing.Color.White;
+            this.xuiFlatTab1.ItemSize = new System.Drawing.Size(240, 16);
+            this.xuiFlatTab1.Location = new System.Drawing.Point(0, 24);
+            this.xuiFlatTab1.Name = "xuiFlatTab1";
+            this.xuiFlatTab1.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.xuiFlatTab1.SelectedIndex = 0;
+            this.xuiFlatTab1.ShowBorder = true;
+            this.xuiFlatTab1.Size = new System.Drawing.Size(1109, 554);
+            this.xuiFlatTab1.TabIndex = 52;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage1.Controls.Add(this.redRoomDescription);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.btnAddRoom);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.dgvAddRoom);
+            this.tabPage1.Controls.Add(this.txtRoomSize);
+            this.tabPage1.Controls.Add(this.txtRoomPrice);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.ForeColor = System.Drawing.Color.White;
+            this.tabPage1.Location = new System.Drawing.Point(4, 20);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "AddRoom";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage2.Controls.Add(this.btnAddEmployee);
+            this.tabPage2.Controls.Add(this.label36);
+            this.tabPage2.Controls.Add(this.label29);
+            this.tabPage2.Controls.Add(this.label35);
+            this.tabPage2.Controls.Add(this.dgvAddEmployee);
+            this.tabPage2.Controls.Add(this.dgvRoleEmployee);
+            this.tabPage2.Controls.Add(this.label34);
+            this.tabPage2.Controls.Add(this.txtNameAE);
+            this.tabPage2.Controls.Add(this.dtpBirthDateAE);
+            this.tabPage2.Controls.Add(this.label30);
+            this.tabPage2.Controls.Add(this.label33);
+            this.tabPage2.Controls.Add(this.txtSurnameAE);
+            this.tabPage2.Controls.Add(this.txtEmailAE);
+            this.tabPage2.Controls.Add(this.label31);
+            this.tabPage2.Controls.Add(this.label32);
+            this.tabPage2.Controls.Add(this.cmbRoleIDAE);
+            this.tabPage2.Location = new System.Drawing.Point(4, 20);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Add Employee";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage3.Controls.Add(this.btnAddRole);
+            this.tabPage3.Controls.Add(this.redRoleDescription);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.dgvRoleAR);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.txtHoursAR);
+            this.tabPage3.Controls.Add(this.label22);
+            this.tabPage3.Controls.Add(this.txtSalaryAR);
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Location = new System.Drawing.Point(4, 20);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "AddRole";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage4.Controls.Add(this.btnDeleteRoom);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.Controls.Add(this.label17);
+            this.tabPage4.Controls.Add(this.dgvDeleteRoom);
+            this.tabPage4.Controls.Add(this.cmbRoomID);
+            this.tabPage4.Location = new System.Drawing.Point(4, 20);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Delete Room";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage5.Controls.Add(this.btnDeleteEmployee);
+            this.tabPage5.Controls.Add(this.label42);
+            this.tabPage5.Controls.Add(this.dgvDeleteEmployee);
+            this.tabPage5.Controls.Add(this.label41);
+            this.tabPage5.Controls.Add(this.comboBox1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 20);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Delete Employee";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage6.Controls.Add(this.btnDeleteRole);
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.label28);
+            this.tabPage6.Controls.Add(this.dgvRoleDR);
+            this.tabPage6.Controls.Add(this.cmbRoleIDDR);
+            this.tabPage6.Location = new System.Drawing.Point(4, 20);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Delete Role";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage7.Controls.Add(this.btnUpdateRoom);
+            this.tabPage7.Controls.Add(this.label10);
+            this.tabPage7.Controls.Add(this.txtPriceUR);
+            this.tabPage7.Controls.Add(this.cmbID);
+            this.tabPage7.Controls.Add(this.txtSizeUR);
+            this.tabPage7.Controls.Add(this.label11);
+            this.tabPage7.Controls.Add(this.dgvRoomUpdate);
+            this.tabPage7.Controls.Add(this.txtDescriptionUR);
+            this.tabPage7.Controls.Add(this.label15);
+            this.tabPage7.Controls.Add(this.label12);
+            this.tabPage7.Controls.Add(this.label14);
+            this.tabPage7.Location = new System.Drawing.Point(4, 20);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "UpdateRoom";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage8.Controls.Add(this.btnUpdateRole);
+            this.tabPage8.Controls.Add(this.label19);
+            this.tabPage8.Controls.Add(this.label27);
+            this.tabPage8.Controls.Add(this.dgvRoleUR);
+            this.tabPage8.Controls.Add(this.label26);
+            this.tabPage8.Controls.Add(this.cmbRoleUR);
+            this.tabPage8.Controls.Add(this.label25);
+            this.tabPage8.Controls.Add(this.label24);
+            this.tabPage8.Controls.Add(this.txtDescriptionRU);
+            this.tabPage8.Controls.Add(this.txtHoursUR);
+            this.tabPage8.Controls.Add(this.txtSalaryUR);
+            this.tabPage8.Location = new System.Drawing.Point(4, 20);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "UpdateRole";
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage9.Controls.Add(this.btnUpdateEmployee);
+            this.tabPage9.Controls.Add(this.label37);
+            this.tabPage9.Controls.Add(this.label47);
+            this.tabPage9.Controls.Add(this.dataGridView1);
+            this.tabPage9.Controls.Add(this.textBox6);
+            this.tabPage9.Controls.Add(this.dataGridView2);
+            this.tabPage9.Controls.Add(this.label46);
+            this.tabPage9.Controls.Add(this.label38);
+            this.tabPage9.Controls.Add(this.dateTimePicker1);
+            this.tabPage9.Controls.Add(this.label39);
+            this.tabPage9.Controls.Add(this.label45);
+            this.tabPage9.Controls.Add(this.label40);
+            this.tabPage9.Controls.Add(this.comboBox2);
+            this.tabPage9.Controls.Add(this.cmbEmployeeIDUE);
+            this.tabPage9.Controls.Add(this.label44);
+            this.tabPage9.Controls.Add(this.textBox4);
+            this.tabPage9.Controls.Add(this.label43);
+            this.tabPage9.Controls.Add(this.textBox5);
+            this.tabPage9.Location = new System.Drawing.Point(4, 20);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "Update Employee";
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage10.Controls.Add(this.groupBox4);
+            this.tabPage10.Controls.Add(this.groupBox1);
+            this.tabPage10.Controls.Add(this.groupBox3);
+            this.tabPage10.Controls.Add(this.groupBox2);
+            this.tabPage10.Location = new System.Drawing.Point(4, 20);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "Report";
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage11.Controls.Add(this.label9);
+            this.tabPage11.Controls.Add(this.btnChangePassword);
+            this.tabPage11.Controls.Add(this.label1);
+            this.tabPage11.Controls.Add(this.label3);
+            this.tabPage11.Controls.Add(this.textBox1);
+            this.tabPage11.Controls.Add(this.label2);
+            this.tabPage11.Controls.Add(this.textBox2);
+            this.tabPage11.Controls.Add(this.textBox3);
+            this.tabPage11.Location = new System.Drawing.Point(4, 20);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "ChangePassword";
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnAddEmployee.ButtonImage = null;
+            this.btnAddEmployee.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnAddEmployee.ButtonText = "Confirm Guest Info Update";
+            this.btnAddEmployee.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnAddEmployee.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnAddEmployee.CornerRadius = 10;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnAddEmployee.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnAddEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnAddEmployee.Location = new System.Drawing.Point(76, 382);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(148, 55);
+            this.btnAddEmployee.TabIndex = 53;
+            this.btnAddEmployee.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnAddEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
+            // btnAddRole
+            // 
+            this.btnAddRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnAddRole.ButtonImage = null;
+            this.btnAddRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnAddRole.ButtonText = "Add Role";
+            this.btnAddRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnAddRole.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnAddRole.CornerRadius = 10;
+            this.btnAddRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnAddRole.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnAddRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnAddRole.Location = new System.Drawing.Point(112, 385);
+            this.btnAddRole.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddRole.Name = "btnAddRole";
+            this.btnAddRole.Size = new System.Drawing.Size(148, 55);
+            this.btnAddRole.TabIndex = 54;
+            this.btnAddRole.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnAddRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddRole.Click += new System.EventHandler(this.btnAddRole_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 511);
-            this.Controls.Add(this.tabControl1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(1109, 578);
+            this.Controls.Add(this.xuiFlatTab1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAdmin";
@@ -1818,38 +1817,17 @@ namespace Arcadia_Hotel
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tpAddRoom.ResumeLayout(false);
-            this.tpAddRoom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddRoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupdRoomAmount)).EndInit();
-            this.tpAddEmployee.ResumeLayout(false);
-            this.tpAddEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddEmployee)).EndInit();
-            this.tpAddRole.ResumeLayout(false);
-            this.tpAddRole.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleAR)).EndInit();
-            this.tpDeleteRoom.ResumeLayout(false);
-            this.tpDeleteRoom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteRoom)).EndInit();
-            this.tpDeleteEmployee.ResumeLayout(false);
-            this.tpDeleteEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteEmployee)).EndInit();
-            this.tpDeleteRole.ResumeLayout(false);
-            this.tpDeleteRole.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleDR)).EndInit();
-            this.tpUpdateRoom.ResumeLayout(false);
-            this.tpUpdateRoom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomUpdate)).EndInit();
-            this.tpUpdateRole.ResumeLayout(false);
-            this.tpUpdateRole.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleUR)).EndInit();
-            this.tpUpdateEmployee.ResumeLayout(false);
-            this.tpUpdateEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tpReport.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1858,8 +1836,28 @@ namespace Arcadia_Hotel
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tpChangePs.ResumeLayout(false);
-            this.tpChangePs.PerformLayout();
+            this.xuiFlatTab1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1883,19 +1881,7 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.ToolStripMenuItem addRoleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateRoleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeRoleToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tpChangePs;
-        private System.Windows.Forms.TabPage tpAddRoom;
-        private System.Windows.Forms.TabPage tpUpdateRoom;
-        private System.Windows.Forms.TabPage tpDeleteRoom;
-        private System.Windows.Forms.TabPage tpAddEmployee;
-        private System.Windows.Forms.TabPage tpUpdateEmployee;
-        private System.Windows.Forms.TabPage tpDeleteEmployee;
-        private System.Windows.Forms.TabPage tpAddRole;
-        private System.Windows.Forms.TabPage tpUpdateRole;
-        private System.Windows.Forms.TabPage tpDeleteRole;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
-        private System.Windows.Forms.TabPage tpReport;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
@@ -1904,10 +1890,8 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label1;
         private XanderUI.XUIButton btnChangePassword;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown nupdRoomAmount;
         private System.Windows.Forms.TextBox txtRoomPrice;
         private System.Windows.Forms.TextBox txtRoomSize;
         private System.Windows.Forms.Label label8;
@@ -1934,7 +1918,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private XanderUI.XUIButton btnAddRole;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
@@ -1969,7 +1952,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.DateTimePicker dtpBirthDateAE;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtEmailAE;
-        private XanderUI.XUIButton btnAddEmployee;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
@@ -2022,5 +2004,19 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.CheckBox cbShowMax;
         private System.Windows.Forms.CheckBox cbSummation;
         private System.Windows.Forms.RichTextBox redRoleDescription;
+        private XanderUI.XUIFlatTab xuiFlatTab1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabPage11;
+        private XanderUI.XUIButton btnAddEmployee;
+        private XanderUI.XUIButton btnAddRole;
     }
 }

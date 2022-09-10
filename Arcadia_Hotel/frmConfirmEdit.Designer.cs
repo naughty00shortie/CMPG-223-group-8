@@ -49,10 +49,10 @@ namespace Arcadia_Hotel
             this.xuiButton2 = new XanderUI.XUIButton();
             this.xuiButton1 = new XanderUI.XUIButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtRoomType = new System.Windows.Forms.TextBox();
-            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
+            this.txtRoomType = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,36 +70,40 @@ namespace Arcadia_Hotel
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label19.Location = new System.Drawing.Point(34, 40);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(103, 13);
+            this.label19.Size = new System.Drawing.Size(149, 21);
             this.label19.TabIndex = 6;
             this.label19.Text = "Edit Reservation for:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(244, 43);
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label26.Location = new System.Drawing.Point(234, 41);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(60, 13);
+            this.label26.Size = new System.Drawing.Size(76, 19);
             this.label26.TabIndex = 26;
             this.label26.Text = "BookingID:";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(34, 89);
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label20.Location = new System.Drawing.Point(30, 86);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(38, 13);
+            this.label20.Size = new System.Drawing.Size(48, 19);
             this.label20.TabIndex = 27;
             this.label20.Text = "Name:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(252, 89);
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label21.Location = new System.Drawing.Point(244, 87);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(52, 13);
+            this.label21.Size = new System.Drawing.Size(66, 19);
             this.label21.TabIndex = 28;
             this.label21.Text = "Surname:";
             // 
@@ -137,9 +141,10 @@ namespace Arcadia_Hotel
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 144);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.Location = new System.Drawing.Point(19, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 33;
             this.label2.Text = "Room Type:";
             // 
@@ -166,36 +171,40 @@ namespace Arcadia_Hotel
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(258, 144);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label3.Location = new System.Drawing.Point(248, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 37;
             this.label3.Text = "Amount:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 189);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label4.Location = new System.Drawing.Point(34, 187);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(65, 19);
             this.label4.TabIndex = 38;
             this.label4.Text = "Check In:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 227);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.Location = new System.Drawing.Point(30, 224);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.Size = new System.Drawing.Size(77, 19);
             this.label5.TabIndex = 39;
             this.label5.Text = "Check Out:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(127, 268);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label6.Location = new System.Drawing.Point(120, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.Size = new System.Drawing.Size(41, 19);
             this.label6.TabIndex = 42;
             this.label6.Text = "Price:";
             // 
@@ -287,6 +296,19 @@ namespace Arcadia_Hotel
             this.panel2.Size = new System.Drawing.Size(231, 26);
             this.panel2.TabIndex = 50;
             // 
+            // dtpCheckOut
+            // 
+            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckOut.BorderSize = 0;
+            this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckOut.Location = new System.Drawing.Point(2, 2);
+            this.dtpCheckOut.Name = "dtpCheckOut";
+            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.TabIndex = 49;
+            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -295,16 +317,6 @@ namespace Arcadia_Hotel
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(231, 26);
             this.panel3.TabIndex = 51;
-            // 
-            // txtRoomType
-            // 
-            this.txtRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.txtRoomType.Enabled = false;
-            this.txtRoomType.Location = new System.Drawing.Point(105, 137);
-            this.txtRoomType.Name = "txtRoomType";
-            this.txtRoomType.ReadOnly = true;
-            this.txtRoomType.Size = new System.Drawing.Size(120, 20);
-            this.txtRoomType.TabIndex = 52;
             // 
             // dtpCheckIn
             // 
@@ -319,18 +331,15 @@ namespace Arcadia_Hotel
             this.dtpCheckIn.TabIndex = 49;
             this.dtpCheckIn.TextColor = System.Drawing.Color.White;
             // 
-            // dtpCheckOut
+            // txtRoomType
             // 
-            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckOut.BorderSize = 0;
-            this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckOut.Location = new System.Drawing.Point(2, 2);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOut.TabIndex = 49;
-            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
+            this.txtRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.txtRoomType.Enabled = false;
+            this.txtRoomType.Location = new System.Drawing.Point(105, 137);
+            this.txtRoomType.Name = "txtRoomType";
+            this.txtRoomType.ReadOnly = true;
+            this.txtRoomType.Size = new System.Drawing.Size(120, 20);
+            this.txtRoomType.TabIndex = 52;
             // 
             // frmConfirmEdit
             // 

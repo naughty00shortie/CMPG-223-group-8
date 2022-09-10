@@ -40,7 +40,7 @@ namespace Arcadia_Hotel
             txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
 
 
-            DataAccess.updateBooking(booking,booking.Room_Number);
+            DataAccess.updateBooking(booking);
         }
     }
 }

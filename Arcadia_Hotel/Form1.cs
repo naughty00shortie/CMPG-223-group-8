@@ -317,6 +317,11 @@ namespace Arcadia_Hotel
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAdmin frmAdmin = new frmAdmin();
+            frmAdmin.Show();
+        }
     }
 }
 /*Waar daar staan Model beteken dit is n tabel in die DB

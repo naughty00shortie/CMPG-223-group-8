@@ -53,9 +53,9 @@ namespace Arcadia_Hotel
         {
             LoadModels();
             // Tab Control Make Visible
-            tabControl1.Appearance = TabAppearance.FlatButtons; 
-            tabControl1.ItemSize = new Size(0, 1); 
-            tabControl1.SizeMode = TabSizeMode.Fixed;
+            xuiFlatTab1.Appearance = TabAppearance.FlatButtons;
+            xuiFlatTab1.ItemSize = new Size(0, 1);
+            xuiFlatTab1.SizeMode = TabSizeMode.Fixed;
         }
 
         private void btnAddRoom_Click(object sender, EventArgs e)

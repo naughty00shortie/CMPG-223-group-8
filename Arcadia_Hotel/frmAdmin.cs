@@ -67,7 +67,7 @@ namespace Arcadia_Hotel
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
-            LoadModels();
+            //LoadModels();
             // Tab Control Make Visible
             xuiFlatTab1.Appearance = TabAppearance.FlatButtons;
             xuiFlatTab1.ItemSize = new Size(0, 1);

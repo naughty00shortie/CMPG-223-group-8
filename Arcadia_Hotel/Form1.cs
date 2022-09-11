@@ -49,9 +49,9 @@ namespace Arcadia_Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadModels();
+            //LoadModels();
             loadUI();
-            CheckForUpdates();
+            //CheckForUpdates();
 
         }
 

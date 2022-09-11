@@ -1187,9 +1187,9 @@ namespace Arcadia_Hotel
             this.label51.ForeColor = System.Drawing.Color.White;
             this.label51.Location = new System.Drawing.Point(31, 26);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 19);
+            this.label51.Size = new System.Drawing.Size(72, 19);
             this.label51.TabIndex = 54;
-            this.label51.Text = "Room Type";
+            this.label51.Text = "Room Size";
             // 
             // cmbCategorizeRoomType
             // 
@@ -1350,7 +1350,7 @@ namespace Arcadia_Hotel
             this.rzrAdminName.Enabled = false;
             this.rzrAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.rzrAdminName.ForeColor = System.Drawing.Color.White;
-            this.rzrAdminName.Location = new System.Drawing.Point(23, 114);
+            this.rzrAdminName.Location = new System.Drawing.Point(27, 114);
             this.rzrAdminName.Name = "rzrAdminName";
             this.rzrAdminName.ReadOnly = true;
             this.rzrAdminName.Size = new System.Drawing.Size(137, 23);

@@ -56,6 +56,8 @@ namespace Arcadia_Hotel
             xuiFlatTab1.Appearance = TabAppearance.FlatButtons;
             xuiFlatTab1.ItemSize = new Size(0, 1);
             xuiFlatTab1.SizeMode = TabSizeMode.Fixed;
+            xuiFlatTab1.ActiveTextColor = Color.FromArgb(60, 60, 60);
+            xuiFlatTab1.InActiveTextColor = Color.FromArgb(60, 60, 60);
         }
 
         private void btnAddRoom_Click(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace Arcadia_Hotel
             RoomModel room = new RoomModel();
 
             room.Room_Description = redRoleDescription.Text;
-            room.Room_Number = (int)nupdRoomAmount.Value;
+            //room.Room_Number = (int)nupdRoomAmount.Value;
             room.Room_Size = txtRoomSize.Text;
             room.Room_Price_Per_Night = float.Parse(txtRoomPrice.Text);
 

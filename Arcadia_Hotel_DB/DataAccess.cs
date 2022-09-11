@@ -141,7 +141,8 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "UPDATE Booking SET Room_Number = @Room_Number, Guest_ID = @Guest_ID, Booking_Check_In = @Booking_Check_In," +
+                    " Booking_Check_Out = @Booking_Check_Out, Booking_Price_Paid = @Booking_Price_Paid WHERE Booking_Number = @Booking_Number",
                     booking);
             }
         }
@@ -217,7 +218,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE Room WHERE {iD} = Role_ID");
+                cnn.Execute($"DELETE Room WHERE {iD} = Room_Number");
             }
         }
 

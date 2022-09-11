@@ -150,34 +150,34 @@ namespace Arcadia_Hotel
             this.xuiFlatTab1 = new XanderUI.XUIFlatTab();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtpBirthDateAE = new Arcadia_Hotel.Controls.BBDateTime();
+            this.cmbRoleIDAE = new System.Windows.Forms.ComboBox();
             this.btnAddEmployee = new XanderUI.XUIButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnAddRole = new XanderUI.XUIButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.cmbRoleIDAE = new System.Windows.Forms.ComboBox();
-            this.cmbRoomID = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmbRoleIDDR = new System.Windows.Forms.ComboBox();
-            this.cmbID = new System.Windows.Forms.ComboBox();
-            this.cmbRoleUR = new System.Windows.Forms.ComboBox();
-            this.cmbEmployeeIDUE = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnDeleteRoom = new XanderUI.XUIButton();
+            this.cmbRoomID = new System.Windows.Forms.ComboBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnDeleteEmployee = new XanderUI.XUIButton();
-            this.dtpBirthDateAE = new Arcadia_Hotel.Controls.BBDateTime();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.btnDeleteRole = new XanderUI.XUIButton();
+            this.cmbRoleIDDR = new System.Windows.Forms.ComboBox();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.btnUpdateRoom = new XanderUI.XUIButton();
+            this.cmbID = new System.Windows.Forms.ComboBox();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.btnUpdateRole = new XanderUI.XUIButton();
-            this.btnUpdateEmployee = new XanderUI.XUIButton();
-            this.btnDesign = new XanderUI.XUIButton();
+            this.cmbRoleUR = new System.Windows.Forms.ComboBox();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.dateTimePicker1 = new Arcadia_Hotel.Controls.BBDateTime();
+            this.btnUpdateEmployee = new XanderUI.XUIButton();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbEmployeeIDUE = new System.Windows.Forms.ComboBox();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.btnDesign = new XanderUI.XUIButton();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
             this.btnChangePassword = new XanderUI.XUIButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.xuiButton5 = new XanderUI.XUIButton();
@@ -241,19 +241,19 @@ namespace Arcadia_Hotel
             // dashboardToolStripMenuItem
             // 
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.dashboardToolStripMenuItem.Text = "Dashboard";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             // 
             // backToolStripMenuItem1
             // 
             this.backToolStripMenuItem1.Name = "backToolStripMenuItem1";
-            this.backToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.backToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
             this.backToolStripMenuItem1.Text = "Back";
             // 
             // roomToolStripMenuItem
@@ -388,7 +388,7 @@ namespace Arcadia_Hotel
             this.dgvAddRoom.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvAddRoom.Location = new System.Drawing.Point(402, 3);
             this.dgvAddRoom.Name = "dgvAddRoom";
-            this.dgvAddRoom.Size = new System.Drawing.Size(596, 524);
+            this.dgvAddRoom.Size = new System.Drawing.Size(596, 498);
             this.dgvAddRoom.TabIndex = 19;
             // 
             // label8
@@ -1496,7 +1496,7 @@ namespace Arcadia_Hotel
             this.tabPage1.Location = new System.Drawing.Point(4, 20);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage1.Size = new System.Drawing.Size(1001, 504);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AddRoom";
             // 
@@ -1522,9 +1522,39 @@ namespace Arcadia_Hotel
             this.tabPage2.Location = new System.Drawing.Point(4, 20);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage2.Size = new System.Drawing.Size(1001, 504);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Employee";
+            // 
+            // dtpBirthDateAE
+            // 
+            this.dtpBirthDateAE.BorderColor = System.Drawing.Color.White;
+            this.dtpBirthDateAE.BorderSize = 0;
+            this.dtpBirthDateAE.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
+            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
+            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
+            this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.TabIndex = 55;
+            this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
+            // 
+            // cmbRoleIDAE
+            // 
+            this.cmbRoleIDAE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbRoleIDAE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRoleIDAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoleIDAE.ForeColor = System.Drawing.Color.White;
+            this.cmbRoleIDAE.FormattingEnabled = true;
+            this.cmbRoleIDAE.ItemHeight = 13;
+            this.cmbRoleIDAE.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbRoleIDAE.Location = new System.Drawing.Point(103, 165);
+            this.cmbRoleIDAE.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbRoleIDAE.Name = "cmbRoleIDAE";
+            this.cmbRoleIDAE.Size = new System.Drawing.Size(200, 21);
+            this.cmbRoleIDAE.TabIndex = 54;
             // 
             // btnAddEmployee
             // 
@@ -1563,7 +1593,7 @@ namespace Arcadia_Hotel
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Location = new System.Drawing.Point(4, 20);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage3.Size = new System.Drawing.Size(1001, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "AddRole";
             // 
@@ -1600,9 +1630,48 @@ namespace Arcadia_Hotel
             this.tabPage4.Controls.Add(this.dgvDeleteRoom);
             this.tabPage4.Location = new System.Drawing.Point(4, 20);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage4.Size = new System.Drawing.Size(1001, 504);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Delete Room";
+            // 
+            // btnDeleteRoom
+            // 
+            this.btnDeleteRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnDeleteRoom.ButtonImage = null;
+            this.btnDeleteRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnDeleteRoom.ButtonText = "Delete Room";
+            this.btnDeleteRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnDeleteRoom.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnDeleteRoom.CornerRadius = 10;
+            this.btnDeleteRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnDeleteRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnDeleteRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnDeleteRoom.Location = new System.Drawing.Point(123, 314);
+            this.btnDeleteRoom.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteRoom.Name = "btnDeleteRoom";
+            this.btnDeleteRoom.Size = new System.Drawing.Size(159, 45);
+            this.btnDeleteRoom.TabIndex = 56;
+            this.btnDeleteRoom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnDeleteRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // cmbRoomID
+            // 
+            this.cmbRoomID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbRoomID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRoomID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoomID.ForeColor = System.Drawing.Color.White;
+            this.cmbRoomID.FormattingEnabled = true;
+            this.cmbRoomID.ItemHeight = 13;
+            this.cmbRoomID.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbRoomID.Location = new System.Drawing.Point(174, 85);
+            this.cmbRoomID.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbRoomID.Name = "cmbRoomID";
+            this.cmbRoomID.Size = new System.Drawing.Size(145, 21);
+            this.cmbRoomID.TabIndex = 55;
             // 
             // tabPage5
             // 
@@ -1614,9 +1683,48 @@ namespace Arcadia_Hotel
             this.tabPage5.Controls.Add(this.label41);
             this.tabPage5.Location = new System.Drawing.Point(4, 20);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage5.Size = new System.Drawing.Size(1001, 504);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Delete Employee";
+            // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnDeleteEmployee.ButtonImage = null;
+            this.btnDeleteEmployee.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnDeleteEmployee.ButtonText = "Delete Employee";
+            this.btnDeleteEmployee.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnDeleteEmployee.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnDeleteEmployee.CornerRadius = 10;
+            this.btnDeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteEmployee.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnDeleteEmployee.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnDeleteEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(105, 223);
+            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(159, 45);
+            this.btnDeleteEmployee.TabIndex = 57;
+            this.btnDeleteEmployee.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnDeleteEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 13;
+            this.comboBox1.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.comboBox1.Location = new System.Drawing.Point(182, 94);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(145, 21);
+            this.comboBox1.TabIndex = 56;
             // 
             // tabPage6
             // 
@@ -1628,9 +1736,48 @@ namespace Arcadia_Hotel
             this.tabPage6.Controls.Add(this.dgvRoleDR);
             this.tabPage6.Location = new System.Drawing.Point(4, 20);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage6.Size = new System.Drawing.Size(1001, 504);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Delete Role";
+            // 
+            // btnDeleteRole
+            // 
+            this.btnDeleteRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnDeleteRole.ButtonImage = null;
+            this.btnDeleteRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnDeleteRole.ButtonText = "Delete Room";
+            this.btnDeleteRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnDeleteRole.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnDeleteRole.CornerRadius = 10;
+            this.btnDeleteRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnDeleteRole.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnDeleteRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnDeleteRole.Location = new System.Drawing.Point(120, 225);
+            this.btnDeleteRole.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteRole.Name = "btnDeleteRole";
+            this.btnDeleteRole.Size = new System.Drawing.Size(159, 45);
+            this.btnDeleteRole.TabIndex = 58;
+            this.btnDeleteRole.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnDeleteRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // cmbRoleIDDR
+            // 
+            this.cmbRoleIDDR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbRoleIDDR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRoleIDDR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoleIDDR.ForeColor = System.Drawing.Color.White;
+            this.cmbRoleIDDR.FormattingEnabled = true;
+            this.cmbRoleIDDR.ItemHeight = 13;
+            this.cmbRoleIDDR.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbRoleIDDR.Location = new System.Drawing.Point(216, 99);
+            this.cmbRoleIDDR.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbRoleIDDR.Name = "cmbRoleIDDR";
+            this.cmbRoleIDDR.Size = new System.Drawing.Size(145, 21);
+            this.cmbRoleIDDR.TabIndex = 57;
             // 
             // tabPage7
             // 
@@ -1648,9 +1795,48 @@ namespace Arcadia_Hotel
             this.tabPage7.Controls.Add(this.label14);
             this.tabPage7.Location = new System.Drawing.Point(4, 20);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage7.Size = new System.Drawing.Size(1001, 504);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "UpdateRoom";
+            // 
+            // btnUpdateRoom
+            // 
+            this.btnUpdateRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnUpdateRoom.ButtonImage = null;
+            this.btnUpdateRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnUpdateRoom.ButtonText = "Update Room";
+            this.btnUpdateRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnUpdateRoom.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnUpdateRoom.CornerRadius = 10;
+            this.btnUpdateRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnUpdateRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnUpdateRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnUpdateRoom.Location = new System.Drawing.Point(139, 381);
+            this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUpdateRoom.Name = "btnUpdateRoom";
+            this.btnUpdateRoom.Size = new System.Drawing.Size(159, 45);
+            this.btnUpdateRoom.TabIndex = 59;
+            this.btnUpdateRoom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnUpdateRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // cmbID
+            // 
+            this.cmbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbID.ForeColor = System.Drawing.Color.White;
+            this.cmbID.FormattingEnabled = true;
+            this.cmbID.ItemHeight = 13;
+            this.cmbID.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbID.Location = new System.Drawing.Point(167, 76);
+            this.cmbID.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbID.Name = "cmbID";
+            this.cmbID.Size = new System.Drawing.Size(145, 21);
+            this.cmbID.TabIndex = 58;
             // 
             // tabPage8
             // 
@@ -1668,9 +1854,48 @@ namespace Arcadia_Hotel
             this.tabPage8.Controls.Add(this.txtSalaryUR);
             this.tabPage8.Location = new System.Drawing.Point(4, 20);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage8.Size = new System.Drawing.Size(1001, 504);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "UpdateRole";
+            // 
+            // btnUpdateRole
+            // 
+            this.btnUpdateRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnUpdateRole.ButtonImage = null;
+            this.btnUpdateRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnUpdateRole.ButtonText = "Update Role";
+            this.btnUpdateRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnUpdateRole.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnUpdateRole.CornerRadius = 10;
+            this.btnUpdateRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnUpdateRole.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnUpdateRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnUpdateRole.Location = new System.Drawing.Point(139, 367);
+            this.btnUpdateRole.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUpdateRole.Name = "btnUpdateRole";
+            this.btnUpdateRole.Size = new System.Drawing.Size(159, 45);
+            this.btnUpdateRole.TabIndex = 60;
+            this.btnUpdateRole.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnUpdateRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // cmbRoleUR
+            // 
+            this.cmbRoleUR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbRoleUR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRoleUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoleUR.ForeColor = System.Drawing.Color.White;
+            this.cmbRoleUR.FormattingEnabled = true;
+            this.cmbRoleUR.ItemHeight = 13;
+            this.cmbRoleUR.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbRoleUR.Location = new System.Drawing.Point(197, 89);
+            this.cmbRoleUR.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbRoleUR.Name = "cmbRoleUR";
+            this.cmbRoleUR.Size = new System.Drawing.Size(145, 21);
+            this.cmbRoleUR.TabIndex = 59;
             // 
             // tabPage9
             // 
@@ -1695,299 +1920,22 @@ namespace Arcadia_Hotel
             this.tabPage9.Controls.Add(this.textBox5);
             this.tabPage9.Location = new System.Drawing.Point(4, 20);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1001, 530);
+            this.tabPage9.Size = new System.Drawing.Size(1001, 504);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Update Employee";
             // 
-            // tabPage10
+            // dateTimePicker1
             // 
-            this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.tabPage10.Controls.Add(this.btnDesign);
-            this.tabPage10.Controls.Add(this.groupBox4);
-            this.tabPage10.Controls.Add(this.groupBox1);
-            this.tabPage10.Controls.Add(this.groupBox3);
-            this.tabPage10.Controls.Add(this.groupBox2);
-            this.tabPage10.Location = new System.Drawing.Point(4, 20);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1001, 530);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "Report";
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.tabPage11.Controls.Add(this.btnChangePassword);
-            this.tabPage11.Controls.Add(this.label9);
-            this.tabPage11.Controls.Add(this.label1);
-            this.tabPage11.Controls.Add(this.label3);
-            this.tabPage11.Controls.Add(this.textBox1);
-            this.tabPage11.Controls.Add(this.label2);
-            this.tabPage11.Controls.Add(this.textBox2);
-            this.tabPage11.Controls.Add(this.textBox3);
-            this.tabPage11.Location = new System.Drawing.Point(4, 20);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(1001, 504);
-            this.tabPage11.TabIndex = 10;
-            this.tabPage11.Text = "ChangePassword";
-            // 
-            // cmbRoleIDAE
-            // 
-            this.cmbRoleIDAE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbRoleIDAE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRoleIDAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRoleIDAE.ForeColor = System.Drawing.Color.White;
-            this.cmbRoleIDAE.FormattingEnabled = true;
-            this.cmbRoleIDAE.ItemHeight = 13;
-            this.cmbRoleIDAE.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbRoleIDAE.Location = new System.Drawing.Point(103, 165);
-            this.cmbRoleIDAE.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbRoleIDAE.Name = "cmbRoleIDAE";
-            this.cmbRoleIDAE.Size = new System.Drawing.Size(200, 21);
-            this.cmbRoleIDAE.TabIndex = 54;
-            // 
-            // cmbRoomID
-            // 
-            this.cmbRoomID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbRoomID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRoomID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRoomID.ForeColor = System.Drawing.Color.White;
-            this.cmbRoomID.FormattingEnabled = true;
-            this.cmbRoomID.ItemHeight = 13;
-            this.cmbRoomID.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbRoomID.Location = new System.Drawing.Point(174, 85);
-            this.cmbRoomID.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbRoomID.Name = "cmbRoomID";
-            this.cmbRoomID.Size = new System.Drawing.Size(145, 21);
-            this.cmbRoomID.TabIndex = 55;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 13;
-            this.comboBox1.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.comboBox1.Location = new System.Drawing.Point(182, 94);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 56;
-            // 
-            // cmbRoleIDDR
-            // 
-            this.cmbRoleIDDR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbRoleIDDR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRoleIDDR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRoleIDDR.ForeColor = System.Drawing.Color.White;
-            this.cmbRoleIDDR.FormattingEnabled = true;
-            this.cmbRoleIDDR.ItemHeight = 13;
-            this.cmbRoleIDDR.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbRoleIDDR.Location = new System.Drawing.Point(216, 99);
-            this.cmbRoleIDDR.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbRoleIDDR.Name = "cmbRoleIDDR";
-            this.cmbRoleIDDR.Size = new System.Drawing.Size(145, 21);
-            this.cmbRoleIDDR.TabIndex = 57;
-            // 
-            // cmbID
-            // 
-            this.cmbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbID.ForeColor = System.Drawing.Color.White;
-            this.cmbID.FormattingEnabled = true;
-            this.cmbID.ItemHeight = 13;
-            this.cmbID.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbID.Location = new System.Drawing.Point(167, 76);
-            this.cmbID.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbID.Name = "cmbID";
-            this.cmbID.Size = new System.Drawing.Size(145, 21);
-            this.cmbID.TabIndex = 58;
-            // 
-            // cmbRoleUR
-            // 
-            this.cmbRoleUR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbRoleUR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRoleUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRoleUR.ForeColor = System.Drawing.Color.White;
-            this.cmbRoleUR.FormattingEnabled = true;
-            this.cmbRoleUR.ItemHeight = 13;
-            this.cmbRoleUR.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbRoleUR.Location = new System.Drawing.Point(197, 89);
-            this.cmbRoleUR.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbRoleUR.Name = "cmbRoleUR";
-            this.cmbRoleUR.Size = new System.Drawing.Size(145, 21);
-            this.cmbRoleUR.TabIndex = 59;
-            // 
-            // cmbEmployeeIDUE
-            // 
-            this.cmbEmployeeIDUE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbEmployeeIDUE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbEmployeeIDUE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEmployeeIDUE.ForeColor = System.Drawing.Color.White;
-            this.cmbEmployeeIDUE.FormattingEnabled = true;
-            this.cmbEmployeeIDUE.ItemHeight = 13;
-            this.cmbEmployeeIDUE.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.cmbEmployeeIDUE.Location = new System.Drawing.Point(170, 54);
-            this.cmbEmployeeIDUE.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbEmployeeIDUE.Name = "cmbEmployeeIDUE";
-            this.cmbEmployeeIDUE.Size = new System.Drawing.Size(197, 21);
-            this.cmbEmployeeIDUE.TabIndex = 60;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 13;
-            this.comboBox2.Items.AddRange(new object[] {
-            "h",
-            "c"});
-            this.comboBox2.Location = new System.Drawing.Point(167, 255);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(197, 21);
-            this.comboBox2.TabIndex = 61;
-            // 
-            // btnDeleteRoom
-            // 
-            this.btnDeleteRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.btnDeleteRoom.ButtonImage = null;
-            this.btnDeleteRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnDeleteRoom.ButtonText = "Delete Room";
-            this.btnDeleteRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.btnDeleteRoom.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.btnDeleteRoom.CornerRadius = 10;
-            this.btnDeleteRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnDeleteRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.btnDeleteRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.btnDeleteRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteRoom.Location = new System.Drawing.Point(123, 314);
-            this.btnDeleteRoom.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDeleteRoom.Name = "btnDeleteRoom";
-            this.btnDeleteRoom.Size = new System.Drawing.Size(159, 45);
-            this.btnDeleteRoom.TabIndex = 56;
-            this.btnDeleteRoom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.btnDeleteRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // btnDeleteEmployee
-            // 
-            this.btnDeleteEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.btnDeleteEmployee.ButtonImage = null;
-            this.btnDeleteEmployee.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnDeleteEmployee.ButtonText = "Delete Employee";
-            this.btnDeleteEmployee.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.btnDeleteEmployee.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.btnDeleteEmployee.CornerRadius = 10;
-            this.btnDeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteEmployee.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnDeleteEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.btnDeleteEmployee.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.btnDeleteEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(105, 223);
-            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(159, 45);
-            this.btnDeleteEmployee.TabIndex = 57;
-            this.btnDeleteEmployee.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.btnDeleteEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // dtpBirthDateAE
-            // 
-            this.dtpBirthDateAE.BorderColor = System.Drawing.Color.White;
-            this.dtpBirthDateAE.BorderSize = 0;
-            this.dtpBirthDateAE.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
-            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
-            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
-            this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpBirthDateAE.TabIndex = 55;
-            this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
-            // 
-            // btnDeleteRole
-            // 
-            this.btnDeleteRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.btnDeleteRole.ButtonImage = null;
-            this.btnDeleteRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnDeleteRole.ButtonText = "Delete Room";
-            this.btnDeleteRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.btnDeleteRole.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.btnDeleteRole.CornerRadius = 10;
-            this.btnDeleteRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnDeleteRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.btnDeleteRole.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.btnDeleteRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteRole.Location = new System.Drawing.Point(120, 225);
-            this.btnDeleteRole.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDeleteRole.Name = "btnDeleteRole";
-            this.btnDeleteRole.Size = new System.Drawing.Size(159, 45);
-            this.btnDeleteRole.TabIndex = 58;
-            this.btnDeleteRole.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.btnDeleteRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // btnUpdateRoom
-            // 
-            this.btnUpdateRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.btnUpdateRoom.ButtonImage = null;
-            this.btnUpdateRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnUpdateRoom.ButtonText = "Update Room";
-            this.btnUpdateRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.btnUpdateRoom.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.btnUpdateRoom.CornerRadius = 10;
-            this.btnUpdateRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.btnUpdateRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.btnUpdateRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateRoom.Location = new System.Drawing.Point(139, 381);
-            this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUpdateRoom.Name = "btnUpdateRoom";
-            this.btnUpdateRoom.Size = new System.Drawing.Size(159, 45);
-            this.btnUpdateRoom.TabIndex = 59;
-            this.btnUpdateRoom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.btnUpdateRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // btnUpdateRole
-            // 
-            this.btnUpdateRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.btnUpdateRole.ButtonImage = null;
-            this.btnUpdateRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnUpdateRole.ButtonText = "Update Role";
-            this.btnUpdateRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.btnUpdateRole.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.btnUpdateRole.CornerRadius = 10;
-            this.btnUpdateRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.btnUpdateRole.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.btnUpdateRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateRole.Location = new System.Drawing.Point(139, 367);
-            this.btnUpdateRole.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUpdateRole.Name = "btnUpdateRole";
-            this.btnUpdateRole.Size = new System.Drawing.Size(159, 45);
-            this.btnUpdateRole.TabIndex = 60;
-            this.btnUpdateRole.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.btnUpdateRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.White;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(164, 300);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.TabIndex = 63;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
             // 
             // btnUpdateEmployee
             // 
@@ -2011,6 +1959,54 @@ namespace Arcadia_Hotel
             this.btnUpdateEmployee.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnUpdateEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ItemHeight = 13;
+            this.comboBox2.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.comboBox2.Location = new System.Drawing.Point(167, 255);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(197, 21);
+            this.comboBox2.TabIndex = 61;
+            // 
+            // cmbEmployeeIDUE
+            // 
+            this.cmbEmployeeIDUE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbEmployeeIDUE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbEmployeeIDUE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEmployeeIDUE.ForeColor = System.Drawing.Color.White;
+            this.cmbEmployeeIDUE.FormattingEnabled = true;
+            this.cmbEmployeeIDUE.ItemHeight = 13;
+            this.cmbEmployeeIDUE.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbEmployeeIDUE.Location = new System.Drawing.Point(170, 54);
+            this.cmbEmployeeIDUE.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbEmployeeIDUE.Name = "cmbEmployeeIDUE";
+            this.cmbEmployeeIDUE.Size = new System.Drawing.Size(197, 21);
+            this.cmbEmployeeIDUE.TabIndex = 60;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage10.Controls.Add(this.btnDesign);
+            this.tabPage10.Controls.Add(this.groupBox4);
+            this.tabPage10.Controls.Add(this.groupBox1);
+            this.tabPage10.Controls.Add(this.groupBox3);
+            this.tabPage10.Controls.Add(this.groupBox2);
+            this.tabPage10.Location = new System.Drawing.Point(4, 20);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "Report";
+            // 
             // btnDesign
             // 
             this.btnDesign.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
@@ -2033,18 +2029,22 @@ namespace Arcadia_Hotel
             this.btnDesign.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnDesign.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // dateTimePicker1
+            // tabPage11
             // 
-            this.dateTimePicker1.BorderColor = System.Drawing.Color.White;
-            this.dateTimePicker1.BorderSize = 0;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(164, 300);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dateTimePicker1.TabIndex = 63;
-            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage11.Controls.Add(this.btnChangePassword);
+            this.tabPage11.Controls.Add(this.label9);
+            this.tabPage11.Controls.Add(this.label1);
+            this.tabPage11.Controls.Add(this.label3);
+            this.tabPage11.Controls.Add(this.textBox1);
+            this.tabPage11.Controls.Add(this.label2);
+            this.tabPage11.Controls.Add(this.textBox2);
+            this.tabPage11.Controls.Add(this.textBox3);
+            this.tabPage11.Location = new System.Drawing.Point(4, 20);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "ChangePassword";
             // 
             // btnChangePassword
             // 

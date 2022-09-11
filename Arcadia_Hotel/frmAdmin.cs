@@ -30,6 +30,8 @@ namespace Arcadia_Hotel
             roles = DataAccess.loadRole();
             rooms = DataAccess.loadRoom();
 
+            dgvAddRoom.DataSource = rooms;
+
             //dgvEditGuest.DataSource = rooms;
             //dgvEditGuest.DataSource = rooms;
         }

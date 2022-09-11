@@ -285,10 +285,6 @@ namespace Arcadia_Hotel
             }
         }
 
-        private void btnBackER_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0;
-        }
 
         private void setTab(object sender, EventArgs e)
         {
@@ -318,6 +314,12 @@ namespace Arcadia_Hotel
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            frmAdmin frmAdmin = new frmAdmin();
+            frmAdmin.Show();
+        }
+
+        private void xuiButton8_Click(object sender, EventArgs e)
         {
             frmAdmin frmAdmin = new frmAdmin();
             frmAdmin.Show();

@@ -29,7 +29,6 @@ namespace Arcadia_Hotel
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +59,6 @@ namespace Arcadia_Hotel
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.dtpBirthDateAE = new System.Windows.Forms.DateTimePicker();
             this.label33 = new System.Windows.Forms.Label();
             this.txtEmailAE = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -85,11 +83,9 @@ namespace Arcadia_Hotel
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.dgvDeleteEmployee = new System.Windows.Forms.DataGridView();
-            this.btnDeleteRole = new XanderUI.XUIButton();
             this.label28 = new System.Windows.Forms.Label();
             this.dgvRoleDR = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnUpdateRoom = new XanderUI.XUIButton();
             this.txtPriceUR = new System.Windows.Forms.TextBox();
             this.txtSizeUR = new System.Windows.Forms.TextBox();
             this.dgvRoomUpdate = new System.Windows.Forms.DataGridView();
@@ -99,7 +95,6 @@ namespace Arcadia_Hotel
             this.txtDescriptionUR = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnUpdateRole = new XanderUI.XUIButton();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -109,11 +104,9 @@ namespace Arcadia_Hotel
             this.label24 = new System.Windows.Forms.Label();
             this.dgvRoleUR = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
-            this.btnUpdateEmployee = new XanderUI.XUIButton();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -144,12 +137,10 @@ namespace Arcadia_Hotel
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.btnDesign = new System.Windows.Forms.Button();
             this.txtReportName = new System.Windows.Forms.TextBox();
             this.rzrAdminName = new System.Windows.Forms.TextBox();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnChangePassword = new XanderUI.XUIButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -180,6 +171,17 @@ namespace Arcadia_Hotel
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnDeleteRoom = new XanderUI.XUIButton();
             this.btnDeleteEmployee = new XanderUI.XUIButton();
+            this.dtpBirthDateAE = new Arcadia_Hotel.Controls.BBDateTime();
+            this.btnDeleteRole = new XanderUI.XUIButton();
+            this.btnUpdateRoom = new XanderUI.XUIButton();
+            this.btnUpdateRole = new XanderUI.XUIButton();
+            this.btnUpdateEmployee = new XanderUI.XUIButton();
+            this.btnDesign = new XanderUI.XUIButton();
+            this.dateTimePicker1 = new Arcadia_Hotel.Controls.BBDateTime();
+            this.btnChangePassword = new XanderUI.XUIButton();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.xuiButton5 = new XanderUI.XUIButton();
+            this.xuiButton6 = new XanderUI.XUIButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleEmployee)).BeginInit();
@@ -208,6 +210,7 @@ namespace Arcadia_Hotel
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.tabPage11.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -218,9 +221,9 @@ namespace Arcadia_Hotel
             this.employeeToolStripMenuItem,
             this.roleToolStripMenuItem,
             this.reportToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 26);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1109, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1009, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -238,19 +241,19 @@ namespace Arcadia_Hotel
             // dashboardToolStripMenuItem
             // 
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dashboardToolStripMenuItem.Text = "Dashboard";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             // 
             // backToolStripMenuItem1
             // 
             this.backToolStripMenuItem1.Name = "backToolStripMenuItem1";
-            this.backToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
+            this.backToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.backToolStripMenuItem1.Text = "Back";
             // 
             // roomToolStripMenuItem
@@ -383,9 +386,9 @@ namespace Arcadia_Hotel
             // 
             this.dgvAddRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAddRoom.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvAddRoom.Location = new System.Drawing.Point(435, 3);
+            this.dgvAddRoom.Location = new System.Drawing.Point(402, 3);
             this.dgvAddRoom.Name = "dgvAddRoom";
-            this.dgvAddRoom.Size = new System.Drawing.Size(663, 524);
+            this.dgvAddRoom.Size = new System.Drawing.Size(596, 524);
             this.dgvAddRoom.TabIndex = 19;
             // 
             // label8
@@ -480,13 +483,6 @@ namespace Arcadia_Hotel
             this.label34.Size = new System.Drawing.Size(44, 19);
             this.label34.TabIndex = 36;
             this.label34.Text = "Email:";
-            // 
-            // dtpBirthDateAE
-            // 
-            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 208);
-            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
-            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthDateAE.TabIndex = 35;
             // 
             // label33
             // 
@@ -640,7 +636,7 @@ namespace Arcadia_Hotel
             this.txtSalaryAR.ForeColor = System.Drawing.Color.White;
             this.txtSalaryAR.Location = new System.Drawing.Point(207, 202);
             this.txtSalaryAR.Name = "txtSalaryAR";
-            this.txtSalaryAR.Size = new System.Drawing.Size(100, 23);
+            this.txtSalaryAR.Size = new System.Drawing.Size(162, 23);
             this.txtSalaryAR.TabIndex = 22;
             // 
             // txtHoursAR
@@ -650,7 +646,7 @@ namespace Arcadia_Hotel
             this.txtHoursAR.ForeColor = System.Drawing.Color.White;
             this.txtHoursAR.Location = new System.Drawing.Point(207, 253);
             this.txtHoursAR.Name = "txtHoursAR";
-            this.txtHoursAR.Size = new System.Drawing.Size(100, 23);
+            this.txtHoursAR.Size = new System.Drawing.Size(162, 23);
             this.txtHoursAR.TabIndex = 21;
             // 
             // dgvRoleAR
@@ -732,27 +728,6 @@ namespace Arcadia_Hotel
             this.dgvDeleteEmployee.Size = new System.Drawing.Size(391, 360);
             this.dgvDeleteEmployee.TabIndex = 20;
             // 
-            // btnDeleteRole
-            // 
-            this.btnDeleteRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDeleteRole.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteRole.ButtonImage")));
-            this.btnDeleteRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnDeleteRole.ButtonText = "Delete Role";
-            this.btnDeleteRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnDeleteRole.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnDeleteRole.CornerRadius = 5;
-            this.btnDeleteRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnDeleteRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnDeleteRole.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnDeleteRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteRole.Location = new System.Drawing.Point(101, 196);
-            this.btnDeleteRole.Name = "btnDeleteRole";
-            this.btnDeleteRole.Size = new System.Drawing.Size(200, 50);
-            this.btnDeleteRole.TabIndex = 31;
-            this.btnDeleteRole.TextColor = System.Drawing.Color.Black;
-            this.btnDeleteRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnDeleteRole.Click += new System.EventHandler(this.btnDeleteRole_Click);
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -782,27 +757,6 @@ namespace Arcadia_Hotel
             this.label20.Size = new System.Drawing.Size(98, 21);
             this.label20.TabIndex = 11;
             this.label20.Text = "Delete Role";
-            // 
-            // btnUpdateRoom
-            // 
-            this.btnUpdateRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnUpdateRoom.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateRoom.ButtonImage")));
-            this.btnUpdateRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnUpdateRoom.ButtonText = "Update Room";
-            this.btnUpdateRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnUpdateRoom.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateRoom.CornerRadius = 5;
-            this.btnUpdateRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnUpdateRoom.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateRoom.Location = new System.Drawing.Point(112, 362);
-            this.btnUpdateRoom.Name = "btnUpdateRoom";
-            this.btnUpdateRoom.Size = new System.Drawing.Size(200, 50);
-            this.btnUpdateRoom.TabIndex = 22;
-            this.btnUpdateRoom.TextColor = System.Drawing.Color.Black;
-            this.btnUpdateRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateRoom.Click += new System.EventHandler(this.btnUpdateRoom_Click);
             // 
             // txtPriceUR
             // 
@@ -897,27 +851,6 @@ namespace Arcadia_Hotel
             this.label10.TabIndex = 10;
             this.label10.Text = "Update Room";
             // 
-            // btnUpdateRole
-            // 
-            this.btnUpdateRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnUpdateRole.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateRole.ButtonImage")));
-            this.btnUpdateRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnUpdateRole.ButtonText = "Update Role";
-            this.btnUpdateRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnUpdateRole.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateRole.CornerRadius = 5;
-            this.btnUpdateRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnUpdateRole.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateRole.Location = new System.Drawing.Point(118, 340);
-            this.btnUpdateRole.Name = "btnUpdateRole";
-            this.btnUpdateRole.Size = new System.Drawing.Size(200, 50);
-            this.btnUpdateRole.TabIndex = 29;
-            this.btnUpdateRole.TextColor = System.Drawing.Color.Black;
-            this.btnUpdateRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateRole.Click += new System.EventHandler(this.btnUpdateRole_Click);
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -1011,33 +944,12 @@ namespace Arcadia_Hotel
             this.label19.TabIndex = 11;
             this.label19.Text = "Update Role";
             // 
-            // btnUpdateEmployee
-            // 
-            this.btnUpdateEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnUpdateEmployee.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateEmployee.ButtonImage")));
-            this.btnUpdateEmployee.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnUpdateEmployee.ButtonText = "Update Employee";
-            this.btnUpdateEmployee.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnUpdateEmployee.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateEmployee.CornerRadius = 5;
-            this.btnUpdateEmployee.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnUpdateEmployee.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnUpdateEmployee.Location = new System.Drawing.Point(108, 362);
-            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
-            this.btnUpdateEmployee.Size = new System.Drawing.Size(200, 50);
-            this.btnUpdateEmployee.TabIndex = 54;
-            this.btnUpdateEmployee.TextColor = System.Drawing.Color.Black;
-            this.btnUpdateEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
-            // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label47.ForeColor = System.Drawing.Color.White;
-            this.label47.Location = new System.Drawing.Point(119, 319);
+            this.label47.Location = new System.Drawing.Point(112, 348);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(44, 19);
             this.label47.TabIndex = 53;
@@ -1048,9 +960,9 @@ namespace Arcadia_Hotel
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(171, 316);
+            this.textBox6.Location = new System.Drawing.Point(164, 345);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(117, 23);
+            this.textBox6.Size = new System.Drawing.Size(200, 23);
             this.textBox6.TabIndex = 52;
             // 
             // label46
@@ -1058,25 +970,18 @@ namespace Arcadia_Hotel
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(77, 274);
+            this.label46.Location = new System.Drawing.Point(70, 303);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(90, 19);
             this.label46.TabIndex = 51;
             this.label46.Text = "Date of birth:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(171, 271);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 50;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(125, 228);
+            this.label45.Location = new System.Drawing.Point(118, 257);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(38, 19);
             this.label45.TabIndex = 49;
@@ -1087,7 +992,7 @@ namespace Arcadia_Hotel
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(119, 186);
+            this.label44.Location = new System.Drawing.Point(112, 215);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(48, 19);
             this.label44.TabIndex = 47;
@@ -1098,7 +1003,7 @@ namespace Arcadia_Hotel
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(105, 142);
+            this.label43.Location = new System.Drawing.Point(98, 171);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(66, 19);
             this.label43.TabIndex = 46;
@@ -1109,9 +1014,9 @@ namespace Arcadia_Hotel
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(171, 179);
+            this.textBox5.Location = new System.Drawing.Point(164, 208);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(137, 23);
+            this.textBox5.Size = new System.Drawing.Size(200, 23);
             this.textBox5.TabIndex = 45;
             // 
             // textBox4
@@ -1119,9 +1024,9 @@ namespace Arcadia_Hotel
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(171, 139);
+            this.textBox4.Location = new System.Drawing.Point(164, 168);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(137, 23);
+            this.textBox4.Size = new System.Drawing.Size(200, 23);
             this.textBox4.TabIndex = 44;
             // 
             // label40
@@ -1129,7 +1034,7 @@ namespace Arcadia_Hotel
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(-3, 85);
+            this.label40.Location = new System.Drawing.Point(-7, 54);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(174, 19);
             this.label40.TabIndex = 42;
@@ -1151,7 +1056,7 @@ namespace Arcadia_Hotel
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(634, 49);
+            this.label38.Location = new System.Drawing.Point(642, 33);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(93, 21);
             this.label38.TabIndex = 40;
@@ -1168,7 +1073,7 @@ namespace Arcadia_Hotel
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(424, 65);
+            this.dataGridView1.Location = new System.Drawing.Point(456, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(473, 257);
             this.dataGridView1.TabIndex = 23;
@@ -1178,7 +1083,7 @@ namespace Arcadia_Hotel
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(167, 51);
+            this.label37.Location = new System.Drawing.Point(163, 20);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(146, 21);
             this.label37.TabIndex = 22;
@@ -1190,7 +1095,7 @@ namespace Arcadia_Hotel
             this.groupBox4.Controls.Add(this.cbShowMax);
             this.groupBox4.Controls.Add(this.cbSummation);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(394, 242);
+            this.groupBox4.Location = new System.Drawing.Point(428, 274);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(232, 143);
             this.groupBox4.TabIndex = 3;
@@ -1240,9 +1145,9 @@ namespace Arcadia_Hotel
             this.groupBox3.Controls.Add(this.label51);
             this.groupBox3.Controls.Add(this.cmbCategorizeRoomType);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(394, 53);
+            this.groupBox3.Location = new System.Drawing.Point(428, 66);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(232, 183);
+            this.groupBox3.Size = new System.Drawing.Size(232, 182);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Categorize";
@@ -1311,7 +1216,7 @@ namespace Arcadia_Hotel
             this.groupBox2.Controls.Add(this.cbTime);
             this.groupBox2.Controls.Add(this.cbDate);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(73, 242);
+            this.groupBox2.Location = new System.Drawing.Point(73, 286);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(290, 143);
             this.groupBox2.TabIndex = 1;
@@ -1383,14 +1288,13 @@ namespace Arcadia_Hotel
             this.groupBox1.Controls.Add(this.label50);
             this.groupBox1.Controls.Add(this.label49);
             this.groupBox1.Controls.Add(this.label48);
-            this.groupBox1.Controls.Add(this.btnDesign);
             this.groupBox1.Controls.Add(this.txtReportName);
             this.groupBox1.Controls.Add(this.rzrAdminName);
             this.groupBox1.Controls.Add(this.cmbReportType);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(73, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 205);
+            this.groupBox1.Size = new System.Drawing.Size(257, 217);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Type";
@@ -1427,15 +1331,6 @@ namespace Arcadia_Hotel
             this.label48.Size = new System.Drawing.Size(121, 19);
             this.label48.TabIndex = 53;
             this.label48.Text = "Select Report Type";
-            // 
-            // btnDesign
-            // 
-            this.btnDesign.Location = new System.Drawing.Point(185, 163);
-            this.btnDesign.Name = "btnDesign";
-            this.btnDesign.Size = new System.Drawing.Size(64, 24);
-            this.btnDesign.TabIndex = 52;
-            this.btnDesign.Text = "Design";
-            this.btnDesign.UseVisualStyleBackColor = true;
             // 
             // txtReportName
             // 
@@ -1483,38 +1378,18 @@ namespace Arcadia_Hotel
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(140, 44);
+            this.label9.Location = new System.Drawing.Point(472, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 21);
             this.label9.TabIndex = 10;
             this.label9.Text = "Change Password";
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnChangePassword.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.ButtonImage")));
-            this.btnChangePassword.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnChangePassword.ButtonText = "Change Password";
-            this.btnChangePassword.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnChangePassword.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnChangePassword.CornerRadius = 5;
-            this.btnChangePassword.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnChangePassword.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnChangePassword.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnChangePassword.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnChangePassword.Location = new System.Drawing.Point(106, 249);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(200, 50);
-            this.btnChangePassword.TabIndex = 6;
-            this.btnChangePassword.TextColor = System.Drawing.Color.Black;
-            this.btnChangePassword.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(67, 142);
+            this.label3.Location = new System.Drawing.Point(399, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 19);
             this.label3.TabIndex = 5;
@@ -1525,7 +1400,7 @@ namespace Arcadia_Hotel
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(48, 195);
+            this.label2.Location = new System.Drawing.Point(380, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 19);
             this.label2.TabIndex = 4;
@@ -1534,31 +1409,34 @@ namespace Arcadia_Hotel
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(208, 141);
+            this.textBox3.Location = new System.Drawing.Point(540, 196);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(116, 20);
+            this.textBox3.Size = new System.Drawing.Size(116, 23);
             this.textBox3.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(208, 194);
+            this.textBox2.Location = new System.Drawing.Point(540, 249);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(116, 20);
+            this.textBox2.Size = new System.Drawing.Size(116, 23);
             this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(208, 92);
+            this.textBox1.Location = new System.Drawing.Point(540, 147);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
+            this.textBox1.Size = new System.Drawing.Size(116, 23);
             this.textBox1.TabIndex = 1;
             // 
             // label1
@@ -1566,7 +1444,7 @@ namespace Arcadia_Hotel
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 93);
+            this.label1.Location = new System.Drawing.Point(380, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 19);
             this.label1.TabIndex = 0;
@@ -1594,12 +1472,12 @@ namespace Arcadia_Hotel
             this.xuiFlatTab1.InActiveHeaderColor = System.Drawing.Color.RoyalBlue;
             this.xuiFlatTab1.InActiveTextColor = System.Drawing.Color.White;
             this.xuiFlatTab1.ItemSize = new System.Drawing.Size(240, 16);
-            this.xuiFlatTab1.Location = new System.Drawing.Point(0, 24);
+            this.xuiFlatTab1.Location = new System.Drawing.Point(0, 50);
             this.xuiFlatTab1.Name = "xuiFlatTab1";
             this.xuiFlatTab1.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.xuiFlatTab1.SelectedIndex = 0;
             this.xuiFlatTab1.ShowBorder = true;
-            this.xuiFlatTab1.Size = new System.Drawing.Size(1109, 554);
+            this.xuiFlatTab1.Size = new System.Drawing.Size(1009, 528);
             this.xuiFlatTab1.TabIndex = 52;
             // 
             // tabPage1
@@ -1618,13 +1496,14 @@ namespace Arcadia_Hotel
             this.tabPage1.Location = new System.Drawing.Point(4, 20);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage1.Size = new System.Drawing.Size(1001, 530);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AddRoom";
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage2.Controls.Add(this.dtpBirthDateAE);
             this.tabPage2.Controls.Add(this.cmbRoleIDAE);
             this.tabPage2.Controls.Add(this.btnAddEmployee);
             this.tabPage2.Controls.Add(this.label36);
@@ -1634,7 +1513,6 @@ namespace Arcadia_Hotel
             this.tabPage2.Controls.Add(this.dgvRoleEmployee);
             this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.txtNameAE);
-            this.tabPage2.Controls.Add(this.dtpBirthDateAE);
             this.tabPage2.Controls.Add(this.label30);
             this.tabPage2.Controls.Add(this.label33);
             this.tabPage2.Controls.Add(this.txtSurnameAE);
@@ -1644,7 +1522,7 @@ namespace Arcadia_Hotel
             this.tabPage2.Location = new System.Drawing.Point(4, 20);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage2.Size = new System.Drawing.Size(1001, 530);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Employee";
             // 
@@ -1685,7 +1563,7 @@ namespace Arcadia_Hotel
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Location = new System.Drawing.Point(4, 20);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage3.Size = new System.Drawing.Size(1001, 530);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "AddRole";
             // 
@@ -1722,7 +1600,7 @@ namespace Arcadia_Hotel
             this.tabPage4.Controls.Add(this.dgvDeleteRoom);
             this.tabPage4.Location = new System.Drawing.Point(4, 20);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage4.Size = new System.Drawing.Size(1001, 530);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Delete Room";
             // 
@@ -1736,29 +1614,29 @@ namespace Arcadia_Hotel
             this.tabPage5.Controls.Add(this.label41);
             this.tabPage5.Location = new System.Drawing.Point(4, 20);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage5.Size = new System.Drawing.Size(1001, 530);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Delete Employee";
             // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.tabPage6.Controls.Add(this.cmbRoleIDDR);
             this.tabPage6.Controls.Add(this.btnDeleteRole);
+            this.tabPage6.Controls.Add(this.cmbRoleIDDR);
             this.tabPage6.Controls.Add(this.label20);
             this.tabPage6.Controls.Add(this.label28);
             this.tabPage6.Controls.Add(this.dgvRoleDR);
             this.tabPage6.Location = new System.Drawing.Point(4, 20);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage6.Size = new System.Drawing.Size(1001, 530);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Delete Role";
             // 
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.tabPage7.Controls.Add(this.cmbID);
             this.tabPage7.Controls.Add(this.btnUpdateRoom);
+            this.tabPage7.Controls.Add(this.cmbID);
             this.tabPage7.Controls.Add(this.label10);
             this.tabPage7.Controls.Add(this.txtPriceUR);
             this.tabPage7.Controls.Add(this.txtSizeUR);
@@ -1770,15 +1648,15 @@ namespace Arcadia_Hotel
             this.tabPage7.Controls.Add(this.label14);
             this.tabPage7.Location = new System.Drawing.Point(4, 20);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage7.Size = new System.Drawing.Size(1001, 530);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "UpdateRoom";
             // 
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.tabPage8.Controls.Add(this.cmbRoleUR);
             this.tabPage8.Controls.Add(this.btnUpdateRole);
+            this.tabPage8.Controls.Add(this.cmbRoleUR);
             this.tabPage8.Controls.Add(this.label19);
             this.tabPage8.Controls.Add(this.label27);
             this.tabPage8.Controls.Add(this.dgvRoleUR);
@@ -1790,16 +1668,17 @@ namespace Arcadia_Hotel
             this.tabPage8.Controls.Add(this.txtSalaryUR);
             this.tabPage8.Location = new System.Drawing.Point(4, 20);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage8.Size = new System.Drawing.Size(1001, 530);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "UpdateRole";
             // 
             // tabPage9
             // 
             this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage9.Controls.Add(this.dateTimePicker1);
+            this.tabPage9.Controls.Add(this.btnUpdateEmployee);
             this.tabPage9.Controls.Add(this.comboBox2);
             this.tabPage9.Controls.Add(this.cmbEmployeeIDUE);
-            this.tabPage9.Controls.Add(this.btnUpdateEmployee);
             this.tabPage9.Controls.Add(this.label37);
             this.tabPage9.Controls.Add(this.label47);
             this.tabPage9.Controls.Add(this.dataGridView1);
@@ -1807,7 +1686,6 @@ namespace Arcadia_Hotel
             this.tabPage9.Controls.Add(this.dataGridView2);
             this.tabPage9.Controls.Add(this.label46);
             this.tabPage9.Controls.Add(this.label38);
-            this.tabPage9.Controls.Add(this.dateTimePicker1);
             this.tabPage9.Controls.Add(this.label39);
             this.tabPage9.Controls.Add(this.label45);
             this.tabPage9.Controls.Add(this.label40);
@@ -1817,28 +1695,29 @@ namespace Arcadia_Hotel
             this.tabPage9.Controls.Add(this.textBox5);
             this.tabPage9.Location = new System.Drawing.Point(4, 20);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage9.Size = new System.Drawing.Size(1001, 530);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Update Employee";
             // 
             // tabPage10
             // 
             this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage10.Controls.Add(this.btnDesign);
             this.tabPage10.Controls.Add(this.groupBox4);
             this.tabPage10.Controls.Add(this.groupBox1);
             this.tabPage10.Controls.Add(this.groupBox3);
             this.tabPage10.Controls.Add(this.groupBox2);
             this.tabPage10.Location = new System.Drawing.Point(4, 20);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage10.Size = new System.Drawing.Size(1001, 530);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Report";
             // 
             // tabPage11
             // 
             this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.tabPage11.Controls.Add(this.label9);
             this.tabPage11.Controls.Add(this.btnChangePassword);
+            this.tabPage11.Controls.Add(this.label9);
             this.tabPage11.Controls.Add(this.label1);
             this.tabPage11.Controls.Add(this.label3);
             this.tabPage11.Controls.Add(this.textBox1);
@@ -1847,7 +1726,7 @@ namespace Arcadia_Hotel
             this.tabPage11.Controls.Add(this.textBox3);
             this.tabPage11.Location = new System.Drawing.Point(4, 20);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(1101, 530);
+            this.tabPage11.Size = new System.Drawing.Size(1001, 504);
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "ChangePassword";
             // 
@@ -1964,10 +1843,10 @@ namespace Arcadia_Hotel
             this.cmbEmployeeIDUE.Items.AddRange(new object[] {
             "h",
             "c"});
-            this.cmbEmployeeIDUE.Location = new System.Drawing.Point(174, 85);
+            this.cmbEmployeeIDUE.Location = new System.Drawing.Point(170, 54);
             this.cmbEmployeeIDUE.Margin = new System.Windows.Forms.Padding(0);
             this.cmbEmployeeIDUE.Name = "cmbEmployeeIDUE";
-            this.cmbEmployeeIDUE.Size = new System.Drawing.Size(145, 21);
+            this.cmbEmployeeIDUE.Size = new System.Drawing.Size(197, 21);
             this.cmbEmployeeIDUE.TabIndex = 60;
             // 
             // comboBox2
@@ -1981,10 +1860,10 @@ namespace Arcadia_Hotel
             this.comboBox2.Items.AddRange(new object[] {
             "h",
             "c"});
-            this.comboBox2.Location = new System.Drawing.Point(174, 226);
+            this.comboBox2.Location = new System.Drawing.Point(167, 255);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(145, 21);
+            this.comboBox2.Size = new System.Drawing.Size(197, 21);
             this.comboBox2.TabIndex = 61;
             // 
             // btnDeleteRoom
@@ -2001,7 +1880,7 @@ namespace Arcadia_Hotel
             this.btnDeleteRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btnDeleteRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.btnDeleteRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDeleteRoom.Location = new System.Drawing.Point(137, 261);
+            this.btnDeleteRoom.Location = new System.Drawing.Point(123, 314);
             this.btnDeleteRoom.Margin = new System.Windows.Forms.Padding(0);
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.Size = new System.Drawing.Size(159, 45);
@@ -2031,16 +1910,234 @@ namespace Arcadia_Hotel
             this.btnDeleteEmployee.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnDeleteEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
+            // dtpBirthDateAE
+            // 
+            this.dtpBirthDateAE.BorderColor = System.Drawing.Color.White;
+            this.dtpBirthDateAE.BorderSize = 0;
+            this.dtpBirthDateAE.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
+            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
+            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
+            this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.TabIndex = 55;
+            this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
+            // 
+            // btnDeleteRole
+            // 
+            this.btnDeleteRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnDeleteRole.ButtonImage = null;
+            this.btnDeleteRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnDeleteRole.ButtonText = "Delete Room";
+            this.btnDeleteRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnDeleteRole.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnDeleteRole.CornerRadius = 10;
+            this.btnDeleteRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnDeleteRole.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnDeleteRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnDeleteRole.Location = new System.Drawing.Point(120, 225);
+            this.btnDeleteRole.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteRole.Name = "btnDeleteRole";
+            this.btnDeleteRole.Size = new System.Drawing.Size(159, 45);
+            this.btnDeleteRole.TabIndex = 58;
+            this.btnDeleteRole.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnDeleteRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btnUpdateRoom
+            // 
+            this.btnUpdateRoom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnUpdateRoom.ButtonImage = null;
+            this.btnUpdateRoom.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnUpdateRoom.ButtonText = "Update Room";
+            this.btnUpdateRoom.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnUpdateRoom.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnUpdateRoom.CornerRadius = 10;
+            this.btnUpdateRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateRoom.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateRoom.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnUpdateRoom.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnUpdateRoom.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnUpdateRoom.Location = new System.Drawing.Point(139, 381);
+            this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUpdateRoom.Name = "btnUpdateRoom";
+            this.btnUpdateRoom.Size = new System.Drawing.Size(159, 45);
+            this.btnUpdateRoom.TabIndex = 59;
+            this.btnUpdateRoom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnUpdateRoom.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btnUpdateRole
+            // 
+            this.btnUpdateRole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnUpdateRole.ButtonImage = null;
+            this.btnUpdateRole.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnUpdateRole.ButtonText = "Update Role";
+            this.btnUpdateRole.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnUpdateRole.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnUpdateRole.CornerRadius = 10;
+            this.btnUpdateRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateRole.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateRole.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnUpdateRole.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnUpdateRole.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnUpdateRole.Location = new System.Drawing.Point(139, 367);
+            this.btnUpdateRole.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUpdateRole.Name = "btnUpdateRole";
+            this.btnUpdateRole.Size = new System.Drawing.Size(159, 45);
+            this.btnUpdateRole.TabIndex = 60;
+            this.btnUpdateRole.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnUpdateRole.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btnUpdateEmployee
+            // 
+            this.btnUpdateEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnUpdateEmployee.ButtonImage = null;
+            this.btnUpdateEmployee.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnUpdateEmployee.ButtonText = "Update Role";
+            this.btnUpdateEmployee.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnUpdateEmployee.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnUpdateEmployee.CornerRadius = 10;
+            this.btnUpdateEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEmployee.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateEmployee.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnUpdateEmployee.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnUpdateEmployee.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(142, 435);
+            this.btnUpdateEmployee.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(159, 45);
+            this.btnUpdateEmployee.TabIndex = 62;
+            this.btnUpdateEmployee.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnUpdateEmployee.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btnDesign
+            // 
+            this.btnDesign.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnDesign.ButtonImage = null;
+            this.btnDesign.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnDesign.ButtonText = "Generate Report";
+            this.btnDesign.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnDesign.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnDesign.CornerRadius = 10;
+            this.btnDesign.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesign.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDesign.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnDesign.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnDesign.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnDesign.Location = new System.Drawing.Point(330, 452);
+            this.btnDesign.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDesign.Name = "btnDesign";
+            this.btnDesign.Size = new System.Drawing.Size(148, 50);
+            this.btnDesign.TabIndex = 63;
+            this.btnDesign.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnDesign.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.White;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(164, 300);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.TabIndex = 63;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnChangePassword.ButtonImage = null;
+            this.btnChangePassword.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnChangePassword.ButtonText = "Change Password";
+            this.btnChangePassword.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnChangePassword.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnChangePassword.CornerRadius = 10;
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnChangePassword.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnChangePassword.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnChangePassword.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnChangePassword.Location = new System.Drawing.Point(468, 354);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(0);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(148, 50);
+            this.btnChangePassword.TabIndex = 64;
+            this.btnChangePassword.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnChangePassword.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel8.Controls.Add(this.xuiButton5);
+            this.panel8.Controls.Add(this.xuiButton6);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1009, 26);
+            this.panel8.TabIndex = 53;
+            // 
+            // xuiButton5
+            // 
+            this.xuiButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.xuiButton5.ButtonImage = null;
+            this.xuiButton5.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.xuiButton5.ButtonText = "-";
+            this.xuiButton5.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.xuiButton5.ClickTextColor = System.Drawing.Color.White;
+            this.xuiButton5.CornerRadius = 5;
+            this.xuiButton5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.xuiButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiButton5.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiButton5.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.xuiButton5.HoverTextColor = System.Drawing.Color.White;
+            this.xuiButton5.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.xuiButton5.Location = new System.Drawing.Point(957, 0);
+            this.xuiButton5.Name = "xuiButton5";
+            this.xuiButton5.Size = new System.Drawing.Size(26, 26);
+            this.xuiButton5.TabIndex = 50;
+            this.xuiButton5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.xuiButton5.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // xuiButton6
+            // 
+            this.xuiButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.xuiButton6.ButtonImage = null;
+            this.xuiButton6.ButtonStyle = XanderUI.XUIButton.Style.Material;
+            this.xuiButton6.ButtonText = "x";
+            this.xuiButton6.ClickBackColor = System.Drawing.Color.Red;
+            this.xuiButton6.ClickTextColor = System.Drawing.Color.White;
+            this.xuiButton6.CornerRadius = 5;
+            this.xuiButton6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.xuiButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiButton6.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiButton6.HoverBackgroundColor = System.Drawing.Color.Red;
+            this.xuiButton6.HoverTextColor = System.Drawing.Color.White;
+            this.xuiButton6.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.xuiButton6.Location = new System.Drawing.Point(983, 0);
+            this.xuiButton6.Name = "xuiButton6";
+            this.xuiButton6.Size = new System.Drawing.Size(26, 26);
+            this.xuiButton6.TabIndex = 49;
+            this.xuiButton6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.xuiButton6.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1109, 578);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1009, 578);
             this.Controls.Add(this.xuiFlatTab1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin control panel";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -2086,6 +2183,7 @@ namespace Arcadia_Hotel
             this.tabPage10.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2116,7 +2214,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private XanderUI.XUIButton btnChangePassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -2133,7 +2230,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.NumericUpDown nupdAmountUR;
         private System.Windows.Forms.DataGridView dgvRoomUpdate;
-        private XanderUI.XUIButton btnUpdateRoom;
         private System.Windows.Forms.TextBox txtPriceUR;
         private System.Windows.Forms.TextBox txtSizeUR;
         private System.Windows.Forms.DataGridView dgvAddRoom;
@@ -2159,8 +2255,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox txtDescriptionRU;
         private System.Windows.Forms.TextBox txtSalaryUR;
         private System.Windows.Forms.TextBox txtHoursUR;
-        private XanderUI.XUIButton btnUpdateRole;
-        private XanderUI.XUIButton btnDeleteRole;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DataGridView dgvAddEmployee;
         private System.Windows.Forms.DataGridView dgvDeleteEmployee;
@@ -2171,7 +2265,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox txtSurnameAE;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.DateTimePicker dtpBirthDateAE;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtEmailAE;
         private System.Windows.Forms.Label label34;
@@ -2191,10 +2284,8 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label47;
-        private XanderUI.XUIButton btnUpdateEmployee;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private XanderUI.XUIButton btnAddRoom;
         private System.Windows.Forms.RichTextBox redRoomDescription;
@@ -2203,7 +2294,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbReportType;
-        private System.Windows.Forms.Button btnDesign;
         private System.Windows.Forms.TextBox txtReportName;
         private System.Windows.Forms.TextBox rzrAdminName;
         private System.Windows.Forms.Label label50;
@@ -2246,5 +2336,16 @@ namespace Arcadia_Hotel
         private XanderUI.XUIButton btnDeleteEmployee;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox cmbEmployeeIDUE;
+        private Controls.BBDateTime dtpBirthDateAE;
+        private XanderUI.XUIButton btnDeleteRole;
+        private XanderUI.XUIButton btnUpdateRoom;
+        private XanderUI.XUIButton btnUpdateRole;
+        private XanderUI.XUIButton btnUpdateEmployee;
+        private XanderUI.XUIButton btnDesign;
+        private Controls.BBDateTime dateTimePicker1;
+        private XanderUI.XUIButton btnChangePassword;
+        private System.Windows.Forms.Panel panel8;
+        private XanderUI.XUIButton xuiButton5;
+        private XanderUI.XUIButton xuiButton6;
     }
 }

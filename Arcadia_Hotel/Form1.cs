@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arcadia_Hotel_DB;
+using Squirrel;
 using XanderUI;
 
 namespace Arcadia_Hotel
@@ -38,12 +39,20 @@ namespace Arcadia_Hotel
             DoubleBuffered = true;
         }
 
+        private async Task CheckForUpdates()
+        {
+            using (var mgr = await UpdateManager.GitHubUpdateManager(@"https://github.com/naughty00shortie/Arcadia_Hotel_Installation"))
+            {
+                await mgr.UpdateApp();
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadModels();
             loadUI();
+            CheckForUpdates();
 
-           
         }
 
         private void LoadModels()

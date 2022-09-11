@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,19 @@ namespace Arcadia_Hotel
         List<GuestModel> guests = new List<GuestModel>();
         List<RoleModel> roles = new List<RoleModel>();
         List<RoomModel> rooms = new List<RoomModel>();
+
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int WM_NCHITTEST = 0x84;
+        private const int HT_CLIENT = 0x1;
+        private const int HT_CAPTION = 0x2;
+
+        
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
 
         private void LoadModels()
         {
@@ -181,6 +195,15 @@ namespace Arcadia_Hotel
             DataAccess.updateEmployee(employee);
 
             LoadModels();
+        }
+
+        private void panel8_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }

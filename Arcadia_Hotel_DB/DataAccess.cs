@@ -18,7 +18,7 @@ namespace Arcadia_Hotel_DB
 
         public static List<BookingModel> loadBooking()
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 var output = cnn.Query<BookingModel>("select * from Booking", new DynamicParameters());
                 return output.ToList();
@@ -27,7 +27,7 @@ namespace Arcadia_Hotel_DB
 
         public static List<EmployeeModel> loadEmployee()
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 var output = cnn.Query<EmployeeModel>("select * from Employee", new DynamicParameters());
                 return output.ToList();
@@ -36,7 +36,7 @@ namespace Arcadia_Hotel_DB
 
         public static List<GuestModel> loadGuest()
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 var output = cnn.Query<GuestModel>("select * from Guest", new DynamicParameters());
                 return output.ToList();
@@ -45,7 +45,7 @@ namespace Arcadia_Hotel_DB
 
         public static List<RoleModel> loadRole()
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 var output = cnn.Query<RoleModel>("select * from Role", new DynamicParameters());
                 return output.ToList();
@@ -54,7 +54,7 @@ namespace Arcadia_Hotel_DB
 
         public static List<RoomModel> loadRoom()
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 var output = cnn.Query<RoomModel>("select * from Room", new DynamicParameters());
                 return output.ToList();
@@ -63,7 +63,7 @@ namespace Arcadia_Hotel_DB
 
         public static DataTable querySQL(String query)
         {
-            using (SqlConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (SqlConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter();
@@ -83,7 +83,7 @@ namespace Arcadia_Hotel_DB
 
         public static void insertBooking(BookingModel booking)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into BOOKING(Room_Number,Guest_ID,Booking_Check_In,Booking_Check_Out,Booking_Price_Paid) VALUES (@Room_Number,@Guest_ID,@Booking_Check_In,@Booking_Check_Out,@Booking_Price_Paid)",
@@ -94,7 +94,7 @@ namespace Arcadia_Hotel_DB
 
         public static void insertEmployee(EmployeeModel employee)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into EMPLOYEE(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
@@ -104,7 +104,7 @@ namespace Arcadia_Hotel_DB
 
         public static void insertGuest(GuestModel guest)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into GUEST(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
@@ -114,7 +114,7 @@ namespace Arcadia_Hotel_DB
 
         public static void insertRoom(RoomModel room)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into ROOM(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
@@ -124,7 +124,7 @@ namespace Arcadia_Hotel_DB
 
         public static void insertRole(RoleModel role)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into role(Role_Description,Role_Salary,Role_Hours_Per_Day) VALUES (@Role_Description@,Role_Salary,@Role_Hours_Per_Day)",
@@ -132,15 +132,13 @@ namespace Arcadia_Hotel_DB
             }
         }
 
-
-
         #endregion
 
         #region UPDATE
 
         public static void updateBooking(BookingModel booking)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
@@ -150,7 +148,7 @@ namespace Arcadia_Hotel_DB
 
         public static void updateRole(RoleModel role)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
@@ -160,7 +158,7 @@ namespace Arcadia_Hotel_DB
 
         public static void updateEmployee(EmployeeModel employee)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
@@ -170,7 +168,7 @@ namespace Arcadia_Hotel_DB
 
         public static void updateRoom(RoomModel room)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
                     "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
@@ -185,7 +183,7 @@ namespace Arcadia_Hotel_DB
 
         public static void deleteBooking(int iD)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute($"DELETE Booking WHERE {iD} = Booking_Number");
             }
@@ -193,7 +191,7 @@ namespace Arcadia_Hotel_DB
 
         public static void DeleteGuest(int iD)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute($"DELETE Guest WHERE {iD} = Guest_ID");
             }
@@ -201,7 +199,7 @@ namespace Arcadia_Hotel_DB
 
         public static void deleteEmployee(int iD)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute($"DELETE Employee WHERE {iD} = Employee_ID");
             }
@@ -209,7 +207,7 @@ namespace Arcadia_Hotel_DB
 
         public static void deleteRole(int iD)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute($"DELETE Employee WHERE {iD} = Role_ID");
             }
@@ -217,7 +215,7 @@ namespace Arcadia_Hotel_DB
 
         public static void deleteRoom(int iD)
         {
-            using (IDbConnection cnn = new SqlConnection(LoadConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute($"DELETE Room WHERE {iD} = Role_ID");
             }
@@ -226,12 +224,7 @@ namespace Arcadia_Hotel_DB
 
         #endregion
 
-
-
-
-
-
-        private static string LoadConnectionString()
+        private static string loadConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
         }

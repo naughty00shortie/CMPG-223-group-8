@@ -2079,6 +2079,7 @@ namespace Arcadia_Hotel
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1009, 26);
             this.panel8.TabIndex = 53;
+            this.panel8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
             // 
             // xuiButton5
             // 

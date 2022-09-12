@@ -1,6 +1,4 @@
-﻿// NEE BERNARD
-// JA JACOBUS
-using System;                                                                                                                                                                                                                                      
+﻿using System;                                                                                                                                                                                                                                      
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -12,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arcadia_Hotel_DB;
-//Lets get that W
+
 namespace Arcadia_Hotel
 {
     public partial class frmAdmin : Form
@@ -63,7 +61,7 @@ namespace Arcadia_Hotel
 
             cmbRoomID.Items.Clear();
             cmbID.Items.Clear();
-            foreach (var room in rooms)
+            cmbAdminName.Items.Clear();            foreach (var room in rooms)
             {
                 cmbRoomID.Items.Add(room.Room_Number);
                 cmbID.Items.Add(room.Room_Number);
@@ -173,7 +171,6 @@ namespace Arcadia_Hotel
 
         private void btnDeleteRoom_Click(object sender, EventArgs e)
         {
-            //? i came in like a wrecking ball
             DataAccess.deleteRoom(int.Parse(cmbRoomID.Text));
             LoadModels();
         }
@@ -337,6 +334,16 @@ namespace Arcadia_Hotel
                     dateTimePicker1.Text = employee.Employee_Date_Of_Birth.ToString();
                     textBox6.Text = employee.Employee_Email;
                 }
+        }
+
+        private void btnDesign_Click(object sender, EventArgs e)
+        {
+            // Get info
+            string sReport = cmbReportType.Text;
+
+            // Database stuff
+
+            // Create Report
         }
     }
 }

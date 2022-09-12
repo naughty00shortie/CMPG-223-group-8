@@ -134,7 +134,6 @@ namespace Arcadia_Hotel
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.txtReportName = new System.Windows.Forms.TextBox();
-            this.rzrAdminName = new System.Windows.Forms.TextBox();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -148,6 +147,7 @@ namespace Arcadia_Hotel
             this.txtRoomDescription = new System.Windows.Forms.TextBox();
             this.dgvAddRoom = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtpBirthDateAE = new Arcadia_Hotel.Controls.BBDateTime();
             this.cmbRoleIDAE = new System.Windows.Forms.ComboBox();
             this.btnAddEmployee = new XanderUI.XUIButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -170,6 +170,7 @@ namespace Arcadia_Hotel
             this.btnUpdateRole = new XanderUI.XUIButton();
             this.cmbRoleUR = new System.Windows.Forms.ComboBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new Arcadia_Hotel.Controls.BBDateTime();
             this.btnUpdateEmployee = new XanderUI.XUIButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.cmbEmployeeIDUE = new System.Windows.Forms.ComboBox();
@@ -180,8 +181,7 @@ namespace Arcadia_Hotel
             this.panel8 = new System.Windows.Forms.Panel();
             this.xuiButton5 = new XanderUI.XUIButton();
             this.xuiButton6 = new XanderUI.XUIButton();
-            this.dtpBirthDateAE = new Arcadia_Hotel.Controls.BBDateTime();
-            this.dateTimePicker1 = new Arcadia_Hotel.Controls.BBDateTime();
+            this.cmbAdminName = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddEmployee)).BeginInit();
@@ -224,7 +224,7 @@ namespace Arcadia_Hotel
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 26);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1009, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1009, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -234,21 +234,21 @@ namespace Arcadia_Hotel
             this.changePasswordToolStripMenuItem,
             this.backToolStripMenuItem1});
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.backToolStripMenuItem.Text = "File";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem1
             // 
             this.backToolStripMenuItem1.Name = "backToolStripMenuItem1";
-            this.backToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
+            this.backToolStripMenuItem1.Size = new System.Drawing.Size(193, 24);
             this.backToolStripMenuItem1.Text = "Back";
             this.backToolStripMenuItem1.Click += new System.EventHandler(this.backToolStripMenuItem1_Click);
             // 
@@ -259,27 +259,27 @@ namespace Arcadia_Hotel
             this.updateRoomToolStripMenuItem,
             this.deleteRoomToolStripMenuItem});
             this.roomToolStripMenuItem.Name = "roomToolStripMenuItem";
-            this.roomToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.roomToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.roomToolStripMenuItem.Text = "Room";
             // 
             // addRoomToolStripMenuItem
             // 
             this.addRoomToolStripMenuItem.Name = "addRoomToolStripMenuItem";
-            this.addRoomToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.addRoomToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.addRoomToolStripMenuItem.Text = "Add Room";
             this.addRoomToolStripMenuItem.Click += new System.EventHandler(this.addRoomToolStripMenuItem_Click);
             // 
             // updateRoomToolStripMenuItem
             // 
             this.updateRoomToolStripMenuItem.Name = "updateRoomToolStripMenuItem";
-            this.updateRoomToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.updateRoomToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.updateRoomToolStripMenuItem.Text = "Update Room";
             this.updateRoomToolStripMenuItem.Click += new System.EventHandler(this.updateRoomToolStripMenuItem_Click);
             // 
             // deleteRoomToolStripMenuItem
             // 
             this.deleteRoomToolStripMenuItem.Name = "deleteRoomToolStripMenuItem";
-            this.deleteRoomToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.deleteRoomToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.deleteRoomToolStripMenuItem.Text = "Delete Room";
             this.deleteRoomToolStripMenuItem.Click += new System.EventHandler(this.deleteRoomToolStripMenuItem_Click);
             // 
@@ -290,27 +290,27 @@ namespace Arcadia_Hotel
             this.updateEmployeeToolStripMenuItem,
             this.removeEmployeeToolStripMenuItem});
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.employeeToolStripMenuItem.Text = "Employee";
             // 
             // hireEmployeeToolStripMenuItem
             // 
             this.hireEmployeeToolStripMenuItem.Name = "hireEmployeeToolStripMenuItem";
-            this.hireEmployeeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.hireEmployeeToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.hireEmployeeToolStripMenuItem.Text = "Hire Employee";
             this.hireEmployeeToolStripMenuItem.Click += new System.EventHandler(this.hireEmployeeToolStripMenuItem_Click);
             // 
             // updateEmployeeToolStripMenuItem
             // 
             this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
-            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
             this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
             // 
             // removeEmployeeToolStripMenuItem
             // 
             this.removeEmployeeToolStripMenuItem.Name = "removeEmployeeToolStripMenuItem";
-            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.removeEmployeeToolStripMenuItem.Text = "Remove Employee";
             this.removeEmployeeToolStripMenuItem.Click += new System.EventHandler(this.removeEmployeeToolStripMenuItem_Click);
             // 
@@ -321,34 +321,34 @@ namespace Arcadia_Hotel
             this.updateRoleToolStripMenuItem,
             this.removeRoleToolStripMenuItem});
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
-            this.roleToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.roleToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.roleToolStripMenuItem.Text = "Role";
             // 
             // addRoleToolStripMenuItem
             // 
             this.addRoleToolStripMenuItem.Name = "addRoleToolStripMenuItem";
-            this.addRoleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.addRoleToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.addRoleToolStripMenuItem.Text = "Add Role";
             this.addRoleToolStripMenuItem.Click += new System.EventHandler(this.addRoleToolStripMenuItem_Click);
             // 
             // updateRoleToolStripMenuItem
             // 
             this.updateRoleToolStripMenuItem.Name = "updateRoleToolStripMenuItem";
-            this.updateRoleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.updateRoleToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.updateRoleToolStripMenuItem.Text = "Update Role";
             this.updateRoleToolStripMenuItem.Click += new System.EventHandler(this.updateRoleToolStripMenuItem_Click);
             // 
             // removeRoleToolStripMenuItem
             // 
             this.removeRoleToolStripMenuItem.Name = "removeRoleToolStripMenuItem";
-            this.removeRoleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.removeRoleToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.removeRoleToolStripMenuItem.Text = "Remove Role";
             this.removeRoleToolStripMenuItem.Click += new System.EventHandler(this.removeRoleToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.reportToolStripMenuItem.Text = "Report";
             this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
@@ -1265,11 +1265,11 @@ namespace Arcadia_Hotel
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbAdminName);
             this.groupBox1.Controls.Add(this.label50);
             this.groupBox1.Controls.Add(this.label49);
             this.groupBox1.Controls.Add(this.label48);
             this.groupBox1.Controls.Add(this.txtReportName);
-            this.groupBox1.Controls.Add(this.rzrAdminName);
             this.groupBox1.Controls.Add(this.cmbReportType);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(73, 31);
@@ -1324,18 +1324,6 @@ namespace Arcadia_Hotel
             this.txtReportName.Size = new System.Drawing.Size(137, 23);
             this.txtReportName.TabIndex = 51;
             // 
-            // rzrAdminName
-            // 
-            this.rzrAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.rzrAdminName.Enabled = false;
-            this.rzrAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rzrAdminName.ForeColor = System.Drawing.Color.White;
-            this.rzrAdminName.Location = new System.Drawing.Point(27, 114);
-            this.rzrAdminName.Name = "rzrAdminName";
-            this.rzrAdminName.ReadOnly = true;
-            this.rzrAdminName.Size = new System.Drawing.Size(137, 23);
-            this.rzrAdminName.TabIndex = 50;
-            // 
             // cmbReportType
             // 
             this.cmbReportType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -1345,8 +1333,8 @@ namespace Arcadia_Hotel
             this.cmbReportType.FormattingEnabled = true;
             this.cmbReportType.ItemHeight = 16;
             this.cmbReportType.Items.AddRange(new object[] {
-            "h",
-            "c"});
+            "Room",
+            "Employee"});
             this.cmbReportType.Location = new System.Drawing.Point(27, 35);
             this.cmbReportType.Margin = new System.Windows.Forms.Padding(0);
             this.cmbReportType.Name = "cmbReportType";
@@ -1452,12 +1440,12 @@ namespace Arcadia_Hotel
             this.xuiFlatTab1.InActiveHeaderColor = System.Drawing.Color.RoyalBlue;
             this.xuiFlatTab1.InActiveTextColor = System.Drawing.Color.White;
             this.xuiFlatTab1.ItemSize = new System.Drawing.Size(240, 16);
-            this.xuiFlatTab1.Location = new System.Drawing.Point(0, 50);
+            this.xuiFlatTab1.Location = new System.Drawing.Point(0, 54);
             this.xuiFlatTab1.Name = "xuiFlatTab1";
             this.xuiFlatTab1.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.xuiFlatTab1.SelectedIndex = 0;
             this.xuiFlatTab1.ShowBorder = true;
-            this.xuiFlatTab1.Size = new System.Drawing.Size(1009, 528);
+            this.xuiFlatTab1.Size = new System.Drawing.Size(1009, 524);
             this.xuiFlatTab1.TabIndex = 52;
             this.xuiFlatTab1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
             // 
@@ -1477,7 +1465,7 @@ namespace Arcadia_Hotel
             this.tabPage1.Location = new System.Drawing.Point(4, 20);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage1.Size = new System.Drawing.Size(1001, 500);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AddRoom";
             this.tabPage1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1498,7 +1486,7 @@ namespace Arcadia_Hotel
             this.dgvAddRoom.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvAddRoom.Location = new System.Drawing.Point(455, 3);
             this.dgvAddRoom.Name = "dgvAddRoom";
-            this.dgvAddRoom.Size = new System.Drawing.Size(543, 498);
+            this.dgvAddRoom.Size = new System.Drawing.Size(543, 494);
             this.dgvAddRoom.TabIndex = 52;
             // 
             // tabPage2
@@ -1526,6 +1514,19 @@ namespace Arcadia_Hotel
             this.tabPage2.Size = new System.Drawing.Size(1001, 504);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Employee";
+            // 
+            // dtpBirthDateAE
+            // 
+            this.dtpBirthDateAE.BorderColor = System.Drawing.Color.White;
+            this.dtpBirthDateAE.BorderSize = 0;
+            this.dtpBirthDateAE.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
+            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
+            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
+            this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.TabIndex = 55;
+            this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
             // 
             // cmbRoleIDAE
             // 
@@ -1946,6 +1947,19 @@ namespace Arcadia_Hotel
             this.tabPage9.Text = "Update Employee";
             this.tabPage9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.White;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(164, 300);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.TabIndex = 63;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            // 
             // btnUpdateEmployee
             // 
             this.btnUpdateEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
@@ -2014,7 +2028,7 @@ namespace Arcadia_Hotel
             this.tabPage10.Controls.Add(this.groupBox2);
             this.tabPage10.Location = new System.Drawing.Point(4, 20);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage10.Size = new System.Drawing.Size(1001, 500);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Report";
             this.tabPage10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -2040,6 +2054,7 @@ namespace Arcadia_Hotel
             this.btnDesign.TabIndex = 63;
             this.btnDesign.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnDesign.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDesign.Click += new System.EventHandler(this.btnDesign_Click);
             // 
             // tabPage11
             // 
@@ -2139,31 +2154,22 @@ namespace Arcadia_Hotel
             this.xuiButton6.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.xuiButton6.Click += new System.EventHandler(this.xuiButton6_Click);
             // 
-            // dtpBirthDateAE
+            // cmbAdminName
             // 
-            this.dtpBirthDateAE.BorderColor = System.Drawing.Color.White;
-            this.dtpBirthDateAE.BorderSize = 0;
-            this.dtpBirthDateAE.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
-            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
-            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
-            this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpBirthDateAE.TabIndex = 55;
-            this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.BorderColor = System.Drawing.Color.White;
-            this.dateTimePicker1.BorderSize = 0;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(164, 300);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dateTimePicker1.TabIndex = 63;
-            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            this.cmbAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbAdminName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbAdminName.ForeColor = System.Drawing.Color.White;
+            this.cmbAdminName.FormattingEnabled = true;
+            this.cmbAdminName.ItemHeight = 16;
+            this.cmbAdminName.Items.AddRange(new object[] {
+            "Room",
+            "Employee"});
+            this.cmbAdminName.Location = new System.Drawing.Point(27, 118);
+            this.cmbAdminName.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbAdminName.Name = "cmbAdminName";
+            this.cmbAdminName.Size = new System.Drawing.Size(137, 24);
+            this.cmbAdminName.TabIndex = 64;
             // 
             // frmAdmin
             // 
@@ -2333,7 +2339,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbReportType;
         private System.Windows.Forms.TextBox txtReportName;
-        private System.Windows.Forms.TextBox rzrAdminName;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
@@ -2388,5 +2393,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox redRoleDescription;
         private System.Windows.Forms.TextBox txtRoomDescription;
+        private System.Windows.Forms.ComboBox cmbAdminName;
     }
 }

@@ -130,11 +130,11 @@ namespace Arcadia_Hotel
             this.cbTime = new System.Windows.Forms.CheckBox();
             this.cbDate = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbAdminName = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.txtReportName = new System.Windows.Forms.TextBox();
-            this.rzrAdminName = new System.Windows.Forms.TextBox();
             this.cmbReportType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -148,6 +148,7 @@ namespace Arcadia_Hotel
             this.txtRoomDescription = new System.Windows.Forms.TextBox();
             this.dgvAddRoom = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtpBirthDateAE = new Arcadia_Hotel.Controls.BBDateTime();
             this.cmbRoleIDAE = new System.Windows.Forms.ComboBox();
             this.btnAddEmployee = new XanderUI.XUIButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -170,6 +171,7 @@ namespace Arcadia_Hotel
             this.btnUpdateRole = new XanderUI.XUIButton();
             this.cmbRoleUR = new System.Windows.Forms.ComboBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new Arcadia_Hotel.Controls.BBDateTime();
             this.btnUpdateEmployee = new XanderUI.XUIButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.cmbEmployeeIDUE = new System.Windows.Forms.ComboBox();
@@ -180,8 +182,6 @@ namespace Arcadia_Hotel
             this.panel8 = new System.Windows.Forms.Panel();
             this.xuiButton5 = new XanderUI.XUIButton();
             this.xuiButton6 = new XanderUI.XUIButton();
-            this.dtpBirthDateAE = new Arcadia_Hotel.Controls.BBDateTime();
-            this.dateTimePicker1 = new Arcadia_Hotel.Controls.BBDateTime();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddEmployee)).BeginInit();
@@ -728,7 +728,7 @@ namespace Arcadia_Hotel
             this.dgvRoleDR.Location = new System.Drawing.Point(471, 0);
             this.dgvRoleDR.Name = "dgvRoleDR";
             this.dgvRoleDR.RowHeadersWidth = 51;
-            this.dgvRoleDR.Size = new System.Drawing.Size(530, 504);
+            this.dgvRoleDR.Size = new System.Drawing.Size(530, 500);
             this.dgvRoleDR.TabIndex = 19;
             // 
             // label20
@@ -769,7 +769,7 @@ namespace Arcadia_Hotel
             this.dgvRoomUpdate.Location = new System.Drawing.Point(446, 0);
             this.dgvRoomUpdate.Name = "dgvRoomUpdate";
             this.dgvRoomUpdate.RowHeadersWidth = 51;
-            this.dgvRoomUpdate.Size = new System.Drawing.Size(555, 504);
+            this.dgvRoomUpdate.Size = new System.Drawing.Size(555, 500);
             this.dgvRoomUpdate.TabIndex = 18;
             // 
             // label15
@@ -908,7 +908,7 @@ namespace Arcadia_Hotel
             this.dgvRoleUR.Location = new System.Drawing.Point(456, 0);
             this.dgvRoleUR.Name = "dgvRoleUR";
             this.dgvRoleUR.RowHeadersWidth = 51;
-            this.dgvRoleUR.Size = new System.Drawing.Size(545, 504);
+            this.dgvRoleUR.Size = new System.Drawing.Size(545, 500);
             this.dgvRoleUR.TabIndex = 19;
             // 
             // label19
@@ -1265,11 +1265,11 @@ namespace Arcadia_Hotel
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbAdminName);
             this.groupBox1.Controls.Add(this.label50);
             this.groupBox1.Controls.Add(this.label49);
             this.groupBox1.Controls.Add(this.label48);
             this.groupBox1.Controls.Add(this.txtReportName);
-            this.groupBox1.Controls.Add(this.rzrAdminName);
             this.groupBox1.Controls.Add(this.cmbReportType);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(73, 31);
@@ -1278,6 +1278,23 @@ namespace Arcadia_Hotel
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Type";
+            // 
+            // cmbAdminName
+            // 
+            this.cmbAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbAdminName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbAdminName.ForeColor = System.Drawing.Color.White;
+            this.cmbAdminName.FormattingEnabled = true;
+            this.cmbAdminName.ItemHeight = 16;
+            this.cmbAdminName.Items.AddRange(new object[] {
+            "Room",
+            "Employee"});
+            this.cmbAdminName.Location = new System.Drawing.Point(27, 118);
+            this.cmbAdminName.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbAdminName.Name = "cmbAdminName";
+            this.cmbAdminName.Size = new System.Drawing.Size(137, 24);
+            this.cmbAdminName.TabIndex = 64;
             // 
             // label50
             // 
@@ -1324,18 +1341,6 @@ namespace Arcadia_Hotel
             this.txtReportName.Size = new System.Drawing.Size(137, 23);
             this.txtReportName.TabIndex = 51;
             // 
-            // rzrAdminName
-            // 
-            this.rzrAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.rzrAdminName.Enabled = false;
-            this.rzrAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rzrAdminName.ForeColor = System.Drawing.Color.White;
-            this.rzrAdminName.Location = new System.Drawing.Point(27, 114);
-            this.rzrAdminName.Name = "rzrAdminName";
-            this.rzrAdminName.ReadOnly = true;
-            this.rzrAdminName.Size = new System.Drawing.Size(137, 23);
-            this.rzrAdminName.TabIndex = 50;
-            // 
             // cmbReportType
             // 
             this.cmbReportType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -1345,8 +1350,8 @@ namespace Arcadia_Hotel
             this.cmbReportType.FormattingEnabled = true;
             this.cmbReportType.ItemHeight = 16;
             this.cmbReportType.Items.AddRange(new object[] {
-            "h",
-            "c"});
+            "Room",
+            "Employee"});
             this.cmbReportType.Location = new System.Drawing.Point(27, 35);
             this.cmbReportType.Margin = new System.Windows.Forms.Padding(0);
             this.cmbReportType.Name = "cmbReportType";
@@ -1523,9 +1528,22 @@ namespace Arcadia_Hotel
             this.tabPage2.Location = new System.Drawing.Point(4, 20);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage2.Size = new System.Drawing.Size(1001, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Employee";
+            // 
+            // dtpBirthDateAE
+            // 
+            this.dtpBirthDateAE.BorderColor = System.Drawing.Color.White;
+            this.dtpBirthDateAE.BorderSize = 0;
+            this.dtpBirthDateAE.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
+            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
+            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
+            this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpBirthDateAE.TabIndex = 55;
+            this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
             // 
             // cmbRoleIDAE
             // 
@@ -1581,7 +1599,7 @@ namespace Arcadia_Hotel
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Location = new System.Drawing.Point(4, 20);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage3.Size = new System.Drawing.Size(1001, 500);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "AddRole";
             this.tabPage3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1629,7 +1647,7 @@ namespace Arcadia_Hotel
             this.tabPage4.Controls.Add(this.dgvDeleteRoom);
             this.tabPage4.Location = new System.Drawing.Point(4, 20);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage4.Size = new System.Drawing.Size(1001, 500);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Delete Room";
             this.tabPage4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1684,7 +1702,7 @@ namespace Arcadia_Hotel
             this.tabPage5.Controls.Add(this.label41);
             this.tabPage5.Location = new System.Drawing.Point(4, 20);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage5.Size = new System.Drawing.Size(1001, 500);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Delete Employee";
             this.tabPage5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1739,7 +1757,7 @@ namespace Arcadia_Hotel
             this.tabPage6.Controls.Add(this.dgvRoleDR);
             this.tabPage6.Location = new System.Drawing.Point(4, 20);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage6.Size = new System.Drawing.Size(1001, 500);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Delete Role";
             this.tabPage6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1800,7 +1818,7 @@ namespace Arcadia_Hotel
             this.tabPage7.Controls.Add(this.label14);
             this.tabPage7.Location = new System.Drawing.Point(4, 20);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage7.Size = new System.Drawing.Size(1001, 500);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "UpdateRoom";
             this.tabPage7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1872,7 +1890,7 @@ namespace Arcadia_Hotel
             this.tabPage8.Controls.Add(this.txtSalaryUR);
             this.tabPage8.Location = new System.Drawing.Point(4, 20);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage8.Size = new System.Drawing.Size(1001, 500);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "UpdateRole";
             this.tabPage8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1941,10 +1959,23 @@ namespace Arcadia_Hotel
             this.tabPage9.Controls.Add(this.textBox5);
             this.tabPage9.Location = new System.Drawing.Point(4, 20);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage9.Size = new System.Drawing.Size(1001, 500);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Update Employee";
             this.tabPage9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.White;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(164, 300);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dateTimePicker1.TabIndex = 63;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
             // 
             // btnUpdateEmployee
             // 
@@ -2014,7 +2045,7 @@ namespace Arcadia_Hotel
             this.tabPage10.Controls.Add(this.groupBox2);
             this.tabPage10.Location = new System.Drawing.Point(4, 20);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage10.Size = new System.Drawing.Size(1001, 500);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Report";
             this.tabPage10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -2040,6 +2071,7 @@ namespace Arcadia_Hotel
             this.btnDesign.TabIndex = 63;
             this.btnDesign.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnDesign.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDesign.Click += new System.EventHandler(this.btnDesign_Click);
             // 
             // tabPage11
             // 
@@ -2054,7 +2086,7 @@ namespace Arcadia_Hotel
             this.tabPage11.Controls.Add(this.textBox3);
             this.tabPage11.Location = new System.Drawing.Point(4, 20);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage11.Size = new System.Drawing.Size(1001, 500);
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "ChangePassword";
             this.tabPage11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -2138,32 +2170,6 @@ namespace Arcadia_Hotel
             this.xuiButton6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.xuiButton6.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.xuiButton6.Click += new System.EventHandler(this.xuiButton6_Click);
-            // 
-            // dtpBirthDateAE
-            // 
-            this.dtpBirthDateAE.BorderColor = System.Drawing.Color.White;
-            this.dtpBirthDateAE.BorderSize = 0;
-            this.dtpBirthDateAE.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
-            this.dtpBirthDateAE.Name = "dtpBirthDateAE";
-            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
-            this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpBirthDateAE.TabIndex = 55;
-            this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.BorderColor = System.Drawing.Color.White;
-            this.dateTimePicker1.BorderSize = 0;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(164, 300);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dateTimePicker1.TabIndex = 63;
-            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
             // 
             // frmAdmin
             // 
@@ -2333,7 +2339,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbReportType;
         private System.Windows.Forms.TextBox txtReportName;
-        private System.Windows.Forms.TextBox rzrAdminName;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
@@ -2388,5 +2393,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox redRoleDescription;
         private System.Windows.Forms.TextBox txtRoomDescription;
+        private System.Windows.Forms.ComboBox cmbAdminName;
     }
 }

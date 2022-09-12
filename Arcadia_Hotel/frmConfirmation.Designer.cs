@@ -43,9 +43,7 @@ namespace Arcadia_Hotel
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBookingID = new System.Windows.Forms.TextBox();
@@ -191,16 +189,6 @@ namespace Arcadia_Hotel
             this.label8.TabIndex = 13;
             this.label8.Text = "Check Out:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label9.Location = new System.Drawing.Point(15, 258);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 19);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Room Amount:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -210,17 +198,6 @@ namespace Arcadia_Hotel
             this.label10.Size = new System.Drawing.Size(41, 19);
             this.label10.TabIndex = 17;
             this.label10.Text = "Price:";
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.txtAmount.Enabled = false;
-            this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtAmount.Location = new System.Drawing.Point(120, 255);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.ReadOnly = true;
-            this.txtAmount.Size = new System.Drawing.Size(58, 25);
-            this.txtAmount.TabIndex = 18;
             // 
             // txtPrice
             // 
@@ -339,9 +316,7 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.txtBookingID);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSurname);
@@ -382,9 +357,7 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtBookingID;

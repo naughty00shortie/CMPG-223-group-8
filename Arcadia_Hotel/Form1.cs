@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Arcadia_Hotel_DB;
 using Squirrel;
 using XanderUI;
+using System.Net.Mail;
 
 namespace Arcadia_Hotel
 {
@@ -32,6 +33,7 @@ namespace Arcadia_Hotel
         private const int WM_NCHITTEST = 0x84;
         private const int HT_CLIENT = 0x1;
         private const int HT_CAPTION = 0x2;
+
 
         public Form1()
         {
@@ -94,14 +96,7 @@ namespace Arcadia_Hotel
             tabControl1.InActiveTextColor = Color.FromArgb(60,60,60);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             xuiButton4.BackgroundColor = Color.FromArgb(75, 80, 90);
-
-            
         }
-
-
-
-
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -110,6 +105,26 @@ namespace Arcadia_Hotel
 
         private void btnAddR_Click(object sender, EventArgs e)
         {
+            if(IsValidEmail(textBox4.Text))
+            {
+                MessageBox.Show("Enter a valid email address.");
+                return;
+            }
+            
+            if(textBox5.Text.Length == 10)
+            {
+                if (!(int.TryParse(textBox5.Text,out int phonenum)))
+                {
+                    MessageBox.Show("Enter a valid phone number.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid phone number.");
+                return;
+            }
+            
             GuestModel guest = new GuestModel();
             guest.Guest_Surname = textBox2.Text;
             guest.Guest_Name = textBox3.Text; 
@@ -122,12 +137,10 @@ namespace Arcadia_Hotel
             booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text);
             booking.Room_Number = int.Parse(lbBookingInfo.GetItemText(lbBookingInfo.SelectedIndex));
 
-            DataAccess.insertGuest(guest);
-            guests = DataAccess.loadGuest();
+            frmConfirmation frmConfirmation = new frmConfirmation(this,guest,booking);
+            frmConfirmation.Show();
 
-
-            DataAccess.insertBooking(booking);
-            bookings = DataAccess.loadBooking();
+            LoadModels();
 
         }
 
@@ -157,29 +170,6 @@ namespace Arcadia_Hotel
             DateTime endDate = DateTime.Parse(dtpCheckOut.Text);
             List<RoomModel> availRoom = new List<RoomModel>();
             RoomModel roomModel = null;
-
-
-            // foreach (var booking in bookings)
-            // {
-            //     flag = true;
-            //     foreach (var room in rooms)
-            //     {
-            //         if (room.Room_Number == booking.Room_Number)
-            //         {
-            //             if (beginDate < booking.Booking_Check_Out &&
-            //                 booking.Booking_Check_In < endDate) //check if dates overlap
-            //             {
-            //                 flag = false;
-            //                 break;
-            //             }
-            //         }
-            //         roomModel = room;
-            //     }
-            //     if (flag)
-            //         availRoom.Add(roomModel);
-            // }
-
-
 
             foreach (var room in rooms)
             {
@@ -296,6 +286,26 @@ namespace Arcadia_Hotel
 
         private void btnUpdateGuest_Click(object sender, EventArgs e)
         {
+            if (IsValidEmail(txtEmailEG.Text))
+            {
+                MessageBox.Show("Enter a valid email address.");
+                return;
+            }
+
+            if (txtPhoneEG.Text.Length == 10)
+            {
+                if (!(int.TryParse(txtPhoneEG.Text, out int phonenum)))
+                {
+                    MessageBox.Show("Enter a valid phone number.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid phone number.");
+                return;
+            }
+
             GuestModel guest = new GuestModel();     
             guest.Guest_Name = txtNameEG.Text;
             guest.Guest_Surname = txtSurnameEG.Text;
@@ -367,6 +377,19 @@ namespace Arcadia_Hotel
                 }
             }
         }
+
+        private static bool IsValidEmail(String EmailToCheck)
+        {
+            try
+            {
+                MailAddress mail = new MailAddress(EmailToCheck);
+                return false;
+            }
+            catch(Exception e)
+            {
+                return true;
+            }
+        }
     }
 }
 /*Waar daar staan Model beteken dit is n tabel in die DB
@@ -379,6 +402,6 @@ Dan kan DataAccess.insertGuest(guest); gecall word om die data in te lees. Na di
 gecall word om die data te update;
 Prof Linda is luuks
  */
- //prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛) en ek wil graag by haar my hoeneers doen in all die DB vakke -- Albertus & Bernard
+ //prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛) en ek wil graag by haar my hoeneers doen in all die DB vakke -- Albertus & Bernard. Ian wil sekuriteit doen, eew.
  
 

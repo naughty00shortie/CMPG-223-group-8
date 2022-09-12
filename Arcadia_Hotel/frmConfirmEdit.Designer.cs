@@ -51,6 +51,7 @@ namespace Arcadia_Hotel
             this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.txtRoomType = new System.Windows.Forms.TextBox();
             this.btnOk = new XanderUI.XUIButton();
+            this.xuiButton1 = new XanderUI.XUIButton();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +59,10 @@ namespace Arcadia_Hotel
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label1.Location = new System.Drawing.Point(96, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.Size = new System.Drawing.Size(235, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reservation Edit Made For:";
             // 
@@ -273,7 +275,7 @@ namespace Arcadia_Hotel
             this.btnOk.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btnOk.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.btnOk.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnOk.Location = new System.Drawing.Point(152, 314);
+            this.btnOk.Location = new System.Drawing.Point(78, 312);
             this.btnOk.Margin = new System.Windows.Forms.Padding(0);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(136, 36);
@@ -282,12 +284,35 @@ namespace Arcadia_Hotel
             this.btnOk.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // xuiButton1
+            // 
+            this.xuiButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.xuiButton1.ButtonImage = null;
+            this.xuiButton1.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.xuiButton1.ButtonText = "Cancel";
+            this.xuiButton1.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.xuiButton1.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.xuiButton1.CornerRadius = 10;
+            this.xuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.xuiButton1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.xuiButton1.Location = new System.Drawing.Point(264, 312);
+            this.xuiButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.xuiButton1.Name = "xuiButton1";
+            this.xuiButton1.Size = new System.Drawing.Size(136, 36);
+            this.xuiButton1.TabIndex = 55;
+            this.xuiButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
             // frmConfirmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(455, 370);
+            this.Controls.Add(this.xuiButton1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtRoomType);
             this.Controls.Add(this.panel3);
@@ -343,5 +368,6 @@ namespace Arcadia_Hotel
         private Controls.BBDateTime dtpCheckIn;
         private System.Windows.Forms.TextBox txtRoomType;
         private XanderUI.XUIButton btnOk;
+        private XanderUI.XUIButton xuiButton1;
     }
 }

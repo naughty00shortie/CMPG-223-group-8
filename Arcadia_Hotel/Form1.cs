@@ -96,14 +96,7 @@ namespace Arcadia_Hotel
             tabControl1.InActiveTextColor = Color.FromArgb(60,60,60);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             xuiButton4.BackgroundColor = Color.FromArgb(75, 80, 90);
-
-            
         }
-
-
-
-
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -112,6 +105,26 @@ namespace Arcadia_Hotel
 
         private void btnAddR_Click(object sender, EventArgs e)
         {
+            if(IsValidEmail(textBox4.Text))
+            {
+                MessageBox.Show("Enter a valid email address.");
+                return;
+            }
+            
+            if(textBox5.Text.Length == 10)
+            {
+                if (!(int.TryParse(textBox5.Text,out int phonenum)))
+                {
+                    MessageBox.Show("Enter a valid phone number.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid phone number.");
+                return;
+            }
+            
             GuestModel guest = new GuestModel();
             guest.Guest_Surname = textBox2.Text;
             guest.Guest_Name = textBox3.Text; 
@@ -124,12 +137,10 @@ namespace Arcadia_Hotel
             booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text);
             booking.Room_Number = int.Parse(lbBookingInfo.GetItemText(lbBookingInfo.SelectedIndex));
 
-            DataAccess.insertGuest(guest);
-            guests = DataAccess.loadGuest();
+            frmConfirmation frmConfirmation = new frmConfirmation(this,guest,booking);
+            frmConfirmation.Show();
 
-
-            DataAccess.insertBooking(booking);
-            bookings = DataAccess.loadBooking();
+            LoadModels();
 
         }
 
@@ -275,6 +286,26 @@ namespace Arcadia_Hotel
 
         private void btnUpdateGuest_Click(object sender, EventArgs e)
         {
+            if (IsValidEmail(txtEmailEG.Text))
+            {
+                MessageBox.Show("Enter a valid email address.");
+                return;
+            }
+
+            if (txtPhoneEG.Text.Length == 10)
+            {
+                if (!(int.TryParse(txtPhoneEG.Text, out int phonenum)))
+                {
+                    MessageBox.Show("Enter a valid phone number.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid phone number.");
+                return;
+            }
+
             GuestModel guest = new GuestModel();     
             guest.Guest_Name = txtNameEG.Text;
             guest.Guest_Surname = txtSurnameEG.Text;
@@ -352,11 +383,11 @@ namespace Arcadia_Hotel
             try
             {
                 MailAddress mail = new MailAddress(EmailToCheck);
-                return true;
+                return false;
             }
             catch(Exception e)
             {
-                return false;
+                return true;
             }
         }
     }

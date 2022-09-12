@@ -130,6 +130,7 @@ namespace Arcadia_Hotel
             this.cbTime = new System.Windows.Forms.CheckBox();
             this.cbDate = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbAdminName = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -181,7 +182,6 @@ namespace Arcadia_Hotel
             this.panel8 = new System.Windows.Forms.Panel();
             this.xuiButton5 = new XanderUI.XUIButton();
             this.xuiButton6 = new XanderUI.XUIButton();
-            this.cmbAdminName = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddEmployee)).BeginInit();
@@ -224,7 +224,7 @@ namespace Arcadia_Hotel
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 26);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1009, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1009, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -234,21 +234,21 @@ namespace Arcadia_Hotel
             this.changePasswordToolStripMenuItem,
             this.backToolStripMenuItem1});
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.backToolStripMenuItem.Text = "File";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem1
             // 
             this.backToolStripMenuItem1.Name = "backToolStripMenuItem1";
-            this.backToolStripMenuItem1.Size = new System.Drawing.Size(193, 24);
+            this.backToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
             this.backToolStripMenuItem1.Text = "Back";
             this.backToolStripMenuItem1.Click += new System.EventHandler(this.backToolStripMenuItem1_Click);
             // 
@@ -259,27 +259,27 @@ namespace Arcadia_Hotel
             this.updateRoomToolStripMenuItem,
             this.deleteRoomToolStripMenuItem});
             this.roomToolStripMenuItem.Name = "roomToolStripMenuItem";
-            this.roomToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.roomToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.roomToolStripMenuItem.Text = "Room";
             // 
             // addRoomToolStripMenuItem
             // 
             this.addRoomToolStripMenuItem.Name = "addRoomToolStripMenuItem";
-            this.addRoomToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.addRoomToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addRoomToolStripMenuItem.Text = "Add Room";
             this.addRoomToolStripMenuItem.Click += new System.EventHandler(this.addRoomToolStripMenuItem_Click);
             // 
             // updateRoomToolStripMenuItem
             // 
             this.updateRoomToolStripMenuItem.Name = "updateRoomToolStripMenuItem";
-            this.updateRoomToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.updateRoomToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.updateRoomToolStripMenuItem.Text = "Update Room";
             this.updateRoomToolStripMenuItem.Click += new System.EventHandler(this.updateRoomToolStripMenuItem_Click);
             // 
             // deleteRoomToolStripMenuItem
             // 
             this.deleteRoomToolStripMenuItem.Name = "deleteRoomToolStripMenuItem";
-            this.deleteRoomToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.deleteRoomToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.deleteRoomToolStripMenuItem.Text = "Delete Room";
             this.deleteRoomToolStripMenuItem.Click += new System.EventHandler(this.deleteRoomToolStripMenuItem_Click);
             // 
@@ -290,27 +290,27 @@ namespace Arcadia_Hotel
             this.updateEmployeeToolStripMenuItem,
             this.removeEmployeeToolStripMenuItem});
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.employeeToolStripMenuItem.Text = "Employee";
             // 
             // hireEmployeeToolStripMenuItem
             // 
             this.hireEmployeeToolStripMenuItem.Name = "hireEmployeeToolStripMenuItem";
-            this.hireEmployeeToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.hireEmployeeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.hireEmployeeToolStripMenuItem.Text = "Hire Employee";
             this.hireEmployeeToolStripMenuItem.Click += new System.EventHandler(this.hireEmployeeToolStripMenuItem_Click);
             // 
             // updateEmployeeToolStripMenuItem
             // 
             this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
-            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
             this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
             // 
             // removeEmployeeToolStripMenuItem
             // 
             this.removeEmployeeToolStripMenuItem.Name = "removeEmployeeToolStripMenuItem";
-            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.removeEmployeeToolStripMenuItem.Text = "Remove Employee";
             this.removeEmployeeToolStripMenuItem.Click += new System.EventHandler(this.removeEmployeeToolStripMenuItem_Click);
             // 
@@ -321,34 +321,34 @@ namespace Arcadia_Hotel
             this.updateRoleToolStripMenuItem,
             this.removeRoleToolStripMenuItem});
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
-            this.roleToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.roleToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.roleToolStripMenuItem.Text = "Role";
             // 
             // addRoleToolStripMenuItem
             // 
             this.addRoleToolStripMenuItem.Name = "addRoleToolStripMenuItem";
-            this.addRoleToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.addRoleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.addRoleToolStripMenuItem.Text = "Add Role";
             this.addRoleToolStripMenuItem.Click += new System.EventHandler(this.addRoleToolStripMenuItem_Click);
             // 
             // updateRoleToolStripMenuItem
             // 
             this.updateRoleToolStripMenuItem.Name = "updateRoleToolStripMenuItem";
-            this.updateRoleToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.updateRoleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.updateRoleToolStripMenuItem.Text = "Update Role";
             this.updateRoleToolStripMenuItem.Click += new System.EventHandler(this.updateRoleToolStripMenuItem_Click);
             // 
             // removeRoleToolStripMenuItem
             // 
             this.removeRoleToolStripMenuItem.Name = "removeRoleToolStripMenuItem";
-            this.removeRoleToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.removeRoleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.removeRoleToolStripMenuItem.Text = "Remove Role";
             this.removeRoleToolStripMenuItem.Click += new System.EventHandler(this.removeRoleToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.reportToolStripMenuItem.Text = "Report";
             this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
@@ -728,7 +728,7 @@ namespace Arcadia_Hotel
             this.dgvRoleDR.Location = new System.Drawing.Point(471, 0);
             this.dgvRoleDR.Name = "dgvRoleDR";
             this.dgvRoleDR.RowHeadersWidth = 51;
-            this.dgvRoleDR.Size = new System.Drawing.Size(530, 504);
+            this.dgvRoleDR.Size = new System.Drawing.Size(530, 500);
             this.dgvRoleDR.TabIndex = 19;
             // 
             // label20
@@ -769,7 +769,7 @@ namespace Arcadia_Hotel
             this.dgvRoomUpdate.Location = new System.Drawing.Point(446, 0);
             this.dgvRoomUpdate.Name = "dgvRoomUpdate";
             this.dgvRoomUpdate.RowHeadersWidth = 51;
-            this.dgvRoomUpdate.Size = new System.Drawing.Size(555, 504);
+            this.dgvRoomUpdate.Size = new System.Drawing.Size(555, 500);
             this.dgvRoomUpdate.TabIndex = 18;
             // 
             // label15
@@ -908,7 +908,7 @@ namespace Arcadia_Hotel
             this.dgvRoleUR.Location = new System.Drawing.Point(456, 0);
             this.dgvRoleUR.Name = "dgvRoleUR";
             this.dgvRoleUR.RowHeadersWidth = 51;
-            this.dgvRoleUR.Size = new System.Drawing.Size(545, 504);
+            this.dgvRoleUR.Size = new System.Drawing.Size(545, 500);
             this.dgvRoleUR.TabIndex = 19;
             // 
             // label19
@@ -1279,6 +1279,23 @@ namespace Arcadia_Hotel
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Type";
             // 
+            // cmbAdminName
+            // 
+            this.cmbAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbAdminName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbAdminName.ForeColor = System.Drawing.Color.White;
+            this.cmbAdminName.FormattingEnabled = true;
+            this.cmbAdminName.ItemHeight = 16;
+            this.cmbAdminName.Items.AddRange(new object[] {
+            "Room",
+            "Employee"});
+            this.cmbAdminName.Location = new System.Drawing.Point(27, 118);
+            this.cmbAdminName.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbAdminName.Name = "cmbAdminName";
+            this.cmbAdminName.Size = new System.Drawing.Size(137, 24);
+            this.cmbAdminName.TabIndex = 64;
+            // 
             // label50
             // 
             this.label50.AutoSize = true;
@@ -1440,12 +1457,12 @@ namespace Arcadia_Hotel
             this.xuiFlatTab1.InActiveHeaderColor = System.Drawing.Color.RoyalBlue;
             this.xuiFlatTab1.InActiveTextColor = System.Drawing.Color.White;
             this.xuiFlatTab1.ItemSize = new System.Drawing.Size(240, 16);
-            this.xuiFlatTab1.Location = new System.Drawing.Point(0, 54);
+            this.xuiFlatTab1.Location = new System.Drawing.Point(0, 50);
             this.xuiFlatTab1.Name = "xuiFlatTab1";
             this.xuiFlatTab1.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.xuiFlatTab1.SelectedIndex = 0;
             this.xuiFlatTab1.ShowBorder = true;
-            this.xuiFlatTab1.Size = new System.Drawing.Size(1009, 524);
+            this.xuiFlatTab1.Size = new System.Drawing.Size(1009, 528);
             this.xuiFlatTab1.TabIndex = 52;
             this.xuiFlatTab1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
             // 
@@ -1465,7 +1482,7 @@ namespace Arcadia_Hotel
             this.tabPage1.Location = new System.Drawing.Point(4, 20);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1001, 500);
+            this.tabPage1.Size = new System.Drawing.Size(1001, 504);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AddRoom";
             this.tabPage1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1486,7 +1503,7 @@ namespace Arcadia_Hotel
             this.dgvAddRoom.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvAddRoom.Location = new System.Drawing.Point(455, 3);
             this.dgvAddRoom.Name = "dgvAddRoom";
-            this.dgvAddRoom.Size = new System.Drawing.Size(543, 494);
+            this.dgvAddRoom.Size = new System.Drawing.Size(543, 498);
             this.dgvAddRoom.TabIndex = 52;
             // 
             // tabPage2
@@ -1511,7 +1528,7 @@ namespace Arcadia_Hotel
             this.tabPage2.Location = new System.Drawing.Point(4, 20);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage2.Size = new System.Drawing.Size(1001, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Employee";
             // 
@@ -1582,7 +1599,7 @@ namespace Arcadia_Hotel
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Location = new System.Drawing.Point(4, 20);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage3.Size = new System.Drawing.Size(1001, 500);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "AddRole";
             this.tabPage3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1630,7 +1647,7 @@ namespace Arcadia_Hotel
             this.tabPage4.Controls.Add(this.dgvDeleteRoom);
             this.tabPage4.Location = new System.Drawing.Point(4, 20);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage4.Size = new System.Drawing.Size(1001, 500);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Delete Room";
             this.tabPage4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1685,7 +1702,7 @@ namespace Arcadia_Hotel
             this.tabPage5.Controls.Add(this.label41);
             this.tabPage5.Location = new System.Drawing.Point(4, 20);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage5.Size = new System.Drawing.Size(1001, 500);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Delete Employee";
             this.tabPage5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1740,7 +1757,7 @@ namespace Arcadia_Hotel
             this.tabPage6.Controls.Add(this.dgvRoleDR);
             this.tabPage6.Location = new System.Drawing.Point(4, 20);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage6.Size = new System.Drawing.Size(1001, 500);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Delete Role";
             this.tabPage6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1801,7 +1818,7 @@ namespace Arcadia_Hotel
             this.tabPage7.Controls.Add(this.label14);
             this.tabPage7.Location = new System.Drawing.Point(4, 20);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage7.Size = new System.Drawing.Size(1001, 500);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "UpdateRoom";
             this.tabPage7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1873,7 +1890,7 @@ namespace Arcadia_Hotel
             this.tabPage8.Controls.Add(this.txtSalaryUR);
             this.tabPage8.Location = new System.Drawing.Point(4, 20);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage8.Size = new System.Drawing.Size(1001, 500);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "UpdateRole";
             this.tabPage8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -1942,7 +1959,7 @@ namespace Arcadia_Hotel
             this.tabPage9.Controls.Add(this.textBox5);
             this.tabPage9.Location = new System.Drawing.Point(4, 20);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage9.Size = new System.Drawing.Size(1001, 500);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Update Employee";
             this.tabPage9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -2069,7 +2086,7 @@ namespace Arcadia_Hotel
             this.tabPage11.Controls.Add(this.textBox3);
             this.tabPage11.Location = new System.Drawing.Point(4, 20);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(1001, 504);
+            this.tabPage11.Size = new System.Drawing.Size(1001, 500);
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "ChangePassword";
             this.tabPage11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
@@ -2153,23 +2170,6 @@ namespace Arcadia_Hotel
             this.xuiButton6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.xuiButton6.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.xuiButton6.Click += new System.EventHandler(this.xuiButton6_Click);
-            // 
-            // cmbAdminName
-            // 
-            this.cmbAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.cmbAdminName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbAdminName.ForeColor = System.Drawing.Color.White;
-            this.cmbAdminName.FormattingEnabled = true;
-            this.cmbAdminName.ItemHeight = 16;
-            this.cmbAdminName.Items.AddRange(new object[] {
-            "Room",
-            "Employee"});
-            this.cmbAdminName.Location = new System.Drawing.Point(27, 118);
-            this.cmbAdminName.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbAdminName.Name = "cmbAdminName";
-            this.cmbAdminName.Size = new System.Drawing.Size(137, 24);
-            this.cmbAdminName.TabIndex = 64;
             // 
             // frmAdmin
             // 

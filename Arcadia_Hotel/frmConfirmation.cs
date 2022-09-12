@@ -9,29 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arcadia_Hotel_DB;
 
+
 namespace Arcadia_Hotel
 {
     public partial class frmConfirmation : Form
     {
-        List<BookingModel> bookings = new List<BookingModel>();
-        List<EmployeeModel> employees = new List<EmployeeModel>();
-        List<GuestModel> guests = new List<GuestModel>();
-        List<RoleModel> roles = new List<RoleModel>();
-        List<RoomModel> rooms = new List<RoomModel>();
 
         private Form1 form1;
         private GuestModel guestRecieved;
         private BookingModel bookingRecieved;
         private RoomModel roomRecieved;
-        private int iAmount;
 
-        public frmConfirmation(Form1 form1, GuestModel guestRecieved,BookingModel bookingRecieved,int iAmount)
+        public frmConfirmation(Form1 form1, GuestModel guestRecieved,BookingModel bookingRecieved)
         {
             InitializeComponent();
             this.form1 = form1;
             this.bookingRecieved = bookingRecieved;
             this.guestRecieved = guestRecieved;
-            this.iAmount = iAmount;
 
 
             txtName.Text = guestRecieved.Guest_Name;
@@ -44,7 +38,6 @@ namespace Arcadia_Hotel
             txtBookingID.Text = bookingRecieved.Booking_Number.ToString();
             txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
 
-            txtAmount.Text = iAmount.ToString();
         }
 
         private void btnOk_Click(object sender, EventArgs e)

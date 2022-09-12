@@ -5,11 +5,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arcadia_Hotel_DB;
+using DGVPrinterHelper;
 
 namespace Arcadia_Hotel
 {
@@ -61,7 +63,8 @@ namespace Arcadia_Hotel
 
             cmbRoomID.Items.Clear();
             cmbID.Items.Clear();
-            cmbAdminName.Items.Clear();            foreach (var room in rooms)
+                     
+            foreach (var room in rooms)
             {
                 cmbRoomID.Items.Add(room.Room_Number);
                 cmbID.Items.Add(room.Room_Number);
@@ -71,10 +74,16 @@ namespace Arcadia_Hotel
 
             comboBox1.Items.Clear();
             cmbEmployeeIDUE.Items.Clear();
+            cmbAdminName.Items.Clear();
             foreach (var employee in employees)
             {
                 comboBox1.Items.Add(employee.Employee_ID);
                 cmbEmployeeIDUE.Items.Add(employee.Employee_ID);
+                foreach (var role in roles)
+                {
+                    if (employee.Role_ID == role.Role_ID && role.Role_Description == "Admin")
+                        cmbAdminName.Items.Add(employee.Employee_Name + " " + employee.Employee_Surname);
+                }
             }
             dgvDeleteEmployee.DataSource = employees;
 
@@ -332,18 +341,41 @@ namespace Arcadia_Hotel
                     textBox5.Text = employee.Employee_Name;
                     comboBox2.Text = employee.Role_ID.ToString();
                     dateTimePicker1.Text = employee.Employee_Date_Of_Birth.ToString();
-                    textBox6.Text = employee.Employee_Email;
+                    if((textBox6.Text).IsValidEmail == true)
+                    {
+                        textBox6.Text = employee.Employee_Email;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Email");
+                    }
+                    
                 }
         }
 
         private void btnDesign_Click(object sender, EventArgs e)
         {
-            // Get info
+            // Info
             string sReport = cmbReportType.Text;
-
-            // Database stuff
+            string sAdminName = cmbAdminName.Text;
+            string sReportName = txtReportName.Text;
 
             // Create Report
+            DGVPrinter printer = new DGVPrinter();
+           
+        }
+
+        private static bool IsValidEmail(String EmailToCheck)
+        {
+            try
+            {
+                MailAddress mail = new MailAddress(EmailToCheck);
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
         }
     }
 }

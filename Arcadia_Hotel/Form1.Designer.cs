@@ -1092,6 +1092,7 @@
             this.btnUpdateGuest.TabIndex = 52;
             this.btnUpdateGuest.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnUpdateGuest.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnUpdateGuest.Click += new System.EventHandler(this.btnUpdateGuest_Click);
             // 
             // txtGuestEG
             // 

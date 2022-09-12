@@ -72,8 +72,7 @@ namespace Arcadia_Hotel_DB
 
 
 
-
-        public static DataTable querySQL(String query)
+        public static DataTable queryReport(String query)
         {
             using (SqlConnection cnn = new SqlConnection(loadConnectionString()))
             {

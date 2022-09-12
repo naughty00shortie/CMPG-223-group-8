@@ -13,6 +13,6 @@ namespace Arcadia_Hotel_DB
         public int Guest_ID { get; set; }
         public DateTime Booking_Check_In { get; set; }
         public DateTime Booking_Check_Out { get; set; }
-        public float Booking_Price_paid { get; set; }
+        public decimal Booking_Price_paid { get; set; }
     }
 }

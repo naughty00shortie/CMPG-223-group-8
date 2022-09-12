@@ -63,11 +63,22 @@ namespace Arcadia_Hotel
             roles = DataAccess.loadRole();
             rooms = DataAccess.loadRoom();
 
-            dgvEditGuest.DataSource = guests;
             comboBox1.Items.Clear();
             List<RoomModel> uniqueRoomSizeList = DataAccess.loadUniqueRoom();
             foreach (var room in uniqueRoomSizeList)
                 comboBox1.Items.Add(room.Room_Size);
+
+            comboBox1.Items.Clear();
+            List<RoomModel> uniqueRoomTypes = DataAccess.loadUniqueRoom();
+            foreach (var room in uniqueRoomTypes)
+            {
+                comboBox1.Items.Add(room.Room_Size);
+                cmbTypeER.Items.Add(room.Room_Size);
+            }
+
+            dataGridView2.DataSource = bookings;
+            dataGridView1.DataSource = guests;
+
         }
 
         private void loadUI()
@@ -84,27 +95,11 @@ namespace Arcadia_Hotel
             tabControl1.SizeMode = TabSizeMode.Fixed;
             xuiButton4.BackgroundColor = Color.FromArgb(75, 80, 90);
 
+            
         }
 
 
-        private void tabPage2_Click(object sender, EventArgs e)
-         {
-        //     BookingModel model = new BookingModel();
-        //     foreach (var booking in bookings)
-        //     {
-        //         comboBox1.Items.Add(booking);
-        //     }
-        //
-        //     model.Booking_Check_In = "1";
-        //     model.Booking_Check_out = "1";
-        //
-        //
-        //     DataAccess.InsertBooking(model);
-        //    bookings = DataAccess.LoadBooking();
 
-
-
-        }
 
 
 
@@ -122,32 +117,26 @@ namespace Arcadia_Hotel
             guest.Guest_Phone_Number = textBox5.Text;
 
             BookingModel booking = new BookingModel();
-            booking.Booking_Price_paid = calcBookingPrice();
-            txtPrice.Text = calcBookingPrice().ToString();
+            booking.Booking_Price_paid = decimal.Parse(txtPrice.Text);
             booking.Booking_Check_In = DateTime.Parse(dtpCheckIn.Text);
             booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text);
+            booking.Room_Number = int.Parse(lbBookingInfo.GetItemText(lbBookingInfo.SelectedIndex));
 
             DataAccess.insertGuest(guest);
             guests = DataAccess.loadGuest();
 
-            for (int i = 0; i < nudRoomAmount.Value; i++)
-            {
-                DataAccess.insertBooking(booking);
-                bookings = DataAccess.loadBooking();
-            }
+
+            DataAccess.insertBooking(booking);
+            bookings = DataAccess.loadBooking();
+
         }
 
-        public float calcBookingPrice()
+        public decimal calcBookingPrice(decimal price)
         {
             int totalDays = 0;
             totalDays = (int)(DateTime.Parse(dtpCheckIn.Text) - DateTime.Parse(dtpCheckOut.Text)).TotalDays;
 
-            float price = 0;
-            if(comboBox1.SelectedIndex == 0) { price = 1; }
-            else if (comboBox1.SelectedIndex == 1) { price = 2; }
-            else { price = 3; }
-
-            return  price * totalDays * (int)nudRoomAmount.Value;
+            return  price * totalDays;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -157,28 +146,63 @@ namespace Arcadia_Hotel
 
             foreach (var room in availRoom)
             {
-                lbBookingInfo.Items.Add(room.Room_Description);
+                lbBookingInfo.Items.Add(room.Room_Number+ " " + room.Room_Description);
             }
         }
 
         private List<RoomModel> checkAvailibility()
         {
-            List<RoomModel> availRoom = new List<RoomModel>();//
+            bool flag = false;
+            DateTime beginDate = DateTime.Parse(dtpCheckIn.Text);
+            DateTime endDate = DateTime.Parse(dtpCheckOut.Text);
+            List<RoomModel> availRoom = new List<RoomModel>();
+            RoomModel roomModel = null;
+
+
+            // foreach (var booking in bookings)
+            // {
+            //     flag = true;
+            //     foreach (var room in rooms)
+            //     {
+            //         if (room.Room_Number == booking.Room_Number)
+            //         {
+            //             if (beginDate < booking.Booking_Check_Out &&
+            //                 booking.Booking_Check_In < endDate) //check if dates overlap
+            //             {
+            //                 flag = false;
+            //                 break;
+            //             }
+            //         }
+            //         roomModel = room;
+            //     }
+            //     if (flag)
+            //         availRoom.Add(roomModel);
+            // }
+
+
+
             foreach (var room in rooms)
             {
-                if (room.Room_Availability == 1)
+                flag = true;
+                foreach (var booking in bookings)
                 {
-                   availRoom.Add(room);
+                    if (room.Room_Number == booking.Room_Number)
+                    {
+                        if (beginDate < booking.Booking_Check_Out &&
+                            booking.Booking_Check_In < endDate) //check if dates overlap
+                        {
+                            flag = false;
+                            break;
+                        }
+                    }
                 }
+                if (flag) 
+                    availRoom.Add(room);
             }
 
             return availRoom;
         }
 
-        private void btnBackMR_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0;
-        }
 
 
         private void btnUpdateReservation_Click(object sender, EventArgs e)
@@ -331,6 +355,17 @@ namespace Arcadia_Hotel
             frmAdmin frmAdmin = new frmAdmin(this);
             frmAdmin.Show();
             this.Hide();
+        }
+
+        private void lbBookingInfo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var room in rooms)
+            {
+                if (room.Room_Number == int.Parse(lbBookingInfo.GetItemText(lbBookingInfo.SelectedIndex)))
+                {
+                    txtPrice.Text = calcBookingPrice(room.Room_Price_Per_Night).ToString("C");
+                }
+            }
         }
     }
 }

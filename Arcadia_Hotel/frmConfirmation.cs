@@ -35,22 +35,16 @@ namespace Arcadia_Hotel
 
             dtpCheckIn.Text = bookingRecieved.Booking_Check_In.ToString();
             dtpCheckOut.Text = bookingRecieved.Booking_Check_Out.ToString();
-            txtBookingID.Text = bookingRecieved.Booking_Number.ToString();
             txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
 
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {//i am the unknown
+
             DataAccess.insertGuest(guestRecieved);
 
-            BookingModel booking = new BookingModel();
-
             DataAccess.insertBooking(bookingRecieved);
-
-            RoomModel room = new RoomModel();
-
-            DataAccess.insertRoom(roomRecieved);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

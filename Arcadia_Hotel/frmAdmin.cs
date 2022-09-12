@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Net.Mail;
 using System.Runtime.InteropServices;
@@ -49,12 +50,16 @@ namespace Arcadia_Hotel
             cmbRoleIDAE.Items.Clear();
             cmbRoleUR.Items.Clear();
             comboBox2.Items.Clear();
+
+            cmbCategorizeRoomSize.Items.Clear();
             foreach (var role in roles)
             {
                 cmbRoleIDAE.Items.Add(role.Role_ID);
                 cmbRoleIDDR.Items.Add(role.Role_ID);
                 cmbRoleUR.Items.Add(role.Role_ID);
                 comboBox2.Items.Add(role.Role_ID);
+                cmbCategorizeRole.Items.Add("All");
+                cmbCategorizeRole.Items.Add(role.Role_ID);
             }
 
             dgvRoleAR.DataSource = roles;
@@ -96,6 +101,15 @@ namespace Arcadia_Hotel
             dataGridView1.DataSource = employees;
             dataGridView2.DataSource = roles;
 
+            List<RoomModel> uniqueRooms = DataAccess.loadUniqueRoom();
+            foreach (RoomModel room in uniqueRooms)
+            {
+                cmbCategorizeRoomSize.Items.Add("All");
+                cmbCategorizeRoomSize.Items.Add(room.Room_Size);
+            }
+
+
+
         }
 
         private Form1 form1;
@@ -129,6 +143,24 @@ namespace Arcadia_Hotel
         {
             RoomModel room = new RoomModel();
 
+            if(txtRoomDescription.Text == "")
+            {
+                MessageBox.Show("Enter Room Description", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtRoomSize.Text == "")
+            {
+                MessageBox.Show("Enter Room Size", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtRoomPrice.Text == "")
+            {
+                MessageBox.Show("Enter Room Price", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             room.Room_Description = txtRoomDescription.Text;
             room.Room_Size = txtRoomSize.Text;
             room.Room_Price_Per_Night = decimal.Parse(txtRoomPrice.Text);
@@ -141,6 +173,30 @@ namespace Arcadia_Hotel
         private void btnUpdateRole_Click(object sender, EventArgs e)
         {
             RoleModel role = new RoleModel();
+
+            if(cmbRoleUR.Text == "")
+            {
+                MessageBox.Show("Enter Role ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtDescriptionRU.Text == "")
+            {
+                MessageBox.Show("Enter Role Description", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtSalaryUR.Text == "")
+            {
+                MessageBox.Show("Enter Role Salary", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtHoursUR.Text == "")
+            {
+                MessageBox.Show("Enter Role Hours", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             role.Role_ID = int.Parse(cmbRoleUR.Text);
             role.Role_Description = txtDescriptionRU.Text;
@@ -156,6 +212,36 @@ namespace Arcadia_Hotel
         {
            EmployeeModel employee = new EmployeeModel();
 
+            if(cmbRoleIDAE.Text == "")
+            {
+                MessageBox.Show("Select Role", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtSurnameAE.Text == "")
+            {
+                MessageBox.Show("Enter Employee Surname", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtNameAE.Text == "")
+            {
+                MessageBox.Show("Enter Employee Name", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtEmailAE.Text == "")
+            {
+                MessageBox.Show("Enter Employee Email", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(dtpBirthDateAE.Text == "")
+            {
+                MessageBox.Show("Enter Employee Date of Birth", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
            employee.Role_ID = int.Parse(cmbRoleIDAE.Text);
            employee.Employee_Surname = txtSurnameAE.Text;
            employee.Employee_Name = txtNameAE.Text; 
@@ -166,10 +252,28 @@ namespace Arcadia_Hotel
            LoadModels();
         }
 
-        private void btnAddRole_Click(object sender, EventArgs e)
+        private void btnAddRole_Click(object sender, EventArgs e)////////////
         {
             RoleModel role = new RoleModel();
 
+            if(redRoleDescription.Text == "")
+            {
+                MessageBox.Show("Enter Role Description", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtSalaryAR.Text == "")
+            {
+                MessageBox.Show("Enter Role Salary", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtHoursAR.Text == "")
+            {
+                MessageBox.Show("Enter Role Hours", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             role.Role_Description = redRoleDescription.Text;
             role.Role_Salary = decimal.Parse(txtSalaryAR.Text);
             role.Role_Hours_Per_Day = int.Parse(txtHoursAR.Text);
@@ -192,6 +296,30 @@ namespace Arcadia_Hotel
 
         private void btnUpdateRoom_Click(object sender, EventArgs e)
         {
+            if(cmbID.Text == "")
+            {
+                MessageBox.Show("Enter Room number", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(textBox7.Text == "")
+            {
+                MessageBox.Show("Enter Room Description", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtSizeUR.Text == "")
+            {
+                MessageBox.Show("Enter Room size", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtPriceUR.Text == "")
+            {
+                MessageBox.Show("Enter Room Price", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             RoomModel room = new RoomModel();
             room.Room_Number = int.Parse(cmbID.Text);
             room.Room_Description = textBox7.Text;
@@ -216,6 +344,42 @@ namespace Arcadia_Hotel
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e)
         {
+            if(cmbEmployeeIDUE.Text == "")
+            {
+                MessageBox.Show("Enter Employee ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(textBox4.Text == "")
+            {
+                MessageBox.Show("Enter Employee Surname", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(textBox5.Text == "")
+            {
+                MessageBox.Show("Enter Employee Name", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(comboBox2.Text == "")
+            {
+                MessageBox.Show("Select Role ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(dateTimePicker1.Text == "")
+            {
+                MessageBox.Show("Enter Employee Date of Birth", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(textBox6.Text == "")
+            {
+                MessageBox.Show("Enter Employee Email", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             EmployeeModel employee = new EmployeeModel();
             RoleModel role = new RoleModel();
             employee.Employee_ID = int.Parse(cmbEmployeeIDUE.Text);
@@ -341,7 +505,7 @@ namespace Arcadia_Hotel
                     textBox5.Text = employee.Employee_Name;
                     comboBox2.Text = employee.Role_ID.ToString();
                     dateTimePicker1.Text = employee.Employee_Date_Of_Birth.ToString();
-                    if((textBox6.Text).IsValidEmail == true)
+                    if(IsValidEmail(textBox6.Text))
                     {
                         textBox6.Text = employee.Employee_Email;
                     }
@@ -359,10 +523,88 @@ namespace Arcadia_Hotel
             string sReport = cmbReportType.Text;
             string sAdminName = cmbAdminName.Text;
             string sReportName = txtReportName.Text;
+            string sSubtitle = "";
+
+            // Check if text boxes is written in
+            if (cmbAdminName.Text == "")
+            {
+                MessageBox.Show("Select admin name", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtReportName.Text == "")
+            {
+                MessageBox.Show("Enter the report name", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             // Create Report
-            DGVPrinter printer = new DGVPrinter();
-           
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = sReportName+"(.pdf)|.pdf";
+
+            if (saveFileDialog1.ShowDialog() ==  DialogResult.OK)
+            {
+                DGVPrinter printer = new DGVPrinter();
+
+                if (sReport == "Room")                  // Room report sql
+                {
+                    printer.Title = "Room Price Report of the Month";
+
+                    if (cmbCategorizeRoomSize.Text == "All")
+                        dataGridView3.DataSource = DataAccess.queryReport("SELECT R.Room_Description, R.Room_Size, R.Room_Price_Per_Night, COUNT(B.Room_ID) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number");
+                    else if (cmbCategorizeRoomSize.Text == "")
+                    {
+                        MessageBox.Show("Select a categorize option", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                        dataGridView3.DataSource = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Size, R.Room_Price_Per_Night, COUNT(B.Room_ID) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND R.Room_Size = '{cmbCategorizeRoomSize.Text}'");
+                }                   
+                else if (sReport == "Employee")             // Employee report sql
+                {
+                    printer.Title = "Employee Report";
+
+                    if (cmbCategorizeRole.Text == "All")
+                        dataGridView3.DataSource = DataAccess.queryReport("");
+                    else if (cmbCategorizeRole.Text == "")
+                    {
+                        MessageBox.Show("Select a categorize option", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }                     
+                    else
+                        dataGridView3.DataSource = DataAccess.queryReport($" SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID AND R.Role_Description = '{cmbCategorizeRole.Text}'");
+                }                    
+                else
+                {
+                    MessageBox.Show("Select a report", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (cbPageNumbers.Checked)          // Add numbers to report
+                {
+                    printer.PageNumbers = true;
+                    printer.PageNumberInHeader = true;
+                }
+                
+                if (cbDate.Checked)                // Add date to report
+                    sSubtitle += DateTime.Today.ToString() + "\n";
+
+                if (cbReportName.Checked)           // Add Report name to report
+                    sSubtitle += sReportName + "\n";
+
+                if (cbUserName.Checked)         // Add admin who pulled report to report
+                    sSubtitle += sAdminName + "\n";
+
+
+                printer.SubTitle = sSubtitle;
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit;
+
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+
+                printer.PrintDataGridView(dataGridView3);
+            }
+
         }
 
         private static bool IsValidEmail(String EmailToCheck)
@@ -376,6 +618,11 @@ namespace Arcadia_Hotel
             {
                 return false;
             }
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

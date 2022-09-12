@@ -52,8 +52,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
-            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.xuiButton7 = new XanderUI.XUIButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -68,8 +66,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnUpdateReservation = new XanderUI.XUIButton();
-            this.dtpCheckOutER = new Arcadia_Hotel.Controls.BBDateTime();
-            this.dtpCheckInER = new Arcadia_Hotel.Controls.BBDateTime();
             this.cmbTypeER = new System.Windows.Forms.ComboBox();
             this.txtBookingIDER = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -86,7 +82,6 @@
             this.btnGoEditReservation = new XanderUI.XUIButton();
             this.btnDeleteReservation = new XanderUI.XUIButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtBookingER = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSearchER = new System.Windows.Forms.TextBox();
@@ -111,7 +106,6 @@
             this.btnDeleteGuest = new XanderUI.XUIButton();
             this.btnGoEditGuest = new XanderUI.XUIButton();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtGuestIDEG = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSearchEG = new System.Windows.Forms.TextBox();
@@ -121,6 +115,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cmbBookingER = new System.Windows.Forms.ComboBox();
+            this.cmbGuestIDEG = new System.Windows.Forms.ComboBox();
+            this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
+            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
+            this.dtpCheckOutER = new Arcadia_Hotel.Controls.BBDateTime();
+            this.dtpCheckInER = new Arcadia_Hotel.Controls.BBDateTime();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -138,6 +142,7 @@
             this.panel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddR
@@ -520,32 +525,6 @@
             this.panel2.Size = new System.Drawing.Size(631, 440);
             this.panel2.TabIndex = 7;
             // 
-            // dtpCheckOut
-            // 
-            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckOut.BorderSize = 0;
-            this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckOut.Location = new System.Drawing.Point(198, 152);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOut.TabIndex = 51;
-            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
-            // 
-            // dtpCheckIn
-            // 
-            this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckIn.BorderSize = 0;
-            this.dtpCheckIn.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckIn.Location = new System.Drawing.Point(198, 113);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckIn.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckIn.TabIndex = 50;
-            this.dtpCheckIn.TextColor = System.Drawing.Color.White;
-            // 
             // xuiButton7
             // 
             this.xuiButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
@@ -673,6 +652,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.tabPage1.Controls.Add(this.label23);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.dataGridView3);
             this.tabPage1.Controls.Add(this.dataGridView2);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.panel3);
@@ -687,10 +669,9 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridView2.Location = new System.Drawing.Point(594, 0);
+            this.dataGridView2.Location = new System.Drawing.Point(584, 30);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(458, 627);
+            this.dataGridView2.Size = new System.Drawing.Size(462, 296);
             this.dataGridView2.TabIndex = 55;
             // 
             // panel4
@@ -738,32 +719,7 @@
             this.btnUpdateReservation.TabIndex = 53;
             this.btnUpdateReservation.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnUpdateReservation.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // dtpCheckOutER
-            // 
-            this.dtpCheckOutER.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckOutER.BorderSize = 0;
-            this.dtpCheckOutER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOutER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckOutER.Location = new System.Drawing.Point(109, 251);
-            this.dtpCheckOutER.Name = "dtpCheckOutER";
-            this.dtpCheckOutER.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckOutER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOutER.TabIndex = 52;
-            this.dtpCheckOutER.TextColor = System.Drawing.Color.White;
-            // 
-            // dtpCheckInER
-            // 
-            this.dtpCheckInER.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckInER.BorderSize = 0;
-            this.dtpCheckInER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckInER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckInER.Location = new System.Drawing.Point(109, 202);
-            this.dtpCheckInER.Name = "dtpCheckInER";
-            this.dtpCheckInER.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckInER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckInER.TabIndex = 51;
-            this.dtpCheckInER.TextColor = System.Drawing.Color.White;
+            this.btnUpdateReservation.Click += new System.EventHandler(this.btnUpdateReservation_Click);
             // 
             // cmbTypeER
             // 
@@ -905,10 +861,10 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmbBookingER);
             this.panel3.Controls.Add(this.btnGoEditReservation);
             this.panel3.Controls.Add(this.btnDeleteReservation);
             this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.txtBookingER);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(115, 128);
             this.panel3.Name = "panel3";
@@ -936,6 +892,7 @@
             this.btnGoEditReservation.TabIndex = 51;
             this.btnGoEditReservation.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnGoEditReservation.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnGoEditReservation.Click += new System.EventHandler(this.btnGoEditReservation_Click);
             // 
             // btnDeleteReservation
             // 
@@ -958,6 +915,7 @@
             this.btnDeleteReservation.TabIndex = 50;
             this.btnDeleteReservation.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnDeleteReservation.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteReservation.Click += new System.EventHandler(this.btnDeleteReservation_Click);
             // 
             // label18
             // 
@@ -969,16 +927,6 @@
             this.label18.Size = new System.Drawing.Size(89, 21);
             this.label18.TabIndex = 5;
             this.label18.Text = "Booking ID:";
-            // 
-            // txtBookingER
-            // 
-            this.txtBookingER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.txtBookingER.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtBookingER.ForeColor = System.Drawing.Color.White;
-            this.txtBookingER.Location = new System.Drawing.Point(155, 36);
-            this.txtBookingER.Name = "txtBookingER";
-            this.txtBookingER.Size = new System.Drawing.Size(115, 23);
-            this.txtBookingER.TabIndex = 6;
             // 
             // label4
             // 
@@ -993,13 +941,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.txtSearchER);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(142, 32);
+            this.groupBox1.Location = new System.Drawing.Point(49, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(337, 71);
+            this.groupBox1.Size = new System.Drawing.Size(535, 102);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Reservation";
@@ -1009,17 +958,18 @@
             this.txtSearchER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.txtSearchER.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchER.ForeColor = System.Drawing.Color.White;
-            this.txtSearchER.Location = new System.Drawing.Point(185, 30);
+            this.txtSearchER.Location = new System.Drawing.Point(169, 48);
             this.txtSearchER.Name = "txtSearchER";
             this.txtSearchER.Size = new System.Drawing.Size(115, 23);
             this.txtSearchER.TabIndex = 4;
+            this.txtSearchER.TextChanged += new System.EventHandler(this.txtSearchER_TextChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(31, 32);
+            this.label17.Location = new System.Drawing.Point(15, 50);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(148, 21);
             this.label17.TabIndex = 1;
@@ -1222,14 +1172,14 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.cmbGuestIDEG);
             this.panel5.Controls.Add(this.btnDeleteGuest);
             this.panel5.Controls.Add(this.btnGoEditGuest);
             this.panel5.Controls.Add(this.label28);
-            this.panel5.Controls.Add(this.txtGuestIDEG);
             this.panel5.Controls.Add(this.label29);
             this.panel5.Location = new System.Drawing.Point(81, 115);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(400, 136);
+            this.panel5.Size = new System.Drawing.Size(470, 136);
             this.panel5.TabIndex = 12;
             // 
             // btnDeleteGuest
@@ -1253,6 +1203,7 @@
             this.btnDeleteGuest.TabIndex = 52;
             this.btnDeleteGuest.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnDeleteGuest.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDeleteGuest.Click += new System.EventHandler(this.btnDeleteGuest_Click);
             // 
             // btnGoEditGuest
             // 
@@ -1275,6 +1226,7 @@
             this.btnGoEditGuest.TabIndex = 51;
             this.btnGoEditGuest.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnGoEditGuest.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnGoEditGuest.Click += new System.EventHandler(this.btnGoEditGuest_Click);
             // 
             // label28
             // 
@@ -1285,16 +1237,6 @@
             this.label28.Size = new System.Drawing.Size(72, 21);
             this.label28.TabIndex = 5;
             this.label28.Text = "Guest ID:";
-            // 
-            // txtGuestIDEG
-            // 
-            this.txtGuestIDEG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.txtGuestIDEG.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtGuestIDEG.ForeColor = System.Drawing.Color.White;
-            this.txtGuestIDEG.Location = new System.Drawing.Point(164, 46);
-            this.txtGuestIDEG.Name = "txtGuestIDEG";
-            this.txtGuestIDEG.Size = new System.Drawing.Size(115, 25);
-            this.txtGuestIDEG.TabIndex = 6;
             // 
             // label29
             // 
@@ -1407,6 +1349,134 @@
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 5;
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(344, 24);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(185, 68);
+            this.listBox1.TabIndex = 19;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(590, 379);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(454, 238);
+            this.dataGridView3.TabIndex = 56;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(759, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 25);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Bookings";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(759, 351);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(71, 25);
+            this.label23.TabIndex = 59;
+            this.label23.Text = "Guests";
+            // 
+            // cmbBookingER
+            // 
+            this.cmbBookingER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbBookingER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbBookingER.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBookingER.ForeColor = System.Drawing.Color.White;
+            this.cmbBookingER.FormattingEnabled = true;
+            this.cmbBookingER.ItemHeight = 13;
+            this.cmbBookingER.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbBookingER.Location = new System.Drawing.Point(149, 39);
+            this.cmbBookingER.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbBookingER.Name = "cmbBookingER";
+            this.cmbBookingER.Size = new System.Drawing.Size(137, 21);
+            this.cmbBookingER.TabIndex = 52;
+            // 
+            // cmbGuestIDEG
+            // 
+            this.cmbGuestIDEG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.cmbGuestIDEG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbGuestIDEG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGuestIDEG.ForeColor = System.Drawing.Color.White;
+            this.cmbGuestIDEG.FormattingEnabled = true;
+            this.cmbGuestIDEG.ItemHeight = 13;
+            this.cmbGuestIDEG.Items.AddRange(new object[] {
+            "h",
+            "c"});
+            this.cmbGuestIDEG.Location = new System.Drawing.Point(165, 49);
+            this.cmbGuestIDEG.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbGuestIDEG.Name = "cmbGuestIDEG";
+            this.cmbGuestIDEG.Size = new System.Drawing.Size(137, 21);
+            this.cmbGuestIDEG.TabIndex = 53;
+            // 
+            // dtpCheckOut
+            // 
+            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckOut.BorderSize = 0;
+            this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckOut.Location = new System.Drawing.Point(198, 152);
+            this.dtpCheckOut.Name = "dtpCheckOut";
+            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.TabIndex = 51;
+            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
+            // 
+            // dtpCheckIn
+            // 
+            this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckIn.BorderSize = 0;
+            this.dtpCheckIn.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckIn.Location = new System.Drawing.Point(198, 113);
+            this.dtpCheckIn.Name = "dtpCheckIn";
+            this.dtpCheckIn.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckIn.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckIn.TabIndex = 50;
+            this.dtpCheckIn.TextColor = System.Drawing.Color.White;
+            // 
+            // dtpCheckOutER
+            // 
+            this.dtpCheckOutER.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckOutER.BorderSize = 0;
+            this.dtpCheckOutER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOutER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckOutER.Location = new System.Drawing.Point(109, 251);
+            this.dtpCheckOutER.Name = "dtpCheckOutER";
+            this.dtpCheckOutER.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckOutER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOutER.TabIndex = 52;
+            this.dtpCheckOutER.TextColor = System.Drawing.Color.White;
+            // 
+            // dtpCheckInER
+            // 
+            this.dtpCheckInER.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckInER.BorderSize = 0;
+            this.dtpCheckInER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckInER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckInER.Location = new System.Drawing.Point(109, 202);
+            this.dtpCheckInER.Name = "dtpCheckInER";
+            this.dtpCheckInER.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckInER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckInER.TabIndex = 51;
+            this.dtpCheckInER.TextColor = System.Drawing.Color.White;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1430,6 +1500,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1447,6 +1518,7 @@
             this.groupBox2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1488,7 +1560,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtBookingER;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtSearchER;
@@ -1519,7 +1590,6 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txtGuestIDEG;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtSearchEG;
@@ -1544,6 +1614,12 @@
         private XanderUI.XUIButton xuiButton8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox cmbBookingER;
+        private System.Windows.Forms.ComboBox cmbGuestIDEG;
     }
 }
 

@@ -70,6 +70,15 @@ namespace Arcadia_Hotel_DB
             }
         }
 
+        public static List<GuestModel> loadWildCardGuests(string qry)
+        {
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
+            {
+                var output = cnn.Query<GuestModel>($"select * from Guest WHERE Guest_Surname =  '%{qry}%'", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
 
 
         public static DataTable queryReport(String query)

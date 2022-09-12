@@ -78,8 +78,14 @@ namespace Arcadia_Hotel
                 cmbTypeER.Items.Add(room.Room_Size);
             }
 
+            foreach (var booking in bookings)
+            {
+                cmbBookingER.Items.Add(booking.Booking_Number);
+            }
+
             dataGridView2.DataSource = bookings;
             dataGridView1.DataSource = guests;
+            dataGridView3.DataSource = guests;
 
         }
 
@@ -91,9 +97,9 @@ namespace Arcadia_Hotel
             // Make Page Invisible
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
-            tabControl1.ActiveHeaderColor = Color.FromArgb(60,60,60);
-            tabControl1.ActiveTextColor = Color.FromArgb(60,60,60);
-            tabControl1.InActiveTextColor = Color.FromArgb(60,60,60);
+            tabControl1.ActiveHeaderColor = Color.FromArgb(60, 60, 60);
+            tabControl1.ActiveTextColor = Color.FromArgb(60, 60, 60);
+            tabControl1.InActiveTextColor = Color.FromArgb(60, 60, 60);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             xuiButton4.BackgroundColor = Color.FromArgb(75, 80, 90);
         }
@@ -105,15 +111,15 @@ namespace Arcadia_Hotel
 
         private void btnAddR_Click(object sender, EventArgs e)
         {
-            if(IsValidEmail(textBox4.Text))
+            if (IsValidEmail(textBox4.Text))
             {
                 MessageBox.Show("Enter a valid email address.");
                 return;
             }
-            
-            if(textBox5.Text.Length == 10)
+
+            if (textBox5.Text.Length == 10)
             {
-                if (!(int.TryParse(textBox5.Text,out int phonenum)))
+                if (!(int.TryParse(textBox5.Text, out int phonenum)))
                 {
                     MessageBox.Show("Enter a valid phone number.");
                     return;
@@ -124,10 +130,34 @@ namespace Arcadia_Hotel
                 MessageBox.Show("Enter a valid phone number.");
                 return;
             }
+
+            if(textBox2.Text == "")
+            {
+                MessageBox.Show("Enter Surname", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(textBox3.Text == "")
+            {
+                MessageBox.Show("Enter Name", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(lbBookingInfo.SelectedIndex == null)
+            {
+                MessageBox.Show("Select Room number", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             
+            if(DateTime.Parse(dtpCheckIn.Text) > DateTime.Parse(dtpCheckOut.Text))
+            {
+                MessageBox.Show("Input valid Date", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             GuestModel guest = new GuestModel();
             guest.Guest_Surname = textBox2.Text;
-            guest.Guest_Name = textBox3.Text; 
+            guest.Guest_Name = textBox3.Text;
             guest.Guest_Email = textBox4.Text;
             guest.Guest_Phone_Number = textBox5.Text;
 
@@ -137,7 +167,7 @@ namespace Arcadia_Hotel
             booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text);
             booking.Room_Number = int.Parse(lbBookingInfo.GetItemText(lbBookingInfo.SelectedIndex));
 
-            frmConfirmation frmConfirmation = new frmConfirmation(this,guest,booking);
+            frmConfirmation frmConfirmation = new frmConfirmation(this, guest, booking);
             frmConfirmation.Show();
 
             LoadModels();
@@ -149,17 +179,23 @@ namespace Arcadia_Hotel
             int totalDays = 0;
             totalDays = (int)(DateTime.Parse(dtpCheckIn.Text) - DateTime.Parse(dtpCheckOut.Text)).TotalDays;
 
-            return  price * totalDays;
+            return price * totalDays;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)//query
         {
             lbBookingInfo.Items.Clear();
             List<RoomModel> availRoom = checkAvailibility();
 
+            if(DateTime.Parse(dtpCheckIn.Text) > DateTime.Parse(dtpCheckOut.Text))
+            {
+                MessageBox.Show("Input valid date", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             foreach (var room in availRoom)
             {
-                lbBookingInfo.Items.Add(room.Room_Number+ " " + room.Room_Description);
+                lbBookingInfo.Items.Add(room.Room_Number + " " + room.Room_Description);
             }
         }
 
@@ -186,7 +222,7 @@ namespace Arcadia_Hotel
                         }
                     }
                 }
-                if (flag) 
+                if (flag)
                     availRoom.Add(room);
             }
 
@@ -197,23 +233,50 @@ namespace Arcadia_Hotel
 
         private void btnUpdateReservation_Click(object sender, EventArgs e)
         {
+            if(txtBookingIDER.Text == "")
+            {
+                MessageBox.Show("Enter Booking number", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtERName.Text == "")
+            {
+                MessageBox.Show("Enter Guest Name", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(txtSurnameER.Text == "")
+            {
+                MessageBox.Show("Enter Guest Surname", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(cmbTypeER.Text == "")
+            {
+                MessageBox.Show("Enter Room Size", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(DateTime.Parse(dtpCheckIn.Text) > DateTime.Parse(dtpCheckOut.Text))
+            {
+                MessageBox.Show("Input valid date", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             BookingModel booking = new BookingModel();
             GuestModel guest = new GuestModel();
             RoomModel room = new RoomModel();
 
-
-
             booking.Booking_Number = int.Parse(txtBookingIDER.Text);
             guest.Guest_Name = txtERName.Text;
             guest.Guest_Surname = txtSurnameER.Text;
             room.Room_Size = cmbTypeER.Text;
-            booking.Booking_Check_In =  DateTime.Parse(dtpCheckIn.Text);
-            booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text); 
+            booking.Booking_Check_In = DateTime.Parse(dtpCheckIn.Text);
+            booking.Booking_Check_Out = DateTime.Parse(dtpCheckOut.Text);
             //alles van frontend na backend
 
 
-            frmConfirmEdit frmConfirmEdit = new frmConfirmEdit(this, booking,guest,room);
+            frmConfirmEdit frmConfirmEdit = new frmConfirmEdit(this, booking, guest, room);
             frmConfirmEdit.Show();
 
             bookings = DataAccess.loadBooking();
@@ -223,13 +286,13 @@ namespace Arcadia_Hotel
         {
             foreach (var booking in bookings)
             {
-                if (booking.Booking_Number == int.Parse(txtBookingER.Text))
+                if (booking.Booking_Number == int.Parse(cmbBookingER.Text))
                 {
 
                     txtBookingIDER.Text = booking.Booking_Number.ToString();
                     //txtERName.Text = booking.Booking_Name.ToString();
                     //txtSurnameER.Text = booking.Booking_Surname.ToString();
-                    
+
                     dtpCheckInER.Text = booking.Booking_Check_In.ToString();
                     dtpCheckOutER.Text = booking.Booking_Check_Out.ToString();
                     foreach (var guest in guests)
@@ -259,20 +322,20 @@ namespace Arcadia_Hotel
         }
 
         private void btnGoEditGuest_Click(object sender, EventArgs e)
-        {            
+        {
             GuestModel guestModel = new GuestModel();
             foreach (var guest in guests)
             {
-                if (guest.Guest_ID == int.Parse(txtGuestIDEG.Text))
+                if (guest.Guest_ID == int.Parse(cmbGuestIDEG.Text))
                 {
                     txtNameEG.Text = guest.Guest_Name;
                     txtSurnameEG.Text = guest.Guest_Surname;
                     txtPhoneEG.Text = guest.Guest_Phone_Number.ToString();
                     txtEmailEG.Text = guest.Guest_Email.ToString();
-                    txtGuestIDEG.Text = guest.Guest_ID.ToString();
+                    cmbGuestIDEG.Text = guest.Guest_ID.ToString();
                 }
             }
-            frmConfirmationGuest frmConfirmationGuest = new frmConfirmationGuest(this , guestModel);
+            frmConfirmationGuest frmConfirmationGuest = new frmConfirmationGuest(this, guestModel);
             panel6.Visible = true;
         }
 
@@ -280,7 +343,7 @@ namespace Arcadia_Hotel
         {
             if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DataAccess.deleteBooking(int.Parse(txtGuestIDEG.Text));
+                DataAccess.deleteBooking(int.Parse(cmbGuestIDEG.Text));
             }
         }
 
@@ -305,32 +368,38 @@ namespace Arcadia_Hotel
                 MessageBox.Show("Enter a valid phone number.");
                 return;
             }
+            
+            if(txtNameEG.Text == "")
+            {
+                MessageBox.Show("Enter Name", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            if(txtSurnameEG.Text == "")
+            {
+                MessageBox.Show("Enter Surname", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            GuestModel guest = new GuestModel();     
+            GuestModel guest = new GuestModel();
             guest.Guest_Name = txtNameEG.Text;
             guest.Guest_Surname = txtSurnameEG.Text;
             guest.Guest_Phone_Number = txtPhoneEG.Text;
             guest.Guest_Email = txtEmailEG.Text;
-            guest.Guest_ID = int.Parse(txtGuestIDEG.Text);
-            
+            guest.Guest_ID = int.Parse(cmbGuestIDEG.Text);
+
             frmConfirmationGuest frmConfirmGuest = new frmConfirmationGuest(this, guest);
             frmConfirmGuest.Show();
 
-        }
-
-        private void btnBackEG_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0;
         }
 
         private void btnDeleteReservation_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DataAccess.deleteBooking(int.Parse(txtBookingER.Text));
+                DataAccess.deleteBooking(int.Parse(cmbBookingER.Text));
             }
         }
-
 
         private void setTab(object sender, EventArgs e)
         {
@@ -385,10 +454,32 @@ namespace Arcadia_Hotel
                 MailAddress mail = new MailAddress(EmailToCheck);
                 return false;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return true;
             }
+        }
+
+        private void txtSearchER_TextChanged(object sender, EventArgs e)
+        {
+
+            List<GuestModel> wildGuests = DataAccess.loadWildCardGuests(txtSearchER.Text);
+            //TODO change exception handling
+            try
+            {
+                
+            }
+            catch (Exception exception)
+            {
+                
+            }
+
+            listBox1.Items.Clear();
+            foreach (var wildGuest  in wildGuests)
+                foreach (var booking in bookings)
+                    if (booking.Guest_ID == wildGuest.Guest_ID)
+                        listBox1.Items.Add(wildGuest.Guest_Surname);
+            
         }
     }
 }
@@ -402,6 +493,5 @@ Dan kan DataAccess.insertGuest(guest); gecall word om die data in te lees. Na di
 gecall word om die data te update;
 Prof Linda is luuks
  */
- //prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛) en ek wil graag by haar my hoeneers doen in all die DB vakke -- Albertus & Bernard. Ian wil sekuriteit doen, eew.
- 
+//prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛) en ek wil graag by haar my hoeneers doen in all die DB vakke -- Albertus & Bernard. Ian wil sekuriteit doen, eew.
 

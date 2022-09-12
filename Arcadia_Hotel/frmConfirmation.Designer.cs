@@ -45,8 +45,6 @@ namespace Arcadia_Hotel
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtBookingID = new System.Windows.Forms.TextBox();
             this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
             this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.btnOk = new XanderUI.XUIButton();
@@ -193,7 +191,7 @@ namespace Arcadia_Hotel
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label10.Location = new System.Drawing.Point(73, 302);
+            this.label10.Location = new System.Drawing.Point(220, 306);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 19);
             this.label10.TabIndex = 17;
@@ -204,32 +202,11 @@ namespace Arcadia_Hotel
             this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtPrice.Location = new System.Drawing.Point(120, 299);
+            this.txtPrice.Location = new System.Drawing.Point(267, 303);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(97, 25);
             this.txtPrice.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label11.Location = new System.Drawing.Point(297, 305);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 19);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Booking ID:";
-            // 
-            // txtBookingID
-            // 
-            this.txtBookingID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.txtBookingID.Enabled = false;
-            this.txtBookingID.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtBookingID.Location = new System.Drawing.Point(383, 302);
-            this.txtBookingID.Name = "txtBookingID";
-            this.txtBookingID.ReadOnly = true;
-            this.txtBookingID.Size = new System.Drawing.Size(97, 25);
-            this.txtBookingID.TabIndex = 24;
             // 
             // dtpCheckOut
             // 
@@ -313,8 +290,6 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dtpCheckIn);
             this.Controls.Add(this.dtpCheckOut);
-            this.Controls.Add(this.txtBookingID);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -335,7 +310,7 @@ namespace Arcadia_Hotel
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(261, 61);
             this.Name = "frmConfirmation";
-            this.Text = "themeForm1";
+            this.Text = "Confirm Booking";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -359,8 +334,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtBookingID;
         private Controls.BBDateTime dtpCheckOut;
         private Controls.BBDateTime dtpCheckIn;
         private XanderUI.XUIButton btnOk;

@@ -29,6 +29,7 @@ namespace Arcadia_Hotel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfirmEdit));
             this.label1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -44,16 +45,12 @@ namespace Arcadia_Hotel
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.xuiButton2 = new XanderUI.XUIButton();
-            this.xuiButton1 = new XanderUI.XUIButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.txtRoomType = new System.Windows.Forms.TextBox();
             this.btnOk = new XanderUI.XUIButton();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -208,62 +205,6 @@ namespace Arcadia_Hotel
             this.label6.TabIndex = 42;
             this.label6.Text = "Price:";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.xuiButton2);
-            this.panel1.Controls.Add(this.xuiButton1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(455, 22);
-            this.panel1.TabIndex = 48;
-            // 
-            // xuiButton2
-            // 
-            this.xuiButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.xuiButton2.ButtonImage = null;
-            this.xuiButton2.ButtonStyle = XanderUI.XUIButton.Style.Material;
-            this.xuiButton2.ButtonText = "-";
-            this.xuiButton2.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.xuiButton2.ClickTextColor = System.Drawing.Color.White;
-            this.xuiButton2.CornerRadius = 5;
-            this.xuiButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.xuiButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiButton2.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiButton2.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.xuiButton2.HoverTextColor = System.Drawing.Color.White;
-            this.xuiButton2.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton2.Location = new System.Drawing.Point(411, 0);
-            this.xuiButton2.Name = "xuiButton2";
-            this.xuiButton2.Size = new System.Drawing.Size(22, 22);
-            this.xuiButton2.TabIndex = 50;
-            this.xuiButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.xuiButton2.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // xuiButton1
-            // 
-            this.xuiButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.xuiButton1.ButtonImage = null;
-            this.xuiButton1.ButtonStyle = XanderUI.XUIButton.Style.Material;
-            this.xuiButton1.ButtonText = "x";
-            this.xuiButton1.ClickBackColor = System.Drawing.Color.Red;
-            this.xuiButton1.ClickTextColor = System.Drawing.Color.White;
-            this.xuiButton1.CornerRadius = 5;
-            this.xuiButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.xuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.Red;
-            this.xuiButton1.HoverTextColor = System.Drawing.Color.White;
-            this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton1.Location = new System.Drawing.Point(433, 0);
-            this.xuiButton1.Name = "xuiButton1";
-            this.xuiButton1.Size = new System.Drawing.Size(22, 22);
-            this.xuiButton1.TabIndex = 49;
-            this.xuiButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -351,7 +292,6 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.txtRoomType);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -368,11 +308,11 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfirmEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservation Update Report";
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -397,9 +337,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel1;
-        private XanderUI.XUIButton xuiButton1;
-        private XanderUI.XUIButton xuiButton2;
         private Controls.BBDateTime dtpCheckOut;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

@@ -61,6 +61,18 @@ namespace Arcadia_Hotel_DB
             }
         }
 
+        public static List<RoomModel> loadUniqueRoom()
+        {
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
+            {
+                var output = cnn.Query<RoomModel>("select distinct Room_Size from Room", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
+
+
+
         public static DataTable querySQL(String query)
         {
             using (SqlConnection cnn = new SqlConnection(loadConnectionString()))
@@ -97,7 +109,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into EMPLOYEE(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "INSERT into Employee(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,@Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
                     employee);
             }
         }
@@ -107,7 +119,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into GUEST(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "INSERT into Guest(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
                     guest);
             }
         }
@@ -117,7 +129,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into ROOM(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "INSERT into Room(Room_Description,Room_Size,Room_Price_Per_Night) VALUES (@Room_Description,@Room_Size,@Room_Price_Per_Night)",
                     room);
             }
         }
@@ -127,7 +139,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into role(Role_Description,Role_Salary,Role_Hours_Per_Day) VALUES (@Role_Description@,Role_Salary,@Role_Hours_Per_Day)",
+                    "INSERT into role(Role_Description,Role_Salary,Role_Hours_Per_Day) VALUES (@Role_Description,@Role_Salary,@Role_Hours_Per_Day)",
                     role);
             }
         }
@@ -152,7 +164,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "UPDATE Role SET Role_Description = @Role_Description, Role_Salary = @Role_Salary, Role_Hours_Per_Day = @Role_Hours_Per_Day WHERE Role_ID = @Role_ID",
                     role);
             }
         }
@@ -162,7 +174,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "UPDATE Employee SET Employee_Surname = @Employee_Surname, Employee_Name = @Employee_Name,  Employee_Email = @Employee_Email, Employee_Date_Of_Birth = @Employee_Date_Of_Birth WHERE Employee_ID = @Employee_ID",
                     employee);
             }
         }
@@ -172,7 +184,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into ROOM(Role_ID,Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (@Role_ID,Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "UPDATE Room SET Room_Description = @Room_Description, Room_Availability = @Room_Availability, Room_Size = @Room_Size, Room_Price_Per_Night = @Room_Price_Per_Night WHERE Room_Number = @Room_Number",
                     room);
             }
         }
@@ -194,7 +206,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE Guest WHERE {iD} = Guest_ID");
+                cnn.Execute($"DELETE from Guest WHERE {iD} = Guest_ID");
             }
         }
 
@@ -202,7 +214,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE Employee WHERE {iD} = Employee_ID");
+                cnn.Execute($"DELETE from Employee WHERE {iD} = Employee_ID");
             }
         }
 
@@ -210,7 +222,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE Employee WHERE {iD} = Role_ID");
+                cnn.Execute($"DELETE from Role WHERE  Role_ID = {iD}");
             }
         }
 
@@ -218,7 +230,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE Room WHERE {iD} = Room_Number");
+                cnn.Execute($"DELETE from Room WHERE {iD} = Room_Number");
             }
         }
 

@@ -10,7 +10,7 @@ namespace Arcadia_Hotel_DB
     {
         public int Role_ID { get; set; }
         public string Role_Description { get; set; }
-        public float Role_Salary { get; set; }
+        public decimal Role_Salary { get; set; }
         public int Role_Hours_Per_Day { get; set; }
     }
 }

@@ -42,5 +42,10 @@ namespace Arcadia_Hotel
 
             DataAccess.updateBooking(booking);
         }
+
+        private void xuiButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

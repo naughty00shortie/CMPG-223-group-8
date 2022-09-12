@@ -12,7 +12,7 @@ namespace Arcadia_Hotel_DB
         public string Room_Description { get; set; }
         public int Room_Availability { get; set; }
         public string Room_Size { get; set; }
-        public float Room_Price_Per_Night { get; set; }
+        public decimal Room_Price_Per_Night { get; set; }
        
     }
 }

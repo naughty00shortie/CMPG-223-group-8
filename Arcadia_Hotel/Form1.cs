@@ -49,9 +49,9 @@ namespace Arcadia_Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //LoadModels();
+            LoadModels();
             loadUI();
-            //CheckForUpdates();
+            CheckForUpdates();
 
         }
 
@@ -64,6 +64,10 @@ namespace Arcadia_Hotel
             rooms = DataAccess.loadRoom();
 
             dgvEditGuest.DataSource = guests;
+            comboBox1.Items.Clear();
+            List<RoomModel> uniqueRoomSizeList = DataAccess.loadUniqueRoom();
+            foreach (var room in uniqueRoomSizeList)
+                comboBox1.Items.Add(room.Room_Size);
         }
 
         private void loadUI()
@@ -321,16 +325,12 @@ namespace Arcadia_Hotel
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmAdmin frmAdmin = new frmAdmin();
-            frmAdmin.Show();
-        }
 
         private void xuiButton8_Click(object sender, EventArgs e)
         {
-            frmAdmin frmAdmin = new frmAdmin();
+            frmAdmin frmAdmin = new frmAdmin(this);
             frmAdmin.Show();
+            this.Hide();
         }
     }
 }

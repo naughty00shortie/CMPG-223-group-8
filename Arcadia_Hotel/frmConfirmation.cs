@@ -59,5 +59,10 @@ namespace Arcadia_Hotel
 
             DataAccess.insertRoom(roomRecieved);
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

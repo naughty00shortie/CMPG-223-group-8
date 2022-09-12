@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnAddR = new XanderUI.XUIButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnExit = new XanderUI.XUIButton();
@@ -59,8 +60,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
-            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.xuiButton7 = new XanderUI.XUIButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,8 +76,6 @@
             this.dgvEditGuest = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnUpdateReservation = new XanderUI.XUIButton();
-            this.dtpCheckOutER = new Arcadia_Hotel.Controls.BBDateTime();
-            this.dtpCheckInER = new Arcadia_Hotel.Controls.BBDateTime();
             this.cmbTypeER = new System.Windows.Forms.ComboBox();
             this.txtBookingIDER = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -130,6 +127,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
+            this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
+            this.dtpCheckOutER = new Arcadia_Hotel.Controls.BBDateTime();
+            this.dtpCheckInER = new Arcadia_Hotel.Controls.BBDateTime();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -532,32 +533,6 @@
             this.panel2.Size = new System.Drawing.Size(631, 440);
             this.panel2.TabIndex = 7;
             // 
-            // dtpCheckOut
-            // 
-            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckOut.BorderSize = 0;
-            this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckOut.Location = new System.Drawing.Point(226, 317);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOut.TabIndex = 51;
-            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
-            // 
-            // dtpCheckIn
-            // 
-            this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckIn.BorderSize = 0;
-            this.dtpCheckIn.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckIn.Location = new System.Drawing.Point(226, 278);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckIn.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckIn.TabIndex = 50;
-            this.dtpCheckIn.TextColor = System.Drawing.Color.White;
-            // 
             // xuiButton7
             // 
             this.xuiButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
@@ -808,32 +783,6 @@
             this.btnUpdateReservation.TabIndex = 53;
             this.btnUpdateReservation.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnUpdateReservation.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // dtpCheckOutER
-            // 
-            this.dtpCheckOutER.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckOutER.BorderSize = 0;
-            this.dtpCheckOutER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOutER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckOutER.Location = new System.Drawing.Point(109, 251);
-            this.dtpCheckOutER.Name = "dtpCheckOutER";
-            this.dtpCheckOutER.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckOutER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckOutER.TabIndex = 52;
-            this.dtpCheckOutER.TextColor = System.Drawing.Color.White;
-            // 
-            // dtpCheckInER
-            // 
-            this.dtpCheckInER.BorderColor = System.Drawing.Color.White;
-            this.dtpCheckInER.BorderSize = 0;
-            this.dtpCheckInER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckInER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpCheckInER.Location = new System.Drawing.Point(109, 202);
-            this.dtpCheckInER.Name = "dtpCheckInER";
-            this.dtpCheckInER.Size = new System.Drawing.Size(227, 22);
-            this.dtpCheckInER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dtpCheckInER.TabIndex = 51;
-            this.dtpCheckInER.TextColor = System.Drawing.Color.White;
             // 
             // cmbTypeER
             // 
@@ -1516,6 +1465,58 @@
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 5;
             // 
+            // dtpCheckOut
+            // 
+            this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckOut.BorderSize = 0;
+            this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckOut.Location = new System.Drawing.Point(226, 317);
+            this.dtpCheckOut.Name = "dtpCheckOut";
+            this.dtpCheckOut.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckOut.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.TabIndex = 51;
+            this.dtpCheckOut.TextColor = System.Drawing.Color.White;
+            // 
+            // dtpCheckIn
+            // 
+            this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckIn.BorderSize = 0;
+            this.dtpCheckIn.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckIn.Location = new System.Drawing.Point(226, 278);
+            this.dtpCheckIn.Name = "dtpCheckIn";
+            this.dtpCheckIn.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckIn.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckIn.TabIndex = 50;
+            this.dtpCheckIn.TextColor = System.Drawing.Color.White;
+            // 
+            // dtpCheckOutER
+            // 
+            this.dtpCheckOutER.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckOutER.BorderSize = 0;
+            this.dtpCheckOutER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOutER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckOutER.Location = new System.Drawing.Point(109, 251);
+            this.dtpCheckOutER.Name = "dtpCheckOutER";
+            this.dtpCheckOutER.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckOutER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOutER.TabIndex = 52;
+            this.dtpCheckOutER.TextColor = System.Drawing.Color.White;
+            // 
+            // dtpCheckInER
+            // 
+            this.dtpCheckInER.BorderColor = System.Drawing.Color.White;
+            this.dtpCheckInER.BorderSize = 0;
+            this.dtpCheckInER.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckInER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpCheckInER.Location = new System.Drawing.Point(109, 202);
+            this.dtpCheckInER.Name = "dtpCheckInER";
+            this.dtpCheckInER.Size = new System.Drawing.Size(227, 22);
+            this.dtpCheckInER.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckInER.TabIndex = 51;
+            this.dtpCheckInER.TextColor = System.Drawing.Color.White;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1526,6 +1527,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Arcadia Hotel";
             this.Load += new System.EventHandler(this.Form1_Load);

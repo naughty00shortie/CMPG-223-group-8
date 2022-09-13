@@ -124,6 +124,7 @@ namespace Arcadia_Hotel
             this.label51 = new System.Windows.Forms.Label();
             this.cmbCategorizeRoomSize = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbPageNumbers = new System.Windows.Forms.CheckBox();
             this.cbUserName = new System.Windows.Forms.CheckBox();
             this.cbReportName = new System.Windows.Forms.CheckBox();
             this.cbDate = new System.Windows.Forms.CheckBox();
@@ -174,14 +175,13 @@ namespace Arcadia_Hotel
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.cmbEmployeeIDUE = new System.Windows.Forms.ComboBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.btnDesign = new XanderUI.XUIButton();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.btnChangePassword = new XanderUI.XUIButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.xuiButton5 = new XanderUI.XUIButton();
             this.xuiButton6 = new XanderUI.XUIButton();
-            this.cbPageNumbers = new System.Windows.Forms.CheckBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddEmployee)).BeginInit();
@@ -209,9 +209,9 @@ namespace Arcadia_Hotel
             this.tabPage8.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage11.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1204,6 +1204,18 @@ namespace Arcadia_Hotel
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Headder Options";
             // 
+            // cbPageNumbers
+            // 
+            this.cbPageNumbers.AutoSize = true;
+            this.cbPageNumbers.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbPageNumbers.ForeColor = System.Drawing.Color.White;
+            this.cbPageNumbers.Location = new System.Drawing.Point(67, 29);
+            this.cbPageNumbers.Name = "cbPageNumbers";
+            this.cbPageNumbers.Size = new System.Drawing.Size(118, 23);
+            this.cbPageNumbers.TabIndex = 5;
+            this.cbPageNumbers.Text = "Page Numbers";
+            this.cbPageNumbers.UseVisualStyleBackColor = true;
+            // 
             // cbUserName
             // 
             this.cbUserName.AutoSize = true;
@@ -2026,6 +2038,14 @@ namespace Arcadia_Hotel
             this.tabPage10.Text = "Report";
             this.tabPage10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(695, 66);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView3.TabIndex = 64;
+            // 
             // btnDesign
             // 
             this.btnDesign.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
@@ -2148,26 +2168,6 @@ namespace Arcadia_Hotel
             this.xuiButton6.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.xuiButton6.Click += new System.EventHandler(this.xuiButton6_Click);
             // 
-            // cbPageNumbers
-            // 
-            this.cbPageNumbers.AutoSize = true;
-            this.cbPageNumbers.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbPageNumbers.ForeColor = System.Drawing.Color.White;
-            this.cbPageNumbers.Location = new System.Drawing.Point(67, 29);
-            this.cbPageNumbers.Name = "cbPageNumbers";
-            this.cbPageNumbers.Size = new System.Drawing.Size(118, 23);
-            this.cbPageNumbers.TabIndex = 5;
-            this.cbPageNumbers.Text = "Page Numbers";
-            this.cbPageNumbers.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(695, 66);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView3.TabIndex = 64;
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2226,10 +2226,10 @@ namespace Arcadia_Hotel
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             this.tabPage10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

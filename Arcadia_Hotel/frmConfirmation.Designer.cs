@@ -35,7 +35,6 @@ namespace Arcadia_Hotel
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lbType = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@ namespace Arcadia_Hotel
             this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.btnOk = new XanderUI.XUIButton();
             this.btnCancel = new XanderUI.XUIButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -101,19 +101,6 @@ namespace Arcadia_Hotel
             this.label5.TabIndex = 5;
             this.label5.Text = "Phone Number:";
             // 
-            // lbType
-            // 
-            this.lbType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.lbType.Enabled = false;
-            this.lbType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbType.ForeColor = System.Drawing.Color.White;
-            this.lbType.FormattingEnabled = true;
-            this.lbType.ItemHeight = 17;
-            this.lbType.Location = new System.Drawing.Point(120, 192);
-            this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(161, 38);
-            this.lbType.TabIndex = 6;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -128,6 +115,7 @@ namespace Arcadia_Hotel
             // 
             this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(120, 91);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
@@ -213,6 +201,7 @@ namespace Arcadia_Hotel
             this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
             this.dtpCheckOut.BorderSize = 0;
             this.dtpCheckOut.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckOut.Enabled = false;
             this.dtpCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dtpCheckOut.Location = new System.Drawing.Point(389, 232);
             this.dtpCheckOut.Name = "dtpCheckOut";
@@ -226,6 +215,7 @@ namespace Arcadia_Hotel
             this.dtpCheckIn.BorderColor = System.Drawing.Color.White;
             this.dtpCheckIn.BorderSize = 0;
             this.dtpCheckIn.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dtpCheckIn.Enabled = false;
             this.dtpCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dtpCheckIn.Location = new System.Drawing.Point(389, 183);
             this.dtpCheckIn.Name = "dtpCheckIn";
@@ -280,12 +270,24 @@ namespace Arcadia_Hotel
             this.btnCancel.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox1.Location = new System.Drawing.Point(120, 192);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(137, 25);
+            this.textBox1.TabIndex = 61;
+            // 
             // frmConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(637, 400);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dtpCheckIn);
@@ -299,7 +301,6 @@ namespace Arcadia_Hotel
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.lbType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -324,7 +325,6 @@ namespace Arcadia_Hotel
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox lbType;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtEmail;
@@ -338,5 +338,6 @@ namespace Arcadia_Hotel
         private Controls.BBDateTime dtpCheckIn;
         private XanderUI.XUIButton btnOk;
         private XanderUI.XUIButton btnCancel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

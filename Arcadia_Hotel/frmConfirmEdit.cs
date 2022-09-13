@@ -13,34 +13,55 @@ namespace Arcadia_Hotel
 {
     public partial class frmConfirmEdit : Form
     {
-
-
-        private Form1 form1;
         private BookingModel bookingRecieved;
+        private GuestModel selectedGuest;
+        private RoomModel selectedRoom;
 
-        public frmConfirmEdit(Form1 form1,BookingModel bookingRecieved,GuestModel guest, RoomModel room)
+        private List<GuestModel> guests;
+        private List<RoomModel> rooms;
+        private Form1 form1;
+
+        public frmConfirmEdit(Form1 form1,BookingModel bookingRecieved)
         {
-            InitializeComponent();
             this.form1 = form1;
+            InitializeComponent();
             this.bookingRecieved = bookingRecieved;
+
+            guests = DataAccess.loadGuest();
+            rooms = DataAccess.loadRoom();
+
+            foreach (var guest in guests)
+                if (guest.Guest_ID == bookingRecieved.Guest_ID)
+                {
+                    selectedGuest = guest;
+                    break;
+                }
+
+            foreach (var room in rooms)
+            {
+                if (room.Room_Number == bookingRecieved.Room_Number)
+                {
+                    selectedRoom = room;
+                }
+            }
+
+            txtBookingID.Text = bookingRecieved.Booking_Number.ToString();
+            txtName.Text = selectedGuest.Guest_Name;
+            txtSurname.Text = selectedGuest.Guest_Surname;
+            txtRoomType.Text = selectedRoom.Room_Size;
+            dtpCheckIn.Text = bookingRecieved.Booking_Check_In.ToString();
+            dtpCheckOut.Text = bookingRecieved.Booking_Check_Out.ToString();
+            txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
 
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            GuestModel guest = new GuestModel();
-            BookingModel booking = new BookingModel();
-            RoomModel room = new RoomModel();
 
-            guest.Guest_Name = txtName.Text;
-            guest.Guest_Surname = txtSurname.Text;
-
-            room.Room_Description = txtRoomType.Text;
-
-            txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
-
-
-            DataAccess.updateBooking(booking);
+            DataAccess.updateBooking(bookingRecieved);
+            form1.LoadModels();
+            this.Close();
+            
         }
 
         private void xuiButton1_Click(object sender, EventArgs e)

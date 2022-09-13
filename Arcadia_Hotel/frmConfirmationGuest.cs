@@ -13,9 +13,8 @@ namespace Arcadia_Hotel
 {
     public partial class frmConfirmationGuest : Form
     {
-        private Form1 form1;
         private GuestModel guest;
-
+        private Form1 form1;
         public frmConfirmationGuest(Form1 form1,GuestModel guest)
         {
             InitializeComponent();
@@ -30,8 +29,14 @@ namespace Arcadia_Hotel
         }
         private void btnOk_Click(object sender, EventArgs e)
         {
-            DataAccess.insertGuest(guest);
-            form1.Show();
+            DataAccess.updateGuest(guest);
+            form1.LoadModels();
+            this.Close();
+        }
+
+        private void xuiButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

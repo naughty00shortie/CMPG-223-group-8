@@ -15,14 +15,21 @@ namespace Arcadia_Hotel
     public partial class frmConfirmation : Form
     {
 
+        private List<RoomModel> rooms;
+        private List<GuestModel> guests;
+
         private Form1 form1;
         private GuestModel guestRecieved;
         private BookingModel bookingRecieved;
         private RoomModel roomRecieved;
 
+
         public frmConfirmation(Form1 form1, GuestModel guestRecieved,BookingModel bookingRecieved)
         {
             InitializeComponent();
+
+            rooms = DataAccess.loadRoom();
+
             this.form1 = form1;
             this.bookingRecieved = bookingRecieved;
             this.guestRecieved = guestRecieved;
@@ -37,18 +44,39 @@ namespace Arcadia_Hotel
             dtpCheckOut.Text = bookingRecieved.Booking_Check_Out.ToString();
             txtPrice.Text = bookingRecieved.Booking_Price_paid.ToString();
 
+            foreach (var room in rooms)
+            {
+                if (room.Room_Number == bookingRecieved.Room_Number)
+                {
+                    textBox1.Text = room.Room_Size;
+                    break;
+                }
+            }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {//i am the unknown
 
             DataAccess.insertGuest(guestRecieved);
+            int biggest = 0;
+            guests = DataAccess.loadGuest();
+            foreach (var guest in guests)
+            {
+                if (guest.Guest_ID> biggest)
+                {
+                    biggest = guest.Guest_ID;
+                }  
+            }
 
+            bookingRecieved.Guest_ID = biggest;
             DataAccess.insertBooking(bookingRecieved);
+            form1.LoadModels();
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
     }

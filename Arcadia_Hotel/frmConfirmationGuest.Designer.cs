@@ -199,6 +199,7 @@ namespace Arcadia_Hotel
             this.xuiButton1.TabIndex = 54;
             this.xuiButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiButton1.Click += new System.EventHandler(this.xuiButton1_Click);
             // 
             // frmConfirmationGuest
             // 

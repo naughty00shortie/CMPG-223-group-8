@@ -520,10 +520,13 @@ namespace Arcadia_Hotel
         private void btnDesign_Click(object sender, EventArgs e)
         {
             // Info
+            DGVPrinter printer = new DGVPrinter();
             string sReport = cmbReportType.Text;
             string sAdminName = cmbAdminName.Text;
             string sReportName = txtReportName.Text;
             string sSubtitle = "";
+            string sFooter = "";
+
 
             // Check if text boxes is written in
             if (cmbAdminName.Text == "")
@@ -539,71 +542,155 @@ namespace Arcadia_Hotel
 
 
             // Create Report
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = sReportName+"(.pdf)|.pdf";
 
-            if (saveFileDialog1.ShowDialog() ==  DialogResult.OK)
+            string dToday = DateTime.Today.ToString("yyyy-MM-dd");
+            string dLastMonth = DateTime.Parse(dToday).AddMonths(-1).ToString("yyyy-MM-dd");
+
+
+
+
+            if (sReport == "Room")                  // Room report sql
             {
-                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Room Price Report of the Month";
 
-                if (sReport == "Room")                  // Room report sql
+                if (cmbCategorizeRoomSize.Text == "All")
                 {
-                    printer.Title = "Room Price Report of the Month";
-
-                    if (cmbCategorizeRoomSize.Text == "All")
-                        dataGridView3.DataSource = DataAccess.queryReport("SELECT R.Room_Description, R.Room_Size, R.Room_Price_Per_Night, COUNT(B.Room_ID) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number");
-                    else if (cmbCategorizeRoomSize.Text == "")
-                    {
-                        MessageBox.Show("Select a categorize option", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    else
-                        dataGridView3.DataSource = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Size, R.Room_Price_Per_Night, COUNT(B.Room_ID) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND R.Room_Size = '{cmbCategorizeRoomSize.Text}'");
-                }                   
-                else if (sReport == "Employee")             // Employee report sql
+                    dataGridView3.DataSource = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Price_Per_Night, COUNT(B.Room_Number) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND B.Booking_Check_Out  BETWEEN '{DateTime.Parse(dLastMonth)}' AND '{DateTime.Parse(dToday)}' GROUP BY R.Room_Description, R.Room_Price_Per_Night ORDER BY R.Room_Price_Per_Night DESC");
+                    sSubtitle += "Room size used in report: All\n";
+                }
+                   
+                else if (cmbCategorizeRoomSize.Text == "")
                 {
-                    printer.Title = "Employee Report";
-
-                    if (cmbCategorizeRole.Text == "All")
-                        dataGridView3.DataSource = DataAccess.queryReport("");
-                    else if (cmbCategorizeRole.Text == "")
-                    {
-                        MessageBox.Show("Select a categorize option", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }                     
-                    else
-                        dataGridView3.DataSource = DataAccess.queryReport($" SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID AND R.Role_Description = '{cmbCategorizeRole.Text}'");
-                }                    
-                else
-                {
-                    MessageBox.Show("Select a report", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Select a categorize option", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
-                if (cbPageNumbers.Checked)          // Add numbers to report
+                else
                 {
-                    printer.PageNumbers = true;
-                    printer.PageNumberInHeader = true;
+                    dataGridView3.DataSource = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Price_Per_Night, COUNT(B.Room_Number) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND R.Room_Size = '{cmbCategorizeRoomSize.Text}' AND B.Booking_Check_Out  BETWEEN '{DateTime.Parse(dLastMonth)}' AND '{DateTime.Parse(dToday)}' GROUP BY R.Room_Description, R.Room_Price_Per_Night ORDER BY R.Room_Price_Per_Night DESC");
+                    sSubtitle += "Room size used in report: " + cmbCategorizeRoomSize.Text + "\n";
                 }
-                
-                if (cbDate.Checked)                // Add date to report
-                    sSubtitle += DateTime.Today.ToString() + "\n";
-
-                if (cbReportName.Checked)           // Add Report name to report
-                    sSubtitle += sReportName + "\n";
-
-                if (cbUserName.Checked)         // Add admin who pulled report to report
-                    sSubtitle += sAdminName + "\n";
-
-
-                printer.SubTitle = sSubtitle;
-                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit;
-
-                printer.PorportionalColumns = true;
-                printer.HeaderCellAlignment = StringAlignment.Near;
-
-                printer.PrintDataGridView(dataGridView3);
+                   
             }
+            else if (sReport == "Employee")             // Employee report sql
+            {
+                printer.Title = "Employee Report";
+
+                if (cmbCategorizeRole.Text == "All")
+                    dataGridView3.DataSource = DataAccess.queryReport("SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID ORDER BY R.Role_Salary DESC");
+                else if (cmbCategorizeRole.Text == "")
+                {
+                    MessageBox.Show("Select a categorize option", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                    dataGridView3.DataSource = DataAccess.queryReport($"SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID AND R.Role_Description = '{cmbCategorizeRole.Text}' ORDER BY R.Role_Salary DESC");
+            }
+            else
+            {
+                MessageBox.Show("Select a report", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (cbPageNumbers.Checked)          // Add numbers to report
+            {
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = true;
+            }
+
+            if (cbDate.Checked)                // Add date to report
+                sSubtitle += DateTime.Now.ToString("d") + "\n";
+
+            if (cbReportName.Checked)           // Add Report name to report
+                sSubtitle += sReportName + "\n";
+
+            if (cbUserName.Checked)         // Add admin who pulled report to report
+                sSubtitle += sAdminName + "\n";
+
+            // Get summary info
+            double dTotal = 0.00;
+            double dMax = 0.00;
+            double dMin = 0.00;
+
+            if(sReport == "Room")
+            {
+                 foreach (DataGridViewRow row in dataGridView3.Rows)
+                 {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex == 3)
+                        {
+                            dTotal += double.Parse(cell.Value.ToString());
+
+                            if (double.Parse(cell.Value.ToString()) <= dMin)
+                                dMin = double.Parse(cell.Value.ToString());
+                            else if (double.Parse(cell.Value.ToString()) >= dMax)
+                                dMax = double.Parse(cell.Value.ToString());
+                        }
+                    }
+                 }
+
+                 if (cbSummation.Checked)
+                     sFooter += "Sum of total money received:\t" + dTotal.ToString() + "\n";
+
+                 if (cbShowMax.Checked)
+                     sFooter += "Max money received from single room:\t" + dMax.ToString() + "\n";
+
+                 if (cbShowMinimum.Checked)
+                     sFooter += "Min money received from single room:\t" + dMin.ToString() + "\n";
+            }
+
+            else if (sReport == "Employee")
+            {
+                string sHighest = "";
+                string sLowest = "";
+                string sKeep = "";
+                
+                foreach (DataGridViewRow row in dataGridView3.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex == 2)
+                            sKeep = cell.Value.ToString();
+
+                        if (cell.ColumnIndex == 4)
+                        {
+                            dTotal += double.Parse(cell.Value.ToString());
+
+                            if (double.Parse(cell.Value.ToString()) <= dMin)
+                            {
+                                dMin = double.Parse(cell.Value.ToString());
+                                sLowest = sKeep;
+                            }
+                            else if (double.Parse(cell.Value.ToString()) >= dMax)
+                            {
+                                dMax = double.Parse(cell.Value.ToString());
+                                sHighest = sKeep;
+                            }
+                        }
+                    }
+                }
+
+                if (cbSummation.Checked)
+                    sFooter += "Sum of total salaries to pay:\t"+ dTotal.ToString() + "\n";
+
+                if (cbShowMax.Checked)
+                    sFooter += "Max paying employee role:\t"+ sHighest + "\n";
+
+                if (cbShowMinimum.Checked)
+                    sFooter += "Min paying employee role:\t"+ sLowest + "\n";
+            }
+
+
+            printer.SubTitle = sSubtitle;
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit;
+
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+
+            printer.PrintDataGridView(dataGridView3);
+
+            printer.Footer = sFooter;
+            printer.FooterSpacing = 15;
 
         }
 

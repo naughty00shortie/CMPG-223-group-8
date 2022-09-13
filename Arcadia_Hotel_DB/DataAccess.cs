@@ -127,7 +127,7 @@ namespace Arcadia_Hotel_DB
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
                 cnn.Execute(
-                    "INSERT into Guest(Employee_Surname,Employee_Name,Employee_Date_Of_Birth,Employee_Email) VALUES (Employee_Surname,@Employee_Name,@Employee_Date_Of_Birth,@Employee_Email)",
+                    "INSERT into Guest(Guest_Name,Guest_Surname,Guest_Phone_Number,Guest_Email) VALUES (@Guest_Name,@Guest_Surname,@Guest_Phone_Number,@Guest_Email)",
                     guest);
             }
         }
@@ -194,6 +194,16 @@ namespace Arcadia_Hotel_DB
                 cnn.Execute(
                     "UPDATE Room SET Room_Description = @Room_Description, Room_Availability = @Room_Availability, Room_Size = @Room_Size, Room_Price_Per_Night = @Room_Price_Per_Night WHERE Room_Number = @Room_Number",
                     room);
+            }
+        }
+
+        public static void updateGuest(GuestModel guest)
+        {
+            using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
+            {
+                cnn.Execute(
+                    "UPDATE Guest SET Guest_Surname = @Guest_Surname, Guest_Name = @Guest_Name, Guest_Email = @Guest_Email, Guest_Phone_Number = @Guest_Phone_Number WHERE Guest_ID = @Guest_ID",
+                    guest);
             }
         }
 

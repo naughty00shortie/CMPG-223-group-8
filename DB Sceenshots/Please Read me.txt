@@ -1,0 +1,3 @@
+The Database file could not be added to efundi. We used SQL server and the files is encrypted somewhere on our pc, thus the program will not compile nor run on your pc. If we were to install this program in the industry, we would have made sure everything worked as it should.
+
+We provided screenshots to show the populated database. 

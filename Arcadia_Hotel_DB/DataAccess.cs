@@ -85,6 +85,7 @@ namespace Arcadia_Hotel_DB
         {
             using (SqlConnection cnn = new SqlConnection(loadConnectionString()))
             {
+
                 cnn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataSet ds = new DataSet();
@@ -94,7 +95,10 @@ namespace Arcadia_Hotel_DB
                 adapter.Fill(ds);
                 cnn.Close();
                 return ds.Tables[0];
+
             }
+
+            return null;
         }
 
         #endregion
@@ -216,7 +220,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE Booking WHERE {iD} = Booking_Number");
+                cnn.Execute($"DELETE Booking WHERE  Booking_Number = {iD}");
             }
         }
 
@@ -224,7 +228,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE from Guest WHERE {iD} = Guest_ID");
+                cnn.Execute($"DELETE from Guest WHERE  Guest_ID = {iD}");
             }
         }
 
@@ -232,7 +236,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE from Employee WHERE {iD} = Employee_ID");
+                cnn.Execute($"DELETE from Employee WHERE   Employee_ID = {iD}");
             }
         }
 
@@ -248,7 +252,7 @@ namespace Arcadia_Hotel_DB
         {
             using (IDbConnection cnn = new SqlConnection(loadConnectionString()))
             {
-                cnn.Execute($"DELETE from Room WHERE {iD} = Room_Number");
+                cnn.Execute($"DELETE from Room WHERE Room_Number = {iD}");
             }
         }
 

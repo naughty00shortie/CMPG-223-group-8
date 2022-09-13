@@ -71,12 +71,14 @@ namespace Arcadia_Hotel
             bookingRecieved.Guest_ID = biggest;
             DataAccess.insertBooking(bookingRecieved);
             form1.LoadModels();
-            this.Close();
+
+             MessageBox.Show("Successfully added reservation for " + guestRecieved.Guest_Name);
+             this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            form1.button4_Click(null, EventArgs.Empty);
             this.Close();
         }
     }

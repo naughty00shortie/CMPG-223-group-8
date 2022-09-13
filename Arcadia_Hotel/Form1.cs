@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using Arcadia_Hotel_DB;
 using Squirrel;
 using XanderUI;
@@ -62,6 +63,7 @@ namespace Arcadia_Hotel
 
         public void LoadModels()
         {
+
             bookings = DataAccess.loadBooking();
             employees = DataAccess.loadEmployee();
             guests = DataAccess.loadGuest();
@@ -100,6 +102,31 @@ namespace Arcadia_Hotel
             dataGridView2.DataSource = bookings;
             dataGridView1.DataSource = guests;
             dataGridView3.DataSource = guests;
+
+
+            foreach (var booking in bookings)
+            {
+                if (booking.Booking_Check_In > DateTime.Now && booking.Booking_Check_Out < DateTime.Now )
+                    foreach (var room in rooms)
+                    {
+                        if (booking.Room_Number == room.Room_Number)
+                        {
+                            room.Room_Availability = 0;
+                            DataAccess.updateRoom(room);
+                        }
+                    }
+                else
+                {
+                    foreach (var room in rooms)
+                    {
+                        if (booking.Room_Number == room.Room_Number)
+                        {
+                            room.Room_Availability = 1;
+                            DataAccess.updateRoom(room);
+                        }
+                    }
+                }
+            }
 
         }
 
@@ -183,8 +210,9 @@ namespace Arcadia_Hotel
 
             frmConfirmation frmConfirmation = new frmConfirmation(this, guest, booking);
             frmConfirmation.Show();
+            lbBookingInfo.Items.Clear();
 
-
+            btnAddR.Visible = false;
         }
 
         public decimal calcBookingPrice(decimal price,DateTime beginDateTime, DateTime endDateTime)
@@ -195,8 +223,14 @@ namespace Arcadia_Hotel
             return price * totalDays;
         }
 
-        private void button4_Click(object sender, EventArgs e)//query
+        public void button4_Click(object sender, EventArgs e)//query
         {
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Room Type Invalid", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             lbBookingInfo.Items.Clear();
             List<RoomModel> availRoom = checkAvailibility();
 
@@ -255,6 +289,12 @@ namespace Arcadia_Hotel
 
         private void btnUpdateReservation_Click(object sender, EventArgs e)
         {
+            
+            if(cmbTypeER.SelectedItem == null)
+            {
+                MessageBox.Show("Enter room size", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if(txtERName.Text == "")
             {
@@ -306,17 +346,21 @@ namespace Arcadia_Hotel
             }
 
 
-            
-            //alles van frontend na backend
-
 
             frmConfirmEdit frmConfirmEdit = new frmConfirmEdit(this, booking);
             frmConfirmEdit.Show();
-
+            panel4.Visible = false;
+            cmbBookingER.Text = "";
         }
 
         private void btnGoEditReservation_Click(object sender, EventArgs e)
         {
+            if (cmbBookingER.SelectedItem == null)
+            {
+                MessageBox.Show("Booking ID Invalid", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             foreach (var booking in bookings)
             {
                 if (booking.Booking_Number == int.Parse(cmbBookingER.Text))
@@ -351,6 +395,13 @@ namespace Arcadia_Hotel
 
         private void btnGoEditGuest_Click(object sender, EventArgs e)
         {
+            if (cmbGuestIDEG.SelectedItem == null)
+            {
+                MessageBox.Show("Guest ID invalid", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             GuestModel guestModel = new GuestModel();
             foreach (var guest in guests)
             {
@@ -368,17 +419,39 @@ namespace Arcadia_Hotel
 
         private void btnDeleteGuest_Click(object sender, EventArgs e)
         {
+            if(cmbGuestIDEG.SelectedItem == null)
+            {
+                MessageBox.Show("Select a Guest ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DataAccess.deleteBooking(int.Parse(cmbGuestIDEG.Text));
+                foreach (var booking in bookings)
+                {
+                    if (int.Parse(cmbGuestIDEG.Text) == booking.Guest_ID)
+                    {
+                        DataAccess.deleteBooking(booking.Booking_Number);
+                    }
+                }
+                DataAccess.DeleteGuest(int.Parse(cmbGuestIDEG.Text));
             }
+
+            LoadModels();
         }
 
         private void btnUpdateGuest_Click(object sender, EventArgs e)
         {
+            
             if (IsValidEmail(txtEmailEG.Text))
             {
                 MessageBox.Show("Enter a valid email address.");
+                return;
+            }
+            
+            if(cmbGuestIDEG.SelectedItem == null)
+            {
+                MessageBox.Show("Select a Guest ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -418,15 +491,24 @@ namespace Arcadia_Hotel
             frmConfirmationGuest frmConfirmGuest = new frmConfirmationGuest(this,guest);
             frmConfirmGuest.Show();
 
+            panel6.Visible = false;
+
+            cmbGuestIDEG.Text = "";
         }
 
         private void btnDeleteReservation_Click(object sender, EventArgs e)
         {
+            if (cmbBookingER.SelectedItem == null)
+            {
+                MessageBox.Show("Booking ID Invalid", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 DataAccess.deleteBooking(int.Parse(cmbBookingER.Text));
-                LoadModels();
+               
             }
+            LoadModels();
         }
 
         private void setTab(object sender, EventArgs e)
@@ -438,6 +520,8 @@ namespace Arcadia_Hotel
             xuiButton4.BackgroundColor = Color.FromArgb(65, 70, 75);
 
             (sender as XUIButton).BackgroundColor = Color.FromArgb(75, 80, 90);
+            panel4.Visible = false;
+            panel6.Visible = false;
         }
 
         private void xuiButton6_Click(object sender, EventArgs e)
@@ -457,11 +541,39 @@ namespace Arcadia_Hotel
         }
 
 
-        private void xuiButton8_Click(object sender, EventArgs e)
+        private void xuiButton8_Click(object sender, EventArgs e)//Login
         {
-            frmAdmin frmAdmin = new frmAdmin(this);
-            frmAdmin.Show();
-            this.Hide();
+            Boolean bflag = false;//Boolean value to test if the password is in the textfile
+            int i = 0;//Die counter om die array te populate
+            String[] textfilePassword = new String[10000];//Die array wat elke keur eers die passwords gaan lees en seker maak of hulle bestaan
+
+            StreamReader ReadFile;
+            ReadFile = File.OpenText("Append.txt");
+            while (!ReadFile.EndOfStream)
+            {
+                i++;
+                textfilePassword[i] = ReadFile.ReadLine();
+            }
+            ReadFile.Close();
+
+            String password = textBox1.Text;//Get the password in the textbox
+
+            for (int j = 1; j <= i; j++)
+            {
+                if (textfilePassword[j] == password)
+                {
+                    frmAdmin frmAdmin = new frmAdmin(this);
+                    frmAdmin.Show();
+                    this.Hide();
+                    bflag = true;
+                }
+            }
+
+            textBox1.Text = "";
+            if (!bflag)
+            {
+                MessageBox.Show("This password doesn't exist in the textfile");
+            }
         }
 
         private void lbBookingInfo_SelectedIndexChanged(object sender, EventArgs e)
@@ -473,6 +585,8 @@ namespace Arcadia_Hotel
                     txtPrice.Text = calcBookingPrice(room.Room_Price_Per_Night,DateTime.Parse(dtpCheckIn.Text),DateTime.Parse(dtpCheckOut.Text)).ToString();
                 }
             }
+
+            btnAddR.Visible = true;
         }
 
         private static bool IsValidEmail(String EmailToCheck)
@@ -491,25 +605,29 @@ namespace Arcadia_Hotel
         private void txtSearchER_TextChanged(object sender, EventArgs e)
         {
 
-            //List<GuestModel> wildGuests = DataAccess.loadWildCardGuests(txtSearchER.Text);
-            //TODO change exception handling
-            // try
-            // {
-            //     
-            // }
-            // catch (Exception exception)
-            // {
-            //     
-            // }
+            List<GuestModel> wildGuests = DataAccess.loadWildCardGuests(txtSearchER.Text);
+            try
+            {
+                dataGridView3.DataSource =
+                    DataAccess.queryReport($"SELECT * FROM Guest WHERE Guest_Surname LIKE '%{txtSearchER.Text}%'");
+            }
+            catch (Exception exception)
+            {
+                dataGridView3.DataSource = null;
+            }
 
-            dataGridView3.DataSource =
-                DataAccess.queryReport($"SELECT * FROM Guest WHERE Guest_Surname Like '%{txtSearchER.Text}%'");
+
         }
 
 
         private void btnQryRooms_Click(object sender, EventArgs e)
         {
 
+            if (cmbTypeER.SelectedItem == null)
+            {
+                MessageBox.Show("Room type Invalid", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
 
             listBox1.Items.Clear();
@@ -573,3 +691,4 @@ gecall word om die data te update;
 Prof Linda is luuks
  */
 //prof linda is die beste prof op die kampus ( ͡❛ ͜ʖ ͡❛) en ek wil graag by haar my hoeneers doen in all die DB vakke -- Albertus & Bernard. Ian wil sekuriteit doen, eew.
+//Plaas die url in Google vir n goeie tyd https://www.youtube.com/watch?v=dQw4w9WgXcQ

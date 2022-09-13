@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Net.Mail;
 using System.Runtime.InteropServices;
@@ -52,15 +53,16 @@ namespace Arcadia_Hotel
             comboBox2.Items.Clear();
 
             cmbCategorizeRoomSize.Items.Clear();
+            cmbCategorizeRole.Items.Clear();
+            cmbCategorizeRole.Items.Add("All");
             foreach (var role in roles)
             {
                 cmbRoleIDAE.Items.Add(role.Role_ID);
                 cmbRoleIDDR.Items.Add(role.Role_ID);
                 cmbRoleUR.Items.Add(role.Role_ID);
-                comboBox2.Items.Add(role.Role_ID);
-                cmbCategorizeRole.Items.Add("All");
-                cmbCategorizeRole.Items.Add(role.Role_ID);
-            }
+                comboBox2.Items.Add(role.Role_ID);               
+                cmbCategorizeRole.Items.Add(role.Role_Description);
+            }           
 
             dgvRoleAR.DataSource = roles;
             dgvAddEmployee.DataSource = employees;
@@ -68,7 +70,8 @@ namespace Arcadia_Hotel
 
             cmbRoomID.Items.Clear();
             cmbID.Items.Clear();
-                     
+            cmbCategorizeRoomSize.Items.Clear();
+            cmbCategorizeRoomSize.Items.Add("All");
             foreach (var room in rooms)
             {
                 cmbRoomID.Items.Add(room.Room_Number);
@@ -104,11 +107,10 @@ namespace Arcadia_Hotel
             List<RoomModel> uniqueRooms = DataAccess.loadUniqueRoom();
             foreach (RoomModel room in uniqueRooms)
             {
-                cmbCategorizeRoomSize.Items.Add("All");
                 cmbCategorizeRoomSize.Items.Add(room.Room_Size);
             }
 
-
+            
 
         }
 
@@ -155,9 +157,15 @@ namespace Arcadia_Hotel
                 return;
             }
 
-            if(txtRoomPrice.Text == "")
+            if (txtRoomPrice.Text == "")
             {
                 MessageBox.Show("Enter Room Price", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!decimal.TryParse(txtRoomPrice.Text, out decimal yeet))
+            {
+                MessageBox.Show("Invalid Price", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -173,6 +181,12 @@ namespace Arcadia_Hotel
         private void btnUpdateRole_Click(object sender, EventArgs e)
         {
             RoleModel role = new RoleModel();
+            
+            if(cmbRoleUR.SelectedItem == null)
+            {
+                MessageBox.Show("Select a Role", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if(cmbRoleUR.Text == "")
             {
@@ -205,12 +219,19 @@ namespace Arcadia_Hotel
 
             DataAccess.updateRole(role);
             LoadModels();
+            cmbRoleUR.Text = "";
 
         }
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
            EmployeeModel employee = new EmployeeModel();
+            
+            if(cmbRoleIDAE.SelectedItem == null)
+            {
+                MessageBox.Show("Select a Role", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if(cmbRoleIDAE.Text == "")
             {
@@ -252,7 +273,7 @@ namespace Arcadia_Hotel
            LoadModels();
         }
 
-        private void btnAddRole_Click(object sender, EventArgs e)////////////
+        private void btnAddRole_Click(object sender, EventArgs e)////////////papi wenjo
         {
             RoleModel role = new RoleModel();
 
@@ -273,7 +294,21 @@ namespace Arcadia_Hotel
                 MessageBox.Show("Enter Role Hours", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
+
+            if (!decimal.TryParse(txtSalaryAR.Text, out decimal yeet))
+            {
+                MessageBox.Show("invalid Salary", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtHoursAR.Text, out int yoot))
+            {
+                MessageBox.Show("invalid Salary", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             role.Role_Description = redRoleDescription.Text;
             role.Role_Salary = decimal.Parse(txtSalaryAR.Text);
             role.Role_Hours_Per_Day = int.Parse(txtHoursAR.Text);
@@ -284,18 +319,48 @@ namespace Arcadia_Hotel
 
         private void btnDeleteRoom_Click(object sender, EventArgs e)
         {
+            if (cmbRoomID.SelectedItem == null)
+            {
+                MessageBox.Show("Room ID invalid", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            
+
+            foreach (var booking in bookings)
+            {
+                if (booking.Room_Number == int.Parse(cmbRoomID.Text))
+                {
+                    MessageBox.Show("Room is Restricted and cannot be deleted", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             DataAccess.deleteRoom(int.Parse(cmbRoomID.Text));
             LoadModels();
         }
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e)
         {
-            DataAccess.deleteRole(int.Parse(comboBox1.Text));
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Invalid combobox", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+            DataAccess.deleteEmployee(int.Parse(comboBox1.Text));
             LoadModels();
         }
 
         private void btnUpdateRoom_Click(object sender, EventArgs e)
         {
+            if(cmbID.SelectedItem == null)
+            {
+                MessageBox.Show("Select a ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             if(cmbID.Text == "")
             {
                 MessageBox.Show("Enter Room number", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -314,12 +379,18 @@ namespace Arcadia_Hotel
                 return;
             }
 
-            if(txtPriceUR.Text == "")
+            if (txtPriceUR.Text == "")
             {
                 MessageBox.Show("Enter Room Price", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
+            if (!decimal.TryParse(txtPriceUR.Text, out decimal yeet))
+            {
+                MessageBox.Show("Enter Room Price", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             RoomModel room = new RoomModel();
             room.Room_Number = int.Parse(cmbID.Text);
             room.Room_Description = textBox7.Text;
@@ -327,15 +398,24 @@ namespace Arcadia_Hotel
             room.Room_Price_Per_Night = decimal.Parse(txtPriceUR.Text);
             DataAccess.updateRoom(room);
             LoadModels();
+            cmbID.Text = "";
         }
 
         private void btnDeleteRole_Click(object sender, EventArgs e)
         {
+
+            if(cmbRoleIDDR.SelectedItem == null)
+            {
+                MessageBox.Show("Select a ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             foreach (var employee in employees)
             {
                 if (employee.Role_ID == int.Parse(cmbRoleIDDR.Text))
                 {
-                    DataAccess.deleteEmployee(employee.Employee_ID);
+                    MessageBox.Show("Role is Restricted. Cannot be deleted", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
             DataAccess.deleteRole(int.Parse(cmbRoleIDDR.Text));
@@ -344,6 +424,18 @@ namespace Arcadia_Hotel
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e)
         {
+            if (cmbEmployeeIDUE.SelectedItem == null)
+            {
+                MessageBox.Show("Select a Employee ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (comboBox2.SelectedItem == null)
+            {
+                MessageBox.Show("Select Role ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             if(cmbEmployeeIDUE.Text == "")
             {
                 MessageBox.Show("Enter Employee ID", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -381,16 +473,16 @@ namespace Arcadia_Hotel
             }
             
             EmployeeModel employee = new EmployeeModel();
-            RoleModel role = new RoleModel();
             employee.Employee_ID = int.Parse(cmbEmployeeIDUE.Text);
             employee.Employee_Surname = textBox4.Text;
             employee.Employee_Name = textBox5.Text;
-            role.Role_ID = int.Parse(comboBox2.Text);
+            employee.Role_ID = int.Parse(comboBox2.Text);
             employee.Employee_Date_Of_Birth = DateTime.Parse(dateTimePicker1.Text);
             employee.Employee_Email = textBox6.Text;
             DataAccess.updateEmployee(employee);
 
             LoadModels();
+            cmbEmployeeIDUE.Text = "";
         }
 
         private void panel8_MouseMove(object sender, MouseEventArgs e)
@@ -505,15 +597,8 @@ namespace Arcadia_Hotel
                     textBox5.Text = employee.Employee_Name;
                     comboBox2.Text = employee.Role_ID.ToString();
                     dateTimePicker1.Text = employee.Employee_Date_Of_Birth.ToString();
-                    if(IsValidEmail(textBox6.Text))
-                    {
-                        textBox6.Text = employee.Employee_Email;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid Email");
-                    }
-                    
+                    textBox6.Text = employee.Employee_Email;
+
                 }
         }
 
@@ -526,6 +611,8 @@ namespace Arcadia_Hotel
             string sReportName = txtReportName.Text;
             string sSubtitle = "";
             string sFooter = "";
+
+            DataTable dt = new DataTable();
 
 
             // Check if text boxes is written in
@@ -555,7 +642,7 @@ namespace Arcadia_Hotel
 
                 if (cmbCategorizeRoomSize.Text == "All")
                 {
-                    dataGridView3.DataSource = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Price_Per_Night, COUNT(B.Room_Number) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND B.Booking_Check_Out  BETWEEN '{DateTime.Parse(dLastMonth)}' AND '{DateTime.Parse(dToday)}' GROUP BY R.Room_Description, R.Room_Price_Per_Night ORDER BY R.Room_Price_Per_Night DESC");
+                    dt = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Price_Per_Night, COUNT(B.Room_Number) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND B.Booking_Check_Out  BETWEEN '{DateTime.Parse(dLastMonth)}' AND '{DateTime.Parse(dToday)}' GROUP BY R.Room_Description, R.Room_Price_Per_Night ORDER BY R.Room_Price_Per_Night DESC");
                     sSubtitle += "Room size used in report: All\n";
                 }
                    
@@ -566,7 +653,7 @@ namespace Arcadia_Hotel
                 }
                 else
                 {
-                    dataGridView3.DataSource = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Price_Per_Night, COUNT(B.Room_Number) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND R.Room_Size = '{cmbCategorizeRoomSize.Text}' AND B.Booking_Check_Out  BETWEEN '{DateTime.Parse(dLastMonth)}' AND '{DateTime.Parse(dToday)}' GROUP BY R.Room_Description, R.Room_Price_Per_Night ORDER BY R.Room_Price_Per_Night DESC");
+                    dt = DataAccess.queryReport($"SELECT R.Room_Description, R.Room_Price_Per_Night, COUNT(B.Room_Number) AS 'Guests', SUM(R.Room_Price_Per_Night) AS 'Total money received' FROM Room R, Booking B WHERE R.Room_Number = B.Room_Number AND R.Room_Size = '{cmbCategorizeRoomSize.Text}' AND B.Booking_Check_Out  BETWEEN '{DateTime.Parse(dLastMonth)}' AND '{DateTime.Parse(dToday)}' GROUP BY R.Room_Description, R.Room_Price_Per_Night ORDER BY R.Room_Price_Per_Night DESC");
                     sSubtitle += "Room size used in report: " + cmbCategorizeRoomSize.Text + "\n";
                 }
                    
@@ -576,20 +663,22 @@ namespace Arcadia_Hotel
                 printer.Title = "Employee Report";
 
                 if (cmbCategorizeRole.Text == "All")
-                    dataGridView3.DataSource = DataAccess.queryReport("SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID ORDER BY R.Role_Salary DESC");
+                    dt = DataAccess.queryReport("SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID ORDER BY R.Role_Salary DESC");
                 else if (cmbCategorizeRole.Text == "")
                 {
                     MessageBox.Show("Select a categorize option", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
-                    dataGridView3.DataSource = DataAccess.queryReport($"SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID AND R.Role_Description = '{cmbCategorizeRole.Text}' ORDER BY R.Role_Salary DESC");
+                    dt = DataAccess.queryReport($"SELECT E.Employee_Surname, E.Employee_Name, R.Role_Description, E.Employee_Email, R.Role_Salary FROM Employee E, Role R WHERE E.Role_ID = R.Role_ID AND R.Role_Description = '{cmbCategorizeRole.Text}' ORDER BY R.Role_Salary DESC");
             }
             else
             {
                 MessageBox.Show("Select a report", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            dataGridView3.DataSource = dt;
 
             if (cbPageNumbers.Checked)          // Add numbers to report
             {
@@ -609,25 +698,20 @@ namespace Arcadia_Hotel
             // Get summary info
             double dTotal = 0.00;
             double dMax = 0.00;
-            double dMin = 0.00;
+            double dMin = 5000.00;
 
             if(sReport == "Room")
             {
-                 foreach (DataGridViewRow row in dataGridView3.Rows)
-                 {
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        if (cell.ColumnIndex == 3)
-                        {
-                            dTotal += double.Parse(cell.Value.ToString());
 
-                            if (double.Parse(cell.Value.ToString()) <= dMin)
-                                dMin = double.Parse(cell.Value.ToString());
-                            else if (double.Parse(cell.Value.ToString()) >= dMax)
-                                dMax = double.Parse(cell.Value.ToString());
-                        }
-                    }
-                 }
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    dTotal += double.Parse(dt.Rows[i][3].ToString());
+                    if (double.Parse(dt.Rows[i][3].ToString()) <= dMin)
+                        dMin = double.Parse(dt.Rows[i][3].ToString());
+                    if (double.Parse(dt.Rows[i][3].ToString()) >= dMax)
+                        dMax = double.Parse(dt.Rows[i][3].ToString());
+                }
+
 
                  if (cbSummation.Checked)
                      sFooter += "Sum of total money received:\t" + dTotal.ToString() + "\n";
@@ -642,33 +726,32 @@ namespace Arcadia_Hotel
             else if (sReport == "Employee")
             {
                 string sHighest = "";
-                string sLowest = "";
+                string sLowest = cmbCategorizeRole.Text;
                 string sKeep = "";
-                
-                foreach (DataGridViewRow row in dataGridView3.Rows)
+
+
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    foreach (DataGridViewCell cell in row.Cells)
+
+                    sKeep = dt.Rows[i][2].ToString();
+
+
+                    dTotal += double.Parse(dt.Rows[i][4].ToString());
+
+                    if (double.Parse(dt.Rows[i][4].ToString()) <= dMin)
                     {
-                        if (cell.ColumnIndex == 2)
-                            sKeep = cell.Value.ToString();
-
-                        if (cell.ColumnIndex == 4)
-                        {
-                            dTotal += double.Parse(cell.Value.ToString());
-
-                            if (double.Parse(cell.Value.ToString()) <= dMin)
-                            {
-                                dMin = double.Parse(cell.Value.ToString());
-                                sLowest = sKeep;
-                            }
-                            else if (double.Parse(cell.Value.ToString()) >= dMax)
-                            {
-                                dMax = double.Parse(cell.Value.ToString());
-                                sHighest = sKeep;
-                            }
-                        }
+                        dMin = double.Parse(dt.Rows[i][4].ToString());
+                        sLowest = sKeep;
                     }
+                    else if (double.Parse(dt.Rows[i][4].ToString()) >= dMax)
+                    {
+                        dMax = double.Parse(dt.Rows[i][4].ToString());
+                        sHighest = sKeep;
+                    }
+
                 }
+
+
 
                 if (cbSummation.Checked)
                     sFooter += "Sum of total salaries to pay:\t"+ dTotal.ToString() + "\n";
@@ -687,10 +770,11 @@ namespace Arcadia_Hotel
             printer.PorportionalColumns = true;
             printer.HeaderCellAlignment = StringAlignment.Near;
 
-            printer.PrintDataGridView(dataGridView3);
-
+            
             printer.Footer = sFooter;
             printer.FooterSpacing = 15;
+
+            printer.PrintDataGridView(dataGridView3);
 
         }
 
@@ -708,6 +792,83 @@ namespace Arcadia_Hotel
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            Boolean bflag = false;//Boolean value to test if the password is in the textfile
+            int i = 0;//Die counter om die array te populate
+            String[] textfilePassword = new String[10000];//Die array wat elke keur eers die passwords gaan lees en seker maak of hulle bestaan
+
+            StreamReader ReadFile;
+            ReadFile = File.OpenText("Append.txt");
+            while (!ReadFile.EndOfStream)
+            {
+                i++;
+                textfilePassword[i] = ReadFile.ReadLine();//Bernard en Frikkie
+            }
+            ReadFile.Close();
+
+            String oldPassword = textBox1.Text;//Password wat bestaan etc Bernard en Frikkie
+            String newPassword = textBox3.Text; // Nuwe password 
+            String doubleNewPassword = textBox2.Text; //Confirm nuwe password
+
+            if (textBox1 != null && textBox2 != null && textBox1 != null)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (textfilePassword[j] == oldPassword)
+                    {
+                        if (newPassword == doubleNewPassword)
+                        {
+                            textfilePassword[j] = doubleNewPassword;
+                            bflag = true;
+                        }
+                    }
+                }
+                if (!bflag)
+                {
+                    MessageBox.Show("Password doesn't exist in the textbox or the password wasn't typed in correctly the second time.");
+                }
+            }
+
+            if (bflag)
+            {
+                File.WriteAllText(@"Append.txt", "");//CHANGE THIS TO COMPUTER PATH
+                StreamWriter AppendFile;
+                try
+                {
+                    AppendFile = File.AppendText("Append.txt");
+                    for (int j = 1; j <= i; j++)
+                    {
+                        AppendFile.WriteLine(textfilePassword[j]);
+                    }
+                    MessageBox.Show("Password changed sucessfully!");
+                    AppendFile.Close();
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void cmbReportType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbReportType.Text == "Employee")
+            {
+                cmbCategorizeRole.Visible = true;
+                label51.Visible = false;
+                label52.Visible = true;
+                cmbCategorizeRoomSize.Visible = false;
+            }            
+            else if(cmbReportType.Text == "Room")
+            {
+                cmbCategorizeRole.Visible = false;
+                label51.Visible = true;
+                label52.Visible = false;
+                cmbCategorizeRoomSize.Visible = true;
+            }
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }

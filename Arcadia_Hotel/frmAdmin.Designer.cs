@@ -491,7 +491,7 @@ namespace Arcadia_Hotel
             this.txtEmailAE.ForeColor = System.Drawing.Color.White;
             this.txtEmailAE.Location = new System.Drawing.Point(103, 257);
             this.txtEmailAE.Name = "txtEmailAE";
-            this.txtEmailAE.Size = new System.Drawing.Size(200, 23);
+            this.txtEmailAE.Size = new System.Drawing.Size(214, 23);
             this.txtEmailAE.TabIndex = 33;
             // 
             // label32
@@ -523,7 +523,7 @@ namespace Arcadia_Hotel
             this.txtSurnameAE.ForeColor = System.Drawing.Color.White;
             this.txtSurnameAE.Location = new System.Drawing.Point(103, 77);
             this.txtSurnameAE.Name = "txtSurnameAE";
-            this.txtSurnameAE.Size = new System.Drawing.Size(200, 23);
+            this.txtSurnameAE.Size = new System.Drawing.Size(214, 23);
             this.txtSurnameAE.TabIndex = 25;
             // 
             // label30
@@ -544,16 +544,16 @@ namespace Arcadia_Hotel
             this.txtNameAE.ForeColor = System.Drawing.Color.White;
             this.txtNameAE.Location = new System.Drawing.Point(103, 114);
             this.txtNameAE.Name = "txtNameAE";
-            this.txtNameAE.Size = new System.Drawing.Size(200, 23);
+            this.txtNameAE.Size = new System.Drawing.Size(214, 23);
             this.txtNameAE.TabIndex = 23;
             // 
             // dgvRoleEmployee
             // 
             this.dgvRoleEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoleEmployee.Location = new System.Drawing.Point(445, 328);
+            this.dgvRoleEmployee.Location = new System.Drawing.Point(364, 328);
             this.dgvRoleEmployee.Name = "dgvRoleEmployee";
             this.dgvRoleEmployee.RowHeadersWidth = 51;
-            this.dgvRoleEmployee.Size = new System.Drawing.Size(323, 138);
+            this.dgvRoleEmployee.Size = new System.Drawing.Size(473, 173);
             this.dgvRoleEmployee.TabIndex = 22;
             // 
             // label29
@@ -592,11 +592,11 @@ namespace Arcadia_Hotel
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label22.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label22.Location = new System.Drawing.Point(94, 205);
+            this.label22.Location = new System.Drawing.Point(49, 206);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(91, 19);
+            this.label22.Size = new System.Drawing.Size(147, 19);
             this.label22.TabIndex = 24;
-            this.label22.Text = "Salary of role:";
+            this.label22.Text = "Monthly Salary of role:";
             // 
             // label21
             // 
@@ -632,10 +632,11 @@ namespace Arcadia_Hotel
             // dgvRoleAR
             // 
             this.dgvRoleAR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoleAR.Location = new System.Drawing.Point(439, 79);
+            this.dgvRoleAR.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvRoleAR.Location = new System.Drawing.Point(448, 0);
             this.dgvRoleAR.Name = "dgvRoleAR";
             this.dgvRoleAR.RowHeadersWidth = 51;
-            this.dgvRoleAR.Size = new System.Drawing.Size(374, 336);
+            this.dgvRoleAR.Size = new System.Drawing.Size(553, 504);
             this.dgvRoleAR.TabIndex = 19;
             // 
             // label18
@@ -674,10 +675,11 @@ namespace Arcadia_Hotel
             // dgvDeleteRoom
             // 
             this.dgvDeleteRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeleteRoom.Location = new System.Drawing.Point(461, 54);
+            this.dgvDeleteRoom.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvDeleteRoom.Location = new System.Drawing.Point(490, 0);
             this.dgvDeleteRoom.Name = "dgvDeleteRoom";
             this.dgvDeleteRoom.RowHeadersWidth = 51;
-            this.dgvDeleteRoom.Size = new System.Drawing.Size(391, 360);
+            this.dgvDeleteRoom.Size = new System.Drawing.Size(511, 504);
             this.dgvDeleteRoom.TabIndex = 19;
             // 
             // label42
@@ -696,7 +698,7 @@ namespace Arcadia_Hotel
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(-2, 96);
+            this.label41.Location = new System.Drawing.Point(8, 95);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(168, 19);
             this.label41.TabIndex = 45;
@@ -1025,7 +1027,7 @@ namespace Arcadia_Hotel
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(652, 329);
+            this.label39.Location = new System.Drawing.Point(711, 300);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(51, 21);
             this.label39.TabIndex = 41;
@@ -1036,7 +1038,7 @@ namespace Arcadia_Hotel
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(642, 33);
+            this.label38.Location = new System.Drawing.Point(683, 20);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(93, 21);
             this.label38.TabIndex = 40;
@@ -1045,19 +1047,19 @@ namespace Arcadia_Hotel
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(456, 353);
+            this.dataGridView2.Location = new System.Drawing.Point(456, 324);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(542, 138);
+            this.dataGridView2.Size = new System.Drawing.Size(542, 167);
             this.dataGridView2.TabIndex = 24;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(456, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(456, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(542, 257);
+            this.dataGridView1.Size = new System.Drawing.Size(542, 232);
             this.dataGridView1.TabIndex = 23;
             // 
             // label37
@@ -1077,7 +1079,7 @@ namespace Arcadia_Hotel
             this.groupBox4.Controls.Add(this.cbShowMax);
             this.groupBox4.Controls.Add(this.cbSummation);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(428, 274);
+            this.groupBox4.Location = new System.Drawing.Point(500, 261);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(232, 143);
             this.groupBox4.TabIndex = 3;
@@ -1127,7 +1129,7 @@ namespace Arcadia_Hotel
             this.groupBox3.Controls.Add(this.label51);
             this.groupBox3.Controls.Add(this.cmbCategorizeRoomSize);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(428, 66);
+            this.groupBox3.Location = new System.Drawing.Point(500, 53);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(232, 182);
             this.groupBox3.TabIndex = 2;
@@ -1139,11 +1141,12 @@ namespace Arcadia_Hotel
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label52.ForeColor = System.Drawing.Color.White;
-            this.label52.Location = new System.Drawing.Point(31, 70);
+            this.label52.Location = new System.Drawing.Point(31, 88);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(35, 19);
             this.label52.TabIndex = 56;
             this.label52.Text = "Role";
+            this.label52.Visible = false;
             // 
             // cmbCategorizeRole
             // 
@@ -1156,11 +1159,12 @@ namespace Arcadia_Hotel
             this.cmbCategorizeRole.Items.AddRange(new object[] {
             "h",
             "c"});
-            this.cmbCategorizeRole.Location = new System.Drawing.Point(34, 83);
+            this.cmbCategorizeRole.Location = new System.Drawing.Point(35, 107);
             this.cmbCategorizeRole.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCategorizeRole.Name = "cmbCategorizeRole";
             this.cmbCategorizeRole.Size = new System.Drawing.Size(137, 24);
             this.cmbCategorizeRole.TabIndex = 55;
+            this.cmbCategorizeRole.Visible = false;
             // 
             // label51
             // 
@@ -1172,6 +1176,7 @@ namespace Arcadia_Hotel
             this.label51.Size = new System.Drawing.Size(72, 19);
             this.label51.TabIndex = 54;
             this.label51.Text = "Room Size";
+            this.label51.Visible = false;
             // 
             // cmbCategorizeRoomSize
             // 
@@ -1184,11 +1189,12 @@ namespace Arcadia_Hotel
             this.cmbCategorizeRoomSize.Items.AddRange(new object[] {
             "h",
             "c"});
-            this.cmbCategorizeRoomSize.Location = new System.Drawing.Point(34, 39);
+            this.cmbCategorizeRoomSize.Location = new System.Drawing.Point(34, 45);
             this.cmbCategorizeRoomSize.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCategorizeRoomSize.Name = "cmbCategorizeRoomSize";
             this.cmbCategorizeRoomSize.Size = new System.Drawing.Size(137, 24);
             this.cmbCategorizeRoomSize.TabIndex = 50;
+            this.cmbCategorizeRoomSize.Visible = false;
             // 
             // groupBox2
             // 
@@ -1197,7 +1203,7 @@ namespace Arcadia_Hotel
             this.groupBox2.Controls.Add(this.cbReportName);
             this.groupBox2.Controls.Add(this.cbDate);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(73, 286);
+            this.groupBox2.Location = new System.Drawing.Point(145, 273);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(257, 143);
             this.groupBox2.TabIndex = 1;
@@ -1261,7 +1267,7 @@ namespace Arcadia_Hotel
             this.groupBox1.Controls.Add(this.txtReportName);
             this.groupBox1.Controls.Add(this.cmbReportType);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(73, 31);
+            this.groupBox1.Location = new System.Drawing.Point(145, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(257, 217);
             this.groupBox1.TabIndex = 0;
@@ -1290,7 +1296,7 @@ namespace Arcadia_Hotel
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(27, 145);
+            this.label50.Location = new System.Drawing.Point(25, 167);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(93, 19);
             this.label50.TabIndex = 55;
@@ -1323,7 +1329,7 @@ namespace Arcadia_Hotel
             this.txtReportName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.txtReportName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtReportName.ForeColor = System.Drawing.Color.White;
-            this.txtReportName.Location = new System.Drawing.Point(27, 167);
+            this.txtReportName.Location = new System.Drawing.Point(27, 189);
             this.txtReportName.Name = "txtReportName";
             this.txtReportName.Size = new System.Drawing.Size(137, 23);
             this.txtReportName.TabIndex = 51;
@@ -1344,6 +1350,7 @@ namespace Arcadia_Hotel
             this.cmbReportType.Name = "cmbReportType";
             this.cmbReportType.Size = new System.Drawing.Size(137, 24);
             this.cmbReportType.TabIndex = 49;
+            this.cmbReportType.SelectedIndexChanged += new System.EventHandler(this.cmbReportType_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -1488,9 +1495,9 @@ namespace Arcadia_Hotel
             // 
             this.dgvAddRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAddRoom.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvAddRoom.Location = new System.Drawing.Point(455, 3);
+            this.dgvAddRoom.Location = new System.Drawing.Point(398, 3);
             this.dgvAddRoom.Name = "dgvAddRoom";
-            this.dgvAddRoom.Size = new System.Drawing.Size(543, 498);
+            this.dgvAddRoom.Size = new System.Drawing.Size(600, 498);
             this.dgvAddRoom.TabIndex = 52;
             // 
             // tabPage2
@@ -1527,7 +1534,7 @@ namespace Arcadia_Hotel
             this.dtpBirthDateAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dtpBirthDateAE.Location = new System.Drawing.Point(103, 206);
             this.dtpBirthDateAE.Name = "dtpBirthDateAE";
-            this.dtpBirthDateAE.Size = new System.Drawing.Size(200, 22);
+            this.dtpBirthDateAE.Size = new System.Drawing.Size(214, 22);
             this.dtpBirthDateAE.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.dtpBirthDateAE.TabIndex = 55;
             this.dtpBirthDateAE.TextColor = System.Drawing.Color.White;
@@ -1546,7 +1553,7 @@ namespace Arcadia_Hotel
             this.cmbRoleIDAE.Location = new System.Drawing.Point(103, 165);
             this.cmbRoleIDAE.Margin = new System.Windows.Forms.Padding(0);
             this.cmbRoleIDAE.Name = "cmbRoleIDAE";
-            this.cmbRoleIDAE.Size = new System.Drawing.Size(200, 21);
+            this.cmbRoleIDAE.Size = new System.Drawing.Size(214, 21);
             this.cmbRoleIDAE.TabIndex = 54;
             // 
             // btnAddEmployee
@@ -1589,6 +1596,7 @@ namespace Arcadia_Hotel
             this.tabPage3.Size = new System.Drawing.Size(1001, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "AddRole";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             this.tabPage3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseMove);
             // 
             // redRoleDescription
@@ -1728,7 +1736,7 @@ namespace Arcadia_Hotel
             this.comboBox1.Items.AddRange(new object[] {
             "h",
             "c"});
-            this.comboBox1.Location = new System.Drawing.Point(182, 94);
+            this.comboBox1.Location = new System.Drawing.Point(202, 95);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(145, 21);
@@ -2041,10 +2049,11 @@ namespace Arcadia_Hotel
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(695, 66);
+            this.dataGridView3.Location = new System.Drawing.Point(747, 185);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView3.TabIndex = 64;
+            this.dataGridView3.Size = new System.Drawing.Size(165, 100);
+            this.dataGridView3.TabIndex = 65;
+            this.dataGridView3.Visible = false;
             // 
             // btnDesign
             // 
@@ -2060,7 +2069,7 @@ namespace Arcadia_Hotel
             this.btnDesign.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btnDesign.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.btnDesign.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnDesign.Location = new System.Drawing.Point(330, 452);
+            this.btnDesign.Location = new System.Drawing.Point(374, 436);
             this.btnDesign.Margin = new System.Windows.Forms.Padding(0);
             this.btnDesign.Name = "btnDesign";
             this.btnDesign.Size = new System.Drawing.Size(148, 50);

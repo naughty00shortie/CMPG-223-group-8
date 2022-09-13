@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnAddR = new XanderUI.XUIButton();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -63,9 +64,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnQryRooms = new XanderUI.XUIButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.btnUpdateReservation = new XanderUI.XUIButton();
             this.cmbTypeER = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -86,6 +94,7 @@
             this.txtSearchER = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnUpdateGuest = new XanderUI.XUIButton();
             this.txtPhoneEG = new System.Windows.Forms.TextBox();
@@ -112,18 +121,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label15 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.btnQryRooms = new XanderUI.XUIButton();
             this.dtpCheckOut = new Arcadia_Hotel.Controls.BBDateTime();
             this.dtpCheckIn = new Arcadia_Hotel.Controls.BBDateTime();
             this.dtpCheckOutER = new Arcadia_Hotel.Controls.BBDateTime();
             this.dtpCheckInER = new Arcadia_Hotel.Controls.BBDateTime();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -131,17 +132,17 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddR
@@ -165,6 +166,7 @@
             this.btnAddR.TabIndex = 5;
             this.btnAddR.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
             this.btnAddR.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnAddR.Visible = false;
             this.btnAddR.Click += new System.EventHandler(this.btnAddR_Click);
             // 
             // panel7
@@ -663,6 +665,25 @@
             this.tabPage1.Text = "Edit Reservation";
             this.tabPage1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove);
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(759, 10);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(71, 25);
+            this.label23.TabIndex = 61;
+            this.label23.Text = "Guests";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(590, 38);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(454, 238);
+            this.dataGridView3.TabIndex = 60;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -707,6 +728,75 @@
             this.panel4.Size = new System.Drawing.Size(513, 467);
             this.panel4.TabIndex = 9;
             this.panel4.Visible = false;
+            // 
+            // btnQryRooms
+            // 
+            this.btnQryRooms.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
+            this.btnQryRooms.ButtonImage = null;
+            this.btnQryRooms.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnQryRooms.ButtonText = "Query Rooms";
+            this.btnQryRooms.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.btnQryRooms.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btnQryRooms.CornerRadius = 10;
+            this.btnQryRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQryRooms.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnQryRooms.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.btnQryRooms.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
+            this.btnQryRooms.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnQryRooms.Location = new System.Drawing.Point(179, 225);
+            this.btnQryRooms.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQryRooms.Name = "btnQryRooms";
+            this.btnQryRooms.Size = new System.Drawing.Size(113, 39);
+            this.btnQryRooms.TabIndex = 58;
+            this.btnQryRooms.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
+            this.btnQryRooms.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnQryRooms.Click += new System.EventHandler(this.btnQryRooms_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(112, 257);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 21);
+            this.label15.TabIndex = 57;
+            this.label15.Text = "Rooms";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(116, 281);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(267, 84);
+            this.listBox1.TabIndex = 56;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.Color.White;
+            this.textBox6.Location = new System.Drawing.Point(210, 377);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(102, 22);
+            this.textBox6.TabIndex = 55;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(112, 378);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(83, 21);
+            this.label26.TabIndex = 54;
+            this.label26.Text = "New Price:";
             // 
             // btnUpdateReservation
             // 
@@ -985,6 +1075,23 @@
             this.tabPage4.TabIndex = 2;
             this.tabPage4.Text = "Edit Pesonal Info";
             this.tabPage4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dataGridView1.Location = new System.Drawing.Point(590, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(462, 699);
+            this.dataGridView1.TabIndex = 56;
             // 
             // panel6
             // 
@@ -1326,94 +1433,6 @@
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 5;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(759, 10);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(71, 25);
-            this.label23.TabIndex = 61;
-            this.label23.Text = "Guests";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(590, 38);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(454, 238);
-            this.dataGridView3.TabIndex = 60;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(112, 257);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 21);
-            this.label15.TabIndex = 57;
-            this.label15.Text = "Rooms";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.listBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(116, 281);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(267, 84);
-            this.listBox1.TabIndex = 56;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(210, 377);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(102, 22);
-            this.textBox6.TabIndex = 55;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(112, 378);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(83, 21);
-            this.label26.TabIndex = 54;
-            this.label26.Text = "New Price:";
-            // 
-            // btnQryRooms
-            // 
-            this.btnQryRooms.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(75)))));
-            this.btnQryRooms.ButtonImage = null;
-            this.btnQryRooms.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnQryRooms.ButtonText = "Query Rooms";
-            this.btnQryRooms.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
-            this.btnQryRooms.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
-            this.btnQryRooms.CornerRadius = 10;
-            this.btnQryRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQryRooms.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnQryRooms.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.btnQryRooms.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
-            this.btnQryRooms.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnQryRooms.Location = new System.Drawing.Point(179, 225);
-            this.btnQryRooms.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQryRooms.Name = "btnQryRooms";
-            this.btnQryRooms.Size = new System.Drawing.Size(113, 39);
-            this.btnQryRooms.TabIndex = 58;
-            this.btnQryRooms.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
-            this.btnQryRooms.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnQryRooms.Click += new System.EventHandler(this.btnQryRooms_Click);
-            // 
             // dtpCheckOut
             // 
             this.dtpCheckOut.BorderColor = System.Drawing.Color.White;
@@ -1466,15 +1485,6 @@
             this.dtpCheckInER.TabIndex = 51;
             this.dtpCheckInER.TextColor = System.Drawing.Color.White;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridView1.Location = new System.Drawing.Point(590, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(462, 699);
-            this.dataGridView1.TabIndex = 56;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1499,6 +1509,7 @@
             this.panel2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1507,6 +1518,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1515,8 +1527,6 @@
             this.groupBox2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1536,7 +1546,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ListBox lbBookingInfo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -1617,6 +1626,7 @@
         private System.Windows.Forms.Label label26;
         private XanderUI.XUIButton btnQryRooms;
         private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.ListBox lbBookingInfo;
     }
 }
 
